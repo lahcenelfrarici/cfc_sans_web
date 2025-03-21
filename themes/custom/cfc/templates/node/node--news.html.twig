@@ -128,13 +128,21 @@
 				</svg>
         {# {{ node.field_date.value }} #}
            {% if category_tabs == 'africa_news' %}
-      {{ node.field_date.value }}
+    				 {% if node.field_date.value %}
+  {{ node.field_date.value|date("F Y") }}
+{% endif %}
     {% elseif category_tabs == 'what_s_on_cfc' %}
-      {{ node.field_date.value }}
+   				 {% if node.field_date.value %}
+  {{ node.field_date.value|date("F Y") }}
+{% endif %}
     {% elseif category_tabs == 'what_s_on_members_news' %}
-      {{ node.field_date.value }}
+				 {% if node.field_date.value %}
+  {{ node.field_date.value|date("F Y") }}
+{% endif %}
     {% endif %}
-         {{ node.field_date.value }}
+ 				 {% if node.field_date.value %}
+  {{ node.field_date.value|date("F Y") }}
+{% endif %}
       </div>
 
       <!-- Image Section -->
