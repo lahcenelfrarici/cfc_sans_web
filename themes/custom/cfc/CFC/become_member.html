@@ -1,0 +1,1173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CFC</title>
+  <link rel="icon" type="image/x-icon" href="./assets/images/favicon.png">
+  <!-- Font Awesome CSS -->
+  <link rel="stylesheet" href="./assets/css/all.min.css" />
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
+
+  <!-- Owl Carousel CSS -->
+  <link rel="stylesheet" href="./assets/css/owl.carousel.min.css" />
+  <link rel="stylesheet" href="./assets/css/owl.theme.default.min.css" />
+
+  <!-- AOS CSS -->
+  <link rel="stylesheet" href="./assets/css/aos.css" />
+
+  <!-- slick CSS -->
+  <link rel="stylesheet" href="./assets/css/slick.css" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./assets/css/style.css" />
+
+  <!-- responsive CSS -->
+  <link rel="stylesheet" href="./assets/css/responsive.css" />
+
+  <!-- Responsive CSS -->
+  <!-- <link rel="stylesheet" href="./assets/css/responsive.css" /> -->
+
+</head>
+
+<body>
+
+  <!-- Preloader -->
+
+  <!-- <div class="preloader"></div> -->
+
+  <!-- Scrolle Top -->
+  <!-- 
+  <button class="back-to-top" type="button"></button> -->
+
+  <!-- Start.Header -->
+
+  <!-- Header Section -->
+  <header class="bg-white shadow-sm header--menu" data-sticky-class="is-sticky">
+    <nav class="navbar navbar-expand-lg navbar-light container">
+      <a class="navbar-brand" href="/index.html">
+        <img src="./assets/images/Logo.png" alt="CFC Logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/About.html">About CFC</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="whyCfcDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">Why CFC?</a>
+            <ul class="dropdown-menu" aria-labelledby="whyCfcDropdown">
+              <li><a class="dropdown-item" href="/Doing businesss.html">Doing business at best cost</a></li>
+              <li><a class="dropdown-item" href="/Safe landing .html">Safe landing</a></li>
+              <li><a class="dropdown-item" href="/Effortless-business-connections.html">Effortless business
+                  connections</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/africa_insights.html">Africa Insights</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/whats_on.html">What's On?</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/become_member.html">Become a Member</a>
+          </li>
+          <!-- Multi-language Selector -->
+
+        </ul>
+        <ul class="multi--select">
+          <li class="nav-item dropdown">
+            <!-- <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <i class="fas fa-globe"></i> EN
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+              <li><a class="dropdown-item" href="#">EN - English</a></li>
+              <li><a class="dropdown-item" href="#">FR - Français</a></li>
+              <li><a class="dropdown-item" href="#">AR - العربية</a></li>
+            </ul> -->
+            <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <img src="./assets/images/en.png" alt="English Flag"
+                style="width: 20px; height: 15px; margin-right: 5px;">
+              EN
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+              <li>
+                <a class="dropdown-item" href="#">
+                  <img src="./assets/images/fr.png" alt="French Flag"
+                    style="width: 20px; height: 15px; margin-right: 5px;"> FR
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">
+                  <img src="./assets/images/ar.png" alt="Arabic Flag"
+                    style="width: 20px; height: 15px; margin-right: 5px;"> AR
+                </a>
+              </li>
+            </ul>
+          </li>
+          <!-- Contact Us Button -->
+          <li class="nav-item">
+            <a class="" href="/index.html#contact---us">
+              Contact Us<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+                <g clip-path="url(#clip0_4948_4128)">
+                  <path
+                    d="M40.7279 22.5873C41.1028 22.9623 41.3135 23.4709 41.3135 24.0013C41.3135 24.5316 41.1028 25.0402 40.7279 25.4153L29.4139 36.7293C29.2294 36.9203 29.0087 37.0727 28.7647 37.1775C28.5207 37.2823 28.2583 37.3375 27.9927 37.3398C27.7271 37.3421 27.4638 37.2915 27.218 37.1909C26.9722 37.0903 26.7489 36.9418 26.5611 36.7541C26.3733 36.5663 26.2248 36.343 26.1243 36.0972C26.0237 35.8514 25.9731 35.588 25.9754 35.3225C25.9777 35.0569 26.0329 34.7945 26.1377 34.5505C26.2425 34.3065 26.3949 34.0858 26.5859 33.9013L34.4859 26.0013H7.9999C7.46947 26.0013 6.96076 25.7906 6.58569 25.4155C6.21062 25.0404 5.9999 24.5317 5.9999 24.0013C5.9999 23.4708 6.21062 22.9621 6.58569 22.5871C6.96076 22.212 7.46947 22.0013 7.9999 22.0013H34.4859L26.5859 14.1013C26.2216 13.7241 26.02 13.2189 26.0246 12.6945C26.0291 12.1701 26.2395 11.6684 26.6103 11.2976C26.9811 10.9268 27.4827 10.7165 28.0071 10.7119C28.5315 10.7074 29.0367 10.9089 29.4139 11.2733L40.7279 22.5873Z"
+                    fill="url(#paint0_linear_4948_4128)" />
+                </g>
+                <defs>
+                  <linearGradient id="paint0_linear_4948_4128" x1="23.6567" y1="37.3398" x2="25.6881" y2="13.0491"
+                    gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#009681" />
+                    <stop offset="1" stop-color="#007565" />
+                  </linearGradient>
+                  <clipPath id="clip0_4948_4128">
+                    <rect width="48" height="48" fill="white" transform="matrix(0 -1 -1 0 48 48)" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+
+  <!-- Slider Section -->
+  <section class="slider container-fluid" id="banner-title">
+    <div class="slider-overlay"></div>
+    <!-- <iframe class="slider-video"
+      src="https://www.youtube.com/embed/f97OGCef0FE?autoplay=1&mute=1&loop=1&playlist=f97OGCef0FE" frameborder="0"
+      allow="autoplay; encrypted-media" allowfullscreen>
+    </iframe> -->
+    <img class="slider-video" src="./assets/images/banner_become.png">
+
+    <div class="slider-content">
+      <h2 class="display-4 fw-bold">Become a member</h2>
+    </div>
+    <div class="icon--banner-after">
+      <img class="slider-img--icon" src="./assets/images/icon--banner.png">
+
+    </div>
+    <!-- Breadcrumb -->
+    <div class="breadcrumb-container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="#">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Become a member</li>
+        </ol>
+      </nav>
+    </div>
+  </section>
+
+  <section class="scroll-sticky-tabs">
+    <div class="container">
+      <div class="row" id="wrapper-item-sidebar-style">
+        <!-- Top Tabs -->
+
+
+        <div class="ledt--sidbar-click position-fixed-1" id="sticky-sidebar">
+          <div class="sidebar">
+            <a href="#tab1" class="active">Eligibility criteria for CFC status<svg xmlns="http://www.w3.org/2000/svg"
+                width="30" height="58" viewBox="0 0 30 58" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M24.6547 30.7211L10.9836 44.3921L7.56641 40.975L19.5289 29.0125L7.56641 17.05L10.9836 13.6328L24.6547 27.3039C25.1077 27.7571 25.3622 28.3717 25.3622 29.0125C25.3622 29.6533 25.1077 30.2679 24.6547 30.7211Z"
+                  fill="url(#paint0_linear_4797_6706)" />
+                <defs>
+                  <linearGradient id="paint0_linear_4797_6706" x1="7.56641" y1="29.0125" x2="23.8467" y2="27.9679"
+                    gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#009681" />
+                    <stop offset="1" stop-color="#007565" />
+                  </linearGradient>
+                </defs>
+              </svg></a>
+            <a href="#tab2">CFC status advantages<svg xmlns="http://www.w3.org/2000/svg" width="30" height="58"
+                viewBox="0 0 30 58" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M24.6547 30.7211L10.9836 44.3921L7.56641 40.975L19.5289 29.0125L7.56641 17.05L10.9836 13.6328L24.6547 27.3039C25.1077 27.7571 25.3622 28.3717 25.3622 29.0125C25.3622 29.6533 25.1077 30.2679 24.6547 30.7211Z"
+                  fill="url(#paint0_linear_4797_6706)" />
+                <defs>
+                  <linearGradient id="paint0_linear_4797_6706" x1="7.56641" y1="29.0125" x2="23.8467" y2="27.9679"
+                    gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#009681" />
+                    <stop offset="1" stop-color="#007565" />
+                  </linearGradient>
+                </defs>
+              </svg></a>
+            <a href="#tab3">How to obtain CFC status<svg xmlns="http://www.w3.org/2000/svg" width="30" height="58"
+                viewBox="0 0 30 58" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M24.6547 30.7211L10.9836 44.3921L7.56641 40.975L19.5289 29.0125L7.56641 17.05L10.9836 13.6328L24.6547 27.3039C25.1077 27.7571 25.3622 28.3717 25.3622 29.0125C25.3622 29.6533 25.1077 30.2679 24.6547 30.7211Z"
+                  fill="url(#paint0_linear_4797_6706)" />
+                <defs>
+                  <linearGradient id="paint0_linear_4797_6706" x1="7.56641" y1="29.0125" x2="23.8467" y2="27.9679"
+                    gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#009681" />
+                    <stop offset="1" stop-color="#007565" />
+                  </linearGradient>
+                </defs>
+              </svg></a>
+          </div>
+        </div>
+
+        <div class="element--wrapper-enter african_pioneer">
+          <!-- Tab 1 -->
+          <div class="content active" id="tab1">
+            <div class="element--tabs-sc">
+              <h3>Eligibility criteria for CFC status</h3>
+              <p>The CFC status is designed for companies seeking to establish themselves within Casablanca Finance
+                City. This status offers strategic, fiscal, and operational advantages, enabling companies to maximize
+                their opportunities across the African continent and beyond.</p>
+            </div>
+            <div class="top-tabs">
+              <button class="active" data-tab="eligibility"><svg xmlns="http://www.w3.org/2000/svg" width="67"
+                  height="66" viewBox="0 0 67 66" fill="none">
+                  <path
+                    d="M19.3594 26.5842C19.3594 24.6391 20.1321 22.7736 21.5075 21.3982C22.883 20.0227 24.7485 19.25 26.6936 19.25H50.5251C51.4883 19.25 52.442 19.4397 53.3318 19.8083C54.2217 20.1769 55.0302 20.7171 55.7112 21.3982C56.3923 22.0792 56.9325 22.8877 57.3011 23.7776C57.6697 24.6674 57.8594 25.6211 57.8594 26.5842V50.4157C57.8594 51.3789 57.6697 52.3326 57.3011 53.2224C56.9325 54.1123 56.3923 54.9208 55.7112 55.6018C55.0302 56.2829 54.2217 56.8231 53.3318 57.1917C52.442 57.5603 51.4883 57.75 50.5251 57.75H26.6936C25.7305 57.75 24.7768 57.5603 23.8869 57.1917C22.9971 56.8231 22.1886 56.2829 21.5075 55.6018C20.8265 54.9208 20.2862 54.1123 19.9177 53.2224C19.5491 52.3326 19.3594 51.3789 19.3594 50.4157V26.5842Z"
+                    stroke="url(#paint0_linear_4441_7289)" stroke-width="6" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                  <path
+                    d="M11.1424 46.0268C10.2981 45.5471 9.59591 44.8524 9.1071 44.0135C8.61829 43.1745 8.36031 42.221 8.35938 41.25V13.75C8.35938 10.725 10.8344 8.25 13.8594 8.25H41.3594C43.4219 8.25 44.5439 9.30875 45.4844 11M30.3594 38.5L35.8594 44L46.8594 33"
+                    stroke="url(#paint1_linear_4441_7289)" stroke-width="6" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                  <defs>
+                    <linearGradient id="paint0_linear_4441_7289" x1="19.3594" y1="38.5" x2="54.2959" y2="34.6254"
+                      gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#009681" />
+                      <stop offset="1" stop-color="#007565" />
+                    </linearGradient>
+                    <linearGradient id="paint1_linear_4441_7289" x1="8.35937" y1="27.1384" x2="43.2795" y2="23.1914"
+                      gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#009681" />
+                      <stop offset="1" stop-color="#007565" />
+                    </linearGradient>
+                  </defs>
+                </svg>Eligibility criteria</button>
+              <button data-tab="legal"><svg xmlns="http://www.w3.org/2000/svg" width="63" height="62"
+                  viewBox="0 0 63 62" fill="none">
+                  <path
+                    d="M17.3336 58.8175H44.8903C50.2622 58.8175 52.9348 56.0928 52.9348 50.6955V27.1344C52.9348 23.7864 52.5717 22.3338 50.4958 20.2059L36.1716 5.6492C34.2009 3.62424 32.5911 3.18359 29.6594 3.18359H17.3336C11.9883 3.18359 9.28906 5.93374 9.28906 11.3322V50.6955C9.28906 56.1183 11.9883 58.8175 17.3336 58.8175ZM17.5406 54.6403C14.868 54.6403 13.4663 53.2121 13.4663 50.618V11.4097C13.4663 8.84109 14.868 7.36084 17.5672 7.36084H29.0881V22.4379C29.0881 25.7073 30.7488 27.316 33.9662 27.316H48.7576V50.618C48.7576 53.2121 47.3814 54.6403 44.6833 54.6403H17.5406ZM34.4334 23.3967C33.4215 23.3967 33.0052 22.9826 33.0052 21.9441V8.16574L47.9516 23.3978L34.4334 23.3967ZM40.6611 34.4515H20.965C20.0317 34.4515 19.3574 35.1523 19.3574 36.0347C19.3574 36.9426 20.0328 37.6434 20.9661 37.6434H40.6611C40.8733 37.6469 41.084 37.6076 41.2807 37.528C41.4775 37.4483 41.6562 37.33 41.8062 37.1799C41.9563 37.0298 42.0747 36.8511 42.1543 36.6544C42.2339 36.4577 42.2732 36.2469 42.2697 36.0347C42.2697 35.1523 41.5689 34.4515 40.6611 34.4515ZM40.6611 43.5079H20.965C20.0317 43.5079 19.3574 44.2342 19.3574 45.1421C19.3574 46.0245 20.0328 46.6998 20.9661 46.6998H40.6611C41.5689 46.6998 42.2697 46.0245 42.2697 45.1421C42.2697 44.2342 41.5689 43.5079 40.6611 43.5079Z"
+                    fill="url(#paint0_linear_4441_7709)" stroke="url(#paint1_linear_4441_7709)" />
+                  <defs>
+                    <linearGradient id="paint0_linear_4441_7709" x1="9.28906" y1="31.0006" x2="49.0811" y2="27.5384"
+                      gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#009681" />
+                      <stop offset="1" stop-color="#007565" />
+                    </linearGradient>
+                    <linearGradient id="paint1_linear_4441_7709" x1="9.28906" y1="31.0006" x2="49.0811" y2="27.5384"
+                      gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#009681" />
+                      <stop offset="1" stop-color="#007565" />
+                    </linearGradient>
+                  </defs>
+                </svg>Legal texts</button>
+            </div>
+            <div id="eligibility" class="tab-content active">
+              <div class="items--elements-ll size--1-5-members" >
+                <h4><span>1.</span> Fit into one of the following company categories:</h4>
+                <!--  -->
+                <div class="accordion" id="acc-card-6-column">
+                  <div class="card active">
+                    <div class="card-header">
+                      <div class="icon-african_pioneericon--card">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="70" height="69" viewBox="0 0 70 69" fill="none">
+                          <path
+                            d="M36.5356 6.37351L60.9731 20.0298C61.6905 20.3879 62.2938 20.9389 62.7153 21.621C63.1369 22.303 63.3599 23.0891 63.3594 23.8909V28.0309C63.3594 30.0146 61.7494 31.6246 59.7656 31.6246H57.6094V54.6246H60.4844C61.2469 54.6246 61.9781 54.9275 62.5173 55.4667C63.0565 56.0059 63.3594 56.7371 63.3594 57.4996C63.3594 58.2621 63.0565 58.9934 62.5173 59.5326C61.9781 60.0717 61.2469 60.3746 60.4844 60.3746H8.73438C7.97188 60.3746 7.24061 60.0717 6.70144 59.5326C6.16228 58.9934 5.85938 58.2621 5.85938 57.4996C5.85938 56.7371 6.16228 56.0059 6.70144 55.4667C7.24061 54.9275 7.97188 54.6246 8.73438 54.6246H11.6094V31.6246H9.45312C7.46938 31.6246 5.85938 30.0146 5.85938 28.0309V23.8909C5.85938 22.3901 6.63563 21.0101 7.88913 20.2281L32.6803 6.37351C33.2792 6.07393 33.9397 5.91797 34.6094 5.91797C35.2791 5.91797 35.9367 6.07393 36.5356 6.37351ZM51.8594 31.6246H17.3594V54.6246H25.9844V37.3746H31.7344V54.6246H37.4844V37.3746H43.2344V54.6246H51.8594V31.6246ZM34.6094 11.8389L11.6094 24.7764V25.8746H57.6094V24.7764L34.6094 11.8389ZM34.6094 17.2496C35.3719 17.2496 36.1031 17.5525 36.6423 18.0917C37.1815 18.6309 37.4844 19.3621 37.4844 20.1246C37.4844 20.8871 37.1815 21.6184 36.6423 22.1576C36.1031 22.6967 35.3719 22.9996 34.6094 22.9996C33.8469 22.9996 33.1156 22.6967 32.5764 22.1576C32.0373 21.6184 31.7344 20.8871 31.7344 20.1246C31.7344 19.3621 32.0373 18.6309 32.5764 18.0917C33.1156 17.5525 33.8469 17.2496 34.6094 17.2496Z"
+                            fill="#018371" />
+                        </svg>
+                        <h3>Financial companies</h3>
+                        <div class="icon--african_pioneer">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="39" height="20" viewBox="0 0 39 20"
+                            fill="none">
+                            <g clip-path="url(#clip0_4954_2132)">
+                              <path
+                                d="M28.0821 4.16161L29.7604 5.84153L20.6135 14.9916C20.467 15.1391 20.2927 15.2562 20.1007 15.336C19.9087 15.4159 19.7028 15.457 19.4949 15.457C19.287 15.457 19.0811 15.4159 18.8891 15.336C18.6971 15.2562 18.5228 15.1391 18.3763 14.9916L9.22461 5.84153L10.9029 4.16319L19.4925 12.7512L28.0821 4.16161Z"
+                                fill="url(#paint0_linear_4954_2132)" stroke="url(#paint1_linear_4954_2132)" />
+                            </g>
+                            <defs>
+                              <linearGradient id="paint0_linear_4954_2132" x1="19.4925" y1="15.457" x2="18.8619"
+                                y2="5.11947" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#009681" />
+                                <stop offset="1" stop-color="#007565" />
+                              </linearGradient>
+                              <linearGradient id="paint1_linear_4954_2132" x1="19.4925" y1="15.457" x2="18.8619"
+                                y2="5.11947" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#009681" />
+                                <stop offset="1" stop-color="#007565" />
+                              </linearGradient>
+                              <clipPath id="clip0_4954_2132">
+                                <rect width="19" height="38" fill="white" transform="matrix(0 1 -1 0 38.5 0.277344)" />
+                              </clipPath>
+                            </defs>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-body" style="display: block;">
+                      <div class="two-column-list">
+                        <div class="column">
+                          <ul>
+                            <li>Credit institution</li>
+                            <li>Insurance and/or reinsurance companies/brokers</li>
+                            <li>Credit rating companies</li>
+                            <li>Private wealth management</li>
+                          </ul>
+                        </div>
+                        <div class="column">
+                          <ul>
+                            <li>Holdings</li>
+                            <li>Investment companies</li>
+                            <li>Mutual investment funds</li>
+                            <li>Financial investment advisors</li>
+                            <li>Crowdfunding platforms</li>
+                          </ul>
+                        </div>
+                      </div>
+
+
+                    </div>
+
+                  </div>
+                  <div class="card">
+                    <div class="card-header">
+                      <div class="icon-african_pioneericon--card">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="59" viewBox="0 0 60 59" fill="none">
+                          <path
+                            d="M44.3581 4.91797H14.8581C12.1427 4.91797 9.94141 7.11924 9.94141 9.83464V49.168C9.94141 51.8834 12.1427 54.0846 14.8581 54.0846H44.3581C47.0735 54.0846 49.2747 51.8834 49.2747 49.168V9.83464C49.2747 7.11924 47.0735 4.91797 44.3581 4.91797Z"
+                            stroke="url(#paint0_linear_5816_8331)" stroke-width="5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                          <path
+                            d="M22.2318 54.0833V44.25H36.9818V54.0833M19.7734 14.75H19.798M39.4401 14.75H39.4647M29.6068 14.75H29.6314M29.6068 24.5833H29.6314M29.6068 34.4167H29.6314M39.4401 24.5833H39.4647M39.4401 34.4167H39.4647M19.7734 24.5833H19.798M19.7734 34.4167H19.798"
+                            stroke="url(#paint1_linear_5816_8331)" stroke-width="5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                          <defs>
+                            <linearGradient id="paint0_linear_5816_8331" x1="9.94141" y1="29.5013" x2="45.791"
+                              y2="26.3206" gradientUnits="userSpaceOnUse">
+                              <stop stop-color="#009681" />
+                              <stop offset="1" stop-color="#007565" />
+                            </linearGradient>
+                            <linearGradient id="paint1_linear_5816_8331" x1="19.7734" y1="34.4167" x2="37.8063"
+                              y2="33.4155" gradientUnits="userSpaceOnUse">
+                              <stop stop-color="#009681" />
+                              <stop offset="1" stop-color="#007565" />
+                            </linearGradient>
+                          </defs>
+                        </svg>
+
+                        <h3> Non-financial companies
+                        </h3>
+                        <div class="icon--african_pioneer">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="39" height="20" viewBox="0 0 39 20"
+                            fill="none">
+                            <g clip-path="url(#clip0_4954_2132)">
+                              <path
+                                d="M28.0821 4.16161L29.7604 5.84153L20.6135 14.9916C20.467 15.1391 20.2927 15.2562 20.1007 15.336C19.9087 15.4159 19.7028 15.457 19.4949 15.457C19.287 15.457 19.0811 15.4159 18.8891 15.336C18.6971 15.2562 18.5228 15.1391 18.3763 14.9916L9.22461 5.84153L10.9029 4.16319L19.4925 12.7512L28.0821 4.16161Z"
+                                fill="url(#paint0_linear_4954_2132)" stroke="url(#paint1_linear_4954_2132)" />
+                            </g>
+                            <defs>
+                              <linearGradient id="paint0_linear_4954_2132" x1="19.4925" y1="15.457" x2="18.8619"
+                                y2="5.11947" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#009681" />
+                                <stop offset="1" stop-color="#007565" />
+                              </linearGradient>
+                              <linearGradient id="paint1_linear_4954_2132" x1="19.4925" y1="15.457" x2="18.8619"
+                                y2="5.11947" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#009681" />
+                                <stop offset="1" stop-color="#007565" />
+                              </linearGradient>
+                              <clipPath id="clip0_4954_2132">
+                                <rect width="19" height="38" fill="white" transform="matrix(0 1 -1 0 38.5 0.277344)" />
+                              </clipPath>
+                            </defs>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-body">
+                      <h5><strong>Ancillary services providers</strong></h5>
+                      <p>Companies who practice one or more of the following activities:</p>
+                      <ul>
+                        <li>Audit and consulting services for legal, fiscal, strategy or human resources.</li>
+                        <li>All other professional service activities.</li>
+                      </ul>
+
+                      <h5><strong>Technical and administrative service providers</strong></h5>
+                      <p>Technical service carried out in the context of industrial and commercial activities. Technical
+                        service providers can also:</p>
+                      <ul>
+                        <li>Provide services on behalf of third parties.</li>
+                        <li>Invoice goods and services on behalf of said entities or to third parties.</li>
+                      </ul>
+
+                      <h5><strong>Administrative Services Providers</strong></h5>
+                      <p>Companies that practice at least one of the following activities:</p>
+                      <ul>
+                        <li>The supervision and coordination of the activities carried out by the entities of the group
+                          to which the service provider belongs, on national territory or in one or more foreign
+                          countries.</li>
+                        <li>The direction and management of these entities.</li>
+                        <li>The provision of services on behalf of these entities.</li>
+                      </ul>
+
+                      <h5><strong>Criterion relating to technical service providers and administrative service
+                          providers</strong></h5>
+                      <p>Technical service providers and administrative service providers must provide at least three of
+                        the following services to at least three entities of the same group or with which they are
+                        associated by virtue of commercial, technical or capital relations:</p>
+                      <ul>
+                        <li>The supervision and coordination of the activities carried out by the entities of the group
+                          to which the service provider belongs on the national territory or in one or foreign
+                          countries.</li>
+                        <li>The direction and management of these entities.</li>
+                        <li>The provision of services on behalf of these entities.</li>
+                        <li>The provision of services on behalf of third parties.</li>
+                        <li>Invoicing of goods and services on behalf of these entities or to third parties.</li>
+                        <li>Any other administration, management or coordination service relating to regional and
+                          international headquarters.</li>
+                      </ul>
+
+                      <h5><strong>Trading companies</strong></h5>
+                      <p>It is any legal entity whose main objective is the purchase and sale of goods for the account
+                        of third parties and which carries out at least one of the following activities:</p>
+                      <ul>
+                        <li>The purchase of materials or products for resale.</li>
+                        <li>Trade-related services, including networking, logistics, storage, transit and trade advice.
+                        </li>
+                      </ul>
+
+                    </div>
+                  </div>
+
+
+                  <!-- Add more cards as needed -->
+                </div>
+                <!--  -->
+                <h4><span>2.</span> Provide an added value to the development of CFC</h4>
+                <h4><span>3.</span> Headquarters must be located at CFC</h4>
+                <h4><span>4.</span> Be managed and operated from CFC</h4>
+                <h4><span>5.</span> At least one manager must reside in Morocco</h4>
+                <h4><span>6.</span> Allocate a minimum of operating expenses in line with the activity of the company
+                </h4>
+                <h4><span>7.</span> At least one senior executive must have qualifying international experience:</h4>
+                <ul>
+                  <li>Minimum of 3 years for service providers (administrative, technical, ancillary, trading)</li>
+                  <li>Minimum of 1 year for all other activities</li>
+                </ul>
+                <h4><span>8.</span> Contribute to the development of the technical and technological expertise and to
+                  the development of the Casablanca Finance City, especially concerning the exchanges and financing the
+                  development in Africa</h4>
+
+              </div>
+
+            </div>
+            <div id="legal" class="tab-content">
+              <div class="items--elements-ll">
+                <h5><strong>Legal and regulatory framework governing Casablanca Finance City:</strong></h5>
+
+                <h5><strong>Laws</strong></h5>
+                <ul>
+                  <li>October 2020: Decree-Law No. 2-20-665 reorganizing “CASABLANCA FINANCE CITY”</li>
+                  <li>December 2019: Finance Law 2020</li>
+                  <li>December 2020: Finance Law 2021</li>
+                </ul>
+
+                <h5><strong>Code of ethics</strong></h5>
+                <ul>
+                  <li>October 2020: CFC Code of Ethics</li>
+                </ul>
+
+                <h5><strong>Circulars & Notes</strong></h5>
+                <ul>
+                  <li>Circular OC N° 02 2018 relating to authorized intermediary banks</li>
+                  <li>Joint note relating to the facilities for granting “Business” visas and residence permits
+                    within the framework of the Casablanca Financial Center (CFC)</li>
+                </ul>
+
+
+              </div>
+            </div>
+          </div>
+
+          <!-- Tab 2 -->
+          <div class="content" id="tab2">
+            <div class="element--tabs-sc">
+              <h3>CFC Status advantages
+              </h3>
+
+            </div>
+            <!--  -->
+            <div class="items--elements-ll">
+              <div class="accordion" id="acc-card-6-column">
+                <div class="card active">
+                  <div class="card-header">
+                    <div class="icon-african_pioneericon--card">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="76" height="76" viewBox="0 0 76 76" fill="none">
+                        <path
+                          d="M34.0732 20.0568C33.7067 19.0154 33.026 18.1134 32.1251 17.4753C31.2242 16.8371 30.1475 16.4942 29.0435 16.4939H24.9098C23.7372 16.4972 22.6069 16.933 21.7356 17.7177C20.8642 18.5025 20.313 19.5812 20.1875 20.7471C20.062 21.913 20.371 23.0843 21.0554 24.0366C21.7397 24.9888 22.7513 25.6552 23.8964 25.9079L30.1796 27.2841C31.4652 27.5647 32.6017 28.3106 33.3707 29.3785C34.1396 30.4464 34.4866 31.7608 34.345 33.0691C34.2034 34.3774 33.5831 35.5871 32.6035 36.4658C31.6239 37.3444 30.3541 37.8299 29.0381 37.8289H25.4805C24.3778 37.8293 23.302 37.488 22.4013 36.8518C21.5006 36.2157 20.8191 35.316 20.4508 34.2766M27.2673 16.4939V11.1602M27.2673 43.1626V37.8289M37.4388 72.3222V44.32C37.4388 42.5518 38.1412 40.856 39.3916 39.6056C40.6419 38.3553 42.3377 37.6528 44.106 37.6528C45.8742 37.6528 47.57 38.3553 48.8204 39.6056C50.0707 40.856 50.7731 42.5518 50.7731 44.32V58.9878H61.4406C64.2698 58.9878 66.9831 60.1117 68.9837 62.1122C70.9842 64.1128 72.1081 66.8261 72.1081 69.6553V72.3222"
+                          stroke="url(#paint0_linear_5865_10239)" stroke-width="6" stroke-linecap="round"
+                          stroke-linejoin="round" />
+                        <path
+                          d="M27.2733 51.3344C22.3522 51.3337 17.5487 49.8308 13.5048 47.0265C9.46099 44.2222 6.36959 40.2503 4.64396 35.6418C2.91834 31.0332 2.64072 26.0077 3.84823 21.2371C5.05574 16.4665 7.69084 12.1783 11.4012 8.94564C15.1115 5.71303 19.7203 3.69014 24.6113 3.14743C29.5024 2.60473 34.4425 3.56808 38.7712 5.90868C43.1 8.24928 46.6111 11.8556 48.835 16.2454C51.059 20.6352 51.8898 25.5994 51.2164 30.4741"
+                          stroke="url(#paint1_linear_5865_10239)" stroke-width="6" stroke-linecap="round" />
+                        <defs>
+                          <linearGradient id="paint0_linear_5865_10239" x1="20.1602" y1="41.7412" x2="67.4601"
+                            y2="37.2856" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#009681" />
+                            <stop offset="1" stop-color="#007565" />
+                          </linearGradient>
+                          <linearGradient id="paint1_linear_5865_10239" x1="3.10937" y1="27.1672" x2="46.9701"
+                            y2="22.3028" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#009681" />
+                            <stop offset="1" stop-color="#007565" />
+                          </linearGradient>
+                        </defs>
+                      </svg>
+                      <h3>Safe landing for investors</h3>
+                      <div class="icon--african_pioneer">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="39" height="20" viewBox="0 0 39 20" fill="none">
+                          <g clip-path="url(#clip0_4954_2132)">
+                            <path
+                              d="M28.0821 4.16161L29.7604 5.84153L20.6135 14.9916C20.467 15.1391 20.2927 15.2562 20.1007 15.336C19.9087 15.4159 19.7028 15.457 19.4949 15.457C19.287 15.457 19.0811 15.4159 18.8891 15.336C18.6971 15.2562 18.5228 15.1391 18.3763 14.9916L9.22461 5.84153L10.9029 4.16319L19.4925 12.7512L28.0821 4.16161Z"
+                              fill="url(#paint0_linear_4954_2132)" stroke="url(#paint1_linear_4954_2132)" />
+                          </g>
+                          <defs>
+                            <linearGradient id="paint0_linear_4954_2132" x1="19.4925" y1="15.457" x2="18.8619"
+                              y2="5.11947" gradientUnits="userSpaceOnUse">
+                              <stop stop-color="#009681" />
+                              <stop offset="1" stop-color="#007565" />
+                            </linearGradient>
+                            <linearGradient id="paint1_linear_4954_2132" x1="19.4925" y1="15.457" x2="18.8619"
+                              y2="5.11947" gradientUnits="userSpaceOnUse">
+                              <stop stop-color="#009681" />
+                              <stop offset="1" stop-color="#007565" />
+                            </linearGradient>
+                            <clipPath id="clip0_4954_2132">
+                              <rect width="19" height="38" fill="white" transform="matrix(0 1 -1 0 38.5 0.277344)" />
+                            </clipPath>
+                          </defs>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-body" style="display: block;">
+                    CFC provides investors and companies with an efficient onestop shop that streamlines the setup
+                    process, while giving them a deep understanding of the African market to help them navigate its
+                    complexities. On another note, CFC supported the creation of The Casablanca International Mediation
+                    and Arbitration Centre (CIMAC), an independent not-for-profit institution established in 2016 to
+                    meet the demands of the international business community for a neutral, impartial, efficient and
+                    reliable dispute resolution institution in Africa, and beyond.
+
+
+                  </div>
+
+                </div>
+                <div class="card">
+                  <div class="card-header">
+                    <div class="icon-african_pioneericon--card">
+                      <svg width="64" height="61" viewBox="0 0 64 61" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M6.33333 60.1667C4.59167 60.1667 3.10122 59.5471 1.862 58.3078C0.622778 57.0686 0.00211111 55.5771 0 53.8333V19C0 17.2583 0.620667 15.7679 1.862 14.5287C3.10333 13.2894 4.59378 12.6688 6.33333 12.6667H19V6.33333C19 4.59167 19.6207 3.10122 20.862 1.862C22.1033 0.622778 23.5938 0.00211111 25.3333 0H38C39.7417 0 41.2332 0.620667 42.4745 1.862C43.7158 3.10333 44.3354 4.59378 44.3333 6.33333V12.6667H57C58.7417 12.6667 60.2332 13.2873 61.4745 14.5287C62.7158 15.77 63.3355 17.2604 63.3333 19V53.8333C63.3333 55.575 62.7137 57.0665 61.4745 58.3078C60.2353 59.5492 58.7438 60.1688 57 60.1667H6.33333ZM25.3333 12.6667H38V6.33333H25.3333V12.6667ZM57 41.1667H41.1667V44.3333C41.1667 45.2306 40.8627 45.9832 40.2547 46.5912C39.6467 47.1992 38.8951 47.5021 38 47.5H25.3333C24.4361 47.5 23.6846 47.196 23.0787 46.588C22.4728 45.98 22.1688 45.2284 22.1667 44.3333V41.1667H6.33333V53.8333H57V41.1667ZM28.5 41.1667H34.8333V34.8333H28.5V41.1667ZM6.33333 34.8333H22.1667V31.6667C22.1667 30.7694 22.4707 30.0179 23.0787 29.412C23.6867 28.8061 24.4382 28.5021 25.3333 28.5H38C38.8972 28.5 39.6498 28.804 40.2578 29.412C40.8658 30.02 41.1688 30.7716 41.1667 31.6667V34.8333H57V19H6.33333V34.8333Z"
+                          fill="url(#paint0_linear_5861_11133)" />
+                        <defs>
+                          <linearGradient id="paint0_linear_5861_11133" x1="-1.29861e-07" y1="30.0833" x2="57.3961"
+                            y2="23.3828" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#009681" />
+                            <stop offset="1" stop-color="#007565" />
+                          </linearGradient>
+                        </defs>
+                      </svg>
+
+
+                      <h3> Doing business at best cost
+                      </h3>
+                      <div class="icon--african_pioneer">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="39" height="20" viewBox="0 0 39 20" fill="none">
+                          <g clip-path="url(#clip0_4954_2132)">
+                            <path
+                              d="M28.0821 4.16161L29.7604 5.84153L20.6135 14.9916C20.467 15.1391 20.2927 15.2562 20.1007 15.336C19.9087 15.4159 19.7028 15.457 19.4949 15.457C19.287 15.457 19.0811 15.4159 18.8891 15.336C18.6971 15.2562 18.5228 15.1391 18.3763 14.9916L9.22461 5.84153L10.9029 4.16319L19.4925 12.7512L28.0821 4.16161Z"
+                              fill="url(#paint0_linear_4954_2132)" stroke="url(#paint1_linear_4954_2132)" />
+                          </g>
+                          <defs>
+                            <linearGradient id="paint0_linear_4954_2132" x1="19.4925" y1="15.457" x2="18.8619"
+                              y2="5.11947" gradientUnits="userSpaceOnUse">
+                              <stop stop-color="#009681" />
+                              <stop offset="1" stop-color="#007565" />
+                            </linearGradient>
+                            <linearGradient id="paint1_linear_4954_2132" x1="19.4925" y1="15.457" x2="18.8619"
+                              y2="5.11947" gradientUnits="userSpaceOnUse">
+                              <stop stop-color="#009681" />
+                              <stop offset="1" stop-color="#007565" />
+                            </linearGradient>
+                            <clipPath id="clip0_4954_2132">
+                              <rect width="19" height="38" fill="white" transform="matrix(0 1 -1 0 38.5 0.277344)" />
+                            </clipPath>
+                          </defs>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    CFC offers its vibrant community of over 200 member companies an attractive framework that includes
+                    facilitation of people flow, tax incentives, no capital controls …
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header">
+                    <div class="icon-african_pioneericon--card">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="81" height="80" viewBox="0 0 81 80" fill="none">
+                        <path
+                          d="M20.1107 26.6654C20.1107 24.8973 20.8131 23.2016 22.0633 21.9513C23.3135 20.7011 25.0092 19.9987 26.7773 19.9987C28.5455 19.9987 30.2411 20.7011 31.4914 21.9513C32.7416 23.2016 33.444 24.8973 33.444 26.6654C33.444 28.4335 32.7416 30.1292 31.4914 31.3794C30.2411 32.6297 28.5455 33.332 26.7773 33.332C25.0092 33.332 23.3135 32.6297 22.0633 31.3794C20.8131 30.1292 20.1107 28.4335 20.1107 26.6654ZM26.7773 13.332C23.2411 13.332 19.8497 14.7368 17.3493 17.2373C14.8488 19.7378 13.444 23.1291 13.444 26.6654C13.444 30.2016 14.8488 33.593 17.3493 36.0935C19.8497 38.5939 23.2411 39.9987 26.7773 39.9987C30.3136 39.9987 33.7049 38.5939 36.2054 36.0935C38.7059 33.593 40.1107 30.2016 40.1107 26.6654C40.1107 23.1291 38.7059 19.7378 36.2054 17.2373C33.7049 14.7368 30.3136 13.332 26.7773 13.332ZM53.444 29.9987C53.444 29.1146 53.7952 28.2668 54.4203 27.6417C55.0454 27.0166 55.8933 26.6654 56.7773 26.6654C57.6614 26.6654 58.5092 27.0166 59.1344 27.6417C59.7595 28.2668 60.1107 29.1146 60.1107 29.9987C60.1107 30.8828 59.7595 31.7306 59.1344 32.3557C58.5092 32.9808 57.6614 33.332 56.7773 33.332C55.8933 33.332 55.0454 32.9808 54.4203 32.3557C53.7952 31.7306 53.444 30.8828 53.444 29.9987ZM56.7773 19.9987C54.1252 19.9987 51.5816 21.0523 49.7063 22.9276C47.8309 24.803 46.7773 27.3465 46.7773 29.9987C46.7773 32.6509 47.8309 35.1944 49.7063 37.0698C51.5816 38.9451 54.1252 39.9987 56.7773 39.9987C59.4295 39.9987 61.973 38.9451 63.8484 37.0698C65.7238 35.1944 66.7773 32.6509 66.7773 29.9987C66.7773 27.3465 65.7238 24.803 63.8484 22.9276C61.973 21.0523 59.4295 19.9987 56.7773 19.9987ZM6.77734 54.9987C6.77734 50.3987 10.5107 46.6654 15.1107 46.6654H38.444C43.044 46.6654 46.7773 50.3987 46.7773 54.9987V55.3187C46.7728 55.5617 46.755 55.8043 46.724 56.0454C46.6623 56.6291 46.562 57.2082 46.424 57.7787C45.9738 59.6224 45.1701 61.3612 44.0573 62.8987C41.2307 66.7854 35.964 69.9987 26.7773 69.9987C17.5907 69.9987 12.324 66.7854 9.49734 62.8987C8.04088 60.8778 7.12314 58.5192 6.83068 56.0454L6.77734 55.312V54.9987ZM13.444 55.172L13.4573 55.352C13.4751 55.5431 13.5262 55.8298 13.6107 56.212C13.7907 56.9654 14.1573 57.972 14.8907 58.9787C16.224 60.8187 19.2907 63.332 26.7773 63.332C34.264 63.332 37.324 60.8187 38.664 58.9787C39.4654 57.8578 39.9638 56.5488 40.1107 55.1787V54.9987C40.1107 54.5567 39.9351 54.1327 39.6225 53.8202C39.31 53.5076 38.886 53.332 38.444 53.332H15.1107C14.6686 53.332 14.2447 53.5076 13.9322 53.8202C13.6196 54.1327 13.444 54.5567 13.444 54.9987V55.172ZM56.7707 66.6654C54.4107 66.6565 52.3373 66.4342 50.5507 65.9987C51.765 64.0721 52.6294 61.9461 53.104 59.7187C54.1351 59.8965 55.3573 59.9898 56.7707 59.9987C62.704 59.9987 64.9573 58.1854 65.8373 57.0854C66.3196 56.4722 66.6405 55.7479 66.7707 54.9787V54.9454C66.7568 54.5126 66.5751 54.1023 66.264 53.8012C65.953 53.5001 65.5369 53.3318 65.104 53.332H53.3507C53.0871 50.9466 52.2524 48.6598 50.9173 46.6654H65.1107C69.7107 46.6654 73.444 50.3987 73.444 54.9987V55.112C73.4381 55.3193 73.4225 55.5262 73.3973 55.732C73.1337 57.7497 72.322 59.6566 71.0507 61.2454C68.5907 64.312 64.184 66.6654 56.7773 66.6654"
+                          fill="url(#paint0_linear_5865_10261)" />
+                        <defs>
+                          <linearGradient id="paint0_linear_5865_10261" x1="6.77734" y1="41.6654" x2="66.9926"
+                            y2="33.8087" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#009681" />
+                            <stop offset="1" stop-color="#007565" />
+                          </linearGradient>
+                        </defs>
+                      </svg>
+
+                      <h3> Effortless business connections
+                      </h3>
+                      <div class="icon--african_pioneer">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="39" height="20" viewBox="0 0 39 20" fill="none">
+                          <g clip-path="url(#clip0_4954_2132)">
+                            <path
+                              d="M28.0821 4.16161L29.7604 5.84153L20.6135 14.9916C20.467 15.1391 20.2927 15.2562 20.1007 15.336C19.9087 15.4159 19.7028 15.457 19.4949 15.457C19.287 15.457 19.0811 15.4159 18.8891 15.336C18.6971 15.2562 18.5228 15.1391 18.3763 14.9916L9.22461 5.84153L10.9029 4.16319L19.4925 12.7512L28.0821 4.16161Z"
+                              fill="url(#paint0_linear_4954_2132)" stroke="url(#paint1_linear_4954_2132)" />
+                          </g>
+                          <defs>
+                            <linearGradient id="paint0_linear_4954_2132" x1="19.4925" y1="15.457" x2="18.8619"
+                              y2="5.11947" gradientUnits="userSpaceOnUse">
+                              <stop stop-color="#009681" />
+                              <stop offset="1" stop-color="#007565" />
+                            </linearGradient>
+                            <linearGradient id="paint1_linear_4954_2132" x1="19.4925" y1="15.457" x2="18.8619"
+                              y2="5.11947" gradientUnits="userSpaceOnUse">
+                              <stop stop-color="#009681" />
+                              <stop offset="1" stop-color="#007565" />
+                            </linearGradient>
+                            <clipPath id="clip0_4954_2132">
+                              <rect width="19" height="38" fill="white" transform="matrix(0 1 -1 0 38.5 0.277344)" />
+                            </clipPath>
+                          </defs>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    CFC also plays a pivotal role in fostering B2B matchmaking and strategic relationships among its members, including some of the world's most influential Fortune 500 companies. Moreover, CFC facilitates connections with key African decision makers, thanks to partnerships with investment promotion agencies in Africa, providing onthe-ground introductions to Africa's main economies.
+
+                  </div>
+                </div>
+
+
+                <!-- Add more cards as needed -->
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Tab 3 -->
+          <div class="content" id="tab3">
+            <div class="element--tabs-sc">
+              <h3>How to obtain the CFC status
+              </h3>
+
+            </div>
+            <section class="wrapper">
+              <div class="block">
+                <div class="each-year">
+
+
+
+                  <div class="each-event">
+                    <div class="line_arrow"></div>
+                    <div class="event-description">
+                      <div class="step-content">
+                        <div class="step-header">
+                          <span class="step-number">Step 1</span>
+                          <h3>Write a letter of intent</h3>
+                        </div>
+                        <p>
+                          To have its eligibility examined, a company wishing to obtain the CFC status
+                          shall contact the business development team within CFCA, and then send a letter
+                          of intent stating its will to become a CFC member and describing in detail its
+                          project.
+                        </p>
+                        <a href="./assets/pdf/Letter-intention.docx" class="download-link" download="">
+                          Download template
+                          <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="41" height="40"
+                              viewBox="0 0 41 40" fill="none">
+                              <path
+                                d="M6.77734 26.6733V28.3333C6.77734 29.6594 7.30413 30.9312 8.24181 31.8689C9.17949 32.8066 10.4513 33.3333 11.7773 33.3333H28.444C29.7701 33.3333 31.0419 32.8066 31.9795 31.8689C32.9172 30.9312 33.444 29.6594 33.444 28.3333V26.6667M20.1107 7.5V25.8333M20.1107 25.8333L25.944 20M20.1107 25.8333L14.2773 20"
+                                stroke="url(#paint0_linear_5830_5065)" stroke-width="4" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                              <defs>
+                                <linearGradient id="paint0_linear_5830_5065" x1="6.77734" y1="20.4167" x2="30.9566"
+                                  y2="17.6486" gradientUnits="userSpaceOnUse">
+                                  <stop stop-color="#009681" />
+                                  <stop offset="1" stop-color="#007565" />
+                                </linearGradient>
+                              </defs>
+                            </svg></span>
+                        </a>
+                        <p>
+                          The companies not yet established having requested the CFC Status shall benefit from an accelerated procedure for the creation of their legal entity at the Casablanca Regional Investment Center (within a 48 hours deadline after completion of creation file). Consequently, in order to benefit from this accelerated procedure, the companies shall necessarily contact the assistance team within
+<br>
+                          <span> CFCA </span><a href="mailto:guichetunique@cfca.ma">guichetunique@cfca.ma</a>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="each-event">
+                    <div class="line_arrow"></div>
+                    <div class="step-content">
+                      <div class="step-header">
+                        <span class="step-number">Step 2</span>
+                        <h3>Complete the Business Plan</h3>
+                      </div>
+                      <a href="./assets/pdf/BusinessPlanTemplate-5 (1).xlsx" class="download-link" download="">
+                        Download template
+                        <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="41" height="40"
+                            viewBox="0 0 41 40" fill="none">
+                            <path
+                              d="M6.77734 26.6733V28.3333C6.77734 29.6594 7.30413 30.9312 8.24181 31.8689C9.17949 32.8066 10.4513 33.3333 11.7773 33.3333H28.444C29.7701 33.3333 31.0419 32.8066 31.9795 31.8689C32.9172 30.9312 33.444 29.6594 33.444 28.3333V26.6667M20.1107 7.5V25.8333M20.1107 25.8333L25.944 20M20.1107 25.8333L14.2773 20"
+                              stroke="url(#paint0_linear_5830_5065)" stroke-width="4" stroke-linecap="round"
+                              stroke-linejoin="round" />
+                            <defs>
+                              <linearGradient id="paint0_linear_5830_5065" x1="6.77734" y1="20.4167" x2="30.9566"
+                                y2="17.6486" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#009681" />
+                                <stop offset="1" stop-color="#007565" />
+                              </linearGradient>
+                            </defs>
+                          </svg></span>
+                      </a>
+
+                    </div>
+                  </div>
+
+                  <div class="each-event">
+                    <div class="line_arrow"></div>
+                    <div class="event-description">
+                      <div class="step-content">
+                        <div class="step-header">
+                          <span class="step-number">Step 3</span>
+                          <h3>Fill out the application form</h3>
+                        </div>
+                        <a href="./assets/pdf/CFC-status-application-form_ENG-step-3.docx" class="download-link" download="">
+                          Download template
+                          <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="41" height="40"
+                              viewBox="0 0 41 40" fill="none">
+                              <path
+                                d="M6.77734 26.6733V28.3333C6.77734 29.6594 7.30413 30.9312 8.24181 31.8689C9.17949 32.8066 10.4513 33.3333 11.7773 33.3333H28.444C29.7701 33.3333 31.0419 32.8066 31.9795 31.8689C32.9172 30.9312 33.444 29.6594 33.444 28.3333V26.6667M20.1107 7.5V25.8333M20.1107 25.8333L25.944 20M20.1107 25.8333L14.2773 20"
+                                stroke="url(#paint0_linear_5830_5065)" stroke-width="4" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                              <defs>
+                                <linearGradient id="paint0_linear_5830_5065" x1="6.77734" y1="20.4167" x2="30.9566"
+                                  y2="17.6486" gradientUnits="userSpaceOnUse">
+                                  <stop stop-color="#009681" />
+                                  <stop offset="1" stop-color="#007565" />
+                                </linearGradient>
+                              </defs>
+                            </svg></span>
+                        </a>
+
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="each-event">
+                    <div class="line_arrow"></div>
+                    <div class="event-description">
+                      <div class="step-content">
+                        <div class="step-header">
+                          <span class="step-number">Step 4</span>
+                          <h3>Sign the code of ethics</h3>
+                        </div>
+                        <a href="./assets/pdf/CODE of ethics.docx" class="download-link" download="">
+                        Download template
+                        <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="41" height="40"
+                            viewBox="0 0 41 40" fill="none">
+                            <path
+                              d="M6.77734 26.6733V28.3333C6.77734 29.6594 7.30413 30.9312 8.24181 31.8689C9.17949 32.8066 10.4513 33.3333 11.7773 33.3333H28.444C29.7701 33.3333 31.0419 32.8066 31.9795 31.8689C32.9172 30.9312 33.444 29.6594 33.444 28.3333V26.6667M20.1107 7.5V25.8333M20.1107 25.8333L25.944 20M20.1107 25.8333L14.2773 20"
+                              stroke="url(#paint0_linear_5830_5065)" stroke-width="4" stroke-linecap="round"
+                              stroke-linejoin="round" />
+                            <defs>
+                              <linearGradient id="paint0_linear_5830_5065" x1="6.77734" y1="20.4167" x2="30.9566"
+                                y2="17.6486" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#009681" />
+                                <stop offset="1" stop-color="#007565" />
+                              </linearGradient>
+                            </defs>
+                          </svg></span>
+                        </a>
+
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="each-event">
+                    <div class="line_arrow"></div>
+                    <div class="event-description">
+                      <div class="step-content">
+                        <div class="step-header">
+                          <span class="step-number">Step 5</span>
+                          <h3>Pay the application fee </h3>
+                        </div>
+                        <!-- <a href="#" class="download-link">
+                          Download template
+                          <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="41" height="40"
+                              viewBox="0 0 41 40" fill="none">
+                              <path
+                                d="M6.77734 26.6733V28.3333C6.77734 29.6594 7.30413 30.9312 8.24181 31.8689C9.17949 32.8066 10.4513 33.3333 11.7773 33.3333H28.444C29.7701 33.3333 31.0419 32.8066 31.9795 31.8689C32.9172 30.9312 33.444 29.6594 33.444 28.3333V26.6667M20.1107 7.5V25.8333M20.1107 25.8333L25.944 20M20.1107 25.8333L14.2773 20"
+                                stroke="url(#paint0_linear_5830_5065)" stroke-width="4" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                              <defs>
+                                <linearGradient id="paint0_linear_5830_5065" x1="6.77734" y1="20.4167" x2="30.9566"
+                                  y2="17.6486" gradientUnits="userSpaceOnUse">
+                                  <stop stop-color="#009681" />
+                                  <stop offset="1" stop-color="#007565" />
+                                </linearGradient>
+                              </defs>
+                            </svg></span>
+                        </a> -->
+                        <p>
+                          <p>To get an estimated rate card for your company, please reach out to your key contact at
+                            CFC.</p>
+                          <p>File review and notification </p>
+                          <ul>
+                            <li>The file review by CFCA
+                            </li>
+                            <li> Notifying the company it was granted the CFC status</li>
+                          </ul>
+                          <p>Once the CFC status granted, the company must submit to CFCA on an annual basis:</p>
+                          <ul>
+                            <li>An annual reporting</li>
+                            <li>The payment of the CFC status annual fees. To get an estimated rate card for your
+                              company, please reach out to your key contact at CFCA.</li>
+                          </ul>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <div class="wrapper__all_telecharger-sc">
+              <div class="container">
+                <div class="all__telecharger_timeline">
+                  <div class="header">
+                    <h3>Download all documents at once?</h3>
+                    <a href="#" download>
+                      Download all documents
+                      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                        <path d="M6.66797 26.6733V28.3333C6.66797 29.6594 7.19475 30.9312 8.13243 31.8689C9.07012 32.8066 10.3419 33.3333 11.668 33.3333H28.3346C29.6607 33.3333 30.9325 32.8066 31.8702 31.8689C32.8079 30.9312 33.3346 29.6594 33.3346 28.3333V26.6667M20.0013 7.5V25.8333M20.0013 25.8333L25.8346 20M20.0013 25.8333L14.168 20" stroke="url(#paint0_linear_4753_22571)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                        <defs>
+                          <linearGradient id="paint0_linear_4753_22571" x1="6.66797" y1="20.4167" x2="30.8472" y2="17.6486" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#009681"/>
+                            <stop offset="1" stop-color="#007565"/>
+                          </linearGradient>
+                        </defs>
+                      </svg>
+                    </a>
+                  </div>
+                  <div class="content-last">
+                    <p><strong>Your application file is ready?</strong></p>
+                    <p>Your application file is now complete and ready for submission. Kindly send all the required documents to
+                      the following email address at your earliest convenience:</p>
+                    <p class="email"><a href="mailto:contact@cfca.ma">contact@cfca.ma</a></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+  </section>
+
+  <section class="contact---us" id="contact---us">
+    <div class="contact-container">
+      <!-- Left Form Section -->
+      <div class="contact-form">
+        <h3>I am interested in getting in touch with Casablanca Finance City</h3>
+        <!-- <form>
+          <div class="form-group">
+            <input type="text" placeholder="Company" />
+            <select>
+              <option>Country</option>
+              <option>Morocco</option>
+              <option>USA</option>
+              <option>France</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <input type="text" placeholder="First name" />
+            <input type="text" placeholder="Last name" />
+          </div>
+          <div class="form-group">
+            <input type="text" placeholder="Job title" />
+            <input type="email" placeholder="Email address" />
+          </div>
+          <textarea placeholder="Message"></textarea>
+          <button type="submit">Submit<svg xmlns="http://www.w3.org/2000/svg" width="59" height="61" viewBox="0 0 59 61"
+              fill="none">
+              <g clip-path="url(#clip0_4572_16618)">
+                <path
+                  d="M50.0615 28.9499C50.5223 29.4187 50.7812 30.0545 50.7812 30.7174C50.7812 31.3803 50.5223 32.0161 50.0615 32.4849L36.1547 46.6274C35.9279 46.8662 35.6567 47.0566 35.3567 47.1877C35.0568 47.3187 34.7342 47.3876 34.4078 47.3905C34.0814 47.3934 33.7577 47.3302 33.4556 47.2045C33.1534 47.0788 32.879 46.8931 32.6481 46.6584C32.4173 46.4237 32.2348 46.1445 32.1112 45.8373C31.9876 45.53 31.9254 45.2008 31.9282 44.8689C31.931 44.537 31.9989 44.2089 32.1277 43.9039C32.2565 43.5989 32.4438 43.323 32.6786 43.0924L42.389 33.2174H9.83332C9.18133 33.2174 8.55604 32.954 8.09501 32.4852C7.63399 32.0163 7.37498 31.3804 7.37498 30.7174C7.37498 30.0544 7.63399 29.4185 8.09501 28.9496C8.55604 28.4808 9.18133 28.2174 9.83332 28.2174L42.389 28.2174L32.6786 18.3424C32.2308 17.8709 31.983 17.2394 31.9886 16.5839C31.9942 15.9284 32.2528 15.3014 32.7086 14.8379C33.1644 14.3743 33.7809 14.1114 34.4255 14.1057C35.0701 14.1 35.691 14.352 36.1547 14.8074L50.0615 28.9499Z"
+                  fill="white"></path>
+              </g>
+              <defs>
+                <clipPath id="clip0_4572_16618">
+                  <rect width="60" height="59" fill="white" transform="matrix(0 -1 -1 0 59 60.7188)"></rect>
+                </clipPath>
+              </defs>
+            </svg></button>
+        </form> -->
+        <form>
+          <div class="form-group">
+            <div class="form-field">
+              <label for="company">Company <span class="required">*</span></label>
+              <input type="text" id="company" placeholder="Company" />
+            </div>
+            <div class="form-field">
+              <label for="country">Country <span class="required">*</span></label>
+              <select id="country">
+                <option>Country</option>
+                <option>Morocco</option>
+                <option>USA</option>
+                <option>France</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="form-field">
+              <label for="first-name">First name <span class="required">*</span></label>
+              <input type="text" id="first-name" placeholder="First name" />
+            </div>
+            <div class="form-field">
+              <label for="last-name">Last name <span class="required">*</span></label>
+              <input type="text" id="last-name" placeholder="Last name" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="form-field">
+              <label for="job-title">Job title <span class="required">*</span></label>
+              <input type="text" id="job-title" placeholder="Job title" />
+            </div>
+            <div class="form-field">
+              <label for="email">Email address <span class="required">*</span></label>
+              <input type="email" id="email" placeholder="Email address" />
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="message">Message</label>
+            <textarea id="message" placeholder="Message"></textarea>
+          </div>
+
+          <button type="submit">
+            Submit
+            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
+              <g clip-path="url(#clip0_5733_6151)">
+                <path
+                  d="M30.5462 16.9395C30.8274 17.2208 30.9854 17.6022 30.9854 18C30.9854 18.3977 30.8274 18.7792 30.5462 19.0605L22.0607 27.546C21.9223 27.6892 21.7568 27.8035 21.5738 27.8821C21.3908 27.9607 21.1939 28.0021 20.9948 28.0038C20.7956 28.0056 20.5981 27.9676 20.4137 27.8922C20.2294 27.8168 20.0619 27.7054 19.9211 27.5646C19.7802 27.4237 19.6689 27.2562 19.5934 27.0719C19.518 26.8876 19.4801 26.69 19.4818 26.4909C19.4835 26.2917 19.5249 26.0949 19.6035 25.9119C19.6821 25.7289 19.7964 25.5633 19.9397 25.425L25.8647 19.5H6.00017C5.60235 19.5 5.22082 19.3419 4.93951 19.0606C4.65821 18.7793 4.50017 18.3978 4.50017 18C4.50017 17.6021 4.65821 17.2206 4.93951 16.9393C5.22082 16.658 5.60235 16.5 6.00017 16.5H25.8647L19.9397 10.575C19.6664 10.2921 19.5152 9.91317 19.5187 9.51987C19.5221 9.12658 19.6798 8.75036 19.9579 8.47225C20.2361 8.19413 20.6123 8.03638 21.0056 8.03296C21.3989 8.02954 21.7778 8.18074 22.0607 8.45397L30.5462 16.9395Z"
+                  fill="white" />
+              </g>
+              <defs>
+                <clipPath id="clip0_5733_6151">
+                  <rect width="36" height="36" fill="white" transform="matrix(0 -1 -1 0 36 36)" />
+                </clipPath>
+              </defs>
+            </svg>
+          </button>
+        </form>
+
+      </div>
+
+      <!-- Right Image Section -->
+      <div class="contact-image">
+        <img src="./assets/images/contatc-img.png" alt="Office" />
+      </div>
+    </div>
+  </section>
+  <section class="section---filter-block">
+    <div class="container">
+      <div class="title-primary-sc mb-3">
+        <h2>What’s up in CFC?</h2>
+      </div>
+      <div class="card---filter">
+        <div class="filter" id="filter">
+          <!-- Alphabet buttons will be dynamically generated here -->
+        </div>
+
+        <div class="articles" id="articles">
+          <div class="article" data-title="CFCA and Groupe CDG co-hosted on Nov 13th">
+            <div class="articles-img">
+              <img src="./assets/images/image (2).png" alt="CFCA and Groupe CDG co-hosted on Nov 13th">
+            </div>
+            <div class="article-title">CFCA and Groupe CDG co-hosted on Nov 13th</div>
+            <div class="article-date"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="27" viewBox="0 0 26 27"
+                fill="none">
+                <g clip-path="url(#clip0_4698_14065)">
+                  <path
+                    d="M7.3749 0.71875C7.61625 0.71875 7.84771 0.814625 8.01837 0.985283C8.18902 1.15594 8.2849 1.3874 8.2849 1.62875V3.33045H18.057V1.64045C18.057 1.3991 18.1529 1.16764 18.3235 0.996983C18.4942 0.826325 18.7257 0.73045 18.967 0.73045C19.2083 0.73045 19.4398 0.826325 19.6105 0.996983C19.7811 1.16764 19.877 1.3991 19.877 1.64045V3.33045H23.4C24.0893 3.33045 24.7505 3.6042 25.238 4.09151C25.7256 4.57883 25.9997 5.23981 26 5.92915V24.12C25.9997 24.8094 25.7256 25.4704 25.238 25.9577C24.7505 26.445 24.0893 26.7188 23.4 26.7188H2.6C1.91066 26.7188 1.24954 26.445 0.761982 25.9577C0.274425 25.4704 0.000344669 24.8094 0 24.12L0 5.92915C0.000344669 5.23981 0.274425 4.57883 0.761982 4.09151C1.24954 3.6042 1.91066 3.33045 2.6 3.33045H6.4649V1.62745C6.46524 1.38633 6.56127 1.1552 6.73189 0.984823C6.90251 0.814446 7.13378 0.71875 7.3749 0.71875ZM1.82 10.7833V24.12C1.82 24.2225 1.84018 24.3239 1.87937 24.4185C1.91857 24.5132 1.97603 24.5992 2.04846 24.6716C2.12089 24.744 2.20687 24.8015 2.30151 24.8407C2.39614 24.8799 2.49757 24.9 2.6 24.9H23.4C23.5024 24.9 23.6039 24.8799 23.6985 24.8407C23.7931 24.8015 23.8791 24.744 23.9515 24.6716C24.024 24.5992 24.0814 24.5132 24.1206 24.4185C24.1598 24.3239 24.18 24.2225 24.18 24.12V10.8015L1.82 10.7833ZM8.6671 19.7234V21.8892H6.5V19.7234H8.6671ZM14.0829 19.7234V21.8892H11.9171V19.7234H14.0829ZM19.5 19.7234V21.8892H17.3329V19.7234H19.5ZM8.6671 14.5533V16.7191H6.5V14.5533H8.6671ZM14.0829 14.5533V16.7191H11.9171V14.5533H14.0829ZM19.5 14.5533V16.7191H17.3329V14.5533H19.5ZM6.4649 5.14915H2.6C2.49757 5.14915 2.39614 5.16932 2.30151 5.20852C2.20687 5.24772 2.12089 5.30518 2.04846 5.37761C1.97603 5.45004 1.91857 5.53602 1.87937 5.63066C1.84018 5.72529 1.82 5.82672 1.82 5.92915V8.96465L24.18 8.98285V5.92915C24.18 5.82672 24.1598 5.72529 24.1206 5.63066C24.0814 5.53602 24.024 5.45004 23.9515 5.37761C23.8791 5.30518 23.7931 5.24772 23.6985 5.20852C23.6039 5.16932 23.5024 5.14915 23.4 5.14915H19.877V6.35685C19.877 6.5982 19.7811 6.82966 19.6105 7.00032C19.4398 7.17098 19.2083 7.26685 18.967 7.26685C18.7257 7.26685 18.4942 7.17098 18.3235 7.00032C18.1529 6.82966 18.057 6.5982 18.057 6.35685V5.14915H8.2849V6.34515C8.2849 6.5865 8.18902 6.81796 8.01837 6.98862C7.84771 7.15928 7.61625 7.25515 7.3749 7.25515C7.13355 7.25515 6.90209 7.15928 6.73143 6.98862C6.56077 6.81796 6.4649 6.5865 6.4649 6.34515V5.14915Z"
+                    fill="#929292" />
+                </g>
+                <defs>
+                  <clipPath id="clip0_4698_14065">
+                    <rect width="26" height="26" fill="white" transform="translate(0 0.71875)" />
+                  </clipPath>
+                </defs>
+              </svg>01 Nov 2024</div>
+          </div>
+          <div class="article" data-title="Exploring Africa's Investment Potential">
+            <div class="articles-img">
+              <img src="./assets/images/image (1).png" alt="Exploring Africa's Investment Potential">
+            </div>
+            <div class="article-title">Exploring Africa's Investment Potential</div>
+            <div class="article-date"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="27" viewBox="0 0 26 27"
+                fill="none">
+                <g clip-path="url(#clip0_4698_14065)">
+                  <path
+                    d="M7.3749 0.71875C7.61625 0.71875 7.84771 0.814625 8.01837 0.985283C8.18902 1.15594 8.2849 1.3874 8.2849 1.62875V3.33045H18.057V1.64045C18.057 1.3991 18.1529 1.16764 18.3235 0.996983C18.4942 0.826325 18.7257 0.73045 18.967 0.73045C19.2083 0.73045 19.4398 0.826325 19.6105 0.996983C19.7811 1.16764 19.877 1.3991 19.877 1.64045V3.33045H23.4C24.0893 3.33045 24.7505 3.6042 25.238 4.09151C25.7256 4.57883 25.9997 5.23981 26 5.92915V24.12C25.9997 24.8094 25.7256 25.4704 25.238 25.9577C24.7505 26.445 24.0893 26.7188 23.4 26.7188H2.6C1.91066 26.7188 1.24954 26.445 0.761982 25.9577C0.274425 25.4704 0.000344669 24.8094 0 24.12L0 5.92915C0.000344669 5.23981 0.274425 4.57883 0.761982 4.09151C1.24954 3.6042 1.91066 3.33045 2.6 3.33045H6.4649V1.62745C6.46524 1.38633 6.56127 1.1552 6.73189 0.984823C6.90251 0.814446 7.13378 0.71875 7.3749 0.71875ZM1.82 10.7833V24.12C1.82 24.2225 1.84018 24.3239 1.87937 24.4185C1.91857 24.5132 1.97603 24.5992 2.04846 24.6716C2.12089 24.744 2.20687 24.8015 2.30151 24.8407C2.39614 24.8799 2.49757 24.9 2.6 24.9H23.4C23.5024 24.9 23.6039 24.8799 23.6985 24.8407C23.7931 24.8015 23.8791 24.744 23.9515 24.6716C24.024 24.5992 24.0814 24.5132 24.1206 24.4185C24.1598 24.3239 24.18 24.2225 24.18 24.12V10.8015L1.82 10.7833ZM8.6671 19.7234V21.8892H6.5V19.7234H8.6671ZM14.0829 19.7234V21.8892H11.9171V19.7234H14.0829ZM19.5 19.7234V21.8892H17.3329V19.7234H19.5ZM8.6671 14.5533V16.7191H6.5V14.5533H8.6671ZM14.0829 14.5533V16.7191H11.9171V14.5533H14.0829ZM19.5 14.5533V16.7191H17.3329V14.5533H19.5ZM6.4649 5.14915H2.6C2.49757 5.14915 2.39614 5.16932 2.30151 5.20852C2.20687 5.24772 2.12089 5.30518 2.04846 5.37761C1.97603 5.45004 1.91857 5.53602 1.87937 5.63066C1.84018 5.72529 1.82 5.82672 1.82 5.92915V8.96465L24.18 8.98285V5.92915C24.18 5.82672 24.1598 5.72529 24.1206 5.63066C24.0814 5.53602 24.024 5.45004 23.9515 5.37761C23.8791 5.30518 23.7931 5.24772 23.6985 5.20852C23.6039 5.16932 23.5024 5.14915 23.4 5.14915H19.877V6.35685C19.877 6.5982 19.7811 6.82966 19.6105 7.00032C19.4398 7.17098 19.2083 7.26685 18.967 7.26685C18.7257 7.26685 18.4942 7.17098 18.3235 7.00032C18.1529 6.82966 18.057 6.5982 18.057 6.35685V5.14915H8.2849V6.34515C8.2849 6.5865 8.18902 6.81796 8.01837 6.98862C7.84771 7.15928 7.61625 7.25515 7.3749 7.25515C7.13355 7.25515 6.90209 7.15928 6.73143 6.98862C6.56077 6.81796 6.4649 6.5865 6.4649 6.34515V5.14915Z"
+                    fill="#929292" />
+                </g>
+                <defs>
+                  <clipPath id="clip0_4698_14065">
+                    <rect width="26" height="26" fill="white" transform="translate(0 0.71875)" />
+                  </clipPath>
+                </defs>
+              </svg>01 Nov 2024</div>
+          </div>
+          <div class="article" data-title="Casablanca Finance City (CFC) took part">
+            <div class="articles-img">
+              <img src="./assets/images/image.png" alt="Casablanca Finance City (CFC) took part">
+            </div>
+            <div class="article-title">casablanca Finance City (CFC) took part</div>
+            <div class="article-date"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="27" viewBox="0 0 26 27"
+                fill="none">
+                <g clip-path="url(#clip0_4698_14065)">
+                  <path
+                    d="M7.3749 0.71875C7.61625 0.71875 7.84771 0.814625 8.01837 0.985283C8.18902 1.15594 8.2849 1.3874 8.2849 1.62875V3.33045H18.057V1.64045C18.057 1.3991 18.1529 1.16764 18.3235 0.996983C18.4942 0.826325 18.7257 0.73045 18.967 0.73045C19.2083 0.73045 19.4398 0.826325 19.6105 0.996983C19.7811 1.16764 19.877 1.3991 19.877 1.64045V3.33045H23.4C24.0893 3.33045 24.7505 3.6042 25.238 4.09151C25.7256 4.57883 25.9997 5.23981 26 5.92915V24.12C25.9997 24.8094 25.7256 25.4704 25.238 25.9577C24.7505 26.445 24.0893 26.7188 23.4 26.7188H2.6C1.91066 26.7188 1.24954 26.445 0.761982 25.9577C0.274425 25.4704 0.000344669 24.8094 0 24.12L0 5.92915C0.000344669 5.23981 0.274425 4.57883 0.761982 4.09151C1.24954 3.6042 1.91066 3.33045 2.6 3.33045H6.4649V1.62745C6.46524 1.38633 6.56127 1.1552 6.73189 0.984823C6.90251 0.814446 7.13378 0.71875 7.3749 0.71875ZM1.82 10.7833V24.12C1.82 24.2225 1.84018 24.3239 1.87937 24.4185C1.91857 24.5132 1.97603 24.5992 2.04846 24.6716C2.12089 24.744 2.20687 24.8015 2.30151 24.8407C2.39614 24.8799 2.49757 24.9 2.6 24.9H23.4C23.5024 24.9 23.6039 24.8799 23.6985 24.8407C23.7931 24.8015 23.8791 24.744 23.9515 24.6716C24.024 24.5992 24.0814 24.5132 24.1206 24.4185C24.1598 24.3239 24.18 24.2225 24.18 24.12V10.8015L1.82 10.7833ZM8.6671 19.7234V21.8892H6.5V19.7234H8.6671ZM14.0829 19.7234V21.8892H11.9171V19.7234H14.0829ZM19.5 19.7234V21.8892H17.3329V19.7234H19.5ZM8.6671 14.5533V16.7191H6.5V14.5533H8.6671ZM14.0829 14.5533V16.7191H11.9171V14.5533H14.0829ZM19.5 14.5533V16.7191H17.3329V14.5533H19.5ZM6.4649 5.14915H2.6C2.49757 5.14915 2.39614 5.16932 2.30151 5.20852C2.20687 5.24772 2.12089 5.30518 2.04846 5.37761C1.97603 5.45004 1.91857 5.53602 1.87937 5.63066C1.84018 5.72529 1.82 5.82672 1.82 5.92915V8.96465L24.18 8.98285V5.92915C24.18 5.82672 24.1598 5.72529 24.1206 5.63066C24.0814 5.53602 24.024 5.45004 23.9515 5.37761C23.8791 5.30518 23.7931 5.24772 23.6985 5.20852C23.6039 5.16932 23.5024 5.14915 23.4 5.14915H19.877V6.35685C19.877 6.5982 19.7811 6.82966 19.6105 7.00032C19.4398 7.17098 19.2083 7.26685 18.967 7.26685C18.7257 7.26685 18.4942 7.17098 18.3235 7.00032C18.1529 6.82966 18.057 6.5982 18.057 6.35685V5.14915H8.2849V6.34515C8.2849 6.5865 8.18902 6.81796 8.01837 6.98862C7.84771 7.15928 7.61625 7.25515 7.3749 7.25515C7.13355 7.25515 6.90209 7.15928 6.73143 6.98862C6.56077 6.81796 6.4649 6.5865 6.4649 6.34515V5.14915Z"
+                    fill="#929292" />
+                </g>
+                <defs>
+                  <clipPath id="clip0_4698_14065">
+                    <rect width="26" height="26" fill="white" transform="translate(0 0.71875)" />
+                  </clipPath>
+                </defs>
+              </svg>01 Nov 2024</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Section Footer-->
+
+  <footer class="bg-dark text-light py-5">
+    <div class="container">
+      <div class="row">
+        <!-- Copyright -->
+        <div class="text-center mb-4">
+          <p class="mb-0">&copy; 2024 Casablanca Finance City | All rights reserved.</p>
+        </div>
+        <!-- Logo and Social Links -->
+        <div class="col-md-4 ">
+          <img src="./assets/images/Logo_footer.png" alt="Casablanca Finance City" class="mb-3" width="200">
+
+          <div class="social-icons">
+            <a href="https://instagram.com" target="_blank">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://twitter.com" target="_blank">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://youtube.com" target="_blank">
+              <i class="fab fa-youtube"></i>
+            </a>
+            <a href="https://linkedin.com" target="_blank">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </div>
+
+
+        </div>
+
+        <!-- Stay Updated -->
+        <div class="col-md-4">
+          <h5>Stay Updated</h5>
+          <p>
+            We will keep you informed on the items that matter to you most.
+            More than a world-class financial centre, CFC is also a vibrant community of retail and lifestyle.
+            Sign up to our mailing list and we will keep you informed on the items that matter to you most.
+          </p>
+          <form class="d-flex mt-3">
+            <input type="email" class="form-control rounded-pill" placeholder="Email.." required="">
+            <button type="submit" class="form--news">Subscribe <i class="fas fa-arrow-right ms-2"></i></button>
+          </form>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="col-md-4">
+          <h5>Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-light text-decoration-none">Contact</a></li>
+            <li><a href="#" class="text-light text-decoration-none">Legal Notice</a></li>
+            <li><a href="#" class="text-light text-decoration-none">Downloads</a></li>
+            <li><a href="#" class="text-light text-decoration-none">Privacy Policy</a></li>
+            <li><a href="#" class="text-light text-decoration-none">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+
+
+    </div>
+  </footer>
+
+
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="./assets/js/jquery-3.7.1.min.js"></script>
+
+
+  <!-- Bootstrap JS -->
+  <script src="./assets/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Owl Carousel JS -->
+  <script src="./assets/js/owl.carousel.min.js"></script>
+
+  <script src="./assets/js/slick.min.js"></script>
+
+  <!-- AOS JS -->
+  <script src="./assets/js/aos.js"></script>
+  <!-- <script src="./assets/js/highmaps.js"></script>
+  <script src="./assets/js/jquery.mapRegion.js"></script> -->
+
+  <!-- Your custom JS scripts -->
+  <script src="./assets/js/scripts.js"></script>
+
+  <!--  -->
+
+</body>
+
+</html>

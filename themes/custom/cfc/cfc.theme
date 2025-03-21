@@ -1,0 +1,335 @@
+<?php
+
+// use Drupal;
+use Drupal\taxonomy\Entity\Term;
+use Drupal\views\ViewExecutable;
+use Drupal\Core\Menu\MenuTreeParameters;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\webform\WebformInterface;
+use Drupal\captcha\CaptchaPointInterface;
+
+
+/**
+ * Implements hook_preprocess_HOOK() for page templates.
+ */
+function cfc_preprocess_page(array &$variables)
+{
+
+}
+function cfc_preprocess(&$variables, $hook)
+{
+  $route_name = \Drupal::routeMatch()->getRouteName();
+  $request = \Drupal::request();
+  $route_name = \Drupal::routeMatch()->getRouteName();
+
+  $currentLanguageCode = \Drupal::languageManager()
+    ->getCurrentLanguage()
+    ->getId();
+  $currentLanguageCode = \Drupal::languageManager()
+    ->getCurrentLanguage()
+    ->getId();
+
+  $variables['language_id'] = $currentLanguageCode;
+  $variables['language_name'] = \Drupal::languageManager()->getCurrentLanguage()->getName();
+  $variables['language_id'] = $currentLanguageCode;
+  $variables['language_name'] = \Drupal::languageManager()->getCurrentLanguage()->getName();
+
+  $variables['route_name'] = $route_name;
+
+
+}
+// function cfc_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+// // dump($form_id);
+//   if ($form_id == 'webform_submission_contact_add_form') {
+//     // dump($form['actions']['submit']['#submit']);
+//     $form['actions']['submit']['#submit'][0] = 'confirmation_message_form_submit';
+//   }
+// }
+
+// /**
+//  * Custom submit handler for the form.
+//  */
+// function confirmation_message_form_submit(&$form, \Drupal\Core\Form\FormStateInterface $form_state) {
+//   // die("test");
+//   // $image_url = file_create_url('public://image.jpg');
+
+//   $message = [
+//     '#markup' => '<div class="confirmation-message"><p>Thank you for your submission!</p>' .
+//                  '<img src="" alt="Confirmation Image" /></div>',
+//   ];
+
+//   \Drupal::messenger()->addStatus(\Drupal::service('renderer')->render($message));
+// }
+/**
+ * Implements hook_preprocess_HOOK() for block templates.
+ */
+function cfc_preprocess_block(array &$variables)
+{
+  // Check if the block is from a view.
+  if (!empty($variables['elements']['#view'])) {
+    // Print the name of the hook for the block being rendered.
+    if (module_exists('devel')) {
+      dpm('Block hook: ' . __FUNCTION__); // Display the hook name.
+      dpm($variables); // Optionally display the block variables.
+    }
+  }
+}
+function cfc_theme_suggestions_views_view_alter(array &$suggestions, array $variables)
+{
+  return [
+    'views_view__' . $variables['view']->id()
+  ];
+}
+/**
+ * Implements hook_preprocess_HOOK() for page templates.
+ */
+
+function cfc_preprocess_breadcrumb(array &$variables)
+{
+  if (\Drupal::routeMatch()->getRouteName() == 'view.videos.page_1') {
+    // Get the taxonomy term name from the route parameters.
+    $term_id = \Drupal::routeMatch()->getParameter('category');
+    $language_interface = \Drupal::languageManager()->getCurrentLanguage();
+    $code_lang = $language_interface->getId();
+    $term = Term::load($term_id);
+    if ($term->hasTranslation($code_lang)) {
+      $variables['breadcrumb'][3] = ['text' => $term->getTranslation($code_lang)->getName(), 'url' => ''];
+    }
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter() for node templates.
+ */
+/**
+ * Implements hook_theme_suggestions_HOOK_alter() for node templates.
+ */
+// function cfc_theme_suggestions_node_alter(array &$suggestions, array $variables) {
+//   // Get the node object.
+//   $node = $variables['node'];
+
+//   // Add content type based suggestion (e.g., node--article.html.twig).
+//   $suggestions[] = 'node__' . $node->getType();
+
+//   // Add suggestion based on node ID (e.g., node--1.html.twig).
+//   $suggestions[] = 'node__' . $node->id();
+
+//   // Optionally add suggestions for specific content types and other conditions.
+//   if ($node->getType() == 'article') {
+//     $suggestions[] = 'node__article__custom';
+//   }
+
+//   // You can add more logic here to create more granular template suggestions.
+// }
+
+function cfc_theme_suggestions_node_alter(array &$suggestions, array $variables)
+{
+  // Use $variables variable to get data related to your node
+  $node_name = $variables["elements"]["#node"]->get("title")->value;
+  //  dump($node);
+
+  $modifiedText = str_replace(' ', '_', $node_name);
+
+
+  $suggestions[] = "node__" . $modifiedText;
+}
+
+function cfc_theme_suggestions_form_alter(array &$suggestions, array $variables)
+{
+  if ($variables['element']['#form_id'] == 'search_block_form') {
+    $suggestions[] = 'form__search_block_form';
+  }
+  $form_id = $variables['element']['#form_id'];
+  $suggestions[] = 'form__' . str_replace('-', '_', $form_id);
+}
+function cfc_theme_suggestions_views_exposed_form_alter(array &$suggestions, array $variables)
+{
+  $suggestions[] = 'views_exposed_form__' . str_replace(
+    ['views-exposed-form-', '-'],
+    ['', '_'],
+    $variables['form']['#id']
+  );
+}
+
+function cfc_form_search_block_form_alter(&$form, &$form_state, $form_id)
+{
+  $form['keys']['#attributes']['class'][] = 'form-control form-control-lg';
+  $form['actions']["submit"]['#attributes']['class'] = ['button js-form-submit form-submit submit----input'];
+}
+
+function cfc_preprocess_views_exposed_form(&$variables)
+{
+  $form = &$variables['form'];
+
+  // Ensure the 'search' field is defined
+  if (!isset($form['search'])) {
+    $form['search'] = [
+      '#type' => 'textfield',
+      '#attributes' => ['placeholder' => t('Search...')],
+    ];
+  }
+}
+
+//
+// function cfc_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+// // dump($form_id);
+//   if ($form_id == 'webform_submission_contact_add_form') {
+//     // dump($form['actions']['submit']['#submit']);
+//     $form['actions']['submit']['#submit'][0] = 'confirmation_message_form_submit';
+//   }
+//   // dump($form_id);
+//   // $form['actions']['submit']['#submit'][0] = 'confirmation_message_form_submit';
+
+//   //
+
+// }
+// function confirmation_message_form_submit(&$form, FormStateInterface $form_state) {
+//   // die();
+//   \Drupal::messenger()->addMessage('Thank you for your submission!');
+
+// }
+
+/**
+ * Implements hook_form_alter().
+ */
+// function cfc_theme_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+//   if ($form_id === 'views_exposed_form' && isset($form['field_list_filter_categorie_value'])) {
+//     foreach ($form['field_list_filter_categorie_value']['#options'] as $key => $value) {
+//       if ($value === '- Any -') {
+//         $form['field_list_filter_categorie_value']['#options'][$key] = 'All';
+//       }
+//     }
+//   }
+// }
+function cfc_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id)
+{
+
+  // Replace 'contact' with your webform's machine name.
+  // "#webform_id" => "contact_modal_maps"
+
+  if ($form['#webform_id'] === 'contact_modal_maps') {
+    // dd($form['#webform_id']);
+
+
+
+  }
+}
+
+
+
+/**
+ * Implements hook_form_alter().
+ */
+function cfc_form_user_login_form_alter(&$form, &$form_state, $form_id) {
+  // Modify username field.
+  $form['name']['#title_display'] = 'invisible';
+  $form['name']['#attributes']['id'] = ['bannerInput'];
+  $form['name']['#attributes']['class'] = ['form-control', 'border-2', 'py-md-3'];
+  $form['name']['#attributes']['placeholder'] = t('Adresse mail');
+  $form['name']['#theme_wrappers'] = [];
+
+  // Modify password field.
+  $form['pass']['#title_display'] = 'invisible';
+  $form['pass']['#attributes']['id'] = ['login_pwd'];
+  $form['pass']['#attributes']['class'] = ['form-control', 'border-2', 'py-md-3'];
+  $form['pass']['#attributes']['placeholder'] = t('Mot de passe');
+  $form['pass']['#theme_wrappers'] = [];
+
+  // Modify "Remember Me" checkbox.
+  if (isset($form['persistent_login'])) {
+    $form['persistent_login']['#title_display'] = 'invisible';
+    $form['persistent_login']['#attributes']['id'] = 'switch';
+    $form['persistent_login']['#theme_wrappers'] = [];
+  }
+
+  // Modify submit button.
+  $form['actions']['submit']['#attributes']['class'] = ['btn', 'btn-primary'];
+
+  // Add reCAPTCHA to the form.
+  // $form['captcha'] = [
+  //   '#type' => 'captcha',
+  //   '#captcha_type' => 'recaptcha/reCAPTCHA',
+  // ];
+  // $form['captcha']['#required'] = TRUE;
+
+  // // Add custom validation handler.
+  // $form['#validate'][] = 'cfc_validate_captcha';
+}
+
+// function cfc_preprocess_views_view(&$variables) {
+//   if ($variables["view"]->storage->id() == 'news' && $variables["display_id"] == "page_1") {
+//     // Access the view object.
+//     $view = $variables["view"];
+    
+//     // Check if the view has results.
+//     if (!empty($view->result)) {
+//       // Iterate through each result row.
+//       foreach ($view->result as $row) {
+//         // Access the field_date value.
+//         if (isset($row->_entity->field_date->value)) {
+//           $date_value = $row->_entity->field_date->value;
+//           // Do something with the date value.
+//           dump($date_value);
+//         }
+//       }
+//     }
+//   }
+// }
+
+/**
+ * Custom validation handler for reCAPTCHA.
+ */
+// function cfc_validate_captcha($form, &$form_state) {
+//   $captcha_response = \Drupal::request()->request->get('g-recaptcha-response');
+
+//   if (empty($captcha_response)) {
+//     \Drupal::messenger()->addError(t('Veuillez compléter le CAPTCHA avant de soumettre.'));
+//     $form_state->setErrorByName('captcha', t('Le CAPTCHA est requis.'));
+//   }
+// }
+
+// function cfc_form_user_login_form_alter(&$form, &$form_state, $form_id)
+// {
+//   $form['name']['#attributes']['placeholder'] = t('Adresse mail');
+//   $form['name']['#attributes']['class'][] = 'form-control border-2 py-md-3';
+
+//   $form['pass']['#attributes']['placeholder'] = t('Mot de passe');
+//   $form['pass']['#attributes']['class'][] = 'form-control border-2 py-md-3';
+
+//   // Attach reCAPTCHA v3 to the login form
+//   if (\Drupal::moduleHandler()->moduleExists('recaptcha_v3')) {
+//     $form['recaptcha_v3'] = [
+//       '#type' => 'recaptcha_v3',
+//       '#action' => 'login',
+//     ];
+//   }
+// }
+
+
+
+
+
+// if (\Drupal::currentUser()->isAnonymous()) {
+//   // Disable the user/password route for anonymous users.
+//   if (isset($routes['user.password'])) {
+//     unset($routes['user.password']);
+//   }
+// }
+// /**
+//  * Implements hook_route_alter().
+//  */
+// function cfc__route_alter(array &$routes) {
+//   die();
+//   // Check if the user is anonymous and alter the route for user/password.
+//   if (\Drupal::currentUser()->isAnonymous()) {
+//     // Disable the user/password route for anonymous users.
+//     if (isset($routes['user.password'])) {
+//       unset($routes['user.password']);
+//     }
+//   }
+// }
+
+
+/**
+ * Implements hook_route_alter().
+ */

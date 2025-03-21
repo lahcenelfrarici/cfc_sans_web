@@ -1,0 +1,66 @@
+{# Section Footer #}
+<section class="contact---us" id="contact---us">
+	<div
+		class="contact-container">
+		<!-- Left Form Section -->
+		<div class="contact-form">
+			<h3>{{'I am interested in getting in touch with Casablanca Finance City'|t}}</h3>
+
+			<div class="web__form_dr">
+				{{ drupal_entity('block','cfc_webform') }}
+			</div>
+		</div>
+
+		<!-- Right Image Section -->
+		<div class="contact-image">
+			<img src="/themes/custom/cfc/CFC/assets/images/contatc-img.png" alt="Office"/>
+		</div>
+	</div>
+</section>
+{#  #}
+<section class="section---filter-block">
+	{{ drupal_view('news','block_1') }}
+</section>
+
+<!-- Section Footer-->
+
+<footer class="bg-dark text-light py-5">
+	<div class="container">
+		<div
+			class="row">
+			<!-- Copyright -->
+			<div class="text-center mb-4">
+				<p class="mb-0">
+					{{ drupal_entity('block','cfc_copyright') }}</p>
+			</div>
+			<!-- Logo and Social Links -->
+			<div class="col-md-4 ">
+				{{ drupal_entity('block','cfc_logofooter') }}
+
+				{{ drupal_entity('block','cfc_socialmedia') }}
+
+
+			</div>
+
+			<!-- Stay Updated -->
+			<div class="col-md-4">
+				<h5>{{ 'Stay Updated'|t }}</h5>
+				{{ drupal_entity('block','cfc_stayupdated') }}
+				<form class="d-flex mt-3">
+					<input type="email" class="form-control rounded-pill" placeholder="Email.." required="">
+					<button type="submit" class="form--news">{{'Subscribe'|t}}
+						<i class="fas fa-arrow-right ms-2"></i>
+					</button>
+				</form>
+			</div>
+
+			<!-- Quick Links -->
+			<div class="col-md-4">
+
+				{{ drupal_entity('block','cfc_quicklinks') }}
+			</div>
+		</div>
+
+
+	</div>
+</footer>

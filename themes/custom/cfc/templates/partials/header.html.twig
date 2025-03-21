@@ -1,0 +1,13 @@
+<header class="bg-white shadow-sm header--menu" data-sticky-class="is-sticky">
+	<nav class="navbar navbar-expand-lg navbar-light container">
+		{{ drupal_entity('block','cfc_identitedusite') }}
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNav">
+			{% if page.primary_menu %}
+				{{page.primary_menu}}
+			{% endif %}
+		</div>
+	</nav>
+</header>

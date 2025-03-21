@@ -1,0 +1,1353 @@
+footer .row>div:last-child li a {
+  color: #fff;
+}
+
+footer .row>div:nth-child(2) a i {
+  color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity)) !important;
+  text-indent: -5px;
+}
+
+footer .row>div:nth-child(2) a i:before {
+  color: #fff;
+}
+
+
+#langue---style .dropdown-toggle {
+  -webkit-text-stroke-color: #000;
+  -webkit-appearance: none;
+  background-color: #fff;
+  ;
+  ;
+  color: #000;
+  -webkit-text-stroke-color: #000 !important;
+  font-family: "Averta CY";
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 50px;
+  -webkit-text-stroke-width: 0.5px;
+  ;
+  ;
+  border: 0;
+  ;
+}
+
+
+#langue---style li {
+  width: 88px;
+  display: flex;
+  align-items: center;
+  gap: 0 5px;
+  color: #000;
+  -webkit-text-stroke-color: #000 !important;
+  font-family: "Averta CY";
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 50px;
+  -webkit-text-stroke-width: 0.5px;
+  padding: 0 10px;
+}
+
+
+
+
+li#langue---style .dropdown-toggle::after {
+  padding: 0;
+  margin: 0;
+}
+
+#langue---style .dropdown-toggle img {
+  margin: 0 4px;
+}
+
+#langue---style .dropdown-toggle svg {
+  display: none;
+}
+
+#langue---style ul {
+  min-width: max-content;
+  /* top: 105px; */
+  right: 0;
+}
+
+.articles .article-title a {
+  color: var(--WF-Base-800, #2D3648);
+  -webkit-text-stroke-width: 0.20000000298023224;
+  -webkit-text-stroke-color: #151515;
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+  /* 21.6px */
+  letter-spacing: 0.18px;
+}
+
+.investment-box a {
+  color: white !important;
+}
+
+.investment.african_insights a {
+  color: #151515 !important;
+}
+
+.emblemes_href .tabs--item .active a {
+  background: #EEFFFD;
+  border: 5px solid rgba(1, 148, 128, 0.6);
+}
+
+.emblemes_href .tabs--item button {
+  padding: inherit;
+  background: initial;
+  /*! box-shadow: 0px 4px 44.1px 0px rgba(114, 170, 255, 0.25); */
+}
+
+.emblemes_href .tabs--item .active {
+  box-shadow: 0px 4px 44.1px 0px rgba(114, 170, 255, 0.25);
+  box-shadow: initial;
+  border: initial;
+}
+
+.search-filter form input {
+  border-radius: 100px !important;
+}
+
+#form__drupal_sb input {
+  min-height: calc(1.5em + 1rem + calc(var(--bs-border-width) * 2));
+  padding: .5rem 1rem;
+  font-size: 1.25rem;
+  border-radius: var(--bs-border-radius-lg);
+}
+
+#form__drupal_sb form .js-form-item {
+  position: relative;
+}
+
+#form__drupal_sb form .btn {
+
+  top: -8px;
+  right: 40px;
+  bottom: 0;
+  width: auto;
+  z-index: 333;
+
+  padding: 0;
+  height: auto;
+}
+
+#form__drupal_sb .btn input {
+  outline: none;
+  font-size: 0;
+  display: inline-block;
+  background: transparent;
+  background-position-x: 0%;
+  background-position-y: 0%;
+  background-repeat: repeat;
+  background-image: none;
+  background-size: auto;
+  transform: translate(20%, 12%);
+  border: 0;
+  margin: 0;
+  padding: 0;
+  height: auto;
+  width: 32px;
+  background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%23000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"%3E%3Ccircle cx="11" cy="11" r="8" /%3E%3Cline x1="16.5" y1="16.5" x2="22" y2="22" /%3E%3C/svg%3E');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+  position: relative;
+  top: 0;
+  z-index: 9999;
+}
+
+section#banner-title .slider-content {
+  top: 30px;
+}
+
+.investment.african_insights.african_pioneer #acc-card-6-column .card-header {
+  padding: 15px 0;
+}
+
+.img--pays-el img {
+  width: 50%;
+  height: auto;
+  object-fit: contain;
+}
+
+section.banner_status_slider .wrapper-slider---img img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.parnet--title {
+  display: none;
+}
+
+#five_box_two_colon .member {
+  height: 150px;
+}
+
+section.filter--pays-elements .slick-track {
+  height: 362px;
+}
+
+section#maps--with-select-pays .item-wrap.color---path {
+  fill: #018d71 !important;
+}
+
+.maps-africa .item-wrap.color---path {
+  fill: #E57E39 !important;
+}
+
+section#maps--with-select-pays .item-wrap:hover {
+  fill: #018d71 !important;
+}
+
+.maps-africa .item-wrap:hover {
+  fill: #E57E39 !important;
+}
+
+section#banner-title .slider-video img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.section---filter-block .articles {
+  flex-wrap: wrap;
+}
+
+.web__form_dr form .js-form-item {
+  width: 49%;
+}
+
+.web__form_dr form {
+  flex-direction: row;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.web__form_dr form .form-item-message {
+  width: 100%;
+}
+
+.web__form_dr form>div .form-required:after {
+  content: " *";
+  color: red;
+}
+
+.slider-content .wrapper_submit input {
+  background: transparent;
+  color: #007bff;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  color: #FFF;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: #FFF;
+  font-family: "Averta CY";
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 52px;
+  text-align: right;
+  display: flex;
+  justify-content: right;
+  position: relative;
+  right: -12px;
+  display: flex;
+  gap: 0 18px;
+}
+
+.slider-content .wrapper_submit {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: right;
+}
+
+.web__form_dr form div#edit-actions--2 {
+  width: 100%;
+}
+
+.web__form_dr form .js-form-item label {
+  color: #FFF;
+  font-family: "Averta CY";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  margin-bottom: 10px;
+  padding-left: 20px;
+}
+
+.web__form_dr form div#edit-actions {
+  width: 100%;
+}
+
+#list--news-all .card {
+  border-radius: 17px;
+  overflow: hidden;
+}
+
+#list--news-all .card img {
+  object-fit: cover;
+  width: 100%;
+  aspect-ratio: 16/9;
+}
+
+.rapport_size_img #list--news-all .card img {
+  height: 50vh;
+  object-fit: contain;
+}
+
+
+.filter-wp .wrapper_submit svg {
+  display: none;
+}
+
+.filter-wp .wrapper_submit input {
+  height: 100%;
+}
+
+.filter-wp .wrapper_submit {
+  height: 100%;
+}
+
+.filter-champs>.js-form-item {
+  height: 100%;
+}
+
+.search-icon svg {
+  top: 10px;
+}
+
+#form__drupal_sb form .btn svg {
+  opacity: 0;
+}
+
+.sc_search #views-exposed-form-search-content-block-1 {
+  text-align: left;
+  margin: 0;
+  margin-top: 20px;
+}
+
+.sc_search #views-exposed-form-search-content-block-1 .btn {
+  right: 73px;
+}
+
+/* .sc_search #views-exposed-form-search-content-block-1 .btn {
+  right: 73px;
+} */
+
+.page-node-type-events #banner-title {
+  display: none;
+}
+
+.page-node-type-news #banner-title {
+  display: none;
+}
+
+.wisiwyg h3,
+.wisiwyg h4,
+.wisiwyg h5,
+.wisiwyg h6 {
+  font-weight: bold;
+  padding: 10px 0;
+}
+
+#detail__rapport .img--detail img {
+  height: 100%;
+  object-fit: cover;
+  width: auto;
+  margin: auto;
+}
+
+#detail__rapport .img--detail {
+  height: 600px;
+  margin: auto;
+}
+
+.page-node-type-rapports #banner-title {
+  display: none;
+}
+
+#detail__rapport .container {
+  text-align: center;
+}
+
+#detail__rapport .container .article-date {
+  text-align: center;
+  margin: auto;
+}
+
+.form__formualaire input {
+  width: 48%;
+}
+
+.form__formualaire {
+  width: 100%;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: space-between;
+}
+
+button#send-request-btn {
+  text-align: center;
+  margin: auto;
+}
+
+.result-title h3 {
+  color: #151515;
+  -webkit-text-stroke-width: 0.20000000298023224px;
+  -webkit-text-stroke-color: #151515;
+  font-family: Inter;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+  letter-spacing: 0.48px;
+}
+
+.result-title h3 span {
+  font-weight: bold;
+}
+
+.result-title p {
+  color: #333;
+  font-family: "Averta CY";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px;
+}
+
+.path-search #banner-title {
+  height: 460px;
+}
+
+/* .wisiwyg h3, .wisiwyg h4, .wisiwyg h5, .wisiwyg h6 {
+  font-weight: bold;
+  padding: 10px 0;
+} */
+.web__form_dr .wrapper_submit .form-submit {
+  margin-top: 15px;
+  background: transparent;
+  color: #007bff;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  color: #FFF;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: #FFF;
+  font-family: "Averta CY";
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 52px;
+  text-align: right;
+  display: flex;
+  justify-content: right;
+  position: relative;
+  /*! right: -12px; */
+  display: flex;
+  gap: 0 18px;
+  margin: 0;
+  line-height: normal;
+  padding: 0 !important;
+  margin: 0;
+  top: 3px;
+  gap: 0;
+  width: 100%;
+  padding: 0 21px !important;
+}
+
+#pg_benefits .web__form_dr form .form-item-job-title {
+  width: 100%;
+}
+
+#pg_benefits .web__form_dr form .wrapper_submit {
+  padding-top: 10px;
+}
+
+#pg_benefits .web__form_dr form {
+  gap: 25px 0;
+}
+
+.ui-dialog button.ui-dialog-titlebar-close {
+  z-index: 999;
+}
+
+.web__form_dr #edit-actions-submit,
+.web__form_dr #edit-actions-submit--2 {
+  margin-top: 15px;
+  background: transparent;
+  color: #007bff;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  color: #FFF;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: #FFF;
+  font-family: "Averta CY";
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 52px;
+  text-align: right;
+  display: flex;
+  justify-content: right;
+  position: relative;
+  /*! right: -12px; */
+  display: flex;
+  gap: 0 18px;
+  margin: 0;
+  line-height: normal;
+  padding: 0 !important;
+  margin: 0;
+  top: 3px;
+  gap: 0;
+  width: 100%;
+  padding: 0 21px !important;
+}
+
+.web__form_dr .wrapper_submit {
+  display: block ruby;
+  align-content: center;
+  justify-content: center;
+  height: 103px;
+  /*! background: red; */
+  margin: auto;
+  flex-direction: column;
+  position: relative;
+  right: 10px;
+}
+
+.web__form_dr .wrapper_submit svg {
+  position: relative;
+  right: 15px;
+  top: 0;
+}
+
+.webform-confirmation-modal--content h3 {
+  text-align: center;
+  -webkit-text-stroke-color: #007565;
+  font-family: "Averta CY";
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 52px;
+  background: var(--lin, linear-gradient(84deg, #009681 4.99%, #007565 87.68%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.webform-confirmation-modal--content p {
+  color: #151515;
+  text-align: center;
+  font-family: "Averta CY";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 34px;
+  margin-top: 12px;
+}
+
+.webform-confirmation-modal>div {
+  background: #fff;
+  border: 0;
+}
+
+.webform-confirmation-modal>div>span {
+  opacity: 0;
+}
+
+.webform-confirmation-modal {
+  border-radius: 20px;
+}
+
+.webform-confirmation-modal--content a {
+  border: 0;
+  outline: none;
+  box-shadow: initial;
+}
+
+.webform-confirmation-modal div span {
+  border: 0;
+}
+
+.webform-confirmation-modal--content p {
+  border: 0;
+}
+
+.webform-confirmation-modal div img {
+  border: 0;
+}
+
+.webform-confirmation-modal div span {
+  text-align: center;
+  -webkit-text-stroke-width: 0.5;
+  -webkit-text-stroke-color: #000;
+  font-family: "Averta CY";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 52px;
+  background: var(--lin, linear-gradient(84deg, #009681 4.99%, #007565 87.68%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.webform-confirmation-modal div img {
+  width: auto;
+  height: auto;
+  padding: 10px;
+}
+
+.ui-dialog-titlebar-close {
+  background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%23000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"%3E%3Cline x1="18" y1="6" x2="6" y2="18" /%3E%3Cline x1="6" y1="6" x2="18" y2="18" /%3E%3C/svg%3E');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+  background-color: transparent;
+  border: 0;
+  position: relative;
+  font-size: 15px !important;
+  top: 20px !important;
+  right: 10px !important;
+}
+
+/*  */
+div#block-cfc-identitedusite {}
+
+div#block-cfc-identitedusite img {
+  width: 240px;
+}
+
+.form__formualaire {}
+
+.form__formualaire form>div {
+  width: 48%;
+}
+
+.form__formualaire form>div input {
+  width: 100%;
+}
+
+.form__formualaire form {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.form__formualaire form label {
+  display: none;
+}
+
+
+.form__formualaire form .wrapper_submit path {
+  fill: url(#paint0_linear_4948_4128);
+}
+
+.form__formualaire form .wrapper_submit input {
+  padding: 10px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+  color: #007565;
+  text-align: center;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: #007565;
+  font-family: "Averta CY";
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  box-shadow: initial;
+  outline: none;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  gap: 0 10px;
+  margin-top: 0;
+  text-align: center;
+  margin: auto;
+  width: auto;
+  margin: 5px;
+  padding: 0;
+}
+
+.form__formualaire form .wrapper_submit {
+  display: flex;
+  width: 100%;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  gap: 10px 10px;
+  margin-top: 20px;
+}
+
+.form__formualaire form div#edit-actions {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+}
+
+.form__formualaire form>div #edit-pdf {
+  display: none;
+}
+
+.wrapper-title-filter {
+  display: none;
+}
+
+.filter-wp {
+  margin: 0;
+}
+
+#effortless--wrapper svg .item-wrap:hover {
+  fill: #E57E39 !important;
+}
+
+#effortless--wrapper svg .color---path {
+  fill: #E57E39 !important;
+}
+
+section.banner_status .banner_status_img img {
+  height: 300px;
+  object-fit: cover;
+}
+
+.ui-dialog .ui-dialog-title {
+  height: 0 !important;
+}
+
+.contact-form .web__form_dr .wrapper_submit {
+  display: flex !important;
+  flex-direction: inherit;
+  width: 100%;
+  align-content: center;
+  justify-content: center;
+  height: auto;
+  padding-bottom: 20px;
+  margin-top: 15px;
+  margin: 0;
+  margin-right: 0;
+  justify-content: right;
+  text-align: right;
+  padding-right: 0;
+  right: 0;
+  left: auto;
+}
+
+.contact-form .web__form_dr .wrapper_submit svg {
+  top: 7px;
+  right: 0;
+}
+
+.contact-form #edit-actions-submit:hover:after {
+  content: "";
+  width: 100%;
+  background-color: #007565;
+  position: absolute;
+  bottom: 0;
+  height: 2px;
+  left: 0;
+}
+
+.contact-form .web__form_dr .wrapper_submit input {
+  width: auto !important;
+  right: 0;
+}
+
+.contact-form .web__form_dr .wrapper_submit:hover input {
+  text-decoration: underline;
+}
+
+.form__formualaire form>#edit-actions--2,
+.contact-form .web__form_dr form #edit-actions--4 {
+  width: 100%;
+}
+
+section.section---filter-block .article-title {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+
+
+#list--news-all .card img {
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.step-content a.download-link:hover {
+  text-decoration: underline;
+}
+
+#safe--sc-wrapper #acc-card-3-column .icon--african_pioneer {
+  align-items: center;
+}
+
+#block-cfc-effortlessbusinessconnectionsbloc2 a {
+  color: #fff !important;
+  text-decoration: underline;
+}
+
+#acc-card-6-column .icon--african_pioneer {
+  align-items: center;
+}
+
+.rectangle.mt-3 {
+  display: none;
+}
+
+.tabs--item button svg {
+  margin: 0 10px;
+}
+
+/* #maps__2_item .element-sc.active {
+  z-index: 9999;
+} */
+
+.show_title_1 .tabs---2 {
+  display: none;
+}
+
+.show_title_2 .tabs---2 {
+  display: block !important;
+}
+
+.show_title_2 .tabs---1 {
+  display: none;
+}
+
+.link___ex h4 {
+  color: var(--WF-Base-800, #2D3648);
+  font-family: Inter;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+  letter-spacing: 0.32px;
+}
+
+.link___ex h4 {
+  text-decoration: underline;
+}
+
+.link___ex {
+  color: var(--WF-Base-800, #2D3648);
+  font-family: Inter;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+  font-weight: bold;
+  font-size: 1.4vw;
+}
+
+.link___ex span a {
+  color: var(--WF-Base-800, #2D3648);
+}
+
+.link___ex span {
+  text-decoration: underline;
+}
+
+section.section---filter-block .title-primary-sc {
+  display: none;
+}
+
+/*  */
+.form__formualaire .form-actions {
+  width: 100%;
+}
+
+
+section.two___stories_vs .col-md-10 {
+  margin: auto;
+}
+
+section.two___stories_vs {}
+
+section.two___stories_vs .logo-success {
+  padding: 30px 0;
+  margin: auto;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+section.two___stories_vs .logo-success h4 {
+  font-size: 35px;
+}
+
+section.two___stories_vs {}
+
+section.two___stories_vs .success img.mb-5 {
+  height: 80vh;
+  width: auto;
+}
+
+
+
+@media (min-width: 992px) {
+  section.banner_status_slider .wrapper-slider---img {
+    width: 240px;
+  }
+
+  .investment.african_insights .investment-box img {
+    height: 65px;
+    object-fit: contain;
+    width: 65px;
+  }
+
+  #maps--with-select-pays .container-layout {
+    height: 80vh;
+  }
+
+  #maps--with-select-pays .container-layout svg {
+    height: 70vh;
+  }
+}
+
+.form__formualaire form .wrapper_submit:hover {
+  text-decoration: underline;
+}
+
+/*  */
+/* General Body Styles */
+
+.items--elements-ll #acc-card-6-column .card .card-body {
+  padding: 10px 40px;
+}
+
+.owl-carousel .Testimonials_slide {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 200px;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.Testimonials_slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.icon__play_vd {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 60px;
+  height: 60px;
+}
+
+/* Owl Carousel Default Styles */
+.owl-carousel .owl-nav {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+.owl-carousel .owl-nav button {
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 18px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.Testimonials_slide .owl-carousel .owl-nav button:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.Testimonials_slide .owl-carousel .owl-dots {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.Testimonials_slide .owl-carousel .owl-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: #ccc;
+  border-radius: 50%;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.Testimonials_slide .owl-carousel .owl-dot.active {
+  background: #007bff;
+}
+
+/* Modal Styles */
+.all_modale_albume {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.all_modale_albume.active {
+  display: flex;
+}
+
+.all_modale_albume video {
+  width: 80%;
+  max-height: 80%;
+  border-radius: 10px;
+}
+
+.all_modale_albume .close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+
+
+section.Testimonials_slide .owl-nav {
+  bottom: -2px;
+  /* background: red; */
+  position: absolute;
+  justify-content: center;
+  top: auto;
+  transform: translateY(33%);
+  gap: 0 100px;
+  align-items: center;
+}
+
+section.Testimonials_slide .owl-nav button span {
+  color: rgba(0, 103, 127, 1);
+}
+
+section.Testimonials_slide .owl-carousel .owl-dots button.active {
+  background: rgba(0, 103, 127, 1);
+}
+
+section.Testimonials_slide .owl-carousel .owl-dots button.active span {
+  color: rgba(0, 103, 127, 1);
+}
+
+section.Testimonials_slide .owl-carousel .owl-dots {}
+
+section.Testimonials_slide .owl-dots {
+  transform: translateY(50%);
+  padding: 0;
+  width: fit-content;
+  margin: auto;
+}
+
+section.Testimonials_slide .owl-carousel .owl-dots button {
+  background: #F5F9FF;
+  width: 17px;
+  height: 17px;
+}
+
+section.Testimonials_slide .owl-nav {
+  align-items: center;
+}
+
+section.Testimonials_slide .owl-nav button {
+  top: -3px;
+  position: relative;
+  z-index: 999;
+}
+
+.Testimonials_slide .owl-item {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.Testimonials_slide .owl-item.center {
+
+  z-index: 2;
+  /* Bring it to the front */
+  opacity: 1;
+  /* Ensure full visibility */
+}
+
+.Testimonials_slide .owl-item:not(.center) {
+  transform: scale(0.9);
+  /* Scale down non-centered items */
+  opacity: 0.7;
+  /* Make them slightly transparent */
+}
+
+.Testimonials_slide .owl-item {
+  padding: 10px;
+  /* Add spacing between items */
+}
+
+.Testimonials_slide .owl-item:not(.center) {
+  transform: scale(0.9);
+  margin-top: 36px;
+}
+
+
+section.organise_testimonials_slide .all___class_box_albume img {
+  height: 60vh;
+}
+
+section.organise_testimonials_slide .all___class_box_albume {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+button.form--news:hover {
+  text-decoration: underline;
+}
+
+footer .row>div:last-child li:hover {
+  text-decoration: underline;
+}
+
+.all___class_box_albume img {
+  border-radius: 30px;
+}
+
+
+.remove_height_vh .col-md-6 {
+  height: auto !important;
+}
+
+.remove_height_vh {
+  padding-bottom: 0;
+}
+
+section.organise_testimonials_slide {
+  padding-bottom: 0;
+}
+
+/* Annimation */
+.global_investment .custom-card:hover {
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+.tabs--item button:hover {
+  background: #EDEDED;
+}
+
+#five_box_two_colon .member {
+  width: 18% !important;
+}
+
+.wisiwyg .btn--pls {
+  margin: 0;
+}
+
+#no-members-message {
+  text-align: center;
+  padding: 20px;
+  font-size: 1.2em;
+  color: #666;
+  margin-top: 20px;
+}
+
+#no-members-message.hidden {
+  display: none;
+}
+
+#no-members-message[class=""]+.views-element-container+.slider-navigation {
+  display: none;
+}
+
+#acc-card-6-column .card-header:hover,
+#acc-card-3-column .card-header:hover {
+  background: #C6FAF4;
+}
+
+.banner_status_img {
+  overflow: hidden;
+  display: inline-block;
+
+}
+
+.banner_status_img img {
+  transition: transform 0.5s ease-in-out;
+}
+
+.banner_status_img:hover img {
+  transform: scale(1.1);
+}
+
+.team-card>div {
+  overflow: hidden;
+  /* Ensures the image does not exceed the container */
+  overflow: hidden;
+  display: inline-block;
+  border-radius: 20px;
+}
+
+.team-card img {
+  transition: transform 0.3s ease-in-out;
+  width: 100%;
+}
+
+.team-card:hover img {
+  transform: scale(1.1);
+}
+
+:root {
+  --linn: #007565;
+}
+
+section.team_member .row:hover {
+  background: var(--linn, linear-gradient(84deg, #009681 4.99%, #00241f 87.68%));
+}
+
+.col-md-4.right-tax .row>div {
+  transition: transform 0.3s ease-in-out;
+}
+
+.col-md-4.right-tax .row>div:hover {
+  transform: translateX(-27%);
+}
+
+.col-md-4.left-tax .row>div {
+  transition: transform 0.3s ease-in-out;
+}
+
+.col-md-4.left-tax .row>div:hover {
+  transform: translateX(27%);
+}
+
+.custom-card.card-doing:hover {
+  transform: translateY(-13px);
+}
+
+.custom-card.card-doing {
+  transition: transform 0.3s ease-in-out;
+}
+
+
+.african_pioneer ul li {
+  margin-bottom: 15px;
+  line-height: 30px;
+  color: #000;
+  font-family: "Averta CY";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal
+}
+
+div:has(#pg_benefits) #contact---us {
+  display: none;
+}
+
+.slider-content .search-wrapper label {
+  display: none;
+}
+
+#langue---style .dropdown-toggle img,
+#langue---style img {
+  width: 20px !important;
+  height: 14px !important;
+  object-fit: none;
+
+}
+
+#langue---style .dropdown-toggle img {
+  position: relative;
+  top: -2px;
+  right: -3px;
+}
+
+#langue---style .dropdown-toggle {
+  font-size: 18px !important;
+  text-transform: uppercase;
+}
+
+#langue---style .dropdown-toggle a {}
+
+#langue---style a {
+  font-size: 18px !important;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  color: #000
+}
+
+#safe--sc-wrapper div#acc-card-3-column .icon-african_pioneericon--card img {
+  width: auto;
+}
+
+/*  */
+
+.wisiwyg h2 {
+  line-height: normal !important;
+}
+.link___ex.text-left {
+  display: none;
+}
+.wisiwyg .btn--pls {
+  display: none;
+}
+
+.captcha__title.js-form-required.form-required {
+  display: none;
+}
+.captcha.captcha-type-challenge--recaptcha {
+  text-align: left;
+}
+section.two___stories_vs .d-flex.logo-success img, section.two___stories_vs .d-flex.logo-success h4 {
+  display: none !important;
+}
+video.all___class_box_albume.container {
+  border-radius: 30px;
+  height: 70vh;
+  overflow: hidden;
+}
+footer.bg-dark.text-light.py-5 {
+  padding: 20px 0 5px 0 !important;
+}
+
+div#block-cfc-stayupdated p {
+  font-size: 14px;
+}
+/*  */
+
+
+section.section---filter-block .owl-nav span {
+  color: #2D3648 !important;
+  font-size: 60px !important;
+}
