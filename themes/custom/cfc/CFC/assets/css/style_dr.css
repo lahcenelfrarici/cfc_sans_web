@@ -1316,9 +1316,11 @@ div:has(#pg_benefits) #contact---us {
 .wisiwyg h2 {
   line-height: normal !important;
 }
+
 .link___ex.text-left {
   display: none;
 }
+
 .wisiwyg .btn--pls {
   display: none;
 }
@@ -1326,17 +1328,22 @@ div:has(#pg_benefits) #contact---us {
 .captcha__title.js-form-required.form-required {
   display: none;
 }
+
 .captcha.captcha-type-challenge--recaptcha {
   text-align: left;
 }
-section.two___stories_vs .d-flex.logo-success img, section.two___stories_vs .d-flex.logo-success h4 {
+
+section.two___stories_vs .d-flex.logo-success img,
+section.two___stories_vs .d-flex.logo-success h4 {
   display: none !important;
 }
+
 video.all___class_box_albume.container {
   border-radius: 30px;
   height: 70vh;
   overflow: hidden;
 }
+
 footer.bg-dark.text-light.py-5 {
   padding: 20px 0 5px 0 !important;
 }
@@ -1344,6 +1351,7 @@ footer.bg-dark.text-light.py-5 {
 div#block-cfc-stayupdated p {
   font-size: 14px;
 }
+
 /*  */
 
 
@@ -1351,7 +1359,36 @@ section.section---filter-block .owl-nav span {
   color: #2D3648 !important;
   font-size: 60px !important;
 }
+
 /* section.section---filter-block .owl-nav span {
   color: #2D3648 !important;
   font-size: 60px !important;
 } */
+.ui-dialog img {
+  width: 30px;
+  height: 30px;
+}
+
+.select-items img {
+  width: 20px;
+}
+
+.ui-dialog .ui-dialog-titlebar {
+  background: transparent;
+  border: 0;
+}
+
+.webform-confirmation-modal--content a {
+  color: #151515;
+  text-align: center;
+  font-family: "Averta CY";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 34px;
+  margin-top: 12px;
+}
+.webform-confirmation-modal--content a:hover {
+  color: #333333;
+  text-decoration: underline;
+}
