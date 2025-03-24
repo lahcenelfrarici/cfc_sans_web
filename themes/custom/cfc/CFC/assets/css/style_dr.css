@@ -1392,3 +1392,16 @@ section.section---filter-block .owl-nav span {
   color: #333333;
   text-decoration: underline;
 }
+
+.custom-select.open .select-items {
+  padding: 15px 6px;
+}
+#filter-verticale .select-selected img {
+  width: 20px;
+  height: max-content;
+  margin-right: 10px;
+}
+#filter-verticale .select-selected {
+  display: flex;
+  align-items: center;
+}
