@@ -447,181 +447,181 @@
     //     }
     //   }]
     // });
-// Initialize Slick Slider
-function initializeSlick(autoplay = true) {
-  // Destroy existing Slick instance
-  if ($('.members').hasClass('slick-initialized')) {
-    $('.members').slick('unslick');
-  }
+    // Initialize Slick Slider
+    function initializeSlick(autoplay = true) {
+      // Destroy existing Slick instance
+      if ($('.members').hasClass('slick-initialized')) {
+        $('.members').slick('unslick');
+      }
 
-  // Initialize Slick slider with visible members
-  const visibleMembers = $('.member:not(.hidden)');
+      // Initialize Slick slider with visible members
+      const visibleMembers = $('.member:not(.hidden)');
 
-  // Check if there are visible members
-  if (visibleMembers.length > 0) {
-    $('.members').slick({
-      dots: true,
-      infinite: false,
-      speed: 300,
-      slidesToShow: 10, // Show 10 members per slide
-      slidesToScroll: 10, // Move by 10 members per scroll
-      variableWidth: false,
-      appendDots: $('.slick-dots-container'), // Custom container for dots
-      appendArrows: $('.slider-navigation'), // Custom container for arrows
-      prevArrow: $('.slick-prev'), // Custom prev arrow
-      nextArrow: $('.slick-next'), // Custom next arrow
-      autoplay: autoplay, // Dynamically set autoplay
-      autoplaySpeed: 3000, // Set autoplay speed to 3 seconds (3000ms)
-      responsive: [{
-        breakpoint: 768, // Breakpoint for smaller screens
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
+      // Check if there are visible members
+      if (visibleMembers.length > 0) {
+        $('.members').slick({
+          dots: true,
+          infinite: false,
+          speed: 300,
+          slidesToShow: 10, // Show 10 members per slide
+          slidesToScroll: 10, // Move by 10 members per scroll
           variableWidth: false,
+          appendDots: $('.slick-dots-container'), // Custom container for dots
+          appendArrows: $('.slider-navigation'), // Custom container for arrows
+          prevArrow: $('.slick-prev'), // Custom prev arrow
+          nextArrow: $('.slick-next'), // Custom next arrow
+          autoplay: autoplay, // Dynamically set autoplay
+          autoplaySpeed: 3000, // Set autoplay speed to 3 seconds (3000ms)
+          responsive: [{
+            breakpoint: 768, // Breakpoint for smaller screens
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              variableWidth: false,
+            }
+          }]
+        });
+
+        // Update dots based on visible members
+        updateSlickDots();
+
+        // Highlight active dot on slide change
+        $('.members').on('afterChange', function (event, slick, currentSlide) {
+          highlightActiveDot();
+        });
+      } else {
+        // Hide slider if no visible members
+        $('.members').addClass('hidden_show');
+      }
+    }
+
+    // Update Slick Dots Dynamically
+    function updateSlickDots() {
+      const $slickDots = $('.slick-dots-container .slick-dots');
+      if ($slickDots.length > 0) {
+        const totalSlides = $('.member:not(.hidden)').length;
+        const slidesToShow = 10; // Adjust this to move by 10 members
+        const totalDots = Math.ceil(totalSlides / slidesToShow);
+
+        // Clear existing dots
+        $slickDots.empty();
+
+        // Add new dots based on the number of visible slides
+        for (let i = 0; i < totalDots; i++) {
+          const dot = $(`<li><button>${i + 1}</button></li>`);
+          dot.on('click', function () {
+            // Move the slider to the corresponding slide, by 10 members per dot
+            $('.members').slick('slickGoTo', i * slidesToShow);
+          });
+          $slickDots.append(dot);
         }
-      }]
-    });
 
-    // Update dots based on visible members
-    updateSlickDots();
+        // Highlight the active dot
+        highlightActiveDot();
+      }
+    }
 
-    // Highlight active dot on slide change
-    $('.members').on('afterChange', function (event, slick, currentSlide) {
-      highlightActiveDot();
-    });
-  } else {
-    // Hide slider if no visible members
-    $('.members').addClass('hidden_show');
-  }
-}
+    // Highlight Active Dot
+    function highlightActiveDot() {
+      const $slickDots = $('.slick-dots-container .slick-dots li');
+      const currentSlide = $('.members').slick('slickCurrentSlide');
+      const slidesToShow = 10; // Adjust based on your slidesToShow setting
+      const activeDotIndex = Math.floor(currentSlide / slidesToShow);
 
-// Update Slick Dots Dynamically
-function updateSlickDots() {
-  const $slickDots = $('.slick-dots-container .slick-dots');
-  if ($slickDots.length > 0) {
-    const totalSlides = $('.member:not(.hidden)').length;
-    const slidesToShow = 10; // Adjust this to move by 10 members
-    const totalDots = Math.ceil(totalSlides / slidesToShow);
+      // Remove active class from all dots
+      $slickDots.removeClass('slick-active');
 
-    // Clear existing dots
-    $slickDots.empty();
+      // Add active class to the current dot
+      $slickDots.eq(activeDotIndex).addClass('slick-active');
+    }
 
-    // Add new dots based on the number of visible slides
-    for (let i = 0; i < totalDots; i++) {
-      const dot = $(`<li><button>${i + 1}</button></li>`);
-      dot.on('click', function () {
-        // Move the slider to the corresponding slide, by 10 members per dot
-        $('.members').slick('slickGoTo', i * slidesToShow);
+    // Apply Filters
+    function applyFilters() {
+      const selectedCountry = $countrySelect.find('.select-selected').data('value');
+      const selectedCategory = $industrySelect.find('.select-selected').data('category');
+      const searchTerm = $('#searchFilter').val().toLowerCase();
+
+      let visibleMembersCount = 0;
+
+      // Filter members based on selected filters
+      $('.member').each(function () {
+        const memberCountry = $(this).data('country');
+        const memberCategory = $(this).data('category');
+        const title = $(this).find('.parnet--title').text().toLowerCase();
+
+        // Check if "All countries" or "All industries" is selected
+        const matchesCountry = selectedCountry === 'all' || !selectedCountry || memberCountry === selectedCountry;
+        const matchesCategory = selectedCategory === 'all' || !selectedCategory || memberCategory === selectedCategory;
+        const matchesSearch = !searchTerm || title.includes(searchTerm);
+
+        if (matchesCountry && matchesCategory && matchesSearch) {
+          $(this).removeClass('hidden');
+          visibleMembersCount++;
+        } else {
+          $(this).addClass('hidden');
+        }
       });
-      $slickDots.append(dot);
+
+      // Show or hide the no members message
+      const $noMembersMessage = $('#no-members-message');
+      if (visibleMembersCount === 0) {
+        $noMembersMessage.removeClass('hidden');
+        $('.members').addClass('hidden_show');
+      } else {
+        $noMembersMessage.addClass('hidden');
+        $('.members').removeClass('hidden_show');
+      }
+
+      // Reinitialize Slick with autoplay set to false
+      $('.members').slick('unslick'); // Destroy the current instance
+      initializeSlick(false); // Pass false to disable autoplay
     }
 
-    // Highlight the active dot
-    highlightActiveDot();
-  }
-}
+    // Dropdown Logic for Country and Industry
+    const $countrySelect = $('#country-select');
+    $countrySelect.find('.select-selected').on('click', function () {
+      $countrySelect.toggleClass('open');
+    });
+    $countrySelect.find('.select-items').on('click', 'div[data-value]', function () {
+      const $option = $(this);
+      const value = $option.data('value');
+      const flagHtml = $option.find('img').prop('outerHTML');
+      const countryName = $option.find('span').text();
 
-// Highlight Active Dot
-function highlightActiveDot() {
-  const $slickDots = $('.slick-dots-container .slick-dots li');
-  const currentSlide = $('.members').slick('slickCurrentSlide');
-  const slidesToShow = 10; // Adjust based on your slidesToShow setting
-  const activeDotIndex = Math.floor(currentSlide / slidesToShow);
+      $countrySelect.find('.select-selected')
+        .html(`${flagHtml} <span>${countryName}</span>`)
+        .data('value', value);
 
-  // Remove active class from all dots
-  $slickDots.removeClass('slick-active');
+      $countrySelect.removeClass('open');
+      applyFilters(); // Trigger filtering
+    });
 
-  // Add active class to the current dot
-  $slickDots.eq(activeDotIndex).addClass('slick-active');
-}
+    const $industrySelect = $('#industry-select');
+    $industrySelect.find('.select-selected').on('click', function () {
+      $industrySelect.toggleClass('open');
+    });
+    $industrySelect.find('.select-items').on('click', 'div[data-category]', function () {
+      const $option = $(this);
+      const category = $option.data('category');
+      const categoryName = $option.find('span').text();
 
-// Apply Filters
-function applyFilters() {
-  const selectedCountry = $countrySelect.find('.select-selected').data('value');
-  const selectedCategory = $industrySelect.find('.select-selected').data('category');
-  const searchTerm = $('#searchFilter').val().toLowerCase();
+      $industrySelect.find('.select-selected')
+        .html(`<span>${categoryName}</span>`)
+        .data('category', category);
 
-  let visibleMembersCount = 0;
+      $industrySelect.removeClass('open');
+      applyFilters(); // Trigger filtering
+    });
 
-  // Filter members based on selected filters
-  $('.member').each(function () {
-    const memberCountry = $(this).data('country');
-    const memberCategory = $(this).data('category');
-    const title = $(this).find('.parnet--title').text().toLowerCase();
+    // Search Input Logic
+    $('#searchFilter').on('input', function () {
+      applyFilters(); // Trigger filtering
+    });
 
-    // Check if "All countries" or "All industries" is selected
-    const matchesCountry = selectedCountry === 'all' || !selectedCountry || memberCountry === selectedCountry;
-    const matchesCategory = selectedCategory === 'all' || !selectedCategory || memberCategory === selectedCategory;
-    const matchesSearch = !searchTerm || title.includes(searchTerm);
-
-    if (matchesCountry && matchesCategory && matchesSearch) {
-      $(this).removeClass('hidden');
-      visibleMembersCount++;
-    } else {
-      $(this).addClass('hidden');
-    }
-  });
-
-  // Show or hide the no members message
-  const $noMembersMessage = $('#no-members-message');
-  if (visibleMembersCount === 0) {
-    $noMembersMessage.removeClass('hidden');
-    $('.members').addClass('hidden_show');
-  } else {
-    $noMembersMessage.addClass('hidden');
-    $('.members').removeClass('hidden_show');
-  }
-
-  // Reinitialize Slick with autoplay set to false
-  $('.members').slick('unslick'); // Destroy the current instance
-  initializeSlick(false); // Pass false to disable autoplay
-}
-
-// Dropdown Logic for Country and Industry
-const $countrySelect = $('#country-select');
-$countrySelect.find('.select-selected').on('click', function () {
-  $countrySelect.toggleClass('open');
-});
-$countrySelect.find('.select-items').on('click', 'div[data-value]', function () {
-  const $option = $(this);
-  const value = $option.data('value');
-  const flagHtml = $option.find('img').prop('outerHTML');
-  const countryName = $option.find('span').text();
-
-  $countrySelect.find('.select-selected')
-    .html(`${flagHtml} <span>${countryName}</span>`)
-    .data('value', value);
-
-  $countrySelect.removeClass('open');
-  applyFilters(); // Trigger filtering
-});
-
-const $industrySelect = $('#industry-select');
-$industrySelect.find('.select-selected').on('click', function () {
-  $industrySelect.toggleClass('open');
-});
-$industrySelect.find('.select-items').on('click', 'div[data-category]', function () {
-  const $option = $(this);
-  const category = $option.data('category');
-  const categoryName = $option.find('span').text();
-
-  $industrySelect.find('.select-selected')
-    .html(`<span>${categoryName}</span>`)
-    .data('category', category);
-
-  $industrySelect.removeClass('open');
-  applyFilters(); // Trigger filtering
-});
-
-// Search Input Logic
-$('#searchFilter').on('input', function () {
-  applyFilters(); // Trigger filtering
-});
-
-// Initialize Slick on page load
-$(document).ready(function () {
-  initializeSlick();
-});
+    // Initialize Slick on page load
+    $(document).ready(function () {
+      initializeSlick();
+    });
 
     // ****************
     // var memberCount = $('.members .member').length;
@@ -990,33 +990,64 @@ $(document).ready(function () {
     }
 
     // Function to display item-info modal
+    // function showItemInfo_1(item, factSheet_img_1, subtitle) {
+    //   // Create the content for the item-info modal
+    //   const content =
+    //     `<div class="item-info-content" id="about_maps_1">
+    //         <div class="flag--element">
+    //             <img src="${factSheet_img_1}" alt="Fact Sheet Flag">
+    //         </div>
+    //         <div class="wrapper-element-africa">
+    //             <span clss="test">${subtitle}</span>
+    //             <div class="tabs---1">To get in touch with this international financial center, please enter your email address</div>
+    //             <div class="tabs---2">To get in touch with this investment promotion agency, please enter your email address</div>
+    //             <form class="d-flex mt-3">
+    //                 <input type="email" class="form-control rounded-pill" placeholder="Email.." required="">
+    //                 <button type="submit" class="form--news">Submit <i class="fas fa-arrow-right ms-2"></i></button>
+    //             </form>
+    //         </div>
+    //     </div>`;
+
+    //   // Find or create the .item-info modal
+    //   let itemInfo = $('.item-info');
+    //   if (itemInfo.length === 0) {
+    //     itemInfo = $('<div class="item-info about_maps_1"></div>').appendTo('body');
+    //   }
+
+    //   itemInfo.html(content).show();
+
+    //   // Get the position of the item relative to the document
+    //   const pathOffset = item.offset();
+    //   const windowWidth = $(window).width();
+    //   const itemInfoWidth = itemInfo.outerWidth();
+    //   const itemInfoHeight = itemInfo.outerHeight();
+
+    //   // Position the modal above the item
+    //   itemInfo.css({
+    //     top: pathOffset.top - itemInfoHeight - 10, // Position above the item
+    //     left: pathOffset.left,
+    //     position: 'absolute',
+    //   });
+
+    //   // Check if the modal is off-screen on the left or right side and adjust position if necessary
+    //   if (itemInfo.offset().left < 0) {
+    //     itemInfo.css('left', 10); // Adjust to the left side of the viewport
+    //   } else if ((itemInfo.offset().left + itemInfoWidth) > windowWidth) {
+    //     itemInfo.css('left', windowWidth - itemInfoWidth - 10); // Adjust to the right side of the viewport
+    //   }
+
+    //   // Update item-info-content classes
+    //   updateItemInfoContent();
+    // }
+    // Function to display the item-info modal
     function showItemInfo_1(item, factSheet_img_1, subtitle) {
-      // Create the content for the item-info modal
-      const content =
-        `<div class="item-info-content" id="about_maps_1">
-            <div class="flag--element">
-                <img src="${factSheet_img_1}" alt="Fact Sheet Flag">
-            </div>
-            <div class="wrapper-element-africa">
-                <span clss="test">${subtitle}</span>
-                <div class="tabs---1">To get in touch with this international financial center, please enter your email address</div>
-                <div class="tabs---2">To get in touch with this investment promotion agency, please enter your email address</div>
-                <form class="d-flex mt-3">
-                    <input type="email" class="form-control rounded-pill" placeholder="Email.." required="">
-                    <button type="submit" class="form--news">Submit <i class="fas fa-arrow-right ms-2"></i></button>
-                </form>
-            </div>
-        </div>`;
+      let itemInfo = $('.item-info.about_maps_1');
 
-      // Find or create the .item-info modal
-      let itemInfo = $('.item-info');
-      if (itemInfo.length === 0) {
-        itemInfo = $('<div class="item-info about_maps_1"></div>').appendTo('body');
-      }
+      // Populate the modal with dynamic content
+      $('#factSheetImg').attr('src', factSheet_img_1);
+      $('#modalSubtitle').text(subtitle);
 
-      itemInfo.html(content).show();
-
-      // Get the position of the item relative to the document
+      // Get item position
       const pathOffset = item.offset();
       const windowWidth = $(window).width();
       const itemInfoWidth = itemInfo.outerWidth();
@@ -1026,19 +1057,41 @@ $(document).ready(function () {
       itemInfo.css({
         top: pathOffset.top - itemInfoHeight - 10, // Position above the item
         left: pathOffset.left,
-        position: 'absolute',
-      });
+        position: 'absolute'
+      }).fadeIn(); // Show the modal
 
-      // Check if the modal is off-screen on the left or right side and adjust position if necessary
+      // Adjust position if the modal is off-screen
       if (itemInfo.offset().left < 0) {
-        itemInfo.css('left', 10); // Adjust to the left side of the viewport
+        itemInfo.css('left', 10);
       } else if ((itemInfo.offset().left + itemInfoWidth) > windowWidth) {
-        itemInfo.css('left', windowWidth - itemInfoWidth - 10); // Adjust to the right side of the viewport
+        itemInfo.css('left', windowWidth - itemInfoWidth - 10);
       }
 
-      // Update item-info-content classes
+      // Update content dynamically
       updateItemInfoContent();
     }
+
+    // Event listeners
+    $('.maps___1 .item-wrap-1, .maps___2 .item-wrap-1').on('mouseenter click', function () {
+      const factSheet_img_1 = $(this).data('logo'); // Retrieve image link
+      const subtitle = $(this).data('subtitle'); // Retrieve subtitle
+      showItemInfo_1($(this), factSheet_img_1, subtitle); // Show modal
+    });
+
+    // Hide modal when mouse leaves
+    $(document).on('mouseleave', '.map-container, .item-info', function (event) {
+      if (!$(event.relatedTarget).closest('.item-info').length && !$(event.relatedTarget).closest('.map-container').length) {
+        $('.item-info').fadeOut();
+      }
+    });
+
+    // Handle tab clicks
+    $(".element-sc").on("click", function () {
+      $(".element-sc").removeClass("active");
+      $(this).addClass("active");
+      updateItemInfoContent();
+    });
+
 
     // When the user hovers over the item with the class "item-wrap-1"
     $('.maps___1 .item-wrap-1, .maps___2 .item-wrap-1').on('mouseenter click', function () {
@@ -1623,7 +1676,7 @@ $(document).ready(function () {
       $('.captcha_log').append('<p class="error">Le CAPTCHA est requis.</p>');
     }
   });
-  $('.card time,.article-date time').each(function() {
+  $('.card time,.article-date time').each(function () {
     // Get the datetime attribute value
     const datetime = $(this).attr('datetime');
 
@@ -1631,7 +1684,10 @@ $(document).ready(function () {
     const date = new Date(datetime);
 
     // Format the date as "Month, Year"
-    const formattedDate = date.toLocaleString('default', { month: 'long', year: 'numeric' });
+    const formattedDate = date.toLocaleString('default', {
+      month: 'long',
+      year: 'numeric'
+    });
 
     // Update the text content of the <time> element
     $(this).text(formattedDate);
@@ -1665,4 +1721,8 @@ $(document).ready(function () {
   //     $('.captcha .error').remove(); // If checked, remove error message
   //   }
   // });
+  // if (window.location.pathname.startsWith("/fr")) {
+  //   window.location.href = window.location.origin + "/en";
+  // }
+
 })(jQuery);

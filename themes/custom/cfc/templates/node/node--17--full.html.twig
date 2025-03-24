@@ -75,6 +75,26 @@
 
 {{ drupal_entity('block','cfc_internationalpartnerships') }}
 
+<div class="item-info about_maps_1" style="display: none;">
+	<div class="item-info-content" id="about_maps_1">
+		<div class="flag--element">
+			<img src="" alt="Fact Sheet Flag" id="factSheetImg">
+		</div>
+		<div class="wrapper-element-africa">
+			<span class="test" id="modalSubtitle"></span>
+			<div class="tabs---1">{{'To get in touch with this international financial center, please enter your email address'|t}}</div>
+			<div class="tabs---2">{{'To get in touch with this investment promotion agency, please enter your email address'|t}}</div>
+			<form class="d-flex mt-3">
+				<input type="email" class="form-control rounded-pill" placeholder="Email.." required="">
+				<button type="submit" class="form--news">{{'Submit'|t}}
+					<i class="fas fa-arrow-right ms-2"></i>
+				</button>
+			</form>
+		</div>
+	</div>
+</div>
+
+
 {{ drupal_entity('block','cfc_goinggreen') }}
 
 {{ drupal_view('country_list','block_1') }}
