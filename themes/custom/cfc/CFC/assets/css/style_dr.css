@@ -1423,3 +1423,6 @@ section.section---filter-block .owl-nav span {
 .wisiwyg .article-date span {
   text-transform: capitalize;
 }
+.wisiwyg .article-date .translated-date:first-of-type {
+  display: none;
+}

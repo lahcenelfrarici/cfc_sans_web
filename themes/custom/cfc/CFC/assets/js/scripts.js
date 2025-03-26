@@ -1713,28 +1713,53 @@
       });
 
       // Ensure SVG stays visible while updating date text
-      $('.wisiwyg .article-date', context).each(function () {
-        const rawDate = $(this).clone().children().remove().end().text().trim(); // Get only the text
+    //   $('.wisiwyg .article-date', context).each(function () {
+    //     const rawDate = $(this).clone().children().remove().end().text().trim(); // Get only the text
     
-        if (rawDate) {
-            const date = new Date(rawDate); // Try to parse it
-            if (!isNaN(date)) { // Ensure it's a valid date
-                const lang = $('html').attr('lang') || 'en';
-                const formattedDate = date.toLocaleString(lang, {
-                    month: 'long',
-                    year: 'numeric'
-                });
+    //     if (rawDate) {
+    //         const date = new Date(rawDate); // Try to parse it
+    //         if (!isNaN(date)) { // Ensure it's a valid date
+    //             const lang = $('html').attr('lang') || 'en'; // Get language from HTML tag
+    //             const formattedDate = date.toLocaleDateString(lang, {
+    //                 month: 'long',
+    //                 year: 'numeric'
+    //             });
     
-                // Remove existing text nodes and add the formatted date inside a span
-                $(this).contents().filter(function () {
-                    return this.nodeType === 3; // Select only text nodes
-                }).remove(); // Remove old text
+    //             // Remove existing text nodes and add the formatted date inside a span
+    //             $(this).contents().filter(function () {
+    //                 return this.nodeType === 3; // Select only text nodes
+    //             }).remove(); // Remove old text
     
-                $(this).append(`<span>${formattedDate}</span>`); // Add formatted date inside span
-            }
-        }
+    //             $(this).append(`<span>${formattedDate}</span>`); // Add formatted date inside span
+    //         }
+    //     }
+    // });
+    $('.article-date', context).each(function () {
+      const lang = $('html').attr('lang') || 'en';
+
+      // Get the text content of .article-date (excluding SVG)
+      const textNode = $(this).clone().children().remove().end().text().trim();
+
+      const dateParts = textNode.split(' ');
+      if (dateParts.length !== 2) return; // Skip if format is incorrect
+
+      const month = dateParts[0];
+      const year = dateParts[1];
+
+      const tempDate = new Date(`${month} 1, ${year}`);
+      const formattedDate = tempDate.toLocaleString(lang, {
+        month: 'long',
+        year: 'numeric'
+      });
+
+      // Replace only the text with a wrapped span
+      $(this).contents().filter(function () {
+        return this.nodeType === 3; // Select text nodes
+      }).replaceWith(` <span class="translated-date">${formattedDate}</span>`);
     });
-    
+  
+
+
     }
   };
   // $('#webform-submission-contact-add-form').submit(function (e) {
