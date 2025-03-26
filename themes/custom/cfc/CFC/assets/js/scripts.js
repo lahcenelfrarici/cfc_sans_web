@@ -1679,22 +1679,64 @@
       $('.captcha_log').append('<p class="error">Le CAPTCHA est requis.</p>');
     }
   });
-  $('.card time,.article-date time').each(function () {
-    // Get the datetime attribute value
-    const datetime = $(this).attr('datetime');
+  // $('.card time,.article-date time').each(function () {
+  //   // Get the datetime attribute value
+  //   const datetime = $(this).attr('datetime');
 
-    // Parse the datetime value into a Date object
-    const date = new Date(datetime);
+  //   // Parse the datetime value into a Date object
+  //   const date = new Date(datetime);
 
-    // Format the date as "Month, Year"
-    const formattedDate = date.toLocaleString('default', {
-      month: 'long',
-      year: 'numeric'
+  //   // Format the date as "Month, Year"
+  //   const formattedDate = date.toLocaleString('default', {
+  //     month: 'long',
+  //     year: 'numeric'
+  //   });
+
+  //   // Update the text content of the <time> element
+  //   $(this).text(formattedDate);
+  // });
+  Drupal.behaviors.formatLocalizedDate = {
+    attach: function (context, settings) {
+      $('.card time, .article-date time', context).each(function () {
+        const datetime = $(this).attr('datetime');
+
+        if (datetime) {
+          const date = new Date(datetime);
+          const lang = $('html').attr('lang') || 'en';
+          const formattedDate = date.toLocaleString(lang, {
+            month: 'long',
+            year: 'numeric'
+          });
+
+          $(this).text(formattedDate);
+        }
+      });
+
+      // Ensure SVG stays visible while updating date text
+      $('.wisiwyg .article-date', context).each(function () {
+        const rawDate = $(this).clone().children().remove().end().text().trim(); // Get only the text
+    
+        if (rawDate) {
+            const date = new Date(rawDate); // Try to parse it
+            if (!isNaN(date)) { // Ensure it's a valid date
+                const lang = $('html').attr('lang') || 'en';
+                const formattedDate = date.toLocaleString(lang, {
+                    month: 'long',
+                    year: 'numeric'
+                });
+    
+                // Remove existing text nodes and add the formatted date inside a span
+                $(this).contents().filter(function () {
+                    return this.nodeType === 3; // Select only text nodes
+                }).remove(); // Remove old text
+    
+                $(this).append(`<span>${formattedDate}</span>`); // Add formatted date inside span
+            }
+        }
     });
-
-    // Update the text content of the <time> element
-    $(this).text(formattedDate);
-  });
+    
+    }
+  };
   // $('#webform-submission-contact-add-form').submit(function (e) {
   //   // Check if the g-recaptcha-response field is empty
   //   if ($('#g-recaptcha-response-1').val() === '') {

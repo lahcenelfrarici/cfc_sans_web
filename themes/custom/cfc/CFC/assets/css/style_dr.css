@@ -1414,3 +1414,12 @@ section.section---filter-block .owl-nav span {
 .column ul ul {
   list-style-type: circle;
 }
+#list--news-all .btn--pls span {
+  text-transform: initial;
+}
+.article-date time {
+  text-transform: capitalize;
+}
+.wisiwyg .article-date span {
+  text-transform: capitalize;
+}
