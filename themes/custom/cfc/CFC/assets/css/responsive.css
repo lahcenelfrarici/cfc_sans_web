@@ -421,22 +421,25 @@
     left: 0;
     top: 566px;
   }
-  .container.my-4.position-relative  hr {
+
+  .container.my-4.position-relative hr {
     position: absolute;
     right: 0;
     left: 0;
     top: 557px;
   }
-  
-  section#table_att .container.my-4.position-relative + hr {
+
+  section#table_att .container.my-4.position-relative+hr {
     position: absolute;
     right: 0;
     left: 0;
     top: 566px;
   }
-  section#table_att .container.my-4.position-relative + hr {
+
+  section#table_att .container.my-4.position-relative+hr {
     opacity: 0;
   }
+
   .container.my-4.position-relative .col-md-3.text-center img,
   .col-custom5.text-center img {
     height: 495px;
@@ -1212,6 +1215,50 @@
   #acc-card-6-column .icon--african_pioneer {
 
     align-items: center;
+  }
+
+  .modal_content section.all_invitation-card {
+    height: auto;
+    padding-top: 0;
+    padding-bottom: 30px;
+  }
+
+  .modal_content .invitation-card {
+    height: auto;
+  }
+
+  .modal_ocde .modal_content {
+    width: 100%;
+  }
+
+  .modal_content .invitation-card {
+    padding: 15px;
+  }
+
+  .modal_ocde h2 {
+    font-size: 18px;
+  }
+
+  .modal_ocde .conference-info strong {
+    font-size: 16px;
+  }
+
+  section.all_invitation-card .logo_form_bottom img {
+    height: 278px;
+    object-fit: scale-down;
+  }
+
+  .link_page_ocde a {
+    font-size: 19px;
+  }
+
+  .modal_ocde .conference-info {
+    text-align: left;
+  }
+
+  .modal_ocde .close_btn {
+    right: 29px;
+    color: #fff;
   }
 
   .wisiwyg h2 {

@@ -970,7 +970,7 @@ div#acc-card-6-column .card {
   font-style: normal;
   font-weight: 400;
   line-height: 75px;
-/* test */
+  /* test */
   -webkit-text-stroke-width: 1.5px;
   width: 100%;
 }
@@ -3164,9 +3164,11 @@ section#maps--with-select-pays .map-container .item-wrap {
   background-clip: text;
 
 }
+
 .wisiwyg .btn--pls a {
   font-size: 26px;
 }
+
 #list--news-all .btn--pls a {
   display: flex;
   flex-direction: inherit;
@@ -4821,6 +4823,7 @@ section#organise--africa p {
   height: 100%;
   width: 100%;
 }
+
 /* Loader */
 /*
 
@@ -5043,6 +5046,7 @@ section#pg_benefits .contact-form {
   border-radius: 40px;
   margin-top: 40px;
 }
+
 li#langue---style {
   display: none !important;
 }
@@ -5065,6 +5069,7 @@ li#langue---style {
   border: 1px solid #ccc;
   border-radius: 5px;
 }
+
 .title__form_all_form_bottom.container h2 {
   color: #FFF;
   font-size: 35px;
@@ -5085,7 +5090,7 @@ section.la_conferance.all_form_bottom {
   background: var(--lin, linear-gradient(102deg, #009681 0.97%, #00677F 97.19%));
 }
 
-section.la_conferance.all_form_bottom form >div {
+section.la_conferance.all_form_bottom form>div {
   display: flex;
   flex-direction: column;
   gap: 10px 0;
@@ -5105,7 +5110,8 @@ section.la_conferance.all_form_bottom form input {
 }
 
 
-section.la_conferance.all_form_bottom .form-submit button,section.la_conferance.all_form_bottom .form-submit input {
+section.la_conferance.all_form_bottom .form-submit button,
+section.la_conferance.all_form_bottom .form-submit input {
   background: #FF4F00;
   border: 0;
   color: #FFF;
@@ -5127,14 +5133,17 @@ section.la_conferance.all_form_bottom .form-submit {
 }
 
 
-section.la_conferance.all_form_bottom .form-submit button,section.la_conferance.all_form_bottom .form-submit input {width: max-content;}
+section.la_conferance.all_form_bottom .form-submit button,
+section.la_conferance.all_form_bottom .form-submit input {
+  width: max-content;
+}
 
 section.la_conferance.all_form_bottom .row {
-    align-items: center;
+  align-items: center;
 }
 
 section.la_conferance.all_form_bottom .row .logo_form_bottom {
-    text-align: center;
+  text-align: center;
 }
 
 section.la_conferance.all_form_bottom .logo_form_bottom img {
@@ -5177,9 +5186,11 @@ section.la_conferance.all_form_bottom .logo_form_bottom img {
   font-size: 18px;
   margin-right: 5px;
 }
+
 section.all_invitation-card {
   background: var(--lin, linear-gradient(102deg, #009681 0.97%, #00677F 97.19%));
 }
+
 .invitation-card h2 {
   color: #fff;
   font-size: 34px;
@@ -5199,6 +5210,7 @@ section.all_invitation-card {
   width: 100%;
   height: 100%;
 }
+
 .conference-info {
   color: #F0F0F0;
   font-size: 25px;
@@ -5221,13 +5233,15 @@ section.all_invitation-card {
   align-items: start;
   justify-content: center;
 }
+
 .right_all_prg {
   text-align: right;
 }
 
-.programme_ligne >div:last-child {
+.programme_ligne>div:last-child {
   border-bottom: 2px solid #FF4F00;
 }
+
 .location {
   color: #F0F0F0;
   font-style: normal;
@@ -5259,6 +5273,7 @@ span.location-icon svg {
 .invitation-card h2 {
   padding-top: 20px;
 }
+
 .programme_ligne {
   margin: 0 auto;
   padding: 20px;
@@ -5279,7 +5294,8 @@ span.location-icon svg {
   width: 120px;
 }
 
-.speakers, .keynote_speakers {
+.speakers,
+.keynote_speakers {
   margin-top: 30px;
 }
 
@@ -5296,15 +5312,19 @@ span.location-icon svg {
   text-align: center;
   margin-top: 20px;
 }
-.programme_ligne .title__form_all_form_bottom.container h2, .programme_ligne .title__form_all_form_bottom.container h2 span {
+
+.programme_ligne .title__form_all_form_bottom.container h2,
+.programme_ligne .title__form_all_form_bottom.container h2 span {
   color: #1A677B;
 }
+
 .time_slot {
   border-top: 2px solid #FF4F00;
   padding: 20px 0 15px 0;
 }
 
-.programme_ligne .title__form_all_form_bottom.container h2, .programme_ligne .title__form_all_form_bottom.container h2 span {
+.programme_ligne .title__form_all_form_bottom.container h2,
+.programme_ligne .title__form_all_form_bottom.container h2 span {
   text-align: left;
 }
 
@@ -5313,6 +5333,7 @@ span.location-icon svg {
 section.all_programme_ligne .programme_ligne .title__form_all_form_bottom.container {
   padding: 0;
 }
+
 .time {
   color: #008E82;
   font-size: 20.667px;
@@ -5348,6 +5369,7 @@ span.activity {
   font-weight: 700;
   line-height: normal;
 }
+
 .btn_title-orange {
   background: #FF4F00;
   font-size: 20px;
@@ -5359,15 +5381,19 @@ span.activity {
   padding: 10px 25px;
   height: max-content;
 }
+
 .all_programme_ligne .row:first-child .btn_title-orange.text-center {
   margin: auto;
 }
+
 section.all_programme_ligne {
   background: #e2e5f057;
 }
+
 .btn_title-orange a {
   color: #fff;
 }
+
 section.all_invitation-card .logo_form_bottom {
   position: absolute;
   height: 847px;
@@ -5388,9 +5414,11 @@ section.all_invitation-card .row {
 section.la_conferance.all_form_bottom {
   padding-top: 90px;
 }
+
 section.la_conferance.all_form_bottom .logo_form_bottom img {
   width: 90%;
 }
+
 .all_programme_ligne .row:last-child .btn_title-orange {
   background: #FF4F00;
 
@@ -5405,9 +5433,11 @@ section.la_conferance.all_form_bottom .logo_form_bottom img {
   top: -100px;
   position: relative;
 }
+
 .telecharger__box_two img {
   height: auto;
 }
+
 .remove_banner_pass_ocde section#banner-title {
   display: none;
 }
@@ -5424,6 +5454,7 @@ section.la_conferance.all_form_bottom .logo_form_bottom img {
 .remove_banner_pass_ocde section.section---filter-block {
   display: none;
 }
+
 /*  */
 .titre-manage {
   color: #1a677b;
@@ -5493,50 +5524,152 @@ section#table_att .title__form_all_form_bottom.container span {
 #table_att h2 span {
   color: #1A677B !important;
 }
+
 section.mots.container .col-md-6 img {
   height: auto;
 }
+
 .all_section_ocde hr {
   border-top: #ff4f00 solid;
   opacity: 1;
 }
+
 section.mots.container p {
   font-size: 18px;
 }
+
+.modal_ocde .invitation-header {
+  display: none;
+}
+
+.modal_ocde h2 {
+  text-align: left;
+}
+
+.modal_ocde .conference-info {
+  border-radius: 5px;
+}
+
+.modal_ocde .conference-info strong {
+  font-weight: 300;
+}
+
+.modal_ocde .location {
+  text-align: left;
+  justify-content: left;
+}
+
+
+
+.invitation-card {
+  padding-left: 10%;
+}
+
+
+
+.modal_ocde .logo_form_bottom {
+  height: auto !important;
+}
+
+.modal_ocde .logo_form_bottom img {
+  height: 100%;
+  width: 100%;
+}
+
+.link_page_ocde a {
+  font-size: 25px;
+  color: #fff;
+  font-weight: bold;
+}
+.modal_content section.all_invitation-card {
+  height: 580px;
+}
+
+.modal_content .invitation-card {justify-content: center;height: 580px;}
+
+.modal_content section.all_invitation-card .row {
+  height: 100%;
+}
+
+.modal_ocde {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.50);
+  /* Semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* Modal content */
+.modal_ocde .modal_content {
+
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  width: 70%;
+  position: relative;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Close button */
+.modal_ocde .close_btn {
+  position: absolute;
+  top: 16px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 25px;
+  cursor: pointer;
+  color: black;
+  z-index: 22;
+}
+
+.modal_content section.all_invitation-card {
+
+  border-radius: 20px;
+}
+
+
 @media (max-width: 768px) {
   section#table_att {
-      padding: 20px 30px;
+    padding: 20px 30px;
   }
 
   section.mots {
-      padding: 20px 30px;
+    padding: 20px 30px;
   }
 
   .col-custom5 {
-      width: 50%;
-      /* 2 colonnes par ligne sur tablette */
+    width: 50%;
+    /* 2 colonnes par ligne sur tablette */
   }
 
   section.mots {
-      padding: 50px 30px 50px 30px
+    padding: 50px 30px 50px 30px
   }
 
   section#table_att {
-      padding: 50px 30px 50px 30px
+    padding: 50px 30px 50px 30px
   }
 }
 
 @media (max-width: 576px) {
   section.mots {
-      padding: 50px 30px 50px 30px
+    padding: 50px 30px 50px 30px
   }
 
   section#table_att {
-      padding: 50px 30px 50px 30px
+    padding: 50px 30px 50px 30px
   }
 
   .col-custom5 {
-      width: 100%;
-      /* 1 colonne par ligne sur mobile */
+    width: 100%;
+    /* 1 colonne par ligne sur mobile */
   }
 }
