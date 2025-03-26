@@ -408,6 +408,40 @@
 }
 
 @media (min-width: 992px) {
+  hr.line_box {
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 552px;
+  }
+
+  section#table_att hr.line_box {
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 566px;
+  }
+  .container.my-4.position-relative  hr {
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 557px;
+  }
+  
+  section#table_att .container.my-4.position-relative + hr {
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 566px;
+  }
+  section#table_att .container.my-4.position-relative + hr {
+    opacity: 0;
+  }
+  .container.my-4.position-relative .col-md-3.text-center img,
+  .col-custom5.text-center img {
+    height: 495px;
+  }
+
   #langue---style .dropdown-menu[data-bs-popper] {
     left: auto;
     margin-top: initial;
@@ -1037,6 +1071,51 @@
 }
 
 @media (max-width: 991px) {
+  section.all_invitation-card .row {
+    height: auto;
+  }
+
+  section.all_invitation-card .logo_form_bottom {
+    position: relative;
+    height: auto;
+  }
+
+  section.all_invitation-card {
+    padding-top: 40px;
+  }
+
+  .time_slot {
+    flex-direction: column;
+    gap: 30px 0;
+  }
+
+  .telecharger__box_two {
+    width: 100%;
+  }
+
+  .all_programme_ligne .row:last-child {
+    margin-top: 0 !important;
+    top: auto !important;
+  }
+
+  .all_programme_ligne .row:last-child .btn_title-orange {
+    top: auto;
+    margin: auto;
+    margin-bottom: 40px;
+  }
+
+  .all_programme_ligne .row:first-child {
+    padding-bottom: 30px;
+  }
+
+  section.la_conferance.all_form_bottom {
+    padding-top: 40px;
+  }
+
+  section.la_conferance.all_form_bottom .row .logo_form_bottom {
+    padding: 40px 0;
+  }
+
   .width--img-inc .row-column-width--img-inc:first-child {
     margin-top: -20px;
   }

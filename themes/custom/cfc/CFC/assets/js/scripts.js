@@ -1667,6 +1667,9 @@
   if ($('.password_login_page').length) {
     $('body').addClass('remove_banner_pass');
   }
+  if ($('.all_section_ocde').length) {
+    $('body').addClass('remove_banner_pass_ocde');
+  }
 
   //
 
@@ -1726,3 +1729,6 @@
   // }
 
 })(jQuery);
+// $(document).ready(function () {
+//   $('#exampleModal').modal('show');
+// });
