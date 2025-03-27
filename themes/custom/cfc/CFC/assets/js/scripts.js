@@ -1800,20 +1800,30 @@
   $(".close_btn").click(function () {
     $(".modal_ocde").fadeOut();
   });
-  Drupal.behaviors.smoothScroll = {
-    attach: function (context, settings) {
-      $('.btn-custom[href*="#"]').once('smoothScroll').on('click', function (event) {
-        event.preventDefault(); // Prevent page refresh
+  // Drupal.behaviors.smoothScroll = {
+  //   attach: function (context, settings) {
+  //     $('.btn-custom[href*="#"]').once('smoothScroll').on('click', function (event) {
+  //       event.preventDefault(); // Prevent page refresh
 
-        var target = $(this.hash);
-        if (target.length) {
-          $('html, body').animate({
-            scrollTop: target.offset().top
-          }, 800); // Adjust speed as needed
-        }
-      });
+  //       var target = $(this.hash);
+  //       if (target.length) {
+  //         $('html, body').animate({
+  //           scrollTop: target.offset().top
+  //         }, 800); // Adjust speed as needed
+  //       }
+  //     });
+  //   }
+  // };
+  $('a[href^="/en/event-ocde/#"]').on('click', function (event) {
+    event.preventDefault(); // Prevent default link behavior (no refresh)
+
+    var target = this.hash;
+    if ($(target).length) {
+      $('html, body').animate({
+        scrollTop: $(target).offset().top
+      }, 800); // Adjust the duration (800ms) as needed
     }
-  };
+  });
 })(jQuery);
 // $(document).ready(function () {
 //   $('#exampleModal').modal('show');

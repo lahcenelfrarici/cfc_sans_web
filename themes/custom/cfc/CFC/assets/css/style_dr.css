@@ -1444,3 +1444,13 @@ section.mots.container .para-help {
 section.mots.container {
   padding-bottom: 0;
 }
+
+.show_fr_page:lang(en) {
+  display: none !important;
+}
+.show_en_page:lang(fr) {
+  display: none !important;
+}
+.show_fr_page svg path, .show_en_page svg path {
+  fill: #007565;
+}
