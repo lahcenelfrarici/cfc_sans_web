@@ -1454,3 +1454,9 @@ section.mots.container {
 .show_fr_page svg path, .show_en_page svg path {
   fill: #007565;
 }
+#block-cfc-sectiononeeventocde .invitation-card {
+  padding-left: 0;
+}
+#flex--box-fs .col-md-6 img {
+  object-fit: contain;
+}
