@@ -1460,3 +1460,25 @@ section.mots.container {
 #flex--box-fs .col-md-6 img {
   object-fit: contain;
 }
+div#block-cfc-sectiononeeventocde .btn_title-orange.text-center {
+  margin: 0px auto;
+}
+div#block-cfc-sectiononeeventocde .btn_title-orange.text-center {
+  background: #005C6F;
+}
+span.conference_moderne {
+  text-align: right;
+  width: 100%;
+  display: block;
+  color: #fff;
+  font-size: 21px;
+  position: relative;
+  left: 45px;
+}
+.conference_moderne_p {
+  color: #fff;
+}
+
+#block-cfc-sectiononeeventocde .invitation-card {
+  height: 90%;
+}
