@@ -1713,51 +1713,51 @@
       });
 
       // Ensure SVG stays visible while updating date text
-    //   $('.wisiwyg .article-date', context).each(function () {
-    //     const rawDate = $(this).clone().children().remove().end().text().trim(); // Get only the text
-    
-    //     if (rawDate) {
-    //         const date = new Date(rawDate); // Try to parse it
-    //         if (!isNaN(date)) { // Ensure it's a valid date
-    //             const lang = $('html').attr('lang') || 'en'; // Get language from HTML tag
-    //             const formattedDate = date.toLocaleDateString(lang, {
-    //                 month: 'long',
-    //                 year: 'numeric'
-    //             });
-    
-    //             // Remove existing text nodes and add the formatted date inside a span
-    //             $(this).contents().filter(function () {
-    //                 return this.nodeType === 3; // Select only text nodes
-    //             }).remove(); // Remove old text
-    
-    //             $(this).append(`<span>${formattedDate}</span>`); // Add formatted date inside span
-    //         }
-    //     }
-    // });
-    $('.article-date', context).each(function () {
-      const lang = $('html').attr('lang') || 'en';
+      //   $('.wisiwyg .article-date', context).each(function () {
+      //     const rawDate = $(this).clone().children().remove().end().text().trim(); // Get only the text
 
-      // Get the text content of .article-date (excluding SVG)
-      const textNode = $(this).clone().children().remove().end().text().trim();
+      //     if (rawDate) {
+      //         const date = new Date(rawDate); // Try to parse it
+      //         if (!isNaN(date)) { // Ensure it's a valid date
+      //             const lang = $('html').attr('lang') || 'en'; // Get language from HTML tag
+      //             const formattedDate = date.toLocaleDateString(lang, {
+      //                 month: 'long',
+      //                 year: 'numeric'
+      //             });
 
-      const dateParts = textNode.split(' ');
-      if (dateParts.length !== 2) return; // Skip if format is incorrect
+      //             // Remove existing text nodes and add the formatted date inside a span
+      //             $(this).contents().filter(function () {
+      //                 return this.nodeType === 3; // Select only text nodes
+      //             }).remove(); // Remove old text
 
-      const month = dateParts[0];
-      const year = dateParts[1];
+      //             $(this).append(`<span>${formattedDate}</span>`); // Add formatted date inside span
+      //         }
+      //     }
+      // });
+      $('.article-date', context).each(function () {
+        const lang = $('html').attr('lang') || 'en';
 
-      const tempDate = new Date(`${month} 1, ${year}`);
-      const formattedDate = tempDate.toLocaleString(lang, {
-        month: 'long',
-        year: 'numeric'
+        // Get the text content of .article-date (excluding SVG)
+        const textNode = $(this).clone().children().remove().end().text().trim();
+
+        const dateParts = textNode.split(' ');
+        if (dateParts.length !== 2) return; // Skip if format is incorrect
+
+        const month = dateParts[0];
+        const year = dateParts[1];
+
+        const tempDate = new Date(`${month} 1, ${year}`);
+        const formattedDate = tempDate.toLocaleString(lang, {
+          month: 'long',
+          year: 'numeric'
+        });
+
+        // Replace only the text with a wrapped span
+        $(this).contents().filter(function () {
+          return this.nodeType === 3; // Select text nodes
+        }).replaceWith(` <span class="translated-date">${formattedDate}</span>`);
       });
 
-      // Replace only the text with a wrapped span
-      $(this).contents().filter(function () {
-        return this.nodeType === 3; // Select text nodes
-      }).replaceWith(` <span class="translated-date">${formattedDate}</span>`);
-    });
-  
 
 
     }
@@ -1800,6 +1800,20 @@
   $(".close_btn").click(function () {
     $(".modal_ocde").fadeOut();
   });
+  Drupal.behaviors.smoothScroll = {
+    attach: function (context, settings) {
+      $('.btn-custom[href*="#"]').once('smoothScroll').on('click', function (event) {
+        event.preventDefault(); // Prevent page refresh
+
+        var target = $(this.hash);
+        if (target.length) {
+          $('html, body').animate({
+            scrollTop: target.offset().top
+          }, 800); // Adjust speed as needed
+        }
+      });
+    }
+  };
 })(jQuery);
 // $(document).ready(function () {
 //   $('#exampleModal').modal('show');
