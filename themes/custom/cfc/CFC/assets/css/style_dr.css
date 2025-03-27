@@ -1433,3 +1433,14 @@ section.section---filter-block .owl-nav span {
 section.mots.container .para-help {
   line-height: normal;
 }
+.container.my-4.position-relative hr {
+  width: 50%;
+  margin: 10px auto;
+}
+.container.my-4.position-relative + hr {
+  display: none;
+}
+
+section.mots.container {
+  padding-bottom: 0;
+}

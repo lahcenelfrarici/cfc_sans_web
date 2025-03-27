@@ -422,7 +422,7 @@
     top: 566px;
   }
 
-  .container.my-4.position-relative hr {
+  /* .container.my-4.position-relative hr {
     position: absolute;
     right: 0;
     left: 0;
@@ -434,7 +434,7 @@
     right: 0;
     left: 0;
     top: 566px;
-  }
+  } */
 
   section#table_att .container.my-4.position-relative+hr {
     opacity: 0;
