@@ -5645,7 +5645,9 @@ section.mots.container p {
   border-radius: 20px;
 }
 
-
+section.mots.container .col-md-3.text-center {
+  width: auto;
+}
 @media (max-width: 768px) {
   section#table_att {
     padding: 20px 30px;

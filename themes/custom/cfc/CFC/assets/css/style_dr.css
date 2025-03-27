@@ -1482,3 +1482,55 @@ span.conference_moderne {
 #block-cfc-sectiononeeventocde .invitation-card {
   height: 90%;
 }
+#table_att a.btn.btn-custom {
+  border-radius: 10px;
+  width: auto;
+  padding: 5px 25px;
+  height: max-content;
+}
+.card_all_list {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+.card_all_list .mx-auto {
+  margin: 0;
+  width: inherit;
+}
+
+.card_all_list .mx-auto:last-child .row {justify-content: right;}
+
+.card_all_list .mx-auto:last-child .title__form_all_form_bottom.container {
+  justify-content: center;
+  display: flex;
+  position: relative;
+  left: 17px;
+}
+
+.card_all_list .row {
+  margin-top: 8%;
+}
+.card_all_list .mx-auto {
+  position: relative;
+}
+
+.card_all_list .mx-auto:after {
+  position: absolute;
+  content: "";
+  height: 2px;
+  width: 100%;
+  background: red;
+  top: 14%;
+}
+
+.container.my-4.position-relative.card_all_list {
+  padding: 0;
+}
+.card_all_list hr,p.titre-manage.mt-3 + hr {
+  width: 50%;
+  margin: 10px auto;
+  border-top: #ff4f00 solid;
+  opacity: 1;
+}
