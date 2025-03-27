@@ -1515,6 +1515,9 @@ span.conference_moderne {
 .card_all_list .mx-auto {
   position: relative;
 }
+.container.my-4.position-relative .col-md-3.text-center img, .col-custom5.text-center img {
+  width: auto;
+}
 
 .card_all_list .mx-auto:after {
   position: absolute;
