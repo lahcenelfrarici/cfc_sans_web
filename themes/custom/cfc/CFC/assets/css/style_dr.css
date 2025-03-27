@@ -1426,3 +1426,10 @@ section.section---filter-block .owl-nav span {
 .wisiwyg .article-date .translated-date:first-of-type {
   display: none;
 }
+.all__telecharger_timeline .header a {
+  line-height: normal;
+  text-align: left;
+}
+section.mots.container .para-help {
+  line-height: normal;
+}

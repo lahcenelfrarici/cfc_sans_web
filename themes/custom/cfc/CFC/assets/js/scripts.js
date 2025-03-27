@@ -1794,7 +1794,12 @@
   // if (window.location.pathname.startsWith("/fr")) {
   //   window.location.href = window.location.origin + "/en";
   // }
+  $(".modal_ocde").fadeIn();
 
+  // Close modal when clicking the close button
+  $(".close_btn").click(function () {
+    $(".modal_ocde").fadeOut();
+  });
 })(jQuery);
 // $(document).ready(function () {
 //   $('#exampleModal').modal('show');
