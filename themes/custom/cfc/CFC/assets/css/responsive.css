@@ -1074,6 +1074,36 @@
 }
 
 @media (max-width: 991px) {
+
+  span.conference_moderne {
+    left: auto;
+    text-align: center;
+  }
+
+  .card_all_list {
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    text-align: center;
+  }
+
+  section.mots.container .col-md-3.text-center {
+    margin: auto;
+  }
+
+  .card_all_list .mx-auto::after {
+    opacity: 0;
+  }
+
+  .title__form_all_form_bottom.container h2 {
+    text-align: center;
+  }
+
+  span.conference_moderne {
+    left: auto;
+    text-align: center;
+  }
+
   section.all_invitation-card .row {
     height: auto;
   }
