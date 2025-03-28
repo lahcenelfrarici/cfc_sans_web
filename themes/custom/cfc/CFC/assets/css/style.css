@@ -5588,7 +5588,9 @@ section.mots.container p {
 .modal_content .invitation-card {
   padding-left: 8%;
 }
-
+.link_page_ocde a:hover {
+  text-decoration: underline;
+}
 .link_page_ocde a {
   font-size: 25px;
   color: #fff;
