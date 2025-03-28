@@ -5582,8 +5582,11 @@ section.mots.container p {
 }
 
 .modal_ocde .logo_form_bottom img {
-  height: 100%;
+  height: 580px;
   width: 100%;
+}
+.modal_content .invitation-card {
+  padding-left: 8%;
 }
 
 .link_page_ocde a {
