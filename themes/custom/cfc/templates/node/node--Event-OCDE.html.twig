@@ -5,9 +5,9 @@
 	{{ drupal_entity('block','cfc_sectionfoureventocde') }}
 	<section class="la_conferance all_form_bottom" id="contact---ocde">
 		<div class="title__form_all_form_bottom container">
-			<h2>S’INSCRIRE
+			<h2>{{'S’INSCRIRE'|t}}
 
-				<span>À LA CONFÉRENCE</span>
+				<span>{{'À LA CONFÉRENCE'|t}}</span>
 			</h2>
 
 		</div>
@@ -15,8 +15,8 @@
 			<div class="row">
 				<div class="col-md-6">
 
-          {# {{ drupal_entity('block','cfc_webform_4') }} #}
-					<form>
+          {{ drupal_entity('block','cfc_webform_4') }}
+					{# <form>
 						<div class="form-item">
 							<label for="name">Nom & Prénom</label>
 							<input type="text" id="name" name="name" required>
@@ -39,7 +39,7 @@
 						<div class="form-submit">
 							<button type="submit">CONFIRMER</button>
 						</div>
-					</form>
+					</form> #}
 				</div>
 
 				<div class="col-md-6">
