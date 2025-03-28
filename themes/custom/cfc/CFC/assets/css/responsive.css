@@ -514,7 +514,7 @@
   .wisiwyg .img--detail img {
     height: auto;
     object-fit: cover;
-    width: 50%;
+    width: 30%;
   }
 
   div#block-cfc-identitedusite img {
