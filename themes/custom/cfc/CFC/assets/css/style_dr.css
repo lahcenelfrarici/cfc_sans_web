@@ -1537,3 +1537,6 @@ span.conference_moderne {
   border-top: #ff4f00 solid;
   opacity: 1;
 }
+p.color_speaker {
+  color: #008E82;
+}
