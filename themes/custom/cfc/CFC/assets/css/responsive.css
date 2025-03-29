@@ -1239,7 +1239,7 @@
   /*  */
 
   .modal_content section.all_invitation-card .row {
-    height: 100%;
+    height: max-content;
     display: block;
     align-content: center;
     padding-bottom: 20px;
