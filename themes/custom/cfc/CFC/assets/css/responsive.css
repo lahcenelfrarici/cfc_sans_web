@@ -1240,7 +1240,7 @@
 
   .modal_content section.all_invitation-card .row {
     height: 80vh;
-    overflow: auto;
+    /* overflow: auto; */
     display: flex;
     align-content: space-around;
   }
