@@ -1256,7 +1256,7 @@
   }
 
   .modal_ocde .conference-info {
-    font-size: 18px;
+    font-size: 15px;
   }
 
   .modal_ocde .location {
@@ -1306,7 +1306,7 @@
   }
 
   .link_page_ocde a {
-    font-size: 19px;
+    font-size: 15px;
   }
 
   .modal_ocde .conference-info {
@@ -1382,6 +1382,15 @@
 
   .items--elements-ll #acc-card-6-column .card .card-header {
     padding: 0;
+  }
+
+  .modal_content .invitation-card {
+    max-width: 100%;
+    padding-bottom: 0;
+  }
+
+  .modal_content section.all_invitation-card {
+    padding-bottom: 5px;
   }
 
   .items--elements-ll #acc-card-6-column .card .card-body {
