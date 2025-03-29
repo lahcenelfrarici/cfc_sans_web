@@ -1241,6 +1241,8 @@
   .modal_content section.all_invitation-card .row {
     height: 80vh;
     overflow: auto;
+    display: flex;
+    align-content: space-around;
   }
 
   .modal_ocde .conference-info {
