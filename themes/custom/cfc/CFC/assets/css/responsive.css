@@ -1239,10 +1239,10 @@
   /*  */
 
   .modal_content section.all_invitation-card .row {
-    height: 60vh;
-    overflow: auto;
+    height: auto;
     display: flex;
     align-content: center;
+    padding-bottom: 20px;
   }
 
   .modal_ocde .conference-info {
