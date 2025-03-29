@@ -1236,6 +1236,33 @@
     width: 100%;
   }
 
+  /*  */
+
+  .modal_content section.all_invitation-card .row {
+    height: 80vh;
+    overflow: auto;
+  }
+
+  .modal_ocde .conference-info {
+    padding: 10px;
+  }
+
+  .modal_ocde section.all_invitation-card .logo_form_bottom img {
+    height: 185px !important;
+  }
+
+  .modal_ocde .invitation-card h2 {
+    padding-bottom: 0;
+  }
+
+  .modal_ocde .conference-info {
+    font-size: 18px;
+  }
+
+  .modal_ocde .location {
+    font-size: 15px;
+  }
+
   section.two___stories_vs .success img.mb-5 {
     height: auto;
     width: 100%;
