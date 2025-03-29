@@ -1239,8 +1239,8 @@
   /*  */
 
   .modal_content section.all_invitation-card .row {
-    height: auto;
-    display: flex;
+    height: 100%;
+    display: block;
     align-content: center;
     padding-bottom: 20px;
   }
