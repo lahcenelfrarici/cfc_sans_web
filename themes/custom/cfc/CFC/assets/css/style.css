@@ -2714,7 +2714,7 @@ section.emblemes {
   background: var(--Grey-Grey-5, #F9FAFB);
   display: flex;
   width: 292px;
-  padding: 10px 15px 10px 15px;
+  padding: 5px 15px 5px 15px;
   align-items: center;
 }
 

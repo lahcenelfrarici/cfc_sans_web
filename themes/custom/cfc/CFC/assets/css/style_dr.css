@@ -1540,3 +1540,62 @@ span.conference_moderne {
 p.color_speaker {
   color: #008E82;
 }
+
+.all_form_inter label {
+  display: none;
+}
+.all_form_inter #edit-email {
+  border-radius: var(--bs-border-radius-pill) !important;
+  font-size: 1rem;
+}
+
+
+.all_form_inter .wrapper_submit {
+  display: flex;
+  align-content: center;
+  justify-content: left;
+  width: auto;
+  line-height: normal;
+  margin: auto;
+}
+.all_form_inter .wrapper_submit input {
+  background: transparent;
+  border: 0;
+  width: auto;
+  text-align: center;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: #007565;
+  font-family: "Averta CY";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  background: var(--lin, linear-gradient(84deg, #009681 4.99%, #007565 87.68%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+}
+.all_form_inter .wrapper_submit svg {
+  fill: #007565;
+  position: relative;
+  top: 5px;
+}
+.wrapper_submit svg path {
+  fill: #007565;
+}
+.all_form_inter #edit-actions input:hover {
+  text-decoration: underline;
+}
+.all_form_inter form {
+  display: flex;
+  margin-top: 20px;
+}
+.js-form-item-title-hidden {
+  display: none;
+}
+/*  */
+span#modalSubtitle {
+  background: red;
+  display: none;
+}

@@ -1042,10 +1042,23 @@
     // Function to display the item-info modal
     function showItemInfo_1(item, factSheet_img_1, subtitle) {
       let itemInfo = $('.item-info.about_maps_1');
+      console.log(subtitle);
 
       // Populate the modal with dynamic content
       $('#factSheetImg').attr('src', factSheet_img_1);
       $('#modalSubtitle').text(subtitle);
+
+      // Update the input field with the value of factSheet_img_1
+      $('#edit-title-hidden').val(subtitle);
+
+
+      // ************
+
+
+
+
+
+      // Update the input field value dynamically
 
       // Get item position
       const pathOffset = item.offset();
@@ -1055,21 +1068,22 @@
 
       // Position the modal above the item
       itemInfo.css({
-        top: pathOffset.top - itemInfoHeight - 10, // Position above the item
-        left: pathOffset.left,
-        position: 'absolute'
+          top: pathOffset.top - itemInfoHeight - 10, // Position above the item
+          left: pathOffset.left,
+          position: 'absolute'
       }).fadeIn(); // Show the modal
 
       // Adjust position if the modal is off-screen
       if (itemInfo.offset().left < 0) {
-        itemInfo.css('left', 10);
+          itemInfo.css('left', 10);
       } else if ((itemInfo.offset().left + itemInfoWidth) > windowWidth) {
-        itemInfo.css('left', windowWidth - itemInfoWidth - 10);
+          itemInfo.css('left', windowWidth - itemInfoWidth - 10);
       }
 
       // Update content dynamically
       updateItemInfoContent();
-    }
+  }
+
 
     // Event listeners
     $('.maps___1 .item-wrap-1, .maps___2 .item-wrap-1').on('mouseenter click', function () {
