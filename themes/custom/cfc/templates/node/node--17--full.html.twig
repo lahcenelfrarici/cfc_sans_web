@@ -84,12 +84,13 @@
 			<span class="test" id="modalSubtitle"></span>
 			<div class="tabs---1">{{'To get in touch with this international financial center, please enter your email address'|t}}</div>
 			<div class="tabs---2">{{'To get in touch with this investment promotion agency, please enter your email address'|t}}</div>
-			<form class="d-flex mt-3">
+			{# <form class="d-flex mt-3">
 				<input type="email" class="form-control rounded-pill" placeholder="Email.." required="">
 				<button type="submit" class="form--news">{{'Submit'|t}}
 					<i class="fas fa-arrow-right ms-2"></i>
 				</button>
-			</form>
+			</form> #}
+            {{ drupal_entity('block','cfc_webform_5') }}
 		</div>
 	</div>
 </div>
