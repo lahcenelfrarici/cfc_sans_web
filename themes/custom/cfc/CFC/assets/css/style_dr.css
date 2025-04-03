@@ -1599,3 +1599,6 @@ span#modalSubtitle {
   background: red;
   display: none;
 }
+.wrapper-element-africa .contextual {
+  display: none;
+}
