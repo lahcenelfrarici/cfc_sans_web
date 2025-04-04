@@ -1223,6 +1223,39 @@
     width: 100%;
   }
 
+  /*  */
+  .all_form_inter .wrapper_submit {
+    position: relative;
+    right: auto;
+    justify-content: left;
+  }
+
+  .all_form_inter .wrapper_submit input {
+    width: auto !important;
+  }
+
+  .all_form_inter form {
+    gap: 10px 0 !important;
+  }
+
+  .captcha.captcha-type-challenge--recaptcha {
+    width: 90%;
+  }
+
+  .item-info-content .wrapper-element-africa {
+    position: relative;
+    right: 10px;
+  }
+
+  .all_form_inter .item-info-content {
+    gap: 0;
+    padding: initial;
+  }
+
+  .item-info.about_maps_1 {
+    padding: 15px 0;
+  }
+
   .form__formualaire form .wrapper_submit path {
     fill: #007565;
   }

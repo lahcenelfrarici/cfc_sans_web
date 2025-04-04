@@ -1795,16 +1795,16 @@
   //     $('.captcha .error').remove(); // Remove error message when CAPTCHA is validated
   //   }
   // });
-  // $('#webform-submission-contact-add-form').submit(function (e) {
-  //   // Check if reCAPTCHA is filled
-  //   if (grecaptcha.getResponse() === '') {
-  //     e.preventDefault();
-  //     $('.captcha .error').remove(); // Remove existing error messages
-  //     $('.captcha').append('<p class="error">Le CAPTCHA est requis.</p>');
-  //   } else {
-  //     $('.captcha .error').remove(); // If checked, remove error message
-  //   }
-  // });
+  $('#webform-submission-contact-add-form,#webform-submission-contact-modal-maps-add-form,#webform-submission-international-partnerships-node-17-add-form').submit(function (e) {
+    // Check if reCAPTCHA is filled
+    if (grecaptcha.getResponse() === '') {
+      e.preventDefault();
+      $('.captcha .error').remove(); // Remove existing error messages
+      $('.captcha').append('<p class="error">Le CAPTCHA est requis.</p>');
+    } else {
+      $('.captcha .error').remove(); // If checked, remove error message
+    }
+  });
   // if (window.location.pathname.startsWith("/fr")) {
   //   window.location.href = window.location.origin + "/en";
   // }

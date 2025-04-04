@@ -1602,3 +1602,31 @@ span#modalSubtitle {
 .wrapper-element-africa .contextual {
   display: none;
 }
+.all_form_inter form {
+  flex-direction: column;
+  gap: 10px 0;
+}
+
+.all_form_inter form .captcha__description.description {
+  font-size: 15px;
+}
+.all_form_inter .wrapper_submit {
+  position: absolute;
+  top: 0;
+  right: -15px;
+}
+
+.all_form_inter {
+  position: relative;
+}
+fieldset.captcha.captcha-type-challenge--recaptcha p.error {
+  color: red;
+  font-size: 15px;
+  text-align: left;
+}
+.contact---us .wrapper_submit svg path {
+  fill: #fff;
+}
+.contact---us .form-actions {
+  width: 100%;
+}
