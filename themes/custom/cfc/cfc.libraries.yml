@@ -29,7 +29,9 @@ global-js:
     ./CFC/assets/js/ayoub.js: {}
   dependencies:
     - core/jquery
+    - core/jquery.form  # ✅ Add this line
     - jquery.ui
+
 
 
 global-css-rtl:
