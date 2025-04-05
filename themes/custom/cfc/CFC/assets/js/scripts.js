@@ -1068,21 +1068,21 @@
 
       // Position the modal above the item
       itemInfo.css({
-          top: pathOffset.top - itemInfoHeight - 10, // Position above the item
-          left: pathOffset.left,
-          position: 'absolute'
+        top: pathOffset.top - itemInfoHeight - 10, // Position above the item
+        left: pathOffset.left,
+        position: 'absolute'
       }).fadeIn(); // Show the modal
 
       // Adjust position if the modal is off-screen
       if (itemInfo.offset().left < 0) {
-          itemInfo.css('left', 10);
+        itemInfo.css('left', 10);
       } else if ((itemInfo.offset().left + itemInfoWidth) > windowWidth) {
-          itemInfo.css('left', windowWidth - itemInfoWidth - 10);
+        itemInfo.css('left', windowWidth - itemInfoWidth - 10);
       }
 
       // Update content dynamically
       updateItemInfoContent();
-  }
+    }
 
 
     // Event listeners
@@ -1795,16 +1795,147 @@
   //     $('.captcha .error').remove(); // Remove error message when CAPTCHA is validated
   //   }
   // });
-  $('#webform-submission-contact-add-form,#webform-submission-contact-modal-maps-add-form,#webform-submission-international-partnerships-node-17-add-form').submit(function (e) {
+  // ****************
+
+  // $('#webform-submission-contact-add-form').submit(function (e) {
+  //   // Check if reCAPTCHA is filled
+  //   if (grecaptcha.getResponse() === '') {
+  //     e.preventDefault();
+  //     $('.captcha .error').remove(); // Remove existing error messages
+  //     $('.captcha').append('<p class="error">Le CAPTCHA est requis.</p>');
+  //   } else {
+  //     $('.captcha .error').remove(); // If checked, remove error message
+  //   }
+  // });
+  // $('#webform-submission-contact-modal-maps-add-form').submit(function (e) {
+  //   // Check if reCAPTCHA is filled
+  //   if (grecaptcha.getResponse() === '') {
+  //     e.preventDefault();
+  //     $('.captcha .error').remove(); // Remove existing error messages
+  //     $('.captcha').append('<p class="error">Le CAPTCHA est requis.</p>');
+  //   } else {
+  //     $('.captcha .error').remove(); // If checked, remove error message
+  //   }
+  // });
+  // $('#webform-submission-international-partnerships-node-17-add-form').submit(function (e) {
+  //   // Check if reCAPTCHA is filled
+  //   if (grecaptcha.getResponse() === '') {
+  //     e.preventDefault();
+  //     $('.captcha .error').remove(); // Remove existing error messages
+  //     $('.captcha').append('<p class="error">Le CAPTCHA est requis.</p>');
+  //   } else {
+  //     $('.captcha .error').remove(); // If checked, remove error message
+  //   }
+  // });
+  // *****************
+  // $('.webform-submission-contact-form').submit(function (e) {
+  //   var $form = $(this);
+  //   var $captcha = $form.find('.captcha');
+
+  //   // Check if reCAPTCHA is filled
+  //   if (grecaptcha.getResponse() === '') {
+  //     e.preventDefault();
+  //     $captcha.find('.error').remove(); // Remove existing error messages
+  //     $captcha.append('<p class="error">Le CAPTCHA est requis.</p>');
+  //   } else {
+  //     $captcha.find('.error').remove(); // If checked, remove error message
+  //   }
+  // });
+  // //
+  // $('.webform-submission-international-partnerships-form').submit(function (e) {
+  //   var $form = $(this);
+  //   var $captcha = $form.find('.captcha');
+
+  //   // Check if reCAPTCHA is filled
+  //   if (grecaptcha.getResponse() === '') {
+  //     e.preventDefault();
+  //     $captcha.find('.error').remove(); // Remove existing error messages
+  //     $captcha.append('<p class="error">Le CAPTCHA est requis.</p>');
+  //   } else {
+  //     $captcha.find('.error').remove(); // If checked, remove error message
+  //   }
+  // });
+  // //
+  $('.webform-submission-contact-modal-maps-form').submit(function (e) {
+    var $form = $(this);
+    var $captcha = $form.find('.captcha');
+
     // Check if reCAPTCHA is filled
     if (grecaptcha.getResponse() === '') {
       e.preventDefault();
-      $('.captcha .error').remove(); // Remove existing error messages
-      $('.captcha').append('<p class="error">Le CAPTCHA est requis.</p>');
+      $captcha.find('.error').remove(); // Remove existing error messages
+      $captcha.append('<p class="error">Le CAPTCHA est requis.</p>');
     } else {
-      $('.captcha .error').remove(); // If checked, remove error message
+      $captcha.find('.error').remove(); // If checked, remove error message
     }
   });
+  $('.webform-submission-international-partnerships-node-17-add-form').submit(function (e) {
+    var $form = $(this);
+    var $captcha = $form.find('.captcha');
+
+    // Check if reCAPTCHA is filled
+    if (grecaptcha.getResponse() === '') {
+      e.preventDefault();
+      $captcha.find('.error').remove(); // Remove existing error messages
+      $captcha.append('<p class="error">Le CAPTCHA est requis.</p>');
+    } else {
+      $captcha.find('.error').remove(); // If checked, remove error message
+    }
+  });
+
+  if (window.location.pathname.startsWith("/fr")) {
+    window.location.href = window.location.origin + "/en";
+  }
+  // Validate CAPTCHA before submitting the form
+  // $('form.webform-submission-form').submit(function(event) {
+  //   var captchaResponse = $('input[name="g-recaptcha-response"]').val();
+  //   if (captchaResponse == '') {
+  //     event.preventDefault();  // Prevent form submission
+  //     alert('Please complete the CAPTCHA');
+  //   }
+  // });
+  // $('.webform-submission-contact-form').submit(function (e) {
+  //   var $form = $(this);
+  //   var $captcha = $form.find('.captcha');
+
+  //   // Check if reCAPTCHA is filled
+  //   if (grecaptcha.getResponse() === '') {
+  //     e.preventDefault();
+  //     $captcha.find('.error').remove(); // Remove existing error messages
+  //     $captcha.append('<p class="error">Le CAPTCHA est requis.</p>');
+  //   } else {
+  //     $captcha.find('.error').remove(); // If checked, remove error message
+  //   }
+  // });
+  // //
+  // $('.webform-submission-international-partnerships-form').submit(function (e) {
+  //   var $form = $(this);
+  //   var $captcha = $form.find('.captcha');
+
+  //   // Check if reCAPTCHA is filled
+  //   if (grecaptcha.getResponse() === '') {
+  //     e.preventDefault();
+  //     $captcha.find('.error').remove(); // Remove existing error messages
+  //     $captcha.append('<p class="error">Le CAPTCHA est requis.</p>');
+  //   } else {
+  //     $captcha.find('.error').remove(); // If checked, remove error message
+  //   }
+  // });
+  // //
+  // $('.webform-submission-contact-modal-maps-form').submit(function (e) {
+  //   var $form = $(this);
+  //   var $captcha = $form.find('.captcha');
+
+  //   // Check if reCAPTCHA is filled
+  //   if (grecaptcha.getResponse() === '') {
+  //     e.preventDefault();
+  //     $captcha.find('.error').remove(); // Remove existing error messages
+  //     $captcha.append('<p class="error">Le CAPTCHA est requis.</p>');
+  //   } else {
+  //     $captcha.find('.error').remove(); // If checked, remove error message
+  //   }
+  // });
+
   // if (window.location.pathname.startsWith("/fr")) {
   //   window.location.href = window.location.origin + "/en";
   // }
@@ -1838,6 +1969,7 @@
       }, 800); // Adjust the duration (800ms) as needed
     }
   });
+
 })(jQuery);
 // $(document).ready(function () {
 //   $('#exampleModal').modal('show');

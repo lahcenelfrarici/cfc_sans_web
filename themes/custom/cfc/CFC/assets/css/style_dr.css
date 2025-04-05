@@ -1388,6 +1388,7 @@ section.section---filter-block .owl-nav span {
   line-height: 34px;
   margin-top: 12px;
 }
+
 .webform-confirmation-modal--content a:hover {
   color: #333333;
   text-decoration: underline;
@@ -1396,11 +1397,13 @@ section.section---filter-block .owl-nav span {
 .custom-select.open .select-items {
   padding: 15px 6px;
 }
+
 #filter-verticale .select-selected img {
   width: 20px;
   height: max-content;
   margin-right: 10px;
 }
+
 #filter-verticale .select-selected {
   display: flex;
   align-items: center;
@@ -1411,33 +1414,42 @@ section.section---filter-block .owl-nav span {
 .african_pioneer ul li {
   margin-top: 15px;
 }
+
 .column ul ul {
   list-style-type: circle;
 }
+
 #list--news-all .btn--pls span {
   text-transform: initial;
 }
+
 .article-date time {
   text-transform: capitalize;
 }
+
 .wisiwyg .article-date span {
   text-transform: capitalize;
 }
+
 .wisiwyg .article-date .translated-date:first-of-type {
   display: none;
 }
+
 .all__telecharger_timeline .header a {
   line-height: normal;
   text-align: left;
 }
+
 section.mots.container .para-help {
   line-height: normal;
 }
+
 .container.my-4.position-relative hr {
   width: 50%;
   margin: 10px auto;
 }
-.container.my-4.position-relative + hr {
+
+.container.my-4.position-relative+hr {
   display: none;
 }
 
@@ -1448,24 +1460,32 @@ section.mots.container {
 .show_fr_page:lang(en) {
   display: none !important;
 }
+
 .show_en_page:lang(fr) {
   display: none !important;
 }
-.show_fr_page svg path, .show_en_page svg path {
+
+.show_fr_page svg path,
+.show_en_page svg path {
   fill: #007565;
 }
+
 #block-cfc-sectiononeeventocde .invitation-card {
   padding-left: 0;
 }
+
 #flex--box-fs .col-md-6 img {
   object-fit: contain;
 }
+
 div#block-cfc-sectiononeeventocde .btn_title-orange.text-center {
   margin: 0px auto;
 }
+
 div#block-cfc-sectiononeeventocde .btn_title-orange.text-center {
   background: #005C6F;
 }
+
 span.conference_moderne {
   text-align: right;
   width: 100%;
@@ -1475,6 +1495,7 @@ span.conference_moderne {
   position: relative;
   left: 45px;
 }
+
 .conference_moderne_p {
   color: #fff;
 }
@@ -1482,12 +1503,14 @@ span.conference_moderne {
 #block-cfc-sectiononeeventocde .invitation-card {
   height: 90%;
 }
+
 #table_att a.btn.btn-custom {
   border-radius: 10px;
   width: auto;
   padding: 5px 25px;
   height: max-content;
 }
+
 .card_all_list {
   display: flex;
   justify-content: space-between;
@@ -1500,7 +1523,9 @@ span.conference_moderne {
   width: inherit;
 }
 
-.card_all_list .mx-auto:last-child .row {justify-content: right;}
+.card_all_list .mx-auto:last-child .row {
+  justify-content: right;
+}
 
 .card_all_list .mx-auto:last-child .title__form_all_form_bottom.container {
   justify-content: center;
@@ -1512,10 +1537,13 @@ span.conference_moderne {
 .card_all_list .row {
   margin-top: 8%;
 }
+
 .card_all_list .mx-auto {
   position: relative;
 }
-.container.my-4.position-relative .col-md-3.text-center img, .col-custom5.text-center img {
+
+.container.my-4.position-relative .col-md-3.text-center img,
+.col-custom5.text-center img {
   width: auto;
 }
 
@@ -1531,12 +1559,15 @@ span.conference_moderne {
 .container.my-4.position-relative.card_all_list {
   padding: 0;
 }
-.card_all_list hr,p.titre-manage.mt-3 + hr {
+
+.card_all_list hr,
+p.titre-manage.mt-3+hr {
   width: 50%;
   margin: 10px auto;
   border-top: #ff4f00 solid;
   opacity: 1;
 }
+
 p.color_speaker {
   color: #008E82;
 }
@@ -1544,6 +1575,7 @@ p.color_speaker {
 .all_form_inter label {
   display: none;
 }
+
 .all_form_inter #edit-email {
   border-radius: var(--bs-border-radius-pill) !important;
   font-size: 1rem;
@@ -1558,6 +1590,7 @@ p.color_speaker {
   line-height: normal;
   margin: auto;
 }
+
 .all_form_inter .wrapper_submit input {
   background: transparent;
   border: 0;
@@ -1576,32 +1609,40 @@ p.color_speaker {
   -webkit-text-fill-color: transparent;
 
 }
+
 .all_form_inter .wrapper_submit svg {
   fill: #007565;
   position: relative;
   top: 5px;
 }
+
 .wrapper_submit svg path {
   fill: #007565;
 }
+
 .all_form_inter #edit-actions input:hover {
   text-decoration: underline;
 }
+
 .all_form_inter form {
   display: flex;
   margin-top: 20px;
 }
+
 .js-form-item-title-hidden {
   display: none;
 }
+
 /*  */
 span#modalSubtitle {
   background: red;
   display: none;
 }
+
 .wrapper-element-africa .contextual {
   display: none;
 }
+
 .all_form_inter form {
   flex-direction: column;
   gap: 10px 0;
@@ -1610,6 +1651,7 @@ span#modalSubtitle {
 .all_form_inter form .captcha__description.description {
   font-size: 15px;
 }
+
 .all_form_inter .wrapper_submit {
   position: absolute;
   top: 0;
@@ -1619,14 +1661,67 @@ span#modalSubtitle {
 .all_form_inter {
   position: relative;
 }
+
 fieldset.captcha.captcha-type-challenge--recaptcha p.error {
   color: red;
   font-size: 15px;
   text-align: left;
 }
+
 .contact---us .wrapper_submit svg path {
   fill: #fff;
 }
+
 .contact---us .form-actions {
   width: 100%;
+}
+
+#block-cfc-webform-3 .js-form-item-pdf {
+  display: none;
+}
+
+.showing_modal_pop_up [data-drupal-messages] {
+
+  padding:
+    15px;
+  border-radius:
+    5px;
+  width: 100%;
+}
+.ui-widget.ui-widget-content {
+
+  z-index: 999999 !important;
+}
+.all_form_inter [data-drupal-messages] > div > div {
+  font-size: 16px !important;
+  width: 50%;
+}
+
+.item-info-content .wrapper-element-africa input {
+  width: 70%;
+  border-radius: var(--bs-border-radius-pill) !important;
+  font-size: 1rem;
+}
+
+.all_form_inter .wrapper_submit input {
+  font-size: 21px;
+}
+.item-info-content .wrapper-element-africa {
+  width: auto;
+}
+.all_form_inter .wrapper_submit svg {
+  width: 28px;
+  top: 2px;
+}
+.captcha__description.description {
+  display: none;
+}
+.wrapper-element-africa .form-item--error-message {
+  font-size: 14px;
+  padding-top: 5px;
+  font-weight: 200;
+}
+.wrapper-element-africa [data-drupal-messages] li {
+  font-size: 15px !important;
+  font-weight: 200 !important;
 }
