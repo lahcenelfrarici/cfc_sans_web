@@ -1108,6 +1108,15 @@
   .management_team .row>div:nth-child(5) {
     order: 5;
   }
+
+  section#table_att .title__form_all_form_bottom.container {
+    flex-direction: column;
+  }
+
+  section#table_att .title__form_all_form_bottom.container h2 {
+    width: 100% !important;
+  }
+
   span.conference_moderne {
     left: auto;
     text-align: center;

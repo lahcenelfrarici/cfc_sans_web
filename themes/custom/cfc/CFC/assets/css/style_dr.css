@@ -1749,3 +1749,16 @@ section#table_att .col-custom5.text-center {
   padding: 0;
   margin: 0;
 }
+
+section#table_att .title__form_all_form_bottom.container {
+  display: flex;
+  align-items: end;
+}
+
+section#table_att .title__form_all_form_bottom.container h2:first-child {
+  width: 36%;
+}
+
+section#table_att .title__form_all_form_bottom.container h2:last-child {
+  width: 64%;
+}
