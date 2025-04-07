@@ -1884,9 +1884,9 @@
   });
 
 
-  if (window.location.pathname.startsWith("/fr")) {
-    window.location.href = window.location.origin + "/en";
-  }
+  // if (window.location.pathname.startsWith("/fr")) {
+  //   window.location.href = window.location.origin + "/en";
+  // }
   // Validate CAPTCHA before submitting the form
   // $('form.webform-submission-form').submit(function(event) {
   //   var captchaResponse = $('input[name="g-recaptcha-response"]').val();
