@@ -1882,7 +1882,7 @@
       $captcha.find('.error').remove(); // If checked, remove error message
     }
   });
-  
+
 
   if (window.location.pathname.startsWith("/fr")) {
     window.location.href = window.location.origin + "/en";

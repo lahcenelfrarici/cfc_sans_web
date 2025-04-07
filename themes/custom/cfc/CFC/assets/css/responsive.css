@@ -1074,7 +1074,40 @@
 }
 
 @media (max-width: 991px) {
+  section#table_att .mx-auto {
+    flex-direction: column;
+    margin: auto;
+    text-align: center;
+    justify-content: center;
+  }
 
+  section#table_att .mx-auto .col-custom5.text-center {
+    width: 100%;
+  }
+
+  .management_team .row>div:nth-child(1) {
+    order: 6;
+  }
+
+  .management_team .row>div:nth-child(6) {
+    order: 1;
+  }
+
+  .management_team .row>div:nth-child(2) {
+    order: 2;
+  }
+
+  .management_team .row>div:nth-child(3) {
+    order: 3;
+  }
+
+  .management_team .row>div:nth-child(4) {
+    order: 4;
+  }
+
+  .management_team .row>div:nth-child(5) {
+    order: 5;
+  }
   span.conference_moderne {
     left: auto;
     text-align: center;

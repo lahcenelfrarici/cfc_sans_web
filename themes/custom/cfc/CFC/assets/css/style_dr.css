@@ -1725,3 +1725,27 @@ fieldset.captcha.captcha-type-challenge--recaptcha p.error {
   font-size: 15px !important;
   font-weight: 200 !important;
 }
+/*  */
+
+section#table_att .mx-auto {
+  max-width: initial !important;
+  display: flex;
+  justify-content: space-between;
+}
+
+section#table_att .mx-auto >div {
+  justify-content: space-between !important;
+  padding: 0;
+}
+
+
+section#table_att .col-custom5.text-center img {
+  width: 100%;
+  object-fit: contain;
+}
+
+section#table_att .col-custom5.text-center {
+  width: 209px;
+  padding: 0;
+  margin: 0;
+}
