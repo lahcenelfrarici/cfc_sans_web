@@ -5270,7 +5270,7 @@ span.location-icon svg {
 }
 
 .invitation-card h2:after {
-  bottom: 0;
+  bottom: -10px;
   position: absolute;
   width: 100px;
   background-color: #FF4F00;
