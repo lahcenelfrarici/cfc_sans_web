@@ -1042,95 +1042,87 @@
     // Function to display the item-info modal
     function showItemInfo_1(item, factSheet_img_1, subtitle) {
       let itemInfo = $('.item-info.about_maps_1');
-      console.log(subtitle);
-
-      // Populate the modal with dynamic content
+    
+      // Set image and subtitle
       $('#factSheetImg').attr('src', factSheet_img_1);
       $('#modalSubtitle').text(subtitle);
-
-      // Update the input field with the value of factSheet_img_1
       $('#edit-title-hidden').val(subtitle);
-
-
-      // ************
-
-
-
-
-
-      // Update the input field value dynamically
-
-      // Get item position
+    
+      // Get position and dimensions
       const pathOffset = item.offset();
       const windowWidth = $(window).width();
       const itemInfoWidth = itemInfo.outerWidth();
       const itemInfoHeight = itemInfo.outerHeight();
-
-      // Position the modal above the item
+    
+      // Position modal above the item
       itemInfo.css({
-        top: pathOffset.top - itemInfoHeight - 10, // Position above the item
+        top: pathOffset.top - itemInfoHeight - 10,
         left: pathOffset.left,
         position: 'absolute'
-      }).fadeIn(); // Show the modal
-
-      // Adjust position if the modal is off-screen
+      }).fadeIn();
+    
+      // Adjust if off-screen
       if (itemInfo.offset().left < 0) {
         itemInfo.css('left', 10);
       } else if ((itemInfo.offset().left + itemInfoWidth) > windowWidth) {
         itemInfo.css('left', windowWidth - itemInfoWidth - 10);
       }
-
-      // Update content dynamically
+    
       updateItemInfoContent();
     }
-
-
-    // Event listeners
+    
+    // Show modal on item hover/click
     $('.maps___1 .item-wrap-1, .maps___2 .item-wrap-1').on('mouseenter click', function () {
-      const factSheet_img_1 = $(this).data('logo'); // Retrieve image link
-      const subtitle = $(this).data('subtitle'); // Retrieve subtitle
-      showItemInfo_1($(this), factSheet_img_1, subtitle); // Show modal
+      const factSheet_img_1 = $(this).data('logo');
+      const subtitle = $(this).data('subtitle');
+      showItemInfo_1($(this), factSheet_img_1, subtitle);
     });
-
-    // Hide modal when mouse leaves
-    $(document).on('mouseleave', '.map-container, .item-info', function (event) {
-      if (!$(event.relatedTarget).closest('.item-info').length && !$(event.relatedTarget).closest('.map-container').length) {
-        $('.item-info').fadeOut();
-      }
-    });
-
-    // Handle tab clicks
-    $(".element-sc").on("click", function () {
-      $(".element-sc").removeClass("active");
-      $(this).addClass("active");
+    
+    // Handle tab switching
+    $('.element-sc').on('click', function () {
+      $('.element-sc').removeClass('active');
+      $(this).addClass('active');
       updateItemInfoContent();
     });
-
-
-    // When the user hovers over the item with the class "item-wrap-1"
-    $('.maps___1 .item-wrap-1, .maps___2 .item-wrap-1').on('mouseenter click', function () {
-      const factSheet_img_1 = $(this).data('logo'); // Retrieve the fact sheet image link
-      const subtitle = $(this).data('subtitle'); // Retrieve the subtitle
-      showItemInfo_1($(this), factSheet_img_1, subtitle); // Show item-info modal
+    
+    // Track whether the user is interacting with the email input
+    let isEmailAutocompleteActive = false;
+    
+    // When user focuses the email input (typing or clicking autocomplete)
+    $(document).on('focusin', 'input[type="email"]', function () {
+      isEmailAutocompleteActive = true;
     });
-
-    // When the mouse leaves the .map-container or .item-info, hide the modal
+    
+    // When user clicks outside email input
+    $(document).on('focusout', 'input[type="email"]', function () {
+      // Give a slight delay to let autocomplete options be selected
+      setTimeout(() => {
+        isEmailAutocompleteActive = false;
+      }, 200);
+    });
+    
+    // Timeout to delay hiding
+    let modalTimeout;
+    
+    // Hide modal when leaving container or modal (with delay and checks)
     $(document).on('mouseleave', '.map-container, .item-info', function (event) {
-      // Check if the mouse has really left the map-container or item-info
-      if (!$(event.relatedTarget).closest('.item-info').length && !$(event.relatedTarget).closest('.map-container').length) {
-        $('.item-info').hide(); // Hide the item-info modal
-      }
+      modalTimeout = setTimeout(function () {
+        // Don't hide if interacting with email input
+        if (
+          !isEmailAutocompleteActive &&
+          !$(event.relatedTarget).closest('.item-info').length &&
+          !$(event.relatedTarget).closest('.map-container').length
+        ) {
+          $('.item-info').fadeOut();
+        }
+      }, 150); // slight delay helps avoid flickering
     });
-
-    // Optional: Monitor clicks on hover tabs to dynamically update the state
-    $(".element-sc").on("click", function () {
-      // Add 'active' class to clicked element and remove from siblings
-      $(".element-sc").removeClass("active");
-      $(this).addClass("active");
-
-      // Update item-info-content classes dynamically
-      updateItemInfoContent();
+    
+    // Cancel hiding if mouse re-enters
+    $(document).on('mouseenter', '.map-container, .item-info', function () {
+      clearTimeout(modalTimeout);
     });
+    
   });
 
 
