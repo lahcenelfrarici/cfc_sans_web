@@ -1764,3 +1764,8 @@ section#table_att .title__form_all_form_bottom.container h2:last-child {
 }
 /*  */
 
+
+.all_section_ocde .logo_form_bottom {
+  width: auto !important;
+  left: auto;
+}
