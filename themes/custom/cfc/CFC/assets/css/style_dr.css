@@ -1774,3 +1774,6 @@ p.close_modal_webform {
   cursor: pointer;
   margin: auto;
 }
+form [data-drupal-messages] .webform-confirmation-modal--content{
+  display:none;
+}

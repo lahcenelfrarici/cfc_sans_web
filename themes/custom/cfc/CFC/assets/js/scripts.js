@@ -1962,12 +1962,16 @@
       }, 800); // Adjust the duration (800ms) as needed
     }
   });
-  $('.close_modal_webform').on('click', function() {
-    // Remove the modal
-    $('.ui-dialog.ui-front').remove();
+  // $('.close_modal_webform').on('click', function() {
+  //   // Remove the modal
+  //   $('.ui-dialog.ui-front').remove();
 
-    // Remove the overlay
-    $('.ui-widget-overlay.ui-front').remove();
+  //   // Remove the overlay
+  //   $('.ui-widget-overlay.ui-front').remove();
+  // });
+  $(document).on('click', '.close_modal_webform', function() {
+    $('.ui-dialog.ui-front').remove(); // Remove modal
+    $('.ui-widget-overlay.ui-front').remove(); // Remove overlay
   });
 
 })(jQuery);
