@@ -1042,57 +1042,57 @@
     // Function to display the item-info modal
     function showItemInfo_1(item, factSheet_img_1, subtitle) {
       let itemInfo = $('.item-info.about_maps_1');
-    
+
       // Set image and subtitle
       $('#factSheetImg').attr('src', factSheet_img_1);
       $('#modalSubtitle').text(subtitle);
       $('#edit-title-hidden').val(subtitle);
-    
+
       // Get position and dimensions
       const pathOffset = item.offset();
       const windowWidth = $(window).width();
       const itemInfoWidth = itemInfo.outerWidth();
       const itemInfoHeight = itemInfo.outerHeight();
-    
+
       // Position modal above the item
       itemInfo.css({
         top: pathOffset.top - itemInfoHeight - 10,
         left: pathOffset.left,
         position: 'absolute'
       }).fadeIn();
-    
+
       // Adjust if off-screen
       if (itemInfo.offset().left < 0) {
         itemInfo.css('left', 10);
       } else if ((itemInfo.offset().left + itemInfoWidth) > windowWidth) {
         itemInfo.css('left', windowWidth - itemInfoWidth - 10);
       }
-    
+
       updateItemInfoContent();
     }
-    
+
     // Show modal on item hover/click
     $('.maps___1 .item-wrap-1, .maps___2 .item-wrap-1').on('mouseenter click', function () {
       const factSheet_img_1 = $(this).data('logo');
       const subtitle = $(this).data('subtitle');
       showItemInfo_1($(this), factSheet_img_1, subtitle);
     });
-    
+
     // Handle tab switching
     $('.element-sc').on('click', function () {
       $('.element-sc').removeClass('active');
       $(this).addClass('active');
       updateItemInfoContent();
     });
-    
+
     // Track whether the user is interacting with the email input
     let isEmailAutocompleteActive = false;
-    
+
     // When user focuses the email input (typing or clicking autocomplete)
     $(document).on('focusin', 'input[type="email"]', function () {
       isEmailAutocompleteActive = true;
     });
-    
+
     // When user clicks outside email input
     $(document).on('focusout', 'input[type="email"]', function () {
       // Give a slight delay to let autocomplete options be selected
@@ -1100,10 +1100,10 @@
         isEmailAutocompleteActive = false;
       }, 200);
     });
-    
+
     // Timeout to delay hiding
     let modalTimeout;
-    
+
     // Hide modal when leaving container or modal (with delay and checks)
     $(document).on('mouseleave', '.map-container, .item-info', function (event) {
       modalTimeout = setTimeout(function () {
@@ -1117,12 +1117,12 @@
         }
       }, 150); // slight delay helps avoid flickering
     });
-    
+
     // Cancel hiding if mouse re-enters
     $(document).on('mouseenter', '.map-container, .item-info', function () {
       clearTimeout(modalTimeout);
     });
-    
+
   });
 
 
@@ -1961,6 +1961,13 @@
         scrollTop: $(target).offset().top
       }, 800); // Adjust the duration (800ms) as needed
     }
+  });
+  $('.close_modal_webform').on('click', function() {
+    // Remove the modal
+    $('.ui-dialog.ui-front').remove();
+
+    // Remove the overlay
+    $('.ui-widget-overlay.ui-front').remove();
   });
 
 })(jQuery);
