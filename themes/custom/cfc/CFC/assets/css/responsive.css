@@ -408,16 +408,23 @@
 }
 
 @media (min-width: 992px) {
+  html {
+    overflow: initial !important;
+  }
+
   .modal_ocde .conference-info {
     font-size: 18px;
   }
+
   .modal_content .invitation-card {
     height: max-content;
   }
+
   .invitation-card h2 {
     font-size: 30px;
     padding: 0 0;
   }
+
   .modal_content .invitation-card {
     padding: 15px;
     height: 400px;
@@ -426,20 +433,25 @@
   section.all_invitation-card .logo_form_bottom {
     width: 100%;
   }
+
   .modal_ocde .logo_form_bottom img {
     height: 100%;
     width: 100%;
     object-fit: fill;
   }
+
   .modal_content section.all_invitation-card .row .col-md-5 {
     position: relative;
   }
+
   .modal_ocde .close_btn {
     right: 25px;
   }
+
   .modal_content section.all_invitation-card {
     height: auto;
   }
+
   section.all_invitation-card .logo_form_bottom {
     width: 100%;
     position: absolute;
