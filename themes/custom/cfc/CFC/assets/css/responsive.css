@@ -408,6 +408,16 @@
 }
 
 @media (min-width: 992px) {
+  .all_section_ocde section.all_invitation-card .logo_form_bottom {
+    width: auto !important;
+    left: auto;
+    top: auto !important;
+    bottom: auto !important;
+    height: 760px;
+  }
+  .all_section_ocde .invitation-card h2 {
+    font-size: 35px;
+  }
   html {
     overflow: initial !important;
   }

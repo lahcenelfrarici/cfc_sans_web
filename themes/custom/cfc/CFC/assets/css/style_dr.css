@@ -1765,10 +1765,7 @@ section#table_att .title__form_all_form_bottom.container h2:last-child {
 /*  */
 
 
-.all_section_ocde .logo_form_bottom {
-  width: auto !important;
-  left: auto;
-}
+
 p.close_modal_webform {
   width: max-content;
   display: flex;
