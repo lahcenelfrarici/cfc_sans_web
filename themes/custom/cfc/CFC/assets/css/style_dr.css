@@ -1782,3 +1782,11 @@ form [data-drupal-messages] .webform-confirmation-modal--content{
   font-family: "Averta CY";
   font-size: 17px;
 }
+div#block-cfc-modalhp {
+  display: none;
+}
+.contact---us [data-drupal-messages] div {
+  color: #ff0000;
+  font-family: "Averta CY";
+  font-size: 17px;
+}
