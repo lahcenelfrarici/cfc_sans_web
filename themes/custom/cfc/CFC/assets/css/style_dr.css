@@ -1777,3 +1777,8 @@ p.close_modal_webform {
 form [data-drupal-messages] .webform-confirmation-modal--content{
   display:none;
 }
+.contact---us [data-drupal-messages] li {
+  color: #ff0000;
+  font-family: "Averta CY";
+  font-size: 17px;
+}
