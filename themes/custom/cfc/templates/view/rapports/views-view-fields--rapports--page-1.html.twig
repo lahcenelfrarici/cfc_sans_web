@@ -39,6 +39,7 @@
 
 {# Extract the video ID from the URL using Twig (you might need to create a custom Twig filter) #}
 
+			{% set base_url = url('<front>')["#markup"]|split('/')|slice(0, 3)|join('/') %}
 
 <div class="col-md-4">
   <div class="card">
@@ -57,7 +58,7 @@
         </svg>{{ row._entity.created.value|date('d M Y h:i A') }}</div> #}
       <h5 class="card-title">{{ fields.title.content }}</h5>
       <div class="btn--pls">
-        <a class="click--modal-hp" data-pdf="{{ file_url(row._entity.field_pdf.entity.fileuri) }}" href="{{ file_url(row._entity.field_pdf.entity.fileuri) }}" download="">
+        <a class="click--modal-hp" data-pdf="{{ base_url }}/{{ file_url(row._entity.field_pdf.entity.fileuri) }}" href="{{ file_url(row._entity.field_pdf.entity.fileuri) }}" download="">
           <span>{{'Download'|t}}</span>
           <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewbox="0 0 48 48" fill="none">
             <g clip-path="url(#clip0_4948_4128)">
