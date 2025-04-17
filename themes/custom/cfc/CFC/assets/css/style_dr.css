@@ -1793,3 +1793,6 @@ div#block-cfc-modalhp {
 #list--news-all .btn--pls a svg path {
   fill: #007565;
 }
+.form__formualaire form .wrapper_submit path {
+  fill: #007565;
+}
