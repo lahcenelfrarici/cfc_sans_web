@@ -1790,3 +1790,6 @@ div#block-cfc-modalhp {
   font-family: "Averta CY";
   font-size: 17px;
 }
+#list--news-all .btn--pls a svg path {
+  fill: #007565;
+}
