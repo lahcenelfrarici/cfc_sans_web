@@ -7,6 +7,8 @@ use Drupal\Core\Menu\MenuTreeParameters;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\webform\WebformInterface;
 use Drupal\captcha\CaptchaPointInterface;
+use Drupal\Component\Utility\Html;
+
 
 
 /**
@@ -260,7 +262,7 @@ function cfc_form_user_login_form_alter(&$form, &$form_state, $form_id) {
 //   if ($variables["view"]->storage->id() == 'news' && $variables["display_id"] == "page_1") {
 //     // Access the view object.
 //     $view = $variables["view"];
-    
+
 //     // Check if the view has results.
 //     if (!empty($view->result)) {
 //       // Iterate through each result row.
@@ -333,3 +335,19 @@ function cfc_form_user_login_form_alter(&$form, &$form_state, $form_id) {
 /**
  * Implements hook_route_alter().
  */
+function cfc_preprocess_html(array &$variables) {
+  // Get the current path
+  $path = \Drupal::service('path.current')->getPath();
+
+  // Convert internal path to alias (like /node/1 => /about)
+  $alias = \Drupal::service('path_alias.manager')->getAliasByPath($path);
+
+  // Sanitize the alias to be used as a CSS class
+  $class = str_replace('/', '-', trim($alias, '/'));
+  $class = Html::getClass($class);
+
+  // Add it to body classes
+  if (!empty($class)) {
+    $variables['attributes']['class'][] = 'page-' . $class;
+  }
+}
