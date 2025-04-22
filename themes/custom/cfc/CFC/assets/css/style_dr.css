@@ -1800,3 +1800,58 @@ div#block-cfc-modalhp {
   fill: #007565;
 } */
 
+.page-cfcspain footer {
+  display: none;
+}
+.page-cfcspain header {
+  display: none;
+}
+.page-cfcspain section.section---filter-block {
+  display: none;
+}
+header a[hreflang="es"] {
+  display: none !important;
+}
+.page-cfcspain section#banner-title {
+  display: none;
+}
+.banner___es_only {
+  display: block !important;
+  height: auto !important;
+}
+.banner___es_only p {
+  text-align: left;
+  display: flex;
+  justify-content: left;
+}
+
+.banner___es_only .btn.btn-custom {
+  justify-content: left;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  width: max-content;
+  background-color: #009681 !important;
+  border: 0;
+  border-radius: 30px;
+  font-size: 18px;
+}
+
+.banner___es_only .search-filter {
+  text-align: left;
+}
+.es_2column_page img {
+  width: 100%;
+  height: auto !important;
+}
+
+.es_2column_page .row.g-5 {
+  margin-bottom: 30px;
+}
+.es_2column_page .container .row:last-child>div {
+  height: auto !important;
+}
+.es_2column_page {
+  background: #F5F9FF;
+  margin-top: 40px;
+}
