@@ -210,7 +210,7 @@ section#maps--with-select-pays .item-wrap:hover {
 
 section#banner-title .slider-video img {
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: cover;
 }
 
@@ -1688,11 +1688,13 @@ fieldset.captcha.captcha-type-challenge--recaptcha p.error {
     5px;
   width: 100%;
 }
+
 .ui-widget.ui-widget-content {
 
   z-index: 999999 !important;
 }
-.all_form_inter [data-drupal-messages] > div > div {
+
+.all_form_inter [data-drupal-messages]>div>div {
   font-size: 16px !important;
   width: 50%;
 }
@@ -1706,25 +1708,31 @@ fieldset.captcha.captcha-type-challenge--recaptcha p.error {
 .all_form_inter .wrapper_submit input {
   font-size: 21px;
 }
+
 .item-info-content .wrapper-element-africa {
   width: auto;
 }
+
 .all_form_inter .wrapper_submit svg {
   width: 28px;
   top: 2px;
 }
+
 .captcha__description.description {
   display: none;
 }
+
 .wrapper-element-africa .form-item--error-message {
   font-size: 14px;
   padding-top: 5px;
   font-weight: 200;
 }
+
 .wrapper-element-africa [data-drupal-messages] li {
   font-size: 15px !important;
   font-weight: 200 !important;
 }
+
 /*  */
 
 section#table_att .mx-auto {
@@ -1733,7 +1741,7 @@ section#table_att .mx-auto {
   justify-content: space-between;
 }
 
-section#table_att .mx-auto >div {
+section#table_att .mx-auto>div {
   justify-content: space-between !important;
   padding: 0;
 }
@@ -1762,6 +1770,7 @@ section#table_att .title__form_all_form_bottom.container h2:first-child {
 section#table_att .title__form_all_form_bottom.container h2:last-child {
   width: 64%;
 }
+
 /*  */
 
 
@@ -1774,28 +1783,35 @@ p.close_modal_webform {
   cursor: pointer;
   margin: auto;
 }
-form [data-drupal-messages] .webform-confirmation-modal--content{
-  display:none;
+
+form [data-drupal-messages] .webform-confirmation-modal--content {
+  display: none;
 }
+
 .contact---us [data-drupal-messages] li {
   color: #ff0000;
   font-family: "Averta CY";
   font-size: 17px;
 }
+
 div#block-cfc-modalhp {
   display: none;
 }
+
 .contact---us [data-drupal-messages] div {
   color: #ff0000;
   font-family: "Averta CY";
   font-size: 17px;
 }
+
 #list--news-all .btn--pls a svg path {
   fill: #007565;
 }
+
 .form__formualaire form .wrapper_submit path {
   fill: #007565;
 }
+
 /* .form__formualaire form .wrapper_submit path {
   fill: #007565;
 } */
@@ -1803,22 +1819,28 @@ div#block-cfc-modalhp {
 .page-cfcspain footer {
   display: none;
 }
+
 .page-cfcspain header {
   display: none;
 }
+
 .page-cfcspain section.section---filter-block {
   display: none;
 }
+
 header a[hreflang="es"] {
   display: none !important;
 }
+
 .page-cfcspain section#banner-title {
   display: none;
 }
+
 .banner___es_only {
   display: block !important;
   height: auto !important;
 }
+
 .banner___es_only p {
   text-align: left;
   display: flex;
@@ -1840,6 +1862,7 @@ header a[hreflang="es"] {
 .banner___es_only .search-filter {
   text-align: left;
 }
+
 .es_2column_page img {
   width: 100%;
   height: auto !important;
@@ -1848,16 +1871,20 @@ header a[hreflang="es"] {
 .es_2column_page .row.g-5 {
   margin-bottom: 30px;
 }
+
 .es_2column_page .container .row:last-child>div {
   height: auto !important;
 }
+
 .es_2column_page {
   background: #F5F9FF;
   margin-top: 40px;
 }
+
 .page-cfcspain section#safe--sc-wrapper #textvert {
   line-height: normal;
 }
+
 /*!
  * jQuery UI Menu 1.14.1
  * https://jqueryui.com
@@ -1868,67 +1895,73 @@ header a[hreflang="es"] {
  *
  * https://api.jqueryui.com/menu/#theming
  */
- .ui-menu {
-	list-style: none;
-	padding: 0;
-	margin: 0;
-	display: block;
-	outline: 0;
+.ui-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: block;
+  outline: 0;
 }
+
 .ui-menu .ui-menu {
-	position: absolute;
+  position: absolute;
 }
+
 .ui-menu .ui-menu-item {
-	margin: 0;
-	cursor: pointer;
+  margin: 0;
+  cursor: pointer;
 }
+
 .ui-menu .ui-menu-item-wrapper {
-	position: relative;
-	padding: 3px 1em 3px .4em;
+  position: relative;
+  padding: 3px 1em 3px .4em;
 }
+
 .ui-menu .ui-menu-divider {
-	margin: 5px 0;
-	height: 0;
-	font-size: 0;
-	line-height: 0;
-	border-width: 1px 0 0 0;
+  margin: 5px 0;
+  height: 0;
+  font-size: 0;
+  line-height: 0;
+  border-width: 1px 0 0 0;
 }
+
 .ui-menu .ui-state-focus,
 .ui-menu .ui-state-active {
-	margin: -1px;
+  margin: -1px;
 }
 
 /* icon support */
 .ui-menu-icons {
-	position: relative;
+  position: relative;
 }
+
 .ui-menu-icons .ui-menu-item-wrapper {
-	padding-left: 2em;
+  padding-left: 2em;
 }
 
 /* left-aligned */
 .ui-menu .ui-icon {
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: .2em;
-	margin: auto 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: .2em;
+  margin: auto 0;
 }
 
 /* right-aligned */
 .ui-menu .ui-menu-icon {
-	left: auto;
-	right: 0;
+  left: auto;
+  right: 0;
 }
 
 
 .banner___es_only .search-filter {
-    margin-top: 0;
+  margin-top: 0;
 }
 
 .banner___es_only .search-filter img {
-    position: relative;
-    top: -40px;
+  position: relative;
+  top: -40px;
 }
 
 #block-cfc-bannercasablancafinancecityconectandooportunidades section#banner-title .slider-overlay::after {
@@ -1939,17 +1972,49 @@ header a[hreflang="es"] {
   padding-bottom: 0;
   margin-bottom: 0;
 }
+
 #block-cfc-bannercasablancafinancecityconectandooportunidades .slider-content {
   top: auto !important;
   padding-top: 0 !important;
 }
-.banner___es_only  .icon--banner-after {
+
+.banner___es_only .icon--banner-after {
   top: auto;
   bottom: -67px;
 }
+
 .banner___es_only .search-filter img {
   left: -15px;
 }
+
 .page-cfcspain .doing--espace {
   padding-bottom: 0;
+}
+
+.page-cfcspain section#safe--sc-wrapper h2,
+.page-cfcspain #organise--africa h2,
+.page-cfcspain #doing---wr h2 {
+  text-align: left;
+  color: #151515 !important;
+  text-transform: uppercase;
+}
+
+.page-cfcspain section#safe--sc-wrapper h2 span,
+.page-cfcspain #organise--africa h2 span,.page-cfcspain #doing---wr h2 span {
+  color: #009681;
+  -webkit-text-stroke-color: #009681;
+}
+
+.page-cfcspain #doing---wr {
+  width: auto;
+}
+
+#block-cfc-bannercasablancafinancecityconectandooportunidades .slider-content {
+  padding:
+    0 6% !important;
+  margin-top: 7%;
+  max-width: max-content;
+}
+#block-cfc-bannercasablancafinancecityconectandooportunidades .slider-content .btn.btn-custom {
+  margin-top: 20px;
 }

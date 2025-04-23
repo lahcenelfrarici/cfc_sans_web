@@ -408,6 +408,9 @@
 }
 
 @media (min-width: 992px) {
+  .banner___es_only {
+    height: 620px !important;
+  }
   .all_section_ocde section.all_invitation-card .logo_form_bottom {
     width: auto !important;
     left: auto;
@@ -1141,6 +1144,17 @@
 }
 
 @media (max-width: 991px) {
+  .page-cfcspain section#safe--sc-wrapper h2 {
+    padding:
+  0 15px;
+      padding-bottom: 0px;
+  }
+  .page-cfcspain #flex--left-right-wrp {
+    padding-top: 0;
+  }
+  .banner___es_only {
+    height: 550px !important;
+  }
   section#table_att .mx-auto {
     flex-direction: column;
     margin: auto;
