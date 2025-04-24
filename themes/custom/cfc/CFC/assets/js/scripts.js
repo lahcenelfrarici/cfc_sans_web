@@ -1,5 +1,36 @@
 (function ($) {
   $(document).ready(function () {
+    $('.all_avantage_tabs .tab').click(function () {
+      var target = $(this).data('tab');
+    
+      // Switch active tab
+      $('.all_avantage_tabs .tab').removeClass('active');
+      $(this).addClass('active');
+    
+      // Animate tab-content
+      $('.tab-content.active').fadeOut(200, function () {
+        $(this).removeClass('active');
+        $('.tab-content[data-tab="' + target + '"]').fadeIn(200).addClass('active');
+      });
+    });
+
+    $('.btn_btm_avantage').on('click', function(e) {
+      e.preventDefault();
+      var content = $(this).closest('.card').find('.wisiwig--content-ps').html();
+      $('#customModalBody').html(content);
+      $('#customModal').fadeIn();
+    });
+
+    $('.custom-modal-close').on('click', function() {
+      $('#customModal').fadeOut();
+    });
+
+    $(window).on('click', function(e) {
+      if ($(e.target).is('#customModal')) {
+        $('#customModal').fadeOut();
+      }
+    });
+    
     //Search
     // Get the text from the span and set it as the input value
     // var spanText = $('#search-term').text();
@@ -1973,6 +2004,8 @@
     $('.ui-dialog.ui-front').remove(); // Remove modal
     $('.ui-widget-overlay.ui-front').remove(); // Remove overlay
   });
+
+
 
 })(jQuery);
 // $(document).ready(function () {

@@ -2000,7 +2000,8 @@ header a[hreflang="es"] {
 }
 
 .page-cfcspain section#safe--sc-wrapper h2 span,
-.page-cfcspain #organise--africa h2 span,.page-cfcspain #doing---wr h2 span {
+.page-cfcspain #organise--africa h2 span,
+.page-cfcspain #doing---wr h2 span {
   color: #009681;
   -webkit-text-stroke-color: #009681;
 }
@@ -2015,6 +2016,456 @@ header a[hreflang="es"] {
   margin-top: 7%;
   max-width: max-content;
 }
+
 #block-cfc-bannercasablancafinancecityconectandooportunidades .slider-content .btn.btn-custom {
   margin-top: 20px;
+}
+
+#banner_avantage_ex p.lead {
+  color: #151515;
+  text-align: center;
+  font-family: "Averta CY";
+  font-style: normal;
+  font-weight: 400;
+  padding: 2rem;
+  z-index: 2;
+  max-width: 1050px;
+  width: 100%;
+  text-align: center;
+  margin: auto;
+  position: relative;
+  top: 10px;
+}
+
+
+#banner_avantage_ex h1 {
+  color: #007565;
+  -webkit-text-stroke-color: #007565;
+  -webkit-text-stroke-width: initial;
+  padding: 2rem;
+  z-index: 2;
+  max-width: 1050px;
+  width: 100%;
+  text-align: center;
+  margin: auto;
+  position: relative;
+  top: 40px;
+}
+
+.search-filter-all-avantage {
+  z-index: 3;
+  position: relative;
+}
+
+.list--service-avantage {
+  display: flex;
+  justify-content: space-between;
+  gap: 0 10px;
+}
+
+.item-service-avantage {
+  border-radius: 20px;
+  border: 1px solid #F4F4F4;
+  background: var(--lin, linear-gradient(84deg, #009681 4.99%, #007565 87.68%));
+  box-shadow: 0px 4px 44.1px 0px rgba(114, 170, 255, 0.25);
+  height: 255px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+
+.item-service-avantage h3 {
+  color: #FFF;
+  text-align: center;
+  font-family: "Averta CY";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  /* 91.667% */
+}
+
+.item-service-avantage p {
+  font-size: 18px;
+}
+
+.item-service-avantage {
+  padding: 0 10px;
+}
+
+.click__link_avantage {
+  margin: auto;
+  text-align: center;
+  padding-top: 30px;
+}
+
+.click__link_avantage a {
+  text-align: center;
+  font-family: "Averta CY";
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 52px;
+  /* 144.444% */
+  color: #007565;
+  -webkit-text-stroke-color: #007565;
+  -webkit-text-stroke-width: initial;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: flex !important;
+}
+
+.all_avantage_tabs {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 20px;
+  border: 5px solid #F4F4F4;
+  background: #F5F9FF;
+  height: auto;
+  align-items: center;
+}
+
+.all_avantage_tabs>div {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0 10px;
+  color: #90A1BA;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: #90A1BA;
+  font-family: "Averta CY";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  /* 216.667% */
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  height: 105px;
+}
+
+.all_avantage_tabs>.tab.active {
+  color: #fff;
+  border-radius: 15px;
+  border: 5px solid #F4F4F4;
+  background: var(--lin, linear-gradient(84deg, #009681 4.99%, #007565 87.68%));
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: #fff;
+}
+
+.all_avantage_tabs>.tab.active svg path {
+  fill: #fff;
+}
+
+.all_avantage_tabs>div svg path {
+  fill: #90A1BA;
+}
+
+section.nos_partenaires_avantage {}
+
+section.nos_partenaires_avantage .tab-content {
+  gap: 0 30px;
+  justify-content: space-between;
+  padding: 0;
+  margin-top: 40px;
+}
+
+section.nos_partenaires_avantage .card {
+  border-radius: 20px;
+  border: 1px solid #F4F4F4;
+  background: #FFF;
+  box-shadow: 0px 4px 44.1px 0px rgba(114, 170, 255, 0.25);
+  padding: 30px;
+}
+
+.ocrd_item_culture {
+  display: flex;
+  flex-direction: column;
+  gap: 10px 0;
+}
+
+section.nos_partenaires_avantage .card h4 {
+  color: #151515;
+  -webkit-text-stroke-width: 0.8px;
+  -webkit-text-stroke-color: #151515;
+  font-family: "Averta CY";
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  /* 91.667% */
+}
+
+section.nos_partenaires_avantage .card p {
+  color: #151515;
+  font-family: "Averta CY";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  /* 142.857% */
+}
+
+.ocrd_item_culture img {
+  width: max-content;
+  height: 100%;
+  object-fit: cover;
+}
+
+.btn_bottom_align span {
+  color: #90A1BA;
+  font-family: "Averta CY";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px;
+  /* 181.818% */
+}
+
+span.btn_btm_avantage a {
+  text-align: center;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: #007565;
+  font-family: "Averta CY";
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  /* 173.333% */
+  color: #007565;
+}
+
+.btn_bottom_align {
+  display: flex;
+  justify-content: space-between;
+}
+
+section.nos_partenaires_avantage .card {
+  height: 600px;
+  justify-content: space-between;
+}
+
+span.btn_btm_avantage path {
+  fill: #007565;
+}
+
+/* section.nos_partenaires_avantage h2 {
+  color: #007565;
+  -webkit-text-stroke-color: #007565;
+} */
+.wisiwig--content-text {
+  margin-top: 25px;
+}
+
+.custom-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.custom-modal-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 70%;
+  width: 90%;
+  position: relative;
+}
+
+.custom-modal-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.click__link_avantage a:hover {
+  text-decoration: underline;
+  color: #007565;
+}
+
+.item-service-avantage {
+  transition: transform 0.35s;
+  -webkit-transition: -webkit-transform 0.35s;
+}
+
+.item-service-avantage:hover {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0px, -10px, 0);
+}
+
+.formulaire__avantage_ps {
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.formulaire__avantage_ps .container {
+  padding: 60px;
+  border-radius: 20px;
+  border: 1px solid #F4F4F4;
+  background: #FFF;
+  box-shadow: 0px 4px 44.1px 0px rgba(114, 170, 255, 0.25);
+}
+
+.formulaire__avantage_ps h1 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.formulaire__avantage_ps p {
+  margin-bottom: 20px;
+}
+
+.formulaire__avantage_ps hr {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 20px 0;
+}
+
+.formulaire__avantage_ps .form-group {
+  margin-bottom: 15px;
+}
+
+.formulaire__avantage_ps label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.formulaire__avantage_ps input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.formulaire__avantage_ps button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.cercle___icon_avantage {
+  width: 162px;
+  height: 162px;
+  width: 162px;
+  background: #F5F9FF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin: auto;
+}
+
+.all_formulaire__avantage_ps input {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  display: flex;
+  padding: 18px 20px 18px 20px;
+  align-items: center;
+  outline: none;
+  margin: 0;
+  border-radius: 100px;
+  border: 1px solid var(--Grey-Grey-20, #E5E7EB);
+  background: var(--Grey-Grey-5, #F9FAFB);
+  color: #B7C4DE;
+  font-family: "Averta CY";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  width: 100%;
+}
+
+.all_formulaire__avantage_ps label {
+  color: #151515;
+  font-family: "Averta CY";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  /* 120% */
+}
+.all_formulaire__avantage_ps .form-actions input {
+  background: transparent;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  color: #007565;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: #007565;
+  font-family: "Averta CY";
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 52px;
+  text-align: right;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  display: flex;
+  gap: 0 18px;
+  margin: 0;
+  line-height: normal;
+  padding: 0 !important;
+  margin: 0;
+  top: 3px;
+  gap: 0;
+  width: 100%;
+  padding: 0 21px !important;
+}
+
+
+.all_formulaire__avantage_ps .form-actions .wrapper_submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+  margin: auto;
+  max-width: 100%;
+}
+
+.all_formulaire__avantage_ps .form-actions {
+  margin: auto;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+.all_formulaire__avantage_ps .form-actions .wrapper_submit svg {
+  position: relative;
+  top: 4px;
+}
+.all_formulaire__avantage_ps form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.all_formulaire__avantage_ps form>div {
+  width: 47%;
+}
+.all_formulaire__avantage_ps .form-actions input:hover {
+  text-decoration: underline;
 }

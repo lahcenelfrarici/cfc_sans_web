@@ -1144,6 +1144,51 @@
 }
 
 @media (max-width: 991px) {
+  .list--service-avantage {
+    flex-direction: column;
+    gap: 20px 0;
+}
+
+.all_formulaire__avantage_ps .form-actions input {
+  font-size: 18px;
+}
+.all_avantage_tabs {
+  flex-direction: column;
+}
+
+section.nos_partenaires_avantage .card {
+  height: auto;
+}
+
+section.nos_partenaires_avantage .tab-content {
+  flex-direction: column;
+  gap: 20px 0;
+}
+
+section.nos_partenaires_avantage {
+  padding: 40px 15px;
+}
+
+.title-primary-sc h2 {
+  display: flex;
+  justify-content: center;
+}
+section#banner_avantage_ex {
+    height: auto;
+}
+
+.formulaire__avantage_ps .container {
+    padding: 15px;
+}
+
+.all_formulaire__avantage_ps form {
+    flex-direction: column;
+}
+
+.all_formulaire__avantage_ps form>div {
+    width: 100%;
+}
+
   .page-cfcspain section#safe--sc-wrapper h2 {
     padding:
   0 15px;
