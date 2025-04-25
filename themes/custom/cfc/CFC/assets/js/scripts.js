@@ -1,5 +1,57 @@
 (function ($) {
   $(document).ready(function () {
+    var cardCount = $('section.nos_partenaires_avantage .tab-content .cards-container>div>div .card').length;
+  
+    if(cardCount > 3) {
+      // Initialize Owl Carousel
+      $('section.nos_partenaires_avantage .tab-content .cards-container>div>div').addClass('owl-carousel').owlCarousel({
+        loop: cardCount > 3, // only loop if more than 3 items
+        margin: 20,
+        nav: false,
+        dots: true,
+        responsive: {
+          0: { items: 1 },
+          768: { items: 2 },
+          992: { items: 3 }
+        }
+      });
+    } else {
+      // For 3 or fewer cards, use flex layout
+      $('section.nos_partenaires_avantage .tab-content .cards-container>div>div').addClass('normal-layout');
+    }
+    // ********************
+    // $('.nos_partenaires_avantage').each(function() {
+    //   var $container = $(this).find('section.nos_partenaires_avantage .tab-content .cards-container .views-element-container>div');
+    //   if ($container.children('.card').length > 3) {
+    //     $container.addClass('owl-carousel').owlCarousel({
+    //       loop: false,
+    //       margin: 20,
+    //       nav: false, // Disable navigation arrows
+    //       dots: true, // Enable dots
+    //       responsive: {
+    //         0: { items: 1 },
+    //         768: { items: 2 },
+    //         992: { items: 3 }
+    //       }
+    //     });
+    //   }
+    // });
+    // $('.tab-content').each(function() {
+    //   var $container = $(this).find('.cards-container');
+    //   if ($container.children('.card').length > 3) {
+    //     $container.addClass('owl-carousel').owlCarousel({
+    //       loop: false,
+    //       margin: 20,
+    //       nav: true,
+    //       dots: false,
+    //       responsive: {
+    //         0: { items: 1 },
+    //         768: { items: 2 },
+    //         992: { items: 3 }
+    //       }
+    //     });
+    //   }
+    // });
     $('.all_avantage_tabs .tab').click(function () {
       var target = $(this).data('tab');
     

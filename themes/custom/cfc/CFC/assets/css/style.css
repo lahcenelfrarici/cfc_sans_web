@@ -2073,8 +2073,8 @@ section#banner-title .slider-overlay:after {
   background: rgba(0, 0, 0, 0.1);
 }
 
-body:not(.path-frontpage) header {
-  position: relative;
+.page-accedez-au-livret-des-offres header {
+  position: absolute;
 }
 
 header {

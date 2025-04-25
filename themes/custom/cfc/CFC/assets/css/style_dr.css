@@ -2212,7 +2212,7 @@ section.nos_partenaires_avantage .card p {
 }
 
 .ocrd_item_culture img {
-  width: max-content;
+  width: max-content !important;
   height: 100%;
   object-fit: cover;
 }
@@ -2310,10 +2310,12 @@ span.btn_btm_avantage path {
 .formulaire__avantage_ps {
   margin: 0 auto;
   padding: 20px;
+  position: relative;
+  top: 55px;
 }
 
 .formulaire__avantage_ps .container {
-  padding: 60px;
+  padding: 20px 30px;
   border-radius: 20px;
   border: 1px solid #F4F4F4;
   background: #FFF;
@@ -2361,9 +2363,8 @@ span.btn_btm_avantage path {
 }
 
 .cercle___icon_avantage {
-  width: 162px;
-  height: 162px;
-  width: 162px;
+  width: 100px;
+  height: 100px;
   background: #F5F9FF;
   display: flex;
   align-items: center;
@@ -2461,6 +2462,7 @@ span.btn_btm_avantage path {
   flex-wrap: wrap;
   justify-content: space-between;
   margin-top: 30px;
+  gap: 10px 0;
 }
 
 .all_formulaire__avantage_ps form>div {
@@ -2468,4 +2470,125 @@ span.btn_btm_avantage path {
 }
 .all_formulaire__avantage_ps .form-actions input:hover {
   text-decoration: underline;
+}
+section#banner_avantage_ex {
+  height: auto;
+}
+.cercle___icon_avantage svg {
+  width: 60px;
+}
+.all_formulaire__avantage_ps input {
+  padding: 10px 20px 10px 20px;
+}
+.page-accedez-au-livret-des-offres section#banner-title {
+  display: none;
+}
+.page-avantages-exclusifs-pour-les-membres-cfc section#banner-title {
+  display: none;
+}
+section.nos_partenaires_avantage .tab-content .cards-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+section.nos_partenaires_avantage .tab-content .cards-container .owl-item .card {
+  width: 100% !important;
+}
+/*  */
+/* Hide navigation arrows */
+.nos_partenaires_avantage .owl-nav {
+  display: none !important;
+}
+
+/* Style for dots */
+.nos_partenaires_avantage .owl-dots {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.nos_partenaires_avantage .owl-dot {
+  display: inline-block;
+  margin: 0 5px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #ccc !important;
+}
+
+.nos_partenaires_avantage .owl-dot.active {
+  background-color: #009681 !important;
+}
+
+/* Default card layout when slider is inactive */
+.nos_partenaires_avantage .cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.nos_partenaires_avantage .cards-container .card {
+ 
+
+}
+.nos_partenaires_avantage .owl-dot {
+  display: inline-block;
+  margin: 0 5px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #ccc !important;
+  background: rgba(237, 237, 237, 1);
+  height: 20px;
+  width: 20px;
+  border-radius: 30px;
+  color: rgba(237, 237, 237, 1);
+  font-size: 0;
+  border: 0;
+}
+section.nos_partenaires_avantage .owl-dots {
+  width: 100%;
+}
+section.nos_partenaires_avantage .tab-content .cards-container>div>div {
+  flex-wrap: wrap;
+  gap: 20px;
+  display: flex
+;
+  justify-content: space-between;
+}
+section.nos_partenaires_avantage .tab-content .cards-container {
+  width: 100%;
+}
+
+section.nos_partenaires_avantage .tab-content .cards-container .views-element-container {
+  width: 100%;
+}
+div#customModal a {
+  color: var(--bs-body-color);
+}
+.wrapper_mobile_number {
+  display: flex
+;
+  gap: 0 20px;
+}
+.wrapper_mobile_number >div {
+  display: flex;
+  align-items: center;
+  gap: 0 20px;
+}
+.page-avantages-exclusifs-pour-les-membres-cfc section#contact---us,.page-accedez-au-livret-des-offres section#contact---us {
+  display: none;
+}
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .nos_partenaires_avantage .cards-container .card {
+    flex: 1 1 calc(50% - 15px);
+    min-width: calc(50% - 15px);
+  }
+}
+
+@media (max-width: 768px) {
+  .nos_partenaires_avantage .cards-container .card {
+    flex: 1 1 100%;
+    min-width: 100%;
+  }
 }

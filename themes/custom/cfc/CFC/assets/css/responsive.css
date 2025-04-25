@@ -408,6 +408,27 @@
 }
 
 @media (min-width: 992px) {
+  .custom-modal-content {
+    padding: 60px;
+  }
+  .all_class_modal_app {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.all_wrapper_modal_wq {
+    display: flex;
+    gap: 0 10px;
+}
+
+.mobile_modal_ww >div img {
+    position: relative;
+    top: -2px;
+}
+  section.nos_partenaires_avantage .tab-content .cards-container .card {
+    width: 32%;
+  }
   .banner___es_only {
     height: 620px !important;
   }
