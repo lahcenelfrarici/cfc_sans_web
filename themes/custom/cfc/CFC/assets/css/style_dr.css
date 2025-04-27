@@ -2205,7 +2205,7 @@ section.nos_partenaires_avantage .card h4 {
 section.nos_partenaires_avantage .card p {
   color: #151515;
   font-family: "Averta CY";
-  font-size: 20px;
+  font-size: 18px;
   font-style: normal;
   font-weight: 400;
   /* 142.857% */
@@ -2577,6 +2577,13 @@ div#customModal a {
 }
 .page-avantages-exclusifs-pour-les-membres-cfc section#contact---us,.page-accedez-au-livret-des-offres section#contact---us {
   display: none;
+}
+.formulaire__avantage_ps>div .form-required:after {
+  content: " *";
+  color: red;
+}
+.cards-container .owl-carousel.owl-hidden {
+  opacity: 1;
 }
 /* Responsive adjustments */
 @media (max-width: 992px) {

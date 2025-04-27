@@ -1,70 +1,88 @@
 (function ($) {
   $(document).ready(function () {
-    var cardCount = $('section.nos_partenaires_avantage .tab-content .cards-container>div>div .card').length;
+    // var cardCount = $('section.nos_partenaires_avantage .tab-content .cards-container>div>div .card').length;
   
-    if(cardCount > 3) {
-      // Initialize Owl Carousel
-      $('section.nos_partenaires_avantage .tab-content .cards-container>div>div').addClass('owl-carousel').owlCarousel({
-        loop: cardCount > 3, // only loop if more than 3 items
-        margin: 20,
-        nav: false,
-        dots: true,
-        responsive: {
-          0: { items: 1 },
-          768: { items: 2 },
-          992: { items: 3 }
-        }
-      });
-    } else {
-      // For 3 or fewer cards, use flex layout
-      $('section.nos_partenaires_avantage .tab-content .cards-container>div>div').addClass('normal-layout');
+    // if(cardCount > 3) {
+    //   // Initialize Owl Carousel
+    //   $('section.nos_partenaires_avantage .tab-content .cards-container>div>div').addClass('owl-carousel').owlCarousel({
+    //     loop: cardCount > 3, // only loop if more than 3 items
+    //     margin: 20,
+    //     nav: false,
+    //     dots: true,
+    //     responsive: {
+    //       0: { items: 1 },
+    //       768: { items: 2 },
+    //       992: { items: 3 }
+    //     }
+    //   });
+    // } else {
+    //   // For 3 or fewer cards, use flex layout
+    //   $('section.nos_partenaires_avantage .tab-content .cards-container>div>div').addClass('normal-layout');
+    // }
+    // // ********************
+
+    // $('.all_avantage_tabs .tab').click(function () {
+    //   var target = $(this).data('tab');
+    
+    //   // Switch active tab
+    //   $('.all_avantage_tabs .tab').removeClass('active');
+    //   $(this).addClass('active');
+    
+    //   // Animate tab-content
+    //   $('.tab-content.active').fadeOut(200, function () {
+    //     $(this).removeClass('active');
+    //     $('.tab-content[data-tab="' + target + '"]').fadeIn(200).addClass('active');
+    //   });
+    // });
+
+    function initializeCards() {
+      var $cardsContainer = $('section.nos_partenaires_avantage .tab-content.active .cards-container > div > div');
+      var cardCount = $cardsContainer.find('.card').length;
+    
+      // First, remove previous setup
+      $cardsContainer.trigger('destroy.owl.carousel'); // destroy owl if initialized
+      $cardsContainer.removeClass('owl-carousel normal-layout'); // remove classes
+    
+      if (cardCount > 3) {
+        $cardsContainer.addClass('owl-carousel').owlCarousel({
+          loop: cardCount > 3,
+          margin: 20,
+          nav: false,
+          dots: true,
+          responsive: {
+            0: { items: 1 },
+            768: { items: 2 },
+            992: { items: 3 }
+          }
+        });
+      } else {
+        $cardsContainer.addClass('normal-layout');
+      }
     }
-    // ********************
-    // $('.nos_partenaires_avantage').each(function() {
-    //   var $container = $(this).find('section.nos_partenaires_avantage .tab-content .cards-container .views-element-container>div');
-    //   if ($container.children('.card').length > 3) {
-    //     $container.addClass('owl-carousel').owlCarousel({
-    //       loop: false,
-    //       margin: 20,
-    //       nav: false, // Disable navigation arrows
-    //       dots: true, // Enable dots
-    //       responsive: {
-    //         0: { items: 1 },
-    //         768: { items: 2 },
-    //         992: { items: 3 }
-    //       }
-    //     });
-    //   }
-    // });
-    // $('.tab-content').each(function() {
-    //   var $container = $(this).find('.cards-container');
-    //   if ($container.children('.card').length > 3) {
-    //     $container.addClass('owl-carousel').owlCarousel({
-    //       loop: false,
-    //       margin: 20,
-    //       nav: true,
-    //       dots: false,
-    //       responsive: {
-    //         0: { items: 1 },
-    //         768: { items: 2 },
-    //         992: { items: 3 }
-    //       }
-    //     });
-    //   }
-    // });
+    
+    // First initialization
+    initializeCards();
+    
+    // When clicking a tab
     $('.all_avantage_tabs .tab').click(function () {
       var target = $(this).data('tab');
     
-      // Switch active tab
       $('.all_avantage_tabs .tab').removeClass('active');
       $(this).addClass('active');
     
-      // Animate tab-content
       $('.tab-content.active').fadeOut(200, function () {
         $(this).removeClass('active');
-        $('.tab-content[data-tab="' + target + '"]').fadeIn(200).addClass('active');
+        var $newContent = $('.tab-content[data-tab="' + target + '"]');
+        $newContent.fadeIn(200).addClass('active');
+    
+        // Re-initialize after the new tab content is active
+        setTimeout(function() {
+          initializeCards();
+        }, 250); // slight delay to make sure fadeIn finished
       });
     });
+    
+
 
     $('.btn_btm_avantage').on('click', function(e) {
       e.preventDefault();
