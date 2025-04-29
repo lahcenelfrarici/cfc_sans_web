@@ -2585,7 +2585,7 @@ div#customModal a {
 .cards-container .owl-carousel.owl-hidden {
   opacity: 1;
 }
-div#slider____1 .custom-card.card-doing img {
+#slider____1 .custom-card.card-doing img {
   width: auto;
 }
 #slider____1 .owl-dots span {
