@@ -2588,6 +2588,11 @@ div#customModal a {
 #slider____1 .custom-card.card-doing img {
   width: auto;
 }
+.testimonial-carousel .owl-stage-outer {
+  padding: 20px;
+  margin-left: -20px;
+  margin-right: -20px;
+}
 #slider____1 .owl-dots span {
   background: rgba(237, 237, 237, 1);
   height: 20px;
