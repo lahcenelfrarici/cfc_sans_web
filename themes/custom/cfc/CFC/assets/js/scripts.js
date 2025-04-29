@@ -1,7 +1,32 @@
 (function ($) {
   $(document).ready(function () {
+    var $carousel = $('#slider____1 .testimonial-carousel');
+
+        // Initialize Owl Carousel only if more than 3 items
+        if ($carousel.children().length > 3) {
+            $carousel.owlCarousel({
+                loop: true,
+                margin: 20,
+                nav: false, // Hide navigation arrows
+                dots: true, // Show dots
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    768: {
+                        items: 2
+                    },
+                    992: {
+                        items: 3
+                    }
+                }
+            });
+        } else {
+            // If 3 or fewer items, just display them in a row
+            $carousel.addClass('no-carousel');
+        }
     // var cardCount = $('section.nos_partenaires_avantage .tab-content .cards-container>div>div .card').length;
-  
+
     // if(cardCount > 3) {
     //   // Initialize Owl Carousel
     //   $('section.nos_partenaires_avantage .tab-content .cards-container>div>div').addClass('owl-carousel').owlCarousel({
@@ -23,11 +48,11 @@
 
     // $('.all_avantage_tabs .tab').click(function () {
     //   var target = $(this).data('tab');
-    
+
     //   // Switch active tab
     //   $('.all_avantage_tabs .tab').removeClass('active');
     //   $(this).addClass('active');
-    
+
     //   // Animate tab-content
     //   $('.tab-content.active').fadeOut(200, function () {
     //     $(this).removeClass('active');
@@ -38,11 +63,11 @@
     function initializeCards() {
       var $cardsContainer = $('section.nos_partenaires_avantage .tab-content.active .cards-container > div > div');
       var cardCount = $cardsContainer.find('.card').length;
-    
+
       // First, remove previous setup
       $cardsContainer.trigger('destroy.owl.carousel'); // destroy owl if initialized
       $cardsContainer.removeClass('owl-carousel normal-layout'); // remove classes
-    
+
       if (cardCount > 3) {
         $cardsContainer.addClass('owl-carousel').owlCarousel({
           loop: cardCount > 3,
@@ -59,29 +84,29 @@
         $cardsContainer.addClass('normal-layout');
       }
     }
-    
+
     // First initialization
     initializeCards();
-    
+
     // When clicking a tab
     $('.all_avantage_tabs .tab').click(function () {
       var target = $(this).data('tab');
-    
+
       $('.all_avantage_tabs .tab').removeClass('active');
       $(this).addClass('active');
-    
+
       $('.tab-content.active').fadeOut(200, function () {
         $(this).removeClass('active');
         var $newContent = $('.tab-content[data-tab="' + target + '"]');
         $newContent.fadeIn(200).addClass('active');
-    
+
         // Re-initialize after the new tab content is active
         setTimeout(function() {
           initializeCards();
         }, 250); // slight delay to make sure fadeIn finished
       });
     });
-    
+
 
 
     $('.btn_btm_avantage').on('click', function(e) {
@@ -100,7 +125,7 @@
         $('#customModal').fadeOut();
       }
     });
-    
+
     //Search
     // Get the text from the span and set it as the input value
     // var spanText = $('#search-term').text();

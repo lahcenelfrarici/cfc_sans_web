@@ -2527,7 +2527,7 @@ section.nos_partenaires_avantage .tab-content .cards-container .owl-item .card {
 }
 
 .nos_partenaires_avantage .cards-container .card {
- 
+
 
 }
 .nos_partenaires_avantage .owl-dot {
@@ -2584,6 +2584,38 @@ div#customModal a {
 }
 .cards-container .owl-carousel.owl-hidden {
   opacity: 1;
+}
+div#slider____1 .custom-card.card-doing img {
+  width: auto;
+}
+#slider____1 .owl-dots span {
+  background: rgba(237, 237, 237, 1);
+  height: 20px;
+  width: 20px;
+  display: block;
+  margin: 5px 7px;
+  background: #D6D6D6;
+  display: block;
+  -webkit-backface-visibility: visible;
+  transition: opacity .2s ease;
+  border-radius: 30px;
+}
+#slider____1  .owl-dots {
+  display: flex
+;
+  align-items: center;
+  justify-content: center;
+}
+
+#slider____1  .owl-dots .active span {
+  background: rgba(0, 103, 127, 1);
+  height: 28px;
+  width: 28px;
+}
+#slider____1  .owl-dots >button {
+  margin: auto;
+  display: contents;
+  zoom: 1;
 }
 /* Responsive adjustments */
 @media (max-width: 992px) {
