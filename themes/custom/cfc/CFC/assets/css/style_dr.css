@@ -2553,7 +2553,7 @@ section.nos_partenaires_avantage .tab-content .cards-container>div>div {
   gap: 20px;
   display: flex
 ;
-  justify-content: space-between;
+  justify-content: start;
 }
 section.nos_partenaires_avantage .tab-content .cards-container {
   width: 100%;
