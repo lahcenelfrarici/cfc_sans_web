@@ -1165,6 +1165,10 @@
 }
 
 @media (max-width: 991px) {
+  .formulaire__avantage_ps {
+    top: auto;
+    margin-top: 70px;
+  }
   .list--service-avantage {
     flex-direction: column;
     gap: 20px 0;
