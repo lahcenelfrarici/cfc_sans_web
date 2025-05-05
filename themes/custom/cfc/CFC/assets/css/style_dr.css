@@ -2479,6 +2479,10 @@ section#banner_avantage_ex {
 }
 .all_formulaire__avantage_ps input {
   padding: 10px 20px 10px 20px;
+  color: #000;
+}
+.formulaire__avantage_ps {
+  margin-top: 20px;
 }
 .page-accedez-au-livret-des-offres section#banner-title {
   display: none;
