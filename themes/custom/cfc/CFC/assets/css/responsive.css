@@ -411,27 +411,31 @@
   .custom-modal-content {
     padding: 60px;
   }
+
   .all_class_modal_app {
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
+  }
 
-.all_wrapper_modal_wq {
+  .all_wrapper_modal_wq {
     display: flex;
     gap: 0 10px;
-}
+  }
 
-.mobile_modal_ww >div img {
+  .mobile_modal_ww>div img {
     position: relative;
     top: -2px;
-}
+  }
+
   section.nos_partenaires_avantage .tab-content .cards-container .card {
     width: 32%;
   }
+
   .banner___es_only {
     height: 620px !important;
   }
+
   .all_section_ocde section.all_invitation-card .logo_form_bottom {
     width: auto !important;
     left: auto;
@@ -439,9 +443,11 @@
     bottom: auto !important;
     height: 760px;
   }
+
   .all_section_ocde .invitation-card h2 {
     font-size: 35px;
   }
+
   html {
     overflow: initial !important;
   }
@@ -1165,66 +1171,117 @@
 }
 
 @media (max-width: 991px) {
+  section#cfc_insights_conf {
+    margin-bottom: 0;
+  }
+
+  section#cfc_insights_conf svg path {
+    fill: #779F10;
+  }
+
+  section#cfc_insights_conf {
+    padding: 40px 15px;
+  }
+
+  section#cfc_insights_conf h2 {
+    text-align: left;
+  }
+
+  section#sc_four_agenda .time_slot {
+    text-align: left;
+  }
+
+  section#sc_four_agenda .left_all_prg {
+    justify-content: left;
+  }
+
+  section#sc_four_agenda {
+    padding-bottom: 40px;
+  }
+
+  div#join_the_coin {
+    margin-top: 40px;
+  }
+
+  div#join_the_coin {
+    padding: 15px;
+  }
+
+  .page_2_adv .logo_form_bottom {
+    margin-top: 0;
+  }
+
+  .page_2_adv section#contact---ocde h2 {
+    text-align: left;
+  }
+
+
   .formulaire__avantage_ps {
     top: auto;
     margin-top: 70px;
   }
+
   .list--service-avantage {
     flex-direction: column;
     gap: 20px 0;
-}
+  }
 
-.all_formulaire__avantage_ps .form-actions input {
-  font-size: 18px;
-}
-.all_avantage_tabs {
-  flex-direction: column;
-}
+  .all_formulaire__avantage_ps .form-actions input {
+    font-size: 18px;
+  }
 
-section.nos_partenaires_avantage .card {
-  height: auto;
-}
-
-section.nos_partenaires_avantage .tab-content {
-  flex-direction: column;
-  gap: 20px 0;
-}
-
-section.nos_partenaires_avantage {
-  padding: 40px 15px;
-}
-
-.title-primary-sc h2 {
-  display: flex;
-  justify-content: center;
-}
-section#banner_avantage_ex {
-    height: auto;
-}
-
-.formulaire__avantage_ps .container {
-    padding: 15px;
-}
-
-.all_formulaire__avantage_ps form {
+  .all_avantage_tabs {
     flex-direction: column;
-}
+  }
 
-.all_formulaire__avantage_ps form>div {
+  section.nos_partenaires_avantage .card {
+    height: auto;
+  }
+
+  section.nos_partenaires_avantage .tab-content {
+    flex-direction: column;
+    gap: 20px 0;
+  }
+
+  section.nos_partenaires_avantage {
+    padding: 40px 15px;
+  }
+
+  .title-primary-sc h2 {
+    display: flex;
+    justify-content: center;
+  }
+
+  section#banner_avantage_ex {
+    height: auto;
+  }
+
+  .formulaire__avantage_ps .container {
+    padding: 15px;
+  }
+
+  .all_formulaire__avantage_ps form {
+    flex-direction: column;
+  }
+
+  .all_formulaire__avantage_ps form>div {
     width: 100%;
-}
+  }
 
   .page-cfcspain section#safe--sc-wrapper h2 {
     padding:
-  0 15px;
-      padding-bottom: 0px;
+      0 15px;
+    padding-bottom: 0px;
   }
+
   .page-cfcspain #flex--left-right-wrp {
     padding-top: 0;
   }
+
   .banner___es_only {
     height: 550px !important;
   }
+
   section#table_att .mx-auto {
     flex-direction: column;
     margin: auto;

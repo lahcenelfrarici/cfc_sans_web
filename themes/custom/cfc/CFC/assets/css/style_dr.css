@@ -2403,6 +2403,7 @@ span.btn_btm_avantage path {
   line-height: 24px;
   /* 120% */
 }
+
 .all_formulaire__avantage_ps .form-actions input {
   background: transparent;
   font-weight: bold;
@@ -2456,6 +2457,7 @@ span.btn_btm_avantage path {
   position: relative;
   top: 4px;
 }
+
 .all_formulaire__avantage_ps form {
   display: flex;
   flex-direction: row;
@@ -2468,28 +2470,36 @@ span.btn_btm_avantage path {
 .all_formulaire__avantage_ps form>div {
   width: 47%;
 }
+
 .all_formulaire__avantage_ps .form-actions input:hover {
   text-decoration: underline;
 }
+
 section#banner_avantage_ex {
   height: auto;
 }
+
 .cercle___icon_avantage svg {
   width: 60px;
 }
+
 .all_formulaire__avantage_ps input {
   padding: 10px 20px 10px 20px;
   color: #000;
 }
+
 .formulaire__avantage_ps {
   margin-top: 20px;
 }
+
 .page-accedez-au-livret-des-offres section#banner-title {
   display: none;
 }
+
 .page-avantages-exclusifs-pour-les-membres-cfc section#banner-title {
   display: none;
 }
+
 section.nos_partenaires_avantage .tab-content .cards-container {
   display: flex;
   justify-content: space-between;
@@ -2498,6 +2508,7 @@ section.nos_partenaires_avantage .tab-content .cards-container {
 section.nos_partenaires_avantage .tab-content .cards-container .owl-item .card {
   width: 100% !important;
 }
+
 /*  */
 /* Hide navigation arrows */
 .nos_partenaires_avantage .owl-nav {
@@ -2530,10 +2541,8 @@ section.nos_partenaires_avantage .tab-content .cards-container .owl-item .card {
   gap: 20px;
 }
 
-.nos_partenaires_avantage .cards-container .card {
+.nos_partenaires_avantage .cards-container .card {}
 
-
-}
 .nos_partenaires_avantage .owl-dot {
   display: inline-block;
   margin: 0 5px;
@@ -2549,16 +2558,18 @@ section.nos_partenaires_avantage .tab-content .cards-container .owl-item .card {
   font-size: 0;
   border: 0;
 }
+
 section.nos_partenaires_avantage .owl-dots {
   width: 100%;
 }
+
 section.nos_partenaires_avantage .tab-content .cards-container>div>div {
   flex-wrap: wrap;
   gap: 20px;
-  display: flex
-;
+  display: flex;
   justify-content: start;
 }
+
 section.nos_partenaires_avantage .tab-content .cards-container {
   width: 100%;
 }
@@ -2566,37 +2577,46 @@ section.nos_partenaires_avantage .tab-content .cards-container {
 section.nos_partenaires_avantage .tab-content .cards-container .views-element-container {
   width: 100%;
 }
+
 div#customModal a {
   color: var(--bs-body-color);
 }
+
 .wrapper_mobile_number {
-  display: flex
-;
+  display: flex;
   gap: 0 20px;
 }
-.wrapper_mobile_number >div {
+
+.wrapper_mobile_number>div {
   display: flex;
   align-items: center;
   gap: 0 20px;
 }
-.page-avantages-exclusifs-pour-les-membres-cfc section#contact---us,.page-accedez-au-livret-des-offres section#contact---us {
+
+.page-avantages-exclusifs-pour-les-membres-cfc section#contact---us,
+.page-accedez-au-livret-des-offres section#contact---us {
   display: none;
 }
+
 .formulaire__avantage_ps>div .form-required:after {
   content: " *";
   color: red;
 }
+
 .cards-container .owl-carousel.owl-hidden {
   opacity: 1;
 }
+
 #slider____1 .custom-card.card-doing img {
   width: auto;
 }
+
 .testimonial-carousel .owl-stage-outer {
   padding: 20px;
   margin-left: -20px;
   margin-right: -20px;
 }
+
 #slider____1 .owl-dots span {
   background: rgba(237, 237, 237, 1);
   height: 20px;
@@ -2609,23 +2629,25 @@ div#customModal a {
   transition: opacity .2s ease;
   border-radius: 30px;
 }
-#slider____1  .owl-dots {
-  display: flex
-;
+
+#slider____1 .owl-dots {
+  display: flex;
   align-items: center;
   justify-content: center;
 }
 
-#slider____1  .owl-dots .active span {
+#slider____1 .owl-dots .active span {
   background: rgba(0, 103, 127, 1);
   height: 28px;
   width: 28px;
 }
-#slider____1  .owl-dots >button {
+
+#slider____1 .owl-dots>button {
   margin: auto;
   display: contents;
   zoom: 1;
 }
+
 .page-advancing-sustainability-agenda-across-africa section#banner-title {
   display: none;
 }
@@ -2661,50 +2683,53 @@ section#page_2_sans_header .row {
   height: auto;
   padding: 100px 0 30px 0;
 }
+
 section#page_2_sans_header .logo_form_bottom {
   position: inherit;
 }
+
 section#page_2_sans_header {}
 
 section#page_2_sans_header .img__logo_page_2 {
-    margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 section#page_2_sans_header .img__logo_page_2 img {
-    width: 60%;
-    height: max-content;
+  width: 60%;
+  height: max-content;
 }
 
 section#page_2_sans_header .invitation-header {
-    display: none;
+  display: none;
 }
 
 section#page_2_sans_header .conference-info {
-    background: transparent;
-    padding: 0;
-    text-align: left;
-    padding-bottom: 30px;
+  background: transparent;
+  padding: 0;
+  text-align: left;
+  padding-bottom: 30px;
 }
 
 .all_items_page2 {
-    display: flex;
+  display: flex;
 }
 
 .all_items_page2 span.col_page2 {
-    border-right: 2px solid #fff;
+  border-right: 2px solid #fff;
 }
 
 span.col_page3 {
-    padding-left: 11px;
+  padding-left: 11px;
 }
 
 .all_items_page2 span {
-    line-height: normal;
-    padding: 5px 15px;
-    width: 100%;
-    font-size: 18px;
-    max-width: 200px;
+  line-height: normal;
+  padding: 5px 15px;
+  width: 100%;
+  font-size: 18px;
+  max-width: 200px;
 }
+
 section#page_2_sans_header h2 {
   font-weight: bold;
 }
@@ -2722,11 +2747,12 @@ section#page_2_sans_header .btn_title-orange.text-center {
 }
 
 section#cfc_insights_conf img {
-    width: 100%;
-    height: 100%;
-    margin-bottom: 5%;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 5%;
 }
-section#sc_four_agenda .left_all_prg >div {
+
+section#sc_four_agenda .left_all_prg>div {
   background: #779F10;
   color: #FFF;
   font-family: Rubik;
@@ -2762,6 +2788,7 @@ section#sc_four_agenda .btn_title-orange.text-center {
 section#sc_four_agenda .programme_ligne>div:last-child {
   border-bottom: 2px solid #779F10 !important;
 }
+
 section#cfc_insights_conf .btn_title-orange.text-center {
   background: #779F10;
 }
@@ -2769,6 +2796,224 @@ section#cfc_insights_conf .btn_title-orange.text-center {
 section#cfc_insights_conf {
   padding-bottom: 40px;
 }
+
+.book_join .btn_title-orange {
+  background: #779F10;
+  width: fit-content;
+  margin: auto;
+}
+
+section#page_2_sans_header:after {
+  content: "";
+  content: "";
+  background-image: url(/themes/custom/cfc/CFC/assets/images/bg__hf.png);
+  position: absolute;
+  top: auto;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+section#page_2_sans_header {
+  position: relative;
+  background: initial;
+}
+
+section#page_2_sans_header .invitation-card {
+  gap: 28px;
+  padding: 40px 0;
+}
+
+section#page_2_sans_header .logo_form_bottom {
+  position: relative;
+  margin-top: 0;
+  z-index: 7;
+  gap: 28px;
+  padding: 40px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.page_2_adv .logo_form_bottom .page__2 img {
+  width: 100% !important;
+}
+
+section#cfc_insights_conf svg path {
+  fill: #779F10;
+}
+
+section#cfc_insights_conf h2,
+section#cfc_insights_conf h2 span {
+  color: #779F10 !important;
+}
+
+section#sc_four_agenda h2,
+section.la_slider_members_elements h2 {
+  color: #779F10 !important;
+}
+
+div#join_the_coin {
+  background: #779F10;
+  border-radius: 20px;
+  padding: 40px;
+}
+
+.page_2_adv .logo_form_bottom img {
+  width: 50% !important;
+}
+
+.web_form_the_coin {
+  background: #fff;
+  padding: 30px 30px 10px 30px;
+  border-radius: 20px;
+}
+
+.book_join .btn_title-orange {
+  background: #779F10;
+  width: fit-content;
+}
+
+div#join_the_coin {
+  background: #779F10;
+  border-radius: 20px;
+  padding: 40px;
+}
+
+
+.web_form_the_coin {
+  background: #fff;
+  padding: 30px;
+  border-radius: 20px;
+}
+
+
+.page_2_adv .logo_form_bottom img {
+  width: 50% !important;
+}
+
+div#join_the_coin .web_form_the_coin input {
+  border: 1px solid #779F10;
+  border-radius: 15px;
+  /* position: relative; */
+}
+
+
+div#join_the_coin .web_form_the_coin form>div {
+  position: relative;
+}
+
+div#join_the_coin .web_form_the_coin .wrapper_submit input {
+  background: #779F10;
+}
+
+div#join_the_coin form>div label {
+  position: absolute;
+  top: -13px;
+  color: #4D4D4D;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  left: 15px;
+  padding: 0px 20px;
+  background: #fff;
+}
+
+div#join_the_coin form>div {
+  margin-bottom: 20px;
+}
+
+.page_2_adv section#contact---ocde {
+  padding-top: 0;
+}
+
+div#join_the_coin {
+  z-index: 2;
+  margin-top: -180px;
+  position: relative;
+}
+
+.page_2_adv .logo_form_bottom {
+  z-index: 2;
+  margin-top: -300px;
+  position: relative;
+}
+
+.page_2_adv .book_img_join {
+  margin-bottom: 30px;
+}
+
+.book_img_join>div {
+  margin-top: 30px !important;
+}
+
+.page_2_adv {
+  background: #e2e5f057;
+}
+
+div#block-cfc-sectiononeadvancingthesustainabilityagendaacrossafrica {
+  z-index: 8;
+  position: relative;
+}
+
+.page_2_adv section#sc_four_agenda {
+  background: #fff;
+}
+
+
+section#sc_four_agenda {
+  padding-bottom: 300px;
+}
+
+.member_img_coin {
+  height: 209.189px;
+  margin-bottom: 5px;
+}
+
+.member_img_coin img {
+  width: 100%;
+  height: 100%;
+}
+
+.team-member.item {
+  background: #fff;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 5px;
+  border-radius: 30px;
+  height: 375.859px;
+}
+
+section.la_slider_members_elements .team-slider {
+  padding-top: 40px;
+}
+
+section#cfc_insights_conf {
+  margin-bottom: 210px;
+}
+
+.la_slider_members_elements .name,
+.la_slider_members_elements .surname {
+  text-align: center;
+  color: #779F10 !important;
+  margin: 1px;
+}
+
+.la_slider_members_elements .surname {}
+
+.la_slider_members_elements .position {}
+
+.la_slider_members_elements .position {
+  text-align: center;
+}
+
+.la_slider_members_elements .company {
+  display: none;
+}
+
 /* Responsive adjustments */
 @media (max-width: 992px) {
   .nos_partenaires_avantage .cards-container .card {

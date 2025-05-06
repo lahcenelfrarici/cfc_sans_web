@@ -2,29 +2,38 @@
   $(document).ready(function () {
     var $carousel = $('#slider____1 .testimonial-carousel');
 
-        // Initialize Owl Carousel only if more than 3 items
-        if ($carousel.children().length > 3) {
-            $carousel.owlCarousel({
-                loop: true,
-                margin: 20,
-                nav: false, // Hide navigation arrows
-                dots: true, // Show dots
-                responsive: {
-                    0: {
-                        items: 1
-                    },
-                    768: {
-                        items: 2
-                    },
-                    992: {
-                        items: 3
-                    }
-                }
-            });
-        } else {
-            // If 3 or fewer items, just display them in a row
-            $carousel.addClass('no-carousel');
+    // Initialize Owl Carousel only if more than 3 items
+    if ($carousel.children().length > 3) {
+      $carousel.owlCarousel({
+        loop: true,
+        margin: 20,
+        nav: false, // Hide navigation arrows
+        dots: true, // Show dots
+        responsive: {
+          0: {
+            items: 1
+          },
+          768: {
+            items: 2
+          },
+          992: {
+            items: 3
+          }
         }
+      });
+    } else {
+      // If 3 or fewer items, just display them in a row
+      $carousel.addClass('no-carousel');
+    }
+    $(".team-slider").owlCarousel({
+      items: 5,
+      loop: true,
+      autoplay: true,
+      autoplayTimeout: 3000,
+      autoplayHoverPause: true,
+      nav: false,
+      dots: false
+  });
     // var cardCount = $('section.nos_partenaires_avantage .tab-content .cards-container>div>div .card').length;
 
     // if(cardCount > 3) {
@@ -75,9 +84,15 @@
           nav: false,
           dots: true,
           responsive: {
-            0: { items: 1 },
-            768: { items: 2 },
-            992: { items: 3 }
+            0: {
+              items: 1
+            },
+            768: {
+              items: 2
+            },
+            992: {
+              items: 3
+            }
           }
         });
       } else {
@@ -101,7 +116,7 @@
         $newContent.fadeIn(200).addClass('active');
 
         // Re-initialize after the new tab content is active
-        setTimeout(function() {
+        setTimeout(function () {
           initializeCards();
         }, 250); // slight delay to make sure fadeIn finished
       });
@@ -109,18 +124,18 @@
 
 
 
-    $('.btn_btm_avantage').on('click', function(e) {
+    $('.btn_btm_avantage').on('click', function (e) {
       e.preventDefault();
       var content = $(this).closest('.card').find('.wisiwig--content-ps').html();
       $('#customModalBody').html(content);
       $('#customModal').fadeIn();
     });
 
-    $('.custom-modal-close').on('click', function() {
+    $('.custom-modal-close').on('click', function () {
       $('#customModal').fadeOut();
     });
 
-    $(window).on('click', function(e) {
+    $(window).on('click', function (e) {
       if ($(e.target).is('#customModal')) {
         $('#customModal').fadeOut();
       }
@@ -2095,7 +2110,7 @@
   //   // Remove the overlay
   //   $('.ui-widget-overlay.ui-front').remove();
   // });
-  $(document).on('click', '.close_modal_webform', function() {
+  $(document).on('click', '.close_modal_webform', function () {
     $('.ui-dialog.ui-front').remove(); // Remove modal
     $('.ui-widget-overlay.ui-front').remove(); // Remove overlay
   });
