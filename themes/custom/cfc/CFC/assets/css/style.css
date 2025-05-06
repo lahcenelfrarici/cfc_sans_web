@@ -2073,7 +2073,7 @@ section#banner-title .slider-overlay:after {
   background: rgba(0, 0, 0, 0.1);
 }
 
-.page-accedez-au-livret-des-offres header,page-avantages-exclusifs-pour-les-membres-cfc header,.page-conference-cfc header {
+.page-accedez-au-livret-des-offres header,page-avantages-exclusifs-pour-les-membres-cfc header,.page-conference-cfc header,.page-cfcsustainabilityevent header {
   position: absolute !important;
 }
 
