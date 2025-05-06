@@ -2626,6 +2626,149 @@ div#customModal a {
   display: contents;
   zoom: 1;
 }
+.page-advancing-sustainability-agenda-across-africa section#banner-title {
+  display: none;
+}
+
+.page-advancing-sustainability-agenda-across-africa footer {
+  display: none;
+}
+
+.page-advancing-sustainability-agenda-across-africa section.section---filter-block {
+  display: none;
+}
+
+.page-advancing-sustainability-agenda-across-africa section#contact---us {
+  display: none;
+}
+
+.page__2 span {
+  color: #FFF;
+  font-family: Rubik;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: right;
+  width: 100%;
+  display: block;
+  margin-bottom: 5px;
+}
+
+
+
+section#page_2_sans_header .row {
+  height: auto;
+  padding: 100px 0 30px 0;
+}
+section#page_2_sans_header .logo_form_bottom {
+  position: inherit;
+}
+section#page_2_sans_header {}
+
+section#page_2_sans_header .img__logo_page_2 {
+    margin-bottom: 30px;
+}
+
+section#page_2_sans_header .img__logo_page_2 img {
+    width: 60%;
+    height: max-content;
+}
+
+section#page_2_sans_header .invitation-header {
+    display: none;
+}
+
+section#page_2_sans_header .conference-info {
+    background: transparent;
+    padding: 0;
+    text-align: left;
+    padding-bottom: 30px;
+}
+
+.all_items_page2 {
+    display: flex;
+}
+
+.all_items_page2 span.col_page2 {
+    border-right: 2px solid #fff;
+}
+
+span.col_page3 {
+    padding-left: 11px;
+}
+
+.all_items_page2 span {
+    line-height: normal;
+    padding: 5px 15px;
+    width: 100%;
+    font-size: 18px;
+    max-width: 200px;
+}
+section#page_2_sans_header h2 {
+  font-weight: bold;
+}
+
+span.col_page2 {
+  background: linear-gradient(90deg, #779F10 0%, #59a09424 100%);
+}
+
+section#page_2_sans_header .invitation-card h2:after {
+  background-color: #E0F445;
+}
+
+section#page_2_sans_header .btn_title-orange.text-center {
+  background: #779F10;
+}
+
+section#cfc_insights_conf img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 5%;
+}
+section#sc_four_agenda .left_all_prg >div {
+  background: #779F10;
+  color: #FFF;
+  font-family: Rubik;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: center;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+section#sc_four_agenda .left_all_prg {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+section#sc_four_agenda .left_all_prg p {
+  margin-bottom: 0;
+}
+
+section#sc_four_agenda .time_slot {
+  border-top: 2px solid #779F10;
+}
+
+section#sc_four_agenda .btn_title-orange.text-center {
+  background: #779F10;
+  top: auto;
+}
+
+section#sc_four_agenda .programme_ligne>div:last-child {
+  border-bottom: 2px solid #779F10 !important;
+}
+section#cfc_insights_conf .btn_title-orange.text-center {
+  background: #779F10;
+}
+
+section#cfc_insights_conf {
+  padding-bottom: 40px;
+}
 /* Responsive adjustments */
 @media (max-width: 992px) {
   .nos_partenaires_avantage .cards-container .card {
