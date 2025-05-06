@@ -3002,9 +3002,6 @@ section#cfc_insights_conf {
   margin: 1px;
 }
 
-.la_slider_members_elements .surname {}
-
-.la_slider_members_elements .position {}
 
 .la_slider_members_elements .position {
   text-align: center;
@@ -3013,7 +3010,9 @@ section#cfc_insights_conf {
 .la_slider_members_elements .company {
   display: none;
 }
-
+body:not(.path-frontpage) header {
+  position: relative;
+}
 /* Responsive adjustments */
 @media (max-width: 992px) {
   .nos_partenaires_avantage .cards-container .card {
