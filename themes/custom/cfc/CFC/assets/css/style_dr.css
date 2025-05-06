@@ -3031,6 +3031,9 @@ section#contact---webform4 {
   background: initial;
   z-index: 8;
 }
+.book_join .btn_title-orange {
+  display: none;
+}
 /* Responsive adjustments */
 @media (max-width: 992px) {
   .nos_partenaires_avantage .cards-container .card {
