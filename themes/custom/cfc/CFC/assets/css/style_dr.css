@@ -2806,7 +2806,7 @@ section#cfc_insights_conf {
 section#page_2_sans_header:after {
   content: "";
   content: "";
-  background-image: url(/themes/custom/cfc/CFC/assets/images/bg__hf.png);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/themes/custom/cfc/CFC/assets/images/bg__hf.jpg);
   position: absolute;
   top: auto;
   width: 100%;
@@ -3015,7 +3015,7 @@ body:not(.path-frontpage) header {
 }
 section#contact---webform4:after {
   content: "";
-  background-image: url(/themes/custom/cfc/CFC/assets/images/bg__hf.png);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/themes/custom/cfc/CFC/assets/images/bg__hf.jpg);
   position: absolute;
   top: auto;
   width: 100%;
