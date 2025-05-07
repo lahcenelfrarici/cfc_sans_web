@@ -1140,6 +1140,12 @@
 
 /*  */
 @media (min-width: 1400px) {
+  section#page_2_sans_header:after {
+    background-position: 0 -140px;
+  }
+  section#contact---webform4:after {
+    background-position: 0 -288px;
+  }
   #filter-verticale .members .slick-track {
     width: 100% !important;
     padding: 0 29px;
