@@ -3038,6 +3038,9 @@ div#modal-event .conference-info {
   max-width: max-content;
   text-align: left;
 }
+div#modal-event button.close_btn {
+  color: #fff;
+}
 /* Responsive adjustments */
 @media (max-width: 992px) {
   .nos_partenaires_avantage .cards-container .card {
