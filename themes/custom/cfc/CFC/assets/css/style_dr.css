@@ -3034,6 +3034,10 @@ section#contact---webform4 {
 .book_join .btn_title-orange {
   display: none;
 }
+div#modal-event .conference-info {
+  max-width: max-content;
+  text-align: left;
+}
 /* Responsive adjustments */
 @media (max-width: 992px) {
   .nos_partenaires_avantage .cards-container .card {
