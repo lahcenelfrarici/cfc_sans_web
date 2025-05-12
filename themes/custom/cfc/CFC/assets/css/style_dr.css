@@ -3041,6 +3041,13 @@ div#modal-event .conference-info {
 div#modal-event button.close_btn {
   color: #fff;
 }
+div#modal-event .invitation-card {
+    justify-content: space-between;
+}
+
+div#modal-event .row .col-md-7 {
+    padding: 15px;
+}
 /* Responsive adjustments */
 @media (max-width: 992px) {
   .nos_partenaires_avantage .cards-container .card {
