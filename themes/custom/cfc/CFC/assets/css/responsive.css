@@ -1143,9 +1143,11 @@
   section#page_2_sans_header:after {
     background-position: 0 -140px;
   }
+
   section#contact---webform4:after {
     background-position: 0 -220px;
   }
+
   #filter-verticale .members .slick-track {
     width: 100% !important;
     padding: 0 29px;
@@ -1177,6 +1179,44 @@
 }
 
 @media (max-width: 991px) {
+  .all-tp-heading>div>div:first-child {
+    height: auto;
+  }
+
+  .wrapper-la_slider_members_elements1 {
+    width: 100%;
+  }
+
+  .wrapper-la_slider_members_elements2 {
+    width: 100%;
+  }
+
+  .all-tp-heading {
+    flex-direction: column;
+  }
+
+  .wrapper-la_slider_members_elements2>div:last-child {
+    flex-direction: column;
+    gap: 20px 0;
+  }
+
+  section.la_slider_members_elements {
+    padding-top: 8px;
+    padding-bottom: 40px;
+  }
+
+  .title__form_all_form_bottom.container h2 {
+    padding: 20px 0;
+  }
+
+  .wrapper-la_slider_members_elements2>div:last-child {
+    margin-top: 20px;
+  }
+
+  .line---small {
+    padding: 9px;
+  }
+
   section#cfc_insights_conf {
     margin-bottom: 0;
   }

@@ -2796,7 +2796,47 @@ section#cfc_insights_conf .btn_title-orange.text-center {
 section#cfc_insights_conf {
   padding-bottom: 40px;
 }
+section.la_slider_members_elements .btn_title-orange.text-center {
+    background: #779F10;
+    width: max-content;
+    margin: auto;
+    margin-top: 40px;
+}
+.line---small {
+    padding: 40px;
+    position: relative;
+}
 
+.line---small:after {
+    position: absolute;
+    content: "";
+    width: 50%;
+    height: 2px;
+    bottom: 10px;
+    left: 0;
+    background: linear-gradient(90deg, #779F10 0%, #779f1000 100%);
+}
+
+
+
+section#sc_four_agenda .time_slot:first-child {
+    position: relative;
+    border-top: 0;
+}
+
+section#sc_four_agenda .time_slot:first-child:after {
+    position: absolute;
+    content: "";
+    width: 50%;
+    height: 2px;
+    top: 0;
+    left: 0;
+    background: linear-gradient(90deg, #779F10 0%, #779f1000 100%);
+}
+
+.programme_ligne {
+    padding: 20px 10px;
+}
 .book_join .btn_title-orange {
   background: #779F10;
   width: fit-content;
@@ -2964,7 +3004,7 @@ div#block-cfc-sectiononeadvancingthesustainabilityagendaacrossafrica {
 
 
 section#sc_four_agenda {
-  padding-bottom: 300px;
+  padding-bottom: 170px;
 }
 
 .member_img_coin {
@@ -2992,7 +3032,7 @@ section.la_slider_members_elements .team-slider {
 }
 
 section#cfc_insights_conf {
-  margin-bottom: 210px;
+  margin-bottom: 40px;
 }
 
 .la_slider_members_elements .name,
@@ -3000,6 +3040,7 @@ section#cfc_insights_conf {
   text-align: center;
   color: #779F10 !important;
   margin: 1px;
+      font-weight: bold;
 }
 
 
@@ -3047,6 +3088,47 @@ div#modal-event .invitation-card {
 
 div#modal-event .row .col-md-7 {
     padding: 15px;
+}
+
+.all-tp-heading {
+    display: flex;
+    justify-content: space-between;
+}
+
+.wrapper-la_slider_members_elements2 {
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper-la_slider_members_elements2 >div:last-child {
+    display: flex;
+}
+
+.all-tp-heading>div>div:first-child {
+    height: 134px;
+}
+
+.wrapper-la_slider_members_elements1 {
+    width: 22%;
+}
+
+.wrapper-la_slider_members_elements2 {
+    width: 65%;
+}
+
+.wrapper-la_slider_members_elements2 >div h2:after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(90deg, #779f1000 0%, #779F10 100%);
+}
+
+.wrapper-la_slider_members_elements2 >div h2 {
+    position: relative;
+    padding-bottom: 30px;
 }
 /* Responsive adjustments */
 @media (max-width: 992px) {
