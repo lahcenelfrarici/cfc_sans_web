@@ -410,7 +410,8 @@
 @media (min-width: 992px) {
   .team-member.item {
     width: 270px;
-}
+  }
+
   .custom-modal-content {
     padding: 60px;
   }
@@ -3039,6 +3040,38 @@
 
   section#banner-title {
     height: 390px;
+  }
+
+  /*  */
+
+  section#page_2_sans_header .invitation-card {
+    padding-top: 0;
+    gap: 0 0;
+  }
+
+  section#page_2_sans_header .logo_form_bottom span {
+    gap: 0;
+    text-align: left;
+    margin-bottom: 30px;
+  }
+
+  .page_2_adv .logo_form_bottom .page__2 img {
+    height: auto;
+  }
+
+  section#page_2_sans_header .logo_form_bottom {
+    padding: 0;
+  }
+
+  .member_img_coin img {
+    object-fit: contain;
+  }
+
+  section.la_conferance.all_form_bottom .form-actions {
+    margin-top: 30px;
+  }
+  section#page_2_sans_header .img__logo_page_2 {
+  margin-bottom: 0;
   }
 }
 
