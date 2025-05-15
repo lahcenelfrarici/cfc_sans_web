@@ -408,6 +408,9 @@
 }
 
 @media (min-width: 992px) {
+  .team-member.item {
+    width: 270px;
+}
   .custom-modal-content {
     padding: 60px;
   }
