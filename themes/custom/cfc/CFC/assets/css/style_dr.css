@@ -3130,6 +3130,13 @@ div#modal-event .row .col-md-7 {
     position: relative;
     padding-bottom: 30px;
 }
+section#sc_four_agenda .left_all_prg>div span {
+    font-family: Rubik;
+}
+
+section#sc_four_agenda .left_all_prg>div {
+    padding: 8px 15px;
+}
 /* Responsive adjustments */
 @media (max-width: 992px) {
   .nos_partenaires_avantage .cards-container .card {
