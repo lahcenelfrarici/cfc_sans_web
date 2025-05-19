@@ -3155,7 +3155,9 @@ section#sc_four_agenda .left_all_prg>div {
     left: -50px;
     position: relative;
 }
-
+.la_slider_members_elements .surname {
+    text-transform: uppercase;
+}
 .title__form_all_form_bottom.container .owl-nav button {
     width: 60px;
 }
