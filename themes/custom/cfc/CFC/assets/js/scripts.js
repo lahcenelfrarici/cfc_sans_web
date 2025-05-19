@@ -2,30 +2,59 @@
   $(document).ready(function () {
 
     //
+    // var owl_item3 = $(".item___3item");
+    // owl_item3.owlCarousel({
+    //   items: 3,
+    //   margin: 10,
+    //   loop: true,
+    //   nav: true,
+    //   dots: false,
+    //   navText: [
+    //     '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#007BFF"><path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z"/></svg>',
+    //     '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#007BFF"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>'
+    //   ],
+    //   responsive: {
+    //     0: {
+    //       items: 1
+    //     },
+    //     768: {
+    //       items: 2
+    //     },
+    //     992: {
+    //       items: 3
+    //     }
+    //   }
+    // });
     var owl_item3 = $(".item___3item");
-    owl_item3.owlCarousel({
-      items: 3,
-      margin: 10,
-      loop: true,
-      nav: true,
-      dots: false,
-      navText: [
-        '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#007BFF"><path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z"/></svg>',
-        '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#007BFF"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>'
-      ],
-      responsive: {
-        0: {
-          items: 1
-        },
-        768: {
-          items: 2
-        },
-        992: {
-          items: 3
-        }
-      }
-    });
+    var itemCount = owl_item3.find('.item').length;
 
+    if (itemCount > 3) {
+      owl_item3.owlCarousel({
+        items: 3,
+        margin: 10,
+        loop: true,
+        nav: true,
+        dots: false,
+        navText: [
+          '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#007BFF"><path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z"/></svg>',
+          '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#007BFF"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>'
+        ],
+        responsive: {
+          0: {
+            items: 1
+          },
+          768: {
+            items: 2
+          },
+          992: {
+            items: 3
+          }
+        }
+      });
+    } else {
+      // If 3 or fewer items, remove Owl Carousel classes and show all items
+      owl_item3.removeClass('owl-carousel owl-theme');
+    }
     var $carousel = $('#slider____1 .testimonial-carousel');
 
     // Initialize Owl Carousel only if more than 3 items
