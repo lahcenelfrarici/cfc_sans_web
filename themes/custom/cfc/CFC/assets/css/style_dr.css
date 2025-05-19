@@ -3137,6 +3137,28 @@ section#sc_four_agenda .left_all_prg>div span {
 section#sc_four_agenda .left_all_prg>div {
     padding: 8px 15px;
 }
+
+.title__form_all_form_bottom.container .owl-nav path {
+    fill: #779F10;
+}
+
+.title__form_all_form_bottom.container .owl-nav svg {
+    width: 70px;
+    height: 70px;
+}
+
+.title__form_all_form_bottom.container .owl-nav button.owl-next {
+    right: -50px;
+    position: relative;
+}
+.title__form_all_form_bottom.container .owl-nav button.owl-prev {
+    left: -50px;
+    position: relative;
+}
+
+.title__form_all_form_bottom.container .owl-nav button {
+    width: 60px;
+}
 /* Responsive adjustments */
 @media (max-width: 992px) {
   .nos_partenaires_avantage .cards-container .card {

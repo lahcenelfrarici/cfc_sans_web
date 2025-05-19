@@ -1183,6 +1183,19 @@
 }
 
 @media (max-width: 991px) {
+
+.title__form_all_form_bottom.container .owl-nav {
+    position: relative;
+    justify-content: center;
+}
+
+.title__form_all_form_bottom.container .owl-nav button.owl-prev {
+    left: auto;
+}
+
+.title__form_all_form_bottom.container .owl-nav button.owl-next {
+    right: auto;
+}
   .all-tp-heading>div>div:first-child {
     height: auto;
   }
