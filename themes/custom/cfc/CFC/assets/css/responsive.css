@@ -1183,25 +1183,27 @@
 }
 
 @media (max-width: 991px) {
-.wrapper-role {
+  .wrapper-role {
     display: flex;
     text-align: center;
     justify-content: center;
     margin-bottom: 5px;
     gap: 0 5px;
-}
-.title__form_all_form_bottom.container .owl-nav {
+  }
+
+  .title__form_all_form_bottom.container .owl-nav {
     position: relative;
     justify-content: center;
-}
+  }
 
-.title__form_all_form_bottom.container .owl-nav button.owl-prev {
+  .title__form_all_form_bottom.container .owl-nav button.owl-prev {
     left: auto;
-}
+  }
 
-.title__form_all_form_bottom.container .owl-nav button.owl-next {
+  .title__form_all_form_bottom.container .owl-nav button.owl-next {
     right: auto;
-}
+  }
+
   .all-tp-heading>div>div:first-child {
     height: auto;
   }
@@ -3089,8 +3091,28 @@
   section.la_conferance.all_form_bottom .form-actions {
     margin-top: 30px;
   }
+
   section#page_2_sans_header .img__logo_page_2 {
-  margin-bottom: 0;
+    margin-bottom: 0;
+  }
+
+  .wrapper__logo {
+    flex-direction: column;
+    gap: 15px 0;
+  }
+
+  .wrapper---title {
+    text-align: center;
+    font-size: 20px;
+    line-height: normal;
+  }
+
+  section#modal___financial .col-md-12 .link_page_ocde a {
+    font-size: 20px;
+  }
+  .wrapper---cnt h5 {
+    font-size: 25px !important;
+    line-height: normal !important;
   }
 }
 

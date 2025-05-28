@@ -2796,47 +2796,50 @@ section#cfc_insights_conf .btn_title-orange.text-center {
 section#cfc_insights_conf {
   padding-bottom: 40px;
 }
+
 section.la_slider_members_elements .btn_title-orange.text-center {
-    background: #779F10;
-    width: max-content;
-    margin: auto;
-    margin-top: 40px;
+  background: #779F10;
+  width: max-content;
+  margin: auto;
+  margin-top: 40px;
 }
+
 .line---small {
-    padding: 40px;
-    position: relative;
+  padding: 40px;
+  position: relative;
 }
 
 .line---small:after {
-    position: absolute;
-    content: "";
-    width: 50%;
-    height: 2px;
-    bottom: 10px;
-    left: 0;
-    background: linear-gradient(90deg, #779F10 0%, #779f1000 100%);
+  position: absolute;
+  content: "";
+  width: 50%;
+  height: 2px;
+  bottom: 10px;
+  left: 0;
+  background: linear-gradient(90deg, #779F10 0%, #779f1000 100%);
 }
 
 
 
 section#sc_four_agenda .time_slot:first-child {
-    position: relative;
-    border-top: 0;
+  position: relative;
+  border-top: 0;
 }
 
 section#sc_four_agenda .time_slot:first-child:after {
-    position: absolute;
-    content: "";
-    width: 50%;
-    height: 2px;
-    top: 0;
-    left: 0;
-    background: linear-gradient(90deg, #779F10 0%, #779f1000 100%);
+  position: absolute;
+  content: "";
+  width: 50%;
+  height: 2px;
+  top: 0;
+  left: 0;
+  background: linear-gradient(90deg, #779F10 0%, #779f1000 100%);
 }
 
 .programme_ligne {
-    padding: 20px 10px;
+  padding: 20px 10px;
 }
+
 .book_join .btn_title-orange {
   background: #779F10;
   width: fit-content;
@@ -3040,7 +3043,7 @@ section#cfc_insights_conf {
   text-align: center;
   color: #779F10 !important;
   margin: 1px;
-      font-weight: bold;
+  font-weight: bold;
 }
 
 
@@ -3051,9 +3054,11 @@ section#cfc_insights_conf {
 .la_slider_members_elements .company {
   display: none;
 }
+
 body:not(.path-frontpage) header {
   position: relative;
 }
+
 section#contact---webform4:after {
   content: "";
   background-image: url(/themes/custom/cfc/CFC/assets/images/bg__hf.jpg);
@@ -3072,95 +3077,163 @@ section#contact---webform4 {
   background: initial;
   z-index: 8;
 }
+
 .book_join .btn_title-orange {
   display: none;
 }
+
 div#modal-event .conference-info {
   max-width: max-content;
   text-align: left;
 }
+
 div#modal-event button.close_btn {
   color: #fff;
 }
+
 div#modal-event .invitation-card {
-    justify-content: space-between;
+  justify-content: space-between;
 }
 
 div#modal-event .row .col-md-7 {
-    padding: 15px;
+  padding: 15px;
 }
 
 .all-tp-heading {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .wrapper-la_slider_members_elements2 {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
-.wrapper-la_slider_members_elements2 >div:last-child {
-    display: flex;
+.wrapper-la_slider_members_elements2>div:last-child {
+  display: flex;
 }
 
 .all-tp-heading>div>div:first-child {
-    height: 134px;
+  height: 134px;
 }
 
 .wrapper-la_slider_members_elements1 {
-    width: 22%;
+  width: 22%;
 }
 
 .wrapper-la_slider_members_elements2 {
-    width: 65%;
+  width: 65%;
 }
 
-.wrapper-la_slider_members_elements2 >div h2:after {
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background: linear-gradient(90deg, #779f1000 0%, #779F10 100%);
+.wrapper-la_slider_members_elements2>div h2:after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(90deg, #779f1000 0%, #779F10 100%);
 }
 
-.wrapper-la_slider_members_elements2 >div h2 {
-    position: relative;
-    padding-bottom: 30px;
+.wrapper-la_slider_members_elements2>div h2 {
+  position: relative;
+  padding-bottom: 30px;
 }
+
 section#sc_four_agenda .left_all_prg>div span {
-    font-family: Rubik;
+  font-family: Rubik;
 }
 
 section#sc_four_agenda .left_all_prg>div {
-    padding: 8px 15px;
+  padding: 8px 15px;
 }
 
 .title__form_all_form_bottom.container .owl-nav path {
-    fill: #779F10;
+  fill: #779F10;
 }
 
 .title__form_all_form_bottom.container .owl-nav svg {
-    width: 70px;
-    height: 70px;
+  width: 70px;
+  height: 70px;
 }
 
 .title__form_all_form_bottom.container .owl-nav button.owl-next {
-    right: -50px;
-    position: relative;
+  right: -50px;
+  position: relative;
 }
+
 .title__form_all_form_bottom.container .owl-nav button.owl-prev {
-    left: -50px;
-    position: relative;
+  left: -50px;
+  position: relative;
 }
+
 .la_slider_members_elements .surname {
-    text-transform: uppercase;
+  text-transform: uppercase;
 }
+
 .title__form_all_form_bottom.container .owl-nav button {
-    width: 60px;
+  width: 60px;
 }
+
+/*  */
+.wrapper---title {
+  color: #FFF;
+  text-align: right;
+  font-family: "Averta CY";
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 33px;
+  /* 126.923% */
+}
+
+.wrapper__logo {
+  display: flex;
+  align-items: center;
+  gap: 0 20px;
+  justify-content: space-between;
+}
+
+section#modal___financial {}
+
+section#modal___financial .col-md-12 {
+  padding: 30px 50px;
+}
+
+.wrapper---cnt h5 {
+  color: #FFF;
+  text-align: center;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #FFF;
+  font-family: "Averta CY";
+  font-size: 45px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 52px;
+  /* 115.556% */
+}
+
+.wrapper---cnt .rg--cnt {
+  color: #FF4F00;
+  text-align: center;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #FF4F00;
+  font-family: "Averta CY";
+  font-size: 45px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 52px;
+  /* 115.556% */
+}
+
+.wrapper---cnt {
+  padding-top: 30px;
+}
+
+.wrapper---cnt h5.rg--cnt {
+  padding-bottom: 40px;
+}
+
 /* Responsive adjustments */
 @media (max-width: 992px) {
   .nos_partenaires_avantage .cards-container .card {
