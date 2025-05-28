@@ -3234,6 +3234,39 @@ section#modal___financial .col-md-12 {
   padding-bottom: 40px;
 }
 
+.banner_status_img_bg img {
+  width: 100%;
+  height: 100%;
+}
+
+.banner_status_img_bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  z-index: 0;
+  width: 100%;
+}
+
+section#modal___financial .banner_status_img_bg img {
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+section#modal___financial .row {
+  position: relative;
+}
+
+section#modal___financial {
+  background: transparent;
+}
+
+.wrapper__logo,
+.wrapper---cnt {
+  z-index: 8;
+  position: relative;
+}
+
 /* Responsive adjustments */
 @media (max-width: 992px) {
   .nos_partenaires_avantage .cards-container .card {
