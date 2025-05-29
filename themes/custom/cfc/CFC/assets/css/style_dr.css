@@ -3267,6 +3267,111 @@ section#modal___financial {
   position: relative;
 }
 
+.page-carbon-market-africa section#banner-title {
+  display: none;
+}
+
+.page-carbon-market-africa section#contact---us {
+  display: none;
+}
+
+.page-carbon-market-africa section.section---filter-block {
+  display: none;
+}
+
+.page-carbon-market-africa footer.bg-dark.text-light.py-5 {
+  display: none;
+}
+.page-carbon-market-africa header {
+    display: none;
+}
+/*  */
+.page-carbon-market-africa section#page_2_sans_header:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, #1BCE67 0%, #13A45F 34.63%, #034C4F 100%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+    right: 0;
+}
+
+.page__2_market {
+     position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: MAX-CONTENT;
+}
+
+.page-carbon-market-africa section#page_2_sans_header {
+    position: relative;
+}
+.page-carbon-market-africa section#page_2_sans_header .row {
+    padding: 0;
+}
+.page__2_market svg {
+    height: 100%;
+    width: 100%;
+}
+.page-carbon-market-africa section#page_2_sans_header .invitation-card{
+      padding: 100px 0;
+}
+div#market---space {
+    max-width: 100%;
+}
+
+section#page_2_sans_header #market---space h2:after {
+    width: 259px;
+    bottom: -15px;
+}
+
+
+
+div#market---space .conference-info h4 {
+    color: #FFF;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    font-family: "Averta CY";
+}
+
+
+
+.space---market1 {
+    color: #FFF;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    font-family: "Averta CY";
+}
+
+.wrapper----p-market1 p {
+    color: #FFF;
+    font-family: Rubik;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 30px; /* 21.284px */
+    font-family: "Averta CY";
+}
+section#modal___financial .link_page_ocde a {
+    text-transform: uppercase;
+    background-color: #FF4F00;
+    padding: 8px 25px;
+    border-radius: 15px;
+}
+
+
+
+section#modal___financial .link_page_ocde a svg {
+    display: none;
+}
 /* Responsive adjustments */
 @media (max-width: 992px) {
   .nos_partenaires_avantage .cards-container .card {
