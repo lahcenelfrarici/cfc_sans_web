@@ -3329,7 +3329,9 @@ section#page_2_sans_header #market---space h2:after {
     bottom: -15px;
 }
 
-
+.wrapper---cnt h5 {
+    text-transform: uppercase !important;
+}
 
 div#market---space .conference-info h4 {
     color: #FFF;
