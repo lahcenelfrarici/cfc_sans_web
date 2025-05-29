@@ -1,7 +1,70 @@
 (function ($) {
   $(document).ready(function () {
+$('.speaker-carousel').owlCarousel({
+    loop: true,
+    margin: 20,
+    nav: true, // Enable navigation
+    dots: false,
+    items: 4,
+    navText: [
+      // Left Arrow SVG
+      `<svg xmlns="http://www.w3.org/2000/svg" width="31" height="44" viewBox="0 0 31 44" fill="none">
+        <g clip-path="url(#clip0_92_153)">
+          <path d="M17.8667 0.502441H31L13.1333 22.0024L31 43.5024H17.8667L0 22.0024L17.8667 0.502441Z" fill="#034C4F"/>
+        </g>
+        <defs>
+          <clipPath id="clip0_92_153">
+            <rect width="31" height="43" fill="white" transform="translate(0 0.502441)"/>
+          </clipPath>
+        </defs>
+      </svg>`,
 
+      // Right Arrow SVG
+      `<svg xmlns="http://www.w3.org/2000/svg" width="31" height="44" viewBox="0 0 31 44" fill="none">
+        <g clip-path="url(#clip0_92_156)">
+          <path d="M13.1333 0.502441H0L17.8667 22.0024L0 43.5024H13.1333L31 22.0024L13.1333 0.502441Z" fill="#034C4F"/>
+        </g>
+        <defs>
+          <clipPath id="clip0_92_156">
+            <rect width="31" height="43" fill="white" transform="matrix(-1 0 0 1 31 0.502441)"/>
+          </clipPath>
+        </defs>
+      </svg>`
+    ],
+    responsive: {
+      0: { items: 1 },
+      600: { items: 2 },
+      1000: { items: 4 }
+    }
+  });
     //
+ const $section = $('.section_timmer_market');
+      const targetDate = new Date();
+      targetDate.setDate(targetDate.getDate() + 36);
+      targetDate.setHours(targetDate.getHours() + 17);
+      targetDate.setMinutes(targetDate.getMinutes() + 48);
+      targetDate.setSeconds(targetDate.getSeconds() + 36);
+
+      function updateCountdown() {
+        const now = new Date();
+        const diff = targetDate - now;
+
+        if (diff < 0) return;
+
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+        const minutes = Math.floor((diff / 1000 / 60) % 60);
+        const seconds = Math.floor((diff / 1000) % 60);
+
+        $section.find('.days').text(days);
+        $section.find('.hours').text(hours);
+        $section.find('.minutes').text(minutes);
+        $section.find('.seconds').text(seconds);
+      }
+
+      setInterval(updateCountdown, 1000);
+      updateCountdown();
+
     // var owl_item3 = $(".item___3item");
     // owl_item3.owlCarousel({
     //   items: 3,
@@ -2169,7 +2232,7 @@
     $('.ui-dialog.ui-front').remove(); // Remove modal
     $('.ui-widget-overlay.ui-front').remove(); // Remove overlay
   });
-
+// 
 
 
 })(jQuery);

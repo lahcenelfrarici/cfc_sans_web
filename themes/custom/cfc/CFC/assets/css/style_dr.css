@@ -2752,10 +2752,17 @@ section#cfc_insights_conf img {
   margin-bottom: 5%;
 }
 
+div#agenda---market4 .btn_title-orange.text-center {
+  background: #034D50;
+}
+
+div#agenda---market4 h2 {
+  padding-bottom: 30px;
+}
+
 section#sc_four_agenda .left_all_prg>div {
   background: #779F10;
   color: #FFF;
-  font-family: Rubik;
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
@@ -3282,98 +3289,359 @@ section#modal___financial {
 .page-carbon-market-africa footer.bg-dark.text-light.py-5 {
   display: none;
 }
+
 .page-carbon-market-africa header {
-    display: none;
+  display: none;
 }
+
 /*  */
 .page-carbon-market-africa section#page_2_sans_header:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, #1BCE67 0%, #13A45F 34.63%, #034C4F 100%);
-    background-size: cover;
-    background-repeat: no-repeat;
-    z-index: -1;
-    right: 0;
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #1BCE67 0%, #13A45F 34.63%, #034C4F 100%);
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+  right: 0;
 }
 
 .page__2_market {
-     position: absolute;
-    top: 0;
-    right: 0;
-    height: 100%;
-    width: MAX-CONTENT;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: MAX-CONTENT;
 }
 
 .page-carbon-market-africa section#page_2_sans_header {
-    position: relative;
+  position: relative;
 }
+
 .page-carbon-market-africa section#page_2_sans_header .row {
-    padding: 0;
+  padding: 0;
 }
+
 .page__2_market svg {
-    height: 100%;
-    width: 100%;
+  height: 100%;
+  width: 100%;
 }
-.page-carbon-market-africa section#page_2_sans_header .invitation-card{
-      padding: 100px 0;
+
+.page-carbon-market-africa section#page_2_sans_header .invitation-card {
+  padding: 100px 0;
 }
+
 div#market---space {
-    max-width: 100%;
+  max-width: 100%;
 }
 
 section#page_2_sans_header #market---space h2:after {
-    width: 259px;
-    bottom: -15px;
+  width: 259px;
+  bottom: -15px;
 }
 
 .wrapper---cnt h5 {
-    text-transform: uppercase !important;
+  text-transform: uppercase !important;
+}
+
+.wrapper--btm {
+  background-color: #034D50;
+  display: flex;
+  padding: 30px 40px;
+  gap: 0 20px;
+  width: 70%;
+}
+
+.wrapper---s {
+  display: flex;
+  align-items: center;
+  gap: 0 20px;
+  color: #FFF;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  font-family: "Averta CY";
 }
 
 div#market---space .conference-info h4 {
-    color: #FFF;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    font-family: "Averta CY";
+  color: #FFF;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  font-family: "Averta CY";
 }
 
 
 
 .space---market1 {
-    color: #FFF;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    font-family: "Averta CY";
+  color: #FFF;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  font-family: "Averta CY";
 }
 
 .wrapper----p-market1 p {
-    color: #FFF;
-    font-family: Rubik;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 30px; /* 21.284px */
-    font-family: "Averta CY";
+  color: #FFF;
+  font-family: Rubik;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 30px;
+  /* 21.284px */
+  font-family: "Averta CY";
 }
+
 section#modal___financial .link_page_ocde a {
-    text-transform: uppercase;
-    background-color: #FF4F00;
-    padding: 8px 25px;
-    border-radius: 15px;
+  text-transform: uppercase;
+  background-color: #FF4F00;
+  padding: 8px 25px;
+  border-radius: 15px;
 }
 
+.section_timmer_market {}
 
+.section_timmer_market .logo-bar {
+  margin: auto;
+  text-align: center;
+  display: flex;
+  gap: 0 30px;
+  justify-content: center;
+  padding: 40px 0;
+}
+
+.countdown-box {
+  border-radius: 26px;
+  background: #FFF;
+  box-shadow: 0px 9px 18px 0px rgba(0, 0, 0, 0.25);
+  width: 410.796px;
+  display: flex;
+  text-align: center;
+  justify-content: space-evenly;
+  height: 117.134px;
+  align-items: center;
+  margin: auto;
+}
+
+.time-unit span {
+  color: #779F10;
+  font-family: Rubik;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.time-unit small {
+  color: #000;
+  font-family: Rubik;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.time-unit {
+  display: flex;
+  flex-direction: column;
+}
+
+.section_timmer_market {
+  border-radius: 0 0 50% 50% / 0 0 70% 70%;
+}
 
 section#modal___financial .link_page_ocde a svg {
-    display: none;
+  display: none;
 }
+
+.page-carbon-market-africa div#block-cfc-market3,
+.page-carbon-market-africa div#block-cfc-market2 {
+  background-color: #F6F6F6;
+}
+
+
+.countdown-box {
+  position: relative;
+  margin-top: -30px;
+  top: 35px;
+}
+
+div#block-cfc-market3 {
+  padding-top: 50px;
+}
+
+.section_timmer_market {
+  border-radius: 0 0 50% 50% / 0 0 70% 70%;
+  background-color: #fff;
+}
+
+div#wrapper--market--3 h2 {
+  color: #1B677A !important;
+}
+
+div#block-cfc-market3 section#cfc_insights_conf {
+  margin-bottom: 0;
+}
+
+div#block-cfc-market4 section {
+  background: #F6F6F6;
+}
+
+div#agenda---market4 h2 {
+  text-align: center;
+  color: #1B677A !important;
+  text-align: center;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+div#agenda---market4 .time_slot {
+  border-radius: 24px;
+  border: 1px solid #034D50;
+  background: #034D50;
+  padding: 0;
+}
+
+div#agenda---market4 .time_slot p {
+  border-radius: 0 24px 24px 0px;
+  border: 1px solid #034D50;
+  background: #FFF;
+  width: 80%;
+  height: 100%;
+  padding: 20px;
+}
+
+div#agenda---market4 .time_slot .left_all_prg div {
+  background: #034D50;
+  width: 20%;
+}
+
+div#agenda---market4 .time_slot .left_all_prg {
+  width: 100%;
+}
+
+section#sc_four_agenda div#agenda---market4 .time_slot:last-child {
+  border-bottom: 0 !important;
+}
+
+.page-carbon-market-africa section#contact---webform4:after {
+  background: linear-gradient(90deg, #1BCE67 0%, #13A45F 34.63%, #034C4F 100%);
+}
+
+.page-carbon-market-africa section#contact---webform4 .book_join {
+  display: none;
+}
+
+div#market5--contact {}
+
+div#market5--contact .logo_form_bottom img {
+  width: 50%;
+}
+
+div#market5--contact div#join_the_coin {
+  background: transparent;
+  margin-top: -292px;
+}
+
+div#market5--contact h2 {
+  color: #1B677A !important;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+div#market5--contact h2 span {
+  color: #1B677A !important;
+}
+
+
+div#block-cfc-market4 section {
+  padding-bottom: 189px;
+}
+
+.page-carbon-market-africa .btn_title-orange,
+.page-carbon-market-africa div#join_the_coin .web_form_the_coin .wrapper_submit input {
+  background: #034D50 !important;
+}
+
+.speaker-info strong {
+  color: #1B677A;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.speaker-info span {
+  color: #000;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 118.245%;
+  /* 11.825px */
+  width: 50%;
+  display: block;
+  margin: auto;
+}
+
+.speaker-info {
+  text-align: center;
+}
+
+.speaker-info {
+  border-radius: 9px;
+  background: #FFF;
+  width: 189.401px;
+  padding: 10px;
+  position: absolute;
+  bottom: 16px;
+  margin: auto;
+  text-align: center;
+  left: 0;
+  right: 0;
+  /* display: flex; */
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: space-between;
+}
+
+.section_speaker h2 {
+  color: #1B677A;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding-bottom: 30px;
+  text-align: center;
+}
+
+.section_speaker {
+  padding: 40px 0;
+}
+
+.section_speaker button.owl-prev {
+  left: -45px;
+  position: relative;
+}
+.section_speaker .btn_title-orange.text-center {
+    margin-top: 30px;
+    width: max-content;
+    margin: auto;
+    margin-top: 40px;
+}
+.section_speaker button.owl-next {
+  right: -45px;
+  position: relative;
+}
+
 /* Responsive adjustments */
 @media (max-width: 992px) {
   .nos_partenaires_avantage .cards-container .card {

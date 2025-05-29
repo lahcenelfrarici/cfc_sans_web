@@ -3114,6 +3114,101 @@
     font-size: 25px !important;
     line-height: normal !important;
   }
+  .page__2_market {
+    display: none;
+}
+
+.page-carbon-market-africa section#page_2_sans_header .invitation-card {
+    padding: 30px 0px;
+}
+
+.wrapper--btm {
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px 0;
+    width: 100%;
+}
+
+.logo-bar img {
+    text-align: center;
+    margin: auto;
+}
+
+.section_timmer_market {
+    border-radius: initial;
+}
+
+.countdown-box {
+    padding: 20px 0;
+    height: auto;
+    width: 100%;
+}
+.page__2_market {
+    display: none;
+}
+
+.page-carbon-market-africa section#page_2_sans_header .invitation-card {
+    padding: 30px 0px;
+}
+
+.wrapper--btm {
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px 0;
+    width: 100%;
+}
+
+.logo-bar img {
+    text-align: center;
+    margin: auto;
+}
+
+.section_timmer_market {
+    border-radius: initial;
+}
+
+.countdown-box {
+    padding: 20px 0;
+    height: auto;
+    width: 100%;
+}
+
+div#agenda---market4 .time_slot .left_all_prg {
+    flex-direction: column;
+}
+
+div#agenda---market4 .time_slot .left_all_prg div {
+    width: 100%;
+}
+
+div#agenda---market4 .time_slot p {
+    width: 100%;
+    text-align: center;
+}
+
+div#agenda---market4 .time_slot p {
+    border-radius: 0;
+}
+
+.page-carbon-market-africa section#page_2_sans_header {
+    padding-top: 0;
+}
+
+.title__form_all_form_bottom.container h2 span {
+    font-size: 30px;
+}
+
+div#market5--contact div#join_the_coin {
+    margin-top: 0;
+}
+
+div#market5--contact h2,div#market5--contact h2 span {
+    color: #fff !important;
+}
+
+div#block-cfc-market4 section {
+    padding-bottom: 25px;
+}
 }
 
 @media (max-width: 767px) {
