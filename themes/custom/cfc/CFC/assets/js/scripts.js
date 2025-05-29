@@ -1623,62 +1623,62 @@
   //     updateItemInfoContent();
   //   });
   // });
-  // Modal click logic for ".click--modal-hp"
-  $(".rapport_size_img div#list--news-all > div:first-child .click--modal-hp").on("click", function (event) {
-    event.preventDefault(); // Prevent default action
-    const factSheetLink = $(this).data("pdf");
+  // Modal click logic for ".click--modal-hp ****"
+  // $(".rapport_size_img div#list--news-all > div:first-child .click--modal-hp").on("click", function (event) {
+  //   event.preventDefault(); // Prevent default action
+  //   const factSheetLink = $(this).data("pdf");
 
-    // Update the download link dynamically
-    $("#download-link").attr("href", factSheetLink);
+  //   // Update the download link dynamically
+  //   $("#download-link").attr("href", factSheetLink);
 
-    // Update the input field value dynamically
-    $("#edit-pdf").val(factSheetLink);
+  //   // Update the input field value dynamically
+  //   $("#edit-pdf").val(factSheetLink);
 
-    // Show the member modal
-    $("#member-modal").fadeIn();
+  //   // Show the member modal
+  //   $("#member-modal").fadeIn();
 
-    // Close modal functionality
-    $(".showing_modal_pop_up .close").off("click").on("click", function () {
-      $(".showing_modal_pop_up").fadeOut();
-      $("#access-password").val("");
-      $("#error-message").hide();
-    });
+  //   // Close modal functionality
+  //   $(".showing_modal_pop_up .close").off("click").on("click", function () {
+  //     $(".showing_modal_pop_up").fadeOut();
+  //     $("#access-password").val("");
+  //     $("#error-message").hide();
+  //   });
 
-    // Handle non-member button click
-    $("#not-member-btn").off("click").on("click", function () {
-      $("#member-modal").hide();
-      $("#non-member-modal").fadeIn();
-    });
+  //   // Handle non-member button click
+  //   $("#not-member-btn").off("click").on("click", function () {
+  //     $("#member-modal").hide();
+  //     $("#non-member-modal").fadeIn();
+  //   });
 
-    // Switch to member modal
-    $("#already-member-btn").off("click").on("click", function () {
-      $("#non-member-modal").hide();
-      $("#member-modal").fadeIn();
-    });
+  //   // Switch to member modal
+  //   $("#already-member-btn").off("click").on("click", function () {
+  //     $("#non-member-modal").hide();
+  //     $("#member-modal").fadeIn();
+  //   });
 
-    // Remove disabled so the button is clickable
-    $("#download-btn").prop("disabled", false);
+  //   // Remove disabled so the button is clickable
+  //   $("#download-btn").prop("disabled", false);
 
-    // Handle password validation
-    const correctPassword = "CFC123";
-    $("#access-password").off("input").on("input", function () {
-      const enteredPassword = $(this).val();
-      if (enteredPassword === correctPassword) {
-        $("#error-message").hide();
-      }
-    });
+  //   // Handle password validation
+  //   const correctPassword = "CFC123";
+  //   $("#access-password").off("input").on("input", function () {
+  //     const enteredPassword = $(this).val();
+  //     if (enteredPassword === correctPassword) {
+  //       $("#error-message").hide();
+  //     }
+  //   });
 
-    // Handle download button click
-    $("#download-btn").off("click").on("click", function (event) {
-      const enteredPassword = $("#access-password").val();
-      if (enteredPassword !== correctPassword) {
-        event.preventDefault();
-        $("#error-message").text("Wrong password, please try again").show();
-      } else {
-        $("#error-message").hide();
-      }
-    });
-  });
+  //   // Handle download button click
+  //   $("#download-btn").off("click").on("click", function (event) {
+  //     const enteredPassword = $("#access-password").val();
+  //     if (enteredPassword !== correctPassword) {
+  //       event.preventDefault();
+  //       $("#error-message").text("Wrong password, please try again").show();
+  //     } else {
+  //       $("#error-message").hide();
+  //     }
+  //   });
+  // });
   //
   // Initialize Owl Carousel
   $('.Testimonials_slide .owl-carousel').owlCarousel({
