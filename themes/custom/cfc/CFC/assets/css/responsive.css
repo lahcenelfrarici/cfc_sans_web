@@ -3209,6 +3209,9 @@ div#market5--contact h2,div#market5--contact h2 span {
 div#block-cfc-market4 section {
     padding-bottom: 25px;
 }
+.section_timmer_market .logo-bar {
+    flex-direction: column;
+}
 }
 
 @media (max-width: 767px) {
