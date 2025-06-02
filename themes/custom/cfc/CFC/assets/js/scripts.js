@@ -38,32 +38,32 @@ $('.speaker-carousel').owlCarousel({
     }
   });
     //
- const $section = $('.section_timmer_market');
-      const targetDate = new Date();
-      targetDate.setDate(targetDate.getDate() + 36);
-      targetDate.setHours(targetDate.getHours() + 17);
-      targetDate.setMinutes(targetDate.getMinutes() + 48);
-      targetDate.setSeconds(targetDate.getSeconds() + 36);
+//  const $section = $('.section_timmer_market');
+//       const targetDate = new Date();
+//       targetDate.setDate(targetDate.getDate() + 36);
+//       targetDate.setHours(targetDate.getHours() + 17);
+//       targetDate.setMinutes(targetDate.getMinutes() + 48);
+//       targetDate.setSeconds(targetDate.getSeconds() + 36);
 
-      function updateCountdown() {
-        const now = new Date();
-        const diff = targetDate - now;
+//       function updateCountdown() {
+//         const now = new Date();
+//         const diff = targetDate - now;
 
-        if (diff < 0) return;
+//         if (diff < 0) return;
 
-        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-        const minutes = Math.floor((diff / 1000 / 60) % 60);
-        const seconds = Math.floor((diff / 1000) % 60);
+//         const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+//         const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+//         const minutes = Math.floor((diff / 1000 / 60) % 60);
+//         const seconds = Math.floor((diff / 1000) % 60);
 
-        $section.find('.days').text(days);
-        $section.find('.hours').text(hours);
-        $section.find('.minutes').text(minutes);
-        $section.find('.seconds').text(seconds);
-      }
+//         $section.find('.days').text(days);
+//         $section.find('.hours').text(hours);
+//         $section.find('.minutes').text(minutes);
+//         $section.find('.seconds').text(seconds);
+//       }
 
-      setInterval(updateCountdown, 1000);
-      updateCountdown();
+//       setInterval(updateCountdown, 1000);
+//       updateCountdown();
 
     // var owl_item3 = $(".item___3item");
     // owl_item3.owlCarousel({
@@ -2232,7 +2232,7 @@ $('.speaker-carousel').owlCarousel({
     $('.ui-dialog.ui-front').remove(); // Remove modal
     $('.ui-widget-overlay.ui-front').remove(); // Remove overlay
   });
-// 
+//
 
 
 })(jQuery);
