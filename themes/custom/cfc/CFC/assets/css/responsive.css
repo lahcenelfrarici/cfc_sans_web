@@ -3212,6 +3212,9 @@ div#block-cfc-market4 section {
 .section_timmer_market .logo-bar {
     flex-direction: column;
 }
+.investment.african_insights.african_pioneer h2 {
+  padding: 0 15px;
+}
 }
 
 @media (max-width: 767px) {
