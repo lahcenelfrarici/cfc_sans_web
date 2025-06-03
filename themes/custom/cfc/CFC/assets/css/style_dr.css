@@ -3643,6 +3643,11 @@ div#block-cfc-market4 section {
   position: relative;
 }
 
+div#join_the_coin .web_form_the_coin input, div#join_the_coin .web_form_the_coin textarea {
+  color: var(--bs-body-color);
+  font-weight: 500;
+  font-size: 16px;
+}
 /* Responsive adjustments */
 @media (max-width: 992px) {
   .nos_partenaires_avantage .cards-container .card {
