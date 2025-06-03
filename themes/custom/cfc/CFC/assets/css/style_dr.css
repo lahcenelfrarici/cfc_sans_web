@@ -3648,6 +3648,12 @@ div#join_the_coin .web_form_the_coin input, div#join_the_coin .web_form_the_coin
   font-weight: 500;
   font-size: 16px;
 }
+div#join_the_coin .web_form_the_coin form > div INPUT {
+  color: #fff;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+}
 /* Responsive adjustments */
 @media (max-width: 992px) {
   .nos_partenaires_avantage .cards-container .card {
