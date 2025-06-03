@@ -1,14 +1,44 @@
 (function ($) {
   $(document).ready(function () {
-$('.speaker-carousel').owlCarousel({
-    loop: true,
-    margin: 20,
-    nav: true, // Enable navigation
-    dots: false,
-    items: 4,
-    navText: [
-      // Left Arrow SVG
-      `<svg xmlns="http://www.w3.org/2000/svg" width="31" height="44" viewBox="0 0 31 44" fill="none">
+    // 
+     // Target date (adjust as needed)
+    const targetDate = new Date("2025-07-02T22:08:00").getTime();
+
+    const updateCountdown = () => {
+      const now = new Date().getTime();
+      const distance = targetDate - now;
+
+      if (distance <= 0) {
+        clearInterval(timer);
+        $('.countdown-box').hide();
+        $('#expired-message').show();
+        return;
+      }
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      // Update values using jQuery
+      $('.days').text(days);
+      $('.hours').text(String(hours).padStart(2, '0'));
+      $('.minutes').text(String(minutes).padStart(2, '0'));
+      $('.seconds').text(String(seconds).padStart(2, '0'));
+    };
+
+    const timer = setInterval(updateCountdown, 1000);
+    updateCountdown(); // Run immediately
+    // 
+    $('.speaker-carousel').owlCarousel({
+      loop: true,
+      margin: 20,
+      nav: true, // Enable navigation
+      dots: false,
+      items: 4,
+      navText: [
+        // Left Arrow SVG
+        `<svg xmlns="http://www.w3.org/2000/svg" width="31" height="44" viewBox="0 0 31 44" fill="none">
         <g clip-path="url(#clip0_92_153)">
           <path d="M17.8667 0.502441H31L13.1333 22.0024L31 43.5024H17.8667L0 22.0024L17.8667 0.502441Z" fill="#034C4F"/>
         </g>
@@ -19,8 +49,8 @@ $('.speaker-carousel').owlCarousel({
         </defs>
       </svg>`,
 
-      // Right Arrow SVG
-      `<svg xmlns="http://www.w3.org/2000/svg" width="31" height="44" viewBox="0 0 31 44" fill="none">
+        // Right Arrow SVG
+        `<svg xmlns="http://www.w3.org/2000/svg" width="31" height="44" viewBox="0 0 31 44" fill="none">
         <g clip-path="url(#clip0_92_156)">
           <path d="M13.1333 0.502441H0L17.8667 22.0024L0 43.5024H13.1333L31 22.0024L13.1333 0.502441Z" fill="#034C4F"/>
         </g>
@@ -30,40 +60,46 @@ $('.speaker-carousel').owlCarousel({
           </clipPath>
         </defs>
       </svg>`
-    ],
-    responsive: {
-      0: { items: 1 },
-      600: { items: 2 },
-      1000: { items: 4 }
-    }
-  });
+      ],
+      responsive: {
+        0: {
+          items: 1
+        },
+        600: {
+          items: 2
+        },
+        1000: {
+          items: 4
+        }
+      }
+    });
     //
-//  const $section = $('.section_timmer_market');
-//       const targetDate = new Date();
-//       targetDate.setDate(targetDate.getDate() + 36);
-//       targetDate.setHours(targetDate.getHours() + 17);
-//       targetDate.setMinutes(targetDate.getMinutes() + 48);
-//       targetDate.setSeconds(targetDate.getSeconds() + 36);
+    //  const $section = $('.section_timmer_market');
+    //       const targetDate = new Date();
+    //       targetDate.setDate(targetDate.getDate() + 36);
+    //       targetDate.setHours(targetDate.getHours() + 17);
+    //       targetDate.setMinutes(targetDate.getMinutes() + 48);
+    //       targetDate.setSeconds(targetDate.getSeconds() + 36);
 
-//       function updateCountdown() {
-//         const now = new Date();
-//         const diff = targetDate - now;
+    //       function updateCountdown() {
+    //         const now = new Date();
+    //         const diff = targetDate - now;
 
-//         if (diff < 0) return;
+    //         if (diff < 0) return;
 
-//         const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-//         const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-//         const minutes = Math.floor((diff / 1000 / 60) % 60);
-//         const seconds = Math.floor((diff / 1000) % 60);
+    //         const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    //         const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+    //         const minutes = Math.floor((diff / 1000 / 60) % 60);
+    //         const seconds = Math.floor((diff / 1000) % 60);
 
-//         $section.find('.days').text(days);
-//         $section.find('.hours').text(hours);
-//         $section.find('.minutes').text(minutes);
-//         $section.find('.seconds').text(seconds);
-//       }
+    //         $section.find('.days').text(days);
+    //         $section.find('.hours').text(hours);
+    //         $section.find('.minutes').text(minutes);
+    //         $section.find('.seconds').text(seconds);
+    //       }
 
-//       setInterval(updateCountdown, 1000);
-//       updateCountdown();
+    //       setInterval(updateCountdown, 1000);
+    //       updateCountdown();
 
     // var owl_item3 = $(".item___3item");
     // owl_item3.owlCarousel({
@@ -1039,7 +1075,7 @@ $('.speaker-carousel').owlCarousel({
           </div>
           <div class="wrapper-element-africa">
             <div>${country}</div>
-            <div class="click--modal-hp" data-pdf="${factSheet}">Download the country facts sheet</div>
+            <div class="click--modal-hp" data-pdf="${factSheet}" data-country="${country}">Download the country facts sheet</div>
           </div>
         </div>
       `;
@@ -1073,12 +1109,14 @@ $('.speaker-carousel').owlCarousel({
       // Modal click logic for ".click--modal-hp"
       $(".click--modal-hp").off("click").on("click", function () {
         const factSheetLink = $(this).data("pdf");
+        const factSheetCountry = $(this).data("country");
 
         // Update the download link dynamically
         $("#download-link").attr("href", factSheetLink);
 
         // Update the input field value dynamically
         $("#edit-pdf").val(factSheetLink);
+        $("#edit-country").val(factSheetCountry);
 
         // Show the member modal
         $("#member-modal").fadeIn();
@@ -2232,7 +2270,7 @@ $('.speaker-carousel').owlCarousel({
     $('.ui-dialog.ui-front').remove(); // Remove modal
     $('.ui-widget-overlay.ui-front').remove(); // Remove overlay
   });
-//
+  //
 
 
 })(jQuery);

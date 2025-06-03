@@ -700,7 +700,7 @@ div#block-cfc-identitedusite img {
   text-align: center;
 }
 
-.form__formualaire form>div #edit-pdf {
+.form__formualaire form>div #edit-pdf,.form__formualaire form>div #edit-country {
   display: none;
 }
 
@@ -1675,8 +1675,8 @@ fieldset.captcha.captcha-type-challenge--recaptcha p.error {
 .contact---us .form-actions {
   width: 100%;
 }
-
-#block-cfc-webform-3 .js-form-item-pdf {
+/* lol */
+#block-cfc-webform-3 .js-form-item-pdf, #block-cfc-webform-3 .js-form-item-country{
   display: none;
 }
 
