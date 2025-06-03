@@ -3215,6 +3215,13 @@ div#block-cfc-market4 section {
 .investment.african_insights.african_pioneer h2 {
   padding: 0 15px;
 }
+
+div#block-cfc-market3 section#cfc_insights_conf {
+  padding-bottom: 0;
+}
+div#block-cfc-market4 section {
+  padding-top: 0;
+}
 }
 
 @media (max-width: 767px) {
