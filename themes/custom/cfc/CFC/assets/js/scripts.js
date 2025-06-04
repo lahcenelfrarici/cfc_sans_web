@@ -1,8 +1,8 @@
 (function ($) {
   $(document).ready(function () {
-    // 
+    //
      // Target date (adjust as needed)
-    const targetDate = new Date("2025-07-02T22:09:30").getTime();
+    const targetDate = new Date("2025-07-08T22:09:30").getTime();
 
     const updateCountdown = () => {
       const now = new Date().getTime();
@@ -29,7 +29,7 @@
 
     const timer = setInterval(updateCountdown, 1000);
     updateCountdown(); // Run immediately
-    // 
+    //
     $('.speaker-carousel').owlCarousel({
       loop: true,
       margin: 20,
