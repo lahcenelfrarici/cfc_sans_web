@@ -3654,6 +3654,36 @@ div#join_the_coin .web_form_the_coin form > div .wrapper_submit input {
   font-style: normal;
   font-weight: 700;
 }
+.edition__two {
+    color: #FFF;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    background: #034C4F;
+    position: absolute;
+    right: 0;
+    width: MAX-CONTENT;
+    display: flex;
+    top: 52px;
+    z-index: 99;
+    height: auto;
+    width: 254.406px;
+    text-align: center;
+    justify-content: center;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.edition__two span {
+    color: #FFF;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    position: relative;
+    padding: 0 5px 0 0px;
+}
 /* Responsive adjustments */
 @media (max-width: 992px) {
   .nos_partenaires_avantage .cards-container .card {
