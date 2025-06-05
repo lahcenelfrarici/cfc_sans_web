@@ -409,8 +409,8 @@
 
 @media (min-width: 992px) {
   section#cfc_insights_conf img {
-  width: 600px;
-  height: 600px;
+  width: 500px;
+  height: 500px;
   margin-bottom: 5%;
   object-fit: unset;
 }
