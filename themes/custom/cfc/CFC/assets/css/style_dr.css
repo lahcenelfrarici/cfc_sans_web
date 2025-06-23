@@ -3684,6 +3684,84 @@ div#join_the_coin .web_form_the_coin form > div .wrapper_submit input {
     position: relative;
     padding: 0 5px 0 0px;
 }
+
+
+
+/*  */
+div#webform_step__by_step section#modal___financial {
+    background-color: #fff;
+}
+.step_step_webform h2 {
+    text-align: center;
+    -webkit-text-stroke-width: 1px;
+    font-family: "Averta CY";
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 52px; /* 108.333% */
+    background: var(--lin, linear-gradient(84deg, #009681 4.99%, #007565 87.68%));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: #007565;
+    color: #007565;
+}
+
+.step_step_webform ul.webform-progress-tracker.progress-tracker.progress-tracker--center {
+    display: none;
+}
+
+.step_step_webform h5 {
+    color: #151515;
+    text-align: center;
+    font-family: "Averta CY";
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 34px; /* 130.769% */
+}
+.step_step_webform #edit-flexbox-01 .fieldset-wrapper >div {
+    display: flex
+;
+    justify-content: space-evenly;
+}
+
+.step_step_webform .webform-flex.webform-flex--1 .fieldset-wrapper >div >div {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+}
+
+.step_step_webform div#edit-flexbox-01 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+div#edit-flexbox-02 {
+    display: block;
+}
+
+div#edit-flexbox-02 >div fieldset {
+    display: flex;
+}
+
+div#edit-flexbox-02 >div fieldset .fieldset-wrapper >div {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+div#edit-flexbox-02 >div fieldset legend {
+    width: 30%;
+    text-align: left;
+}
+
+div#edit-flexbox-02 >div fieldset .fieldset-wrapper {
+    width: 100%;
+}
 /* Responsive adjustments */
 @media (max-width: 992px) {
   .nos_partenaires_avantage .cards-container .card {
