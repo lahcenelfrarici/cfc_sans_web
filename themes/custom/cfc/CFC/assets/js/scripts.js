@@ -1,7 +1,7 @@
 (function ($) {
   $(document).ready(function () {
     //
-     // Target date (adjust as needed)
+    // Target date (adjust as needed)
     const targetDate = new Date("2025-07-08T22:09:30").getTime();
 
     const updateCountdown = () => {
@@ -63,7 +63,10 @@
       ],
       responsive: {
         0: {
-          items: 1
+          items: 1,
+
+          autoplay: true
+
         },
         600: {
           items: 2
