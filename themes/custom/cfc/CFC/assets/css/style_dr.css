@@ -4053,6 +4053,13 @@ div#market---space h2 span {
 div#market---space h2 {
     margin-bottom: 25px;
 }
+.step_step_webform div#edit-flexbox-01 label.option {
+    padding-left: 0;
+    text-align: center;
+}
+.step_step_webform .wrapper_submit input#edit-actions-wizard-prev, .step_step_webform .wrapper_submit input#edit-actions-wizard-prev + svg {
+    display: none;
+}
 /* Responsive adjustments */
 @media (max-width: 992px) {
   .nos_partenaires_avantage .cards-container .card {
