@@ -3998,68 +3998,140 @@ div#edit-flexbox-02>div fieldset .fieldset-wrapper {
 .step_step_webform .webform-confirmation__back {
   display: none;
 }
-.step_step_webform div#edit-flexbox-02>div:nth-child(1) div#edit-availability >div:nth-child(1) label {
-    width: 10%;
+
+.step_step_webform div#edit-flexbox-02>div:nth-child(1) div#edit-availability>div:nth-child(1) label {
+  width: 10%;
 }
 
-.step_step_webform div#edit-flexbox-02>div:nth-child(1) div#edit-availability >div:nth-child(5) label {
-    width: 10%;
+.step_step_webform div#edit-flexbox-02>div:nth-child(1) div#edit-availability>div:nth-child(5) label {
+  width: 10%;
 }
 
-.step_step_webform  div#edit-flexbox-02 {
-    padding-top: 80px;
+.step_step_webform div#edit-flexbox-02 {
+  padding-top: 80px;
 }
 
 .step_step_webform .webform-flex.webform-flex--1 label {
-    top: -50px;
+  top: -50px;
 }
+
 .webform-flexbox label {
-    top: auto !important;
-    position: relative !important;
-    width: 100%;
-    text-align: left;
-    padding-left: 15px;
+  top: auto !important;
+  position: relative !important;
+  width: 100%;
+  text-align: left;
+  padding-left: 15px;
 }
+
 .step_step_webform div#edit-flexbox-02 .webform-flex.webform-flex--1 label {
-    position: absolute !important;
-    top: -50px !important;
-    text-align: inherit;
-    padding: 0;
+  position: absolute !important;
+  top: -50px !important;
+  text-align: inherit;
+  padding: 0;
 }
+
 .speaker-item img {
-    border-radius: 37px;
-    height: 290px;
-    object-fit: cover;
+  border-radius: 37px;
+  height: 290px;
+  object-fit: cover;
 }
 
 .speaker-info {
-    WIDTH: 90%;
+  WIDTH: 90%;
 }
 
 .speaker-info span {
-        width: 88%;
-    margin-top: 2px;
+  width: 88%;
+  margin-top: 2px;
 }
 
 
 section#page_2_sans_header div#market---space {
-    gap: 7px 0 !important;
+  gap: 7px 0 !important;
 }
+
 div#market---space h2 span {
-    font-size: 25px;
-    font-weight: normal;
+  font-size: 25px;
+  font-weight: normal;
 }
 
 div#market---space h2 {
-    margin-bottom: 25px;
+  margin-bottom: 25px;
 }
+
 .step_step_webform div#edit-flexbox-01 label.option {
-    padding-left: 0;
-    text-align: center;
+  padding-left: 0;
+  text-align: center;
 }
-.step_step_webform .wrapper_submit input#edit-actions-wizard-prev, .step_step_webform .wrapper_submit input#edit-actions-wizard-prev + svg {
-    display: none;
+
+.step_step_webform .wrapper_submit input#edit-actions-wizard-prev,
+.step_step_webform .wrapper_submit input#edit-actions-wizard-prev+svg {
+  display: none;
 }
+.wrapper_wisi_cadre {
+    margin-top: 3%;
+}
+.wrapper_wisi_cadre {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0px 4px 44.1px 0px rgba(114, 170, 255, 0.25);
+  color: #000;
+  border-radius: 20px;
+  border: 1px solid #F4F4F4;
+  background: #FFF;
+  border-radius: 20px;
+  border: 1px solid #F4F4F4;
+  background: #FFF;
+}
+
+.wrapper_wisi_cadre p,
+.wrapper_wisi_cadre p a,
+.wrapper_wisi_cadre li a {
+  color: #2D3648;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 120%;
+  /* 33.6px */
+  letter-spacing: 0.28px;
+  font-size: 1.4vw;
+  line-height: 40px;
+}
+
+.ul_first li {
+  list-style-type: none;
+}
+
+.ul_first {
+  padding-left: 0 !important;
+}
+
+.wrapper_wisi_cadre p em {
+  font-style: normal;
+}
+
+.wrapper_wisi_cadre h2 {
+  -webkit-text-stroke-width: 0.699999988079071px;
+  -webkit-text-stroke-color: #009681;
+  font-family: "Averta CY";
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 50px;
+  letter-spacing: -3px;
+  background: var(--lin, linear-gradient(102deg, #009681 0.97%, #00677F 97.19%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.wrapper_wisi_cadre ul {
+  padding-left:2rem;
+  font-size: 1.4vw;
+  line-height: 40px;
+}
+
 /* Responsive adjustments */
 @media (max-width: 992px) {
   .nos_partenaires_avantage .cards-container .card {
