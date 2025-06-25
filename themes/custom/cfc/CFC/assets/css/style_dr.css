@@ -4125,7 +4125,9 @@ div#market---space h2 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
+.page-conditions-generales section#banner-title {
+    display: none;
+}
 .wrapper_wisi_cadre ul {
   padding-left:2rem;
   font-size: 1.4vw;
