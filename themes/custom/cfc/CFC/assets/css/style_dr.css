@@ -4134,7 +4134,15 @@ div#market---space h2 {
   font-size: 1.4vw;
   line-height: 40px;
 }
-
+.section_speaker .container:last-child {
+    margin-top: 30px;
+}
+.section_speaker h2 {
+    text-transform: uppercase;
+}
+.speaker-item.visible__1 {
+    opacity: 0;
+}
 /* Responsive adjustments */
 @media (max-width: 992px) {
   .nos_partenaires_avantage .cards-container .card {
