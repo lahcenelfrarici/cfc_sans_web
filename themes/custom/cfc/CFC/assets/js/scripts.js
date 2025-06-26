@@ -30,52 +30,101 @@
     const timer = setInterval(updateCountdown, 1000);
     updateCountdown(); // Run immediately
     //
-    $('.speaker-carousel').owlCarousel({
-      loop: true,
-      margin: 20,
-      nav: true, // Enable navigation
-      dots: false,
-      items: 4,
-      navText: [
-        // Left Arrow SVG
-        `<svg xmlns="http://www.w3.org/2000/svg" width="31" height="44" viewBox="0 0 31 44" fill="none">
-        <g clip-path="url(#clip0_92_153)">
-          <path d="M17.8667 0.502441H31L13.1333 22.0024L31 43.5024H17.8667L0 22.0024L17.8667 0.502441Z" fill="#034C4F"/>
-        </g>
-        <defs>
-          <clipPath id="clip0_92_153">
-            <rect width="31" height="43" fill="white" transform="translate(0 0.502441)"/>
-          </clipPath>
-        </defs>
-      </svg>`,
+    // $('.speaker-carousel').owlCarousel({
+    //   loop: true,
+    //   margin: 20,
+    //   nav: true, // Enable navigation
+    //   dots: false,
+    //   items: 4,
+    //   navText: [
+    //     // Left Arrow SVG
+    //     `<svg xmlns="http://www.w3.org/2000/svg" width="31" height="44" viewBox="0 0 31 44" fill="none">
+    //     <g clip-path="url(#clip0_92_153)">
+    //       <path d="M17.8667 0.502441H31L13.1333 22.0024L31 43.5024H17.8667L0 22.0024L17.8667 0.502441Z" fill="#034C4F"/>
+    //     </g>
+    //     <defs>
+    //       <clipPath id="clip0_92_153">
+    //         <rect width="31" height="43" fill="white" transform="translate(0 0.502441)"/>
+    //       </clipPath>
+    //     </defs>
+    //   </svg>`,
 
-        // Right Arrow SVG
-        `<svg xmlns="http://www.w3.org/2000/svg" width="31" height="44" viewBox="0 0 31 44" fill="none">
-        <g clip-path="url(#clip0_92_156)">
-          <path d="M13.1333 0.502441H0L17.8667 22.0024L0 43.5024H13.1333L31 22.0024L13.1333 0.502441Z" fill="#034C4F"/>
-        </g>
-        <defs>
-          <clipPath id="clip0_92_156">
-            <rect width="31" height="43" fill="white" transform="matrix(-1 0 0 1 31 0.502441)"/>
-          </clipPath>
-        </defs>
-      </svg>`
-      ],
-      responsive: {
-        0: {
-          items: 1,
+    //     // Right Arrow SVG
+    //     `<svg xmlns="http://www.w3.org/2000/svg" width="31" height="44" viewBox="0 0 31 44" fill="none">
+    //     <g clip-path="url(#clip0_92_156)">
+    //       <path d="M13.1333 0.502441H0L17.8667 22.0024L0 43.5024H13.1333L31 22.0024L13.1333 0.502441Z" fill="#034C4F"/>
+    //     </g>
+    //     <defs>
+    //       <clipPath id="clip0_92_156">
+    //         <rect width="31" height="43" fill="white" transform="matrix(-1 0 0 1 31 0.502441)"/>
+    //       </clipPath>
+    //     </defs>
+    //   </svg>`
+    //   ],
+    //   responsive: {
+    //     0: {
+    //       items: 1,
 
-          autoplay: true
+    //       autoplay: true
 
-        },
-        600: {
-          items: 2
-        },
-        1000: {
-          items: 4
+    //     },
+    //     600: {
+    //       items: 2
+    //     },
+    //     1000: {
+    //       items: 4
+    //     }
+    //   }
+    // });
+    var $carousel_1 = $('.speaker-carousel');
+    var itemCount_1 = $carousel_1.find('.speaker-item').length;
+
+    if (itemCount_1 > 4) {
+      $carousel_1.owlCarousel({
+        loop: false,
+        margin: 20,
+        nav: true,
+        dots: false,
+        items: 4,
+        navText: [
+          // Left Arrow SVG
+          `<svg xmlns="http://www.w3.org/2000/svg" width="31" height="44" viewBox="0 0 31 44" fill="none">
+          <g clip-path="url(#clip0_92_153)">
+            <path d="M17.8667 0.502441H31L13.1333 22.0024L31 43.5024H17.8667L0 22.0024L17.8667 0.502441Z" fill="#034C4F"/>
+          </g>
+          <defs>
+            <clipPath id="clip0_92_153">
+              <rect width="31" height="43" fill="white" transform="translate(0 0.502441)"/>
+            </clipPath>
+          </defs>
+        </svg>`,
+
+          // Right Arrow SVG
+          `<svg xmlns="http://www.w3.org/2000/svg" width="31" height="44" viewBox="0 0 31 44" fill="none">
+          <g clip-path="url(#clip0_92_156)">
+            <path d="M13.1333 0.502441H0L17.8667 22.0024L0 43.5024H13.1333L31 22.0024L13.1333 0.502441Z" fill="#034C4F"/>
+          </g>
+          <defs>
+            <clipPath id="clip0_92_156">
+              <rect width="31" height="43" fill="white" transform="matrix(-1 0 0 1 31 0.502441)"/>
+            </clipPath>
+          </defs>
+        </svg>`
+        ],
+        responsive: {
+          0: {
+            items: 1,
+            autoplay: true
+          },
+          600: {
+            items: 2
+          },
+          1000: {
+            items: 4
+          }
         }
-      }
-    });
+      });
+    }
     //
     //  const $section = $('.section_timmer_market');
     //       const targetDate = new Date();
