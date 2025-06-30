@@ -1223,7 +1223,7 @@
 
   .step_step_webform h5 {
 
-    font-size: 20px;
+    font-size: 18px;
   }
 
   .step_step_webform div#edit-flexbox-01 {
@@ -1272,7 +1272,7 @@
   }
 
   div#webform_step__by_step section#modal___financial {
-    height: 95vh;
+    height: 80vh;
   }
 
   .wrapper-la_slider_members_elements2 {
@@ -1319,7 +1319,7 @@
   }
 
   .step_step_webform form {
-    height: 100%;
+    height: 70vh;
     align-items: center;
     overflow-x: hidden;
   }
@@ -1823,6 +1823,7 @@
 
   .modal_ocde .modal_content {
     width: 100%;
+    overflow: scroll;
   }
 
   .modal_content .invitation-card {
@@ -3417,6 +3418,11 @@
     width: auto;
     padding: 5px;
   }
+
+  /* section#modal___financial {
+    height: 650px;
+    overflow-x: hidden;
+  } */
 }
 
 @media (max-width: 767px) {
