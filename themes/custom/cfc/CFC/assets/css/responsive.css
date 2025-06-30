@@ -1272,7 +1272,26 @@
   }
 
   div#webform_step__by_step section#modal___financial {
-    height: 80vh;
+    height: 73vh;
+  }
+  .step_step_webform .webform-flex.webform-flex--1 label {
+    padding-bottom: 5px;
+}
+.step_step_webform div#edit-flexbox-02>div fieldset legend {
+    font-size: 16px;
+}
+
+.step_step_webform .webform-flex.webform-flex--1 label {
+    font-size: 16px;
+}
+
+  .step_step_webform .wrapper1 {
+    font-size: 17px;
+  }
+
+  .step_step_webform .wrapper_submit input {
+    font-size: 24px;
+
   }
 
   .wrapper-la_slider_members_elements2 {
@@ -1824,6 +1843,7 @@
   .modal_ocde .modal_content {
     width: 100%;
     overflow: scroll;
+    height: 100%;
   }
 
   .modal_content .invitation-card {
