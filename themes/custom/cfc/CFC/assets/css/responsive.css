@@ -1196,19 +1196,24 @@
 
 @media (max-width: 991px) {
 
-.wrapper_wisi_cadre h2 {
-  font-size: 30px;
-  line-height: normal;
-}
-.wrapper_wisi_cadre p, .wrapper_wisi_cadre p a, .wrapper_wisi_cadre li a {
-  font-size: 17px;
-}
-.ul_first li {
-  font-size: 16px;
-}
-.wrapper_wisi_cadre ul {
-  font-size: 16px;
-}
+  .wrapper_wisi_cadre h2 {
+    font-size: 30px;
+    line-height: normal;
+  }
+
+  .wrapper_wisi_cadre p,
+  .wrapper_wisi_cadre p a,
+  .wrapper_wisi_cadre li a {
+    font-size: 17px;
+  }
+
+  .ul_first li {
+    font-size: 16px;
+  }
+
+  .wrapper_wisi_cadre ul {
+    font-size: 16px;
+  }
 
   .step_step_webform .webform-flex.webform-flex--1 input,
   .step_step_webform .webform-flex.webform-flex--1 select {
@@ -1314,8 +1319,24 @@
   }
 
   .step_step_webform form {
-    height: 80vh;
+    height: 100%;
     align-items: center;
+    overflow-x: hidden;
+  }
+
+  .step_step_webform h5 {
+    line-height: normal;
+    font-size: 17px;
+  }
+
+  .step_step_webform .webform-flex.webform-flex--1 label {
+    line-height: normal;
+    margin: 5px;
+  }
+
+  .step_step_webform .webform-flex.webform-flex--1 input,
+  .step_step_webform .webform-flex.webform-flex--1 select {
+    padding: 10px;
   }
 
   .section_speaker .owl-carousel .owl-nav {

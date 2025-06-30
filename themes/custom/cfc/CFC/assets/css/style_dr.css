@@ -3831,6 +3831,8 @@ div#edit-flexbox-02>div fieldset .fieldset-wrapper {
   font-weight: 700;
   line-height: 24px;
   color: #007565;
+  position: relative;
+  top: 10px;
 }
 
 .step_step_webform .webform-flex.webform-flex--1 input {
