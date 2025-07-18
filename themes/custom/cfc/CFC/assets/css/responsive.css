@@ -1274,16 +1274,18 @@
   div#webform_step__by_step section#modal___financial {
     height: 73vh;
   }
+
   .step_step_webform .webform-flex.webform-flex--1 label {
     padding-bottom: 5px;
-}
-.step_step_webform div#edit-flexbox-02>div fieldset legend {
-    font-size: 16px;
-}
+  }
 
-.step_step_webform .webform-flex.webform-flex--1 label {
+  .step_step_webform div#edit-flexbox-02>div fieldset legend {
     font-size: 16px;
-}
+  }
+
+  .step_step_webform .webform-flex.webform-flex--1 label {
+    font-size: 16px;
+  }
 
   .step_step_webform .wrapper1 {
     font-size: 17px;
@@ -3692,4 +3694,12 @@
   .members button.slick-arrow {
     display: none !important;
   }
+
+.step_step_webform div#edit-flexbox-02 {
+  width: 100%;
+}
+.step_step_webform div#edit-flexbox-02 {
+  height: auto;
+  overflow: initial;
+}
 }
