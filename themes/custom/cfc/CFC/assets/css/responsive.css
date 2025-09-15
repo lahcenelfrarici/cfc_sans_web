@@ -1872,7 +1872,47 @@
   .modal_ocde .conference-info {
     text-align: left;
   }
+/*  */
+h5.modal___top_title span {
+    font-size: 20;
+    font-size: 20px;
+}
 
+h5.rg--cnt.modal___top_title_1 {
+    font-size: 20px !important;
+}
+
+.bg___image {
+    height: 100% !important;
+}
+
+.wrapper---cnt h5 {
+    padding-bottom: 5px;
+}
+
+h5.rg--cnt.modal___top_title_1 {
+    padding-bottom: 11px;
+    margin-bottom: 0;
+}
+
+.link_page_ocde.modal___top_title_2 p {
+    font-size: 20px;
+}
+
+section#modal___financial .col-md-12 {
+    padding: 25px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100CH;
+}
+
+.banner_status_img_bg.modal___top_title_3 {
+    flex-direction: column;
+    gap: 11px 0;
+    margin: 20px 0;
+}
   .modal_ocde .close_btn {
     right: 29px;
     color: #fff;
