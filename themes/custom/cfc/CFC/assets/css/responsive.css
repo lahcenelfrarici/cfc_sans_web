@@ -1195,6 +1195,7 @@
 }
 
 @media (max-width: 991px) {
+  .modal_content section.all_invitation-card { height: auto !important; } .modal_content section.all_invitation-card .container ,.modal_content section.all_invitation-card .row { height: auto !important; }
 
   .wrapper_wisi_cadre h2 {
     font-size: 30px;
@@ -1798,7 +1799,7 @@
     height: 540px;
     display: block;
     align-content: center;
-    padding-bottom: 20px;
+    padding-bottom: 0;
   }
 
   .modal_ocde .conference-info {
@@ -1879,7 +1880,7 @@ h5.modal___top_title span {
 }
 
 h5.rg--cnt.modal___top_title_1 {
-    font-size: 20px !important;
+    font-size: 16px !important;
 }
 
 .bg___image {
@@ -1900,18 +1901,18 @@ h5.rg--cnt.modal___top_title_1 {
 }
 
 section#modal___financial .col-md-12 {
-    padding: 25px;
+    padding: 20px 20px;
     align-items: center;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    height: 100CH;
+    justify-content: space-between;
+    height: auto;
 }
 
 .banner_status_img_bg.modal___top_title_3 {
     flex-direction: column;
     gap: 11px 0;
-    margin: 20px 0;
+    margin: 20px 0 0 0;
 }
   .modal_ocde .close_btn {
     right: 29px;
