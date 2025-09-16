@@ -4344,7 +4344,19 @@ h5.rg--cnt.modal___top_title_1 {
     bottom: 0;
 }
 
+.banner_status_img_bg.modal___top_title_3 a:hover:after {
+    content: "";
+    width: 100%;
+    background-color: #fff;
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    left: 0;
+}
 
+.banner_status_img_bg.modal___top_title_3 a {
+    position: relative;
+}
 .bg___image {
     position: relative;
 }
