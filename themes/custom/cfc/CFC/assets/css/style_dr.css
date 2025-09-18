@@ -4232,92 +4232,100 @@ div#market---space h2 {
 .step_step_webform div#edit-flexbox-02>div:nth-child(2) {
   padding-bottom: 40px;
 }
+
 .page-cfcspain .contact---us {
-    display: none;
+  display: none;
 }
+
 .page-cfcspain .contact---us-block {
-    display: block;
+  display: block;
 }
 
 div#top__logo_modal {
-    justify-content: space-evenly;
+  justify-content: space-evenly;
 }
 
 h5.modal___top_title {
-    color: #FFF;
-    text-align: center;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: #FFF;
-    font-size: 65px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 52px; /* 80% */
+  color: #FFF;
+  text-align: center;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #FFF;
+  font-size: 65px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 52px;
+  /* 80% */
 }
 
 h5.rg--cnt.modal___top_title_1 {
-    color: #FFF !important;
-    text-align: center;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 30px; /* 125% */
-    letter-spacing: 2.625px;
-    -webkit-text-stroke-width: initial;
-    -webkit-text-stroke-color: initial;
+  color: #FFF !important;
+  text-align: center;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px;
+  /* 125% */
+  letter-spacing: 2.625px;
+  -webkit-text-stroke-width: initial;
+  -webkit-text-stroke-color: initial;
 }
 
 .link_page_ocde.modal___top_title_2 p {
-    color: #FCD0B1;
-    text-align: center;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 30px; /* 125% */
-    letter-spacing: 2.625px;
+  color: #FCD0B1;
+  text-align: center;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px;
+  /* 125% */
+  letter-spacing: 2.625px;
 }
 
 .banner_status_img_bg.modal___top_title_3 {
-    position: relative;
+  position: relative;
 }
+
 h5.modal___top_title span {
-    padding-top: 20px;
-    color: #FCD0B1;
-    text-align: center;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: #FCD0B1;
-    font-size: 65px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 52px; /* 80% */
-    position: relative;
-    top: 18px;
+  padding-top: 20px;
+  color: #FCD0B1;
+  text-align: center;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #FCD0B1;
+  font-size: 65px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 52px;
+  /* 80% */
+  position: relative;
+  top: 18px;
 }
 
 .banner_status_img_bg.modal___top_title_3 {
-    display: flex;
-    align-items: center;
-    height: auto;
-    justify-content: space-between;
-    align-items: center;
-    margin: 40px  15px 20px 15px;
+  display: flex;
+  align-items: center;
+  height: auto;
+  justify-content: space-between;
+  align-items: center;
+  margin: 40px 15px 20px 15px;
 }
 
 h5.modal___top_title {
-    padding-bottom: 30px;
+  padding-bottom: 30px;
 }
 
 .banner_status_img_bg.modal___top_title_3 a {
-    color: #FFF;
-    -webkit-text-stroke-width: 0.7px;
-    -webkit-text-stroke-color: #FFF;
-    font-family: "Averta CY";
-    font-size: 30px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 52px; /* 173.333% */
-    display: flex;
-    align-items: center;
-    gap: 0 10px;
+  color: #FFF;
+  -webkit-text-stroke-width: 0.7px;
+  -webkit-text-stroke-color: #FFF;
+  font-family: "Averta CY";
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 52px;
+  /* 173.333% */
+  display: flex;
+  align-items: center;
+  gap: 0 10px;
 }
 
 /* section#modal___financial {
@@ -4325,51 +4333,64 @@ h5.modal___top_title {
 } */
 
 h5.rg--cnt.modal___top_title_1 {
-    padding-top: 11px;
+  padding-top: 11px;
 }
+
 .bg___image::after {
   content: "";
-  display: block; /* or inline-block depending on your layout */
-  width: 100%;    /* Set your image width */
+  display: block;
+  /* or inline-block depending on your layout */
+  width: 100%;
+  /* Set your image width */
   background-size: cover;
   background-repeat: no-repeat;
   background-image: url('/themes/custom/cfc/CFC/assets/images/modal__1.png');
 
   height: 100%;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    border-radius: 30px;
-    bottom: 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  border-radius: 30px;
+  bottom: 0;
 }
 
 .banner_status_img_bg.modal___top_title_3 a:hover:after {
-    content: "";
-    width: 100%;
-    background-color: #fff;
-    position: absolute;
-    bottom: 0;
-    height: 2px;
-    left: 0;
+  content: "";
+  width: 100%;
+  background-color: #fff;
+  position: absolute;
+  bottom: 0;
+  height: 2px;
+  left: 0;
 }
 
 .banner_status_img_bg.modal___top_title_3 a {
-    position: relative;
+  position: relative;
 }
+
 .bg___image {
-    position: relative;
+  position: relative;
 }
+
 .banner_status_img_bg.modal___top_title_3 {
-    z-index: 22;
+  z-index: 22;
 }
+
 .overly____line {
-    background-color: #FCD0B1;
-    width: 101.461px;
-    height: 2px;
-    margin: auto;
-    margin-bottom: 20px;
+  background-color: #FCD0B1;
+  width: 101.461px;
+  height: 2px;
+  margin: auto;
+  margin-bottom: 20px;
 }
+
+.path-frontpage #filter-verticale {
+  background: #F5F9FF;
+}
+/* .path-frontpage #filter-verticale {
+  background: #F5F9FF;
+} */
 /* Responsive adjustments */
 @media (max-width: 992px) {
   .nos_partenaires_avantage .cards-container .card {
