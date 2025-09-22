@@ -50,28 +50,44 @@
 
 <main id="main-content">
 	{{ drupal_entity('block','cfc_modalhp') }}
-  	{# {{ drupal_entity('block','cfc_modalhpevent') }} #}
-      	{{ drupal_entity('block','cfc_africanleadingfinancialhub') }}
-
-	{# <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-					<div class="modal-dialog" role="document">
-						<div class="modal-content">
-							<div class="modal-header">
-								<h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-									<span aria-hidden="true">&times;</span>
-								</button>
+	{# {{ drupal_entity('block','cfc_modalhpevent') }} #}
+	{{ drupal_entity('block','cfc_africanleadingfinancialhub') }}
+	{# <div class="modal_ocde" id="modal-event">
+					<div class="modal_content">
+						<p>
+							<button class="close_btn">×</button>
+						</p>
+						<section class="all_invitation-card" id="modal___financial">
+							<div class="container">
+								<div class="row">
+									<div class="col-md-12">
+			              testttttttttttt
+			            </div>
+								</div>
 							</div>
-							<div class="modal-body">
-								Content
-							</div>
-							<div class="modal-footer">
-								<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-								<button type="button" class="btn btn-primary">Save changes</button>
-							</div>
-						</div>
+						</section>
 					</div>
 				</div> #}
+
+	{# <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+									<div class="modal-dialog" role="document">
+										<div class="modal-content">
+											<div class="modal-header">
+												<h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+												<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+													<span aria-hidden="true">&times;</span>
+												</button>
+											</div>
+											<div class="modal-body">
+												Content
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+												<button type="button" class="btn btn-primary">Save changes</button>
+											</div>
+										</div>
+									</div>
+								</div> #}
 
 	{#  #}
 	{{ drupal_entity('block','cfc_hpslider') }}
@@ -82,6 +98,47 @@
 
 	{{ drupal_entity('block','cfc_cfcanaturalmagnetforregionalinvestment') }}
 	{{ drupal_view('country_list','block_1') }}
+
+
+		<section class="hear_it_from_our_community d-none"> <div class="container">
+			<div class="title-primary-sc mb-3">
+				<h2>{{'Hear it from our community'|t}}</h2>
+			</div>
+		</div>
+		<div
+			class="owl-carousel owl-theme">
+			<!-- Example item with thumbnail + play button -->
+			<div class="item" data-video="https://casablancafinancecity.com/themes/custom/cfc/CFC/assets/video/CFC%20-%20PWC_Success%20Stories_7_SUBS.mp4">
+				<img src="/themes/custom/cfc/CFC/assets/images/1item.png" alt="Video 1"/>
+				<div class="play-icon"></div>
+			</div>
+			<div class="item" data-video="https://casablancafinancecity.com/themes/custom/cfc/CFC/assets/video/CFC%20-%20PWC_Success%20Stories_7_SUBS2.mp4">
+				<img src="/themes/custom/cfc/CFC/assets/images/2item.png" alt="Video 1"/>
+				<div class="play-icon"></div>
+			</div>
+			<div class="item" data-video="https://casablancafinancecity.com/themes/custom/cfc/CFC/assets/video/CFC%20-%20PWC_Success%20Stories_7_SUBS3.mp4">
+				<img src="/themes/custom/cfc/CFC/assets/images/3item.png" alt="Video 1"/>
+				<div class="play-icon"></div>
+			</div>
+			<div class="item" data-video="https://casablancafinancecity.com/themes/custom/cfc/CFC/assets/video/CFC%20-%20PWC_Success%20Stories_7_SUBS4.mp4">
+				<img src="/themes/custom/cfc/CFC/assets/images/4item.png" alt="Video 1"/>
+				<div class="play-icon"></div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Modal -->
+	<div class="modal__hear_it_from_our_community">
+		<div class="modal-content">
+			<span class="modal-close">&times;</span>
+			<video id="communityVideo" controls>
+				<source src="" type="video/mp4">
+				Your browser does not support HTML5 video.
+			</video>
+		</div>
+	</div>
+
+
 	{{ drupal_entity('block','cfc_unlockthepotentialofafrica') }}
 	{#  #}
 	<!-- Modal structure for showing country facts sheet -->
@@ -116,9 +173,9 @@
 				<div
 					class="form__formualaire">
 					{# <input type="text" id="first_name" placeholder="First name">
-															<input type="text" id="last_name" placeholder="Last name">
-															<input type="text" id="company_item" placeholder="Company">
-															<input type="email" id="email-address" placeholder="Email address"> #}
+																																			<input type="text" id="last_name" placeholder="Last name">
+																																			<input type="text" id="company_item" placeholder="Company">
+																																			<input type="email" id="email-address" placeholder="Email address"> #}
 					{{ drupal_entity('block','cfc_webform_3') }}
 				</div>
 			</div>
@@ -156,23 +213,23 @@
 
 
 	{# <section class="contact---us" id="contact---us">
-						<div
-							class="contact-container">
-							<!-- Left Form Section -->
-							<div class="contact-form">
-								<h3>{{'I am interested in getting in touch with Casablanca Finance City'|t}}</h3>
+										<div
+											class="contact-container">
+											<!-- Left Form Section -->
+											<div class="contact-form">
+												<h3>{{'I am interested in getting in touch with Casablanca Finance City'|t}}</h3>
 
-								<div class="web__form_dr">
-								            {{ drupal_entity('block','cfc_webform') }}
-								</div>
-							</div>
+												<div class="web__form_dr">
+												            {{ drupal_entity('block','cfc_webform') }}
+												</div>
+											</div>
 
-							<!-- Right Image Section -->
-							<div class="contact-image">
-								<img src="/themes/custom/cfc/CFC/assets/images/contatc-img.png" alt="Office"/>
-							</div>
-						</div>
-					</section> #}
+											<!-- Right Image Section -->
+											<div class="contact-image">
+												<img src="/themes/custom/cfc/CFC/assets/images/contatc-img.png" alt="Office"/>
+											</div>
+										</div>
+									</section> #}
 
 </main>
 {% include "@cfc/partials/footer.html.twig" %}
