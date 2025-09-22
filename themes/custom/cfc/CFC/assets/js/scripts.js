@@ -2323,9 +2323,67 @@
     $('.ui-widget-overlay.ui-front').remove(); // Remove overlay
   });
   //
+  // Init Owl Carousel
+  $('.hear_it_from_our_community .owl-carousel').owlCarousel({
+    stagePadding: 200,
+    loop: true,
+    items: 1,
+    lazyLoad: true,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    autoplayTimeout: 5000,
+    autoplayHoverPause: true,
+    responsive: {
+      0: {
+        items: 1,
+        stagePadding: false,
+      },
+      600: {
+        items: 1,
+        stagePadding: false,
+
+      },
+      1000: {
+        items: 1
+      }
+    }
+  });
+
+  // Modal play video
+  $('.hear_it_from_our_community .item').on('click', function () {
+    var videoSrc = $(this).data('video');
+    $('#communityVideo source').attr('src', videoSrc);
+    $('#communityVideo')[0].load();
+    $('#communityVideo')[0].play();
+    $('.modal__hear_it_from_our_community').addClass('active');
+  });
+
+  // Close modal + stop video
+  $('.modal__hear_it_from_our_community .modal-close, .modal__hear_it_from_our_community').on('click', function (e) {
+    if ($(e.target).hasClass('modal__hear_it_from_our_community') || $(e.target).hasClass('modal-close')) {
+      $('#communityVideo')[0].pause();
+      $('#communityVideo')[0].currentTime = 0;
+      $('.modal__hear_it_from_our_community').removeClass('active');
+    }
+  });
 
 
 })(jQuery);
 // $(document).ready(function () {
 //   $('#exampleModal').modal('show');
 // });
+// (function ($, Drupal) {
+//   Drupal.behaviors.sourceIdCookie = {
+//     attach: function (context, settings) {
+//       // Vérifier si l'URL contient ?source_id=
+//       var params = new URLSearchParams(window.location.search);
+//       var sourceId = params.get('id');
+//       // console.log("test============>");
+//       // console.log(sourceId);
+//       if (sourceId) {
+//         // Stocker dans un cookie (valable 30 jours)
+//         document.cookie = "source_id=" + sourceId + "; path=/; max-age=" + (30 * 24 * 60 * 60);
+//       }
+//     }
+//   };
+// })(jQuery, Drupal);

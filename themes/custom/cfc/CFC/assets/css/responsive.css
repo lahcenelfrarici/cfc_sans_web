@@ -1195,7 +1195,38 @@
 }
 
 @media (max-width: 991px) {
-  .modal_content section.all_invitation-card { height: auto !important; } .modal_content section.all_invitation-card .container ,.modal_content section.all_invitation-card .row { height: auto !important; }
+  .hear_it_from_our_community .owl-item {
+    width: 100% !important;
+}
+  section.hear_it_from_our_community .owl-stage-outer {
+    margin: 30px;
+  }
+
+  body .hear_it_from_our_community .active .item {
+    margin: 0 !important;
+  }
+
+  body section.hear_it_from_our_community .owl-stage-outer>div {
+    height: auto !important;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+
+
+  }
+
+  body .hear_it_from_our_community .item {
+    height: auto;
+  }
+
+  .modal_content section.all_invitation-card {
+    height: auto !important;
+  }
+
+  .modal_content section.all_invitation-card .container,
+  .modal_content section.all_invitation-card .row {
+    height: auto !important;
+  }
 
   .wrapper_wisi_cadre h2 {
     font-size: 30px;
@@ -1873,47 +1904,49 @@
   .modal_ocde .conference-info {
     text-align: left;
   }
-/*  */
-h5.modal___top_title span {
+
+  /*  */
+  h5.modal___top_title span {
     font-size: 20;
     font-size: 20px;
-}
+  }
 
-h5.rg--cnt.modal___top_title_1 {
+  h5.rg--cnt.modal___top_title_1 {
     font-size: 16px !important;
-}
+  }
 
-.bg___image {
+  .bg___image {
     height: 100% !important;
-}
+  }
 
-.wrapper---cnt h5 {
+  .wrapper---cnt h5 {
     padding-bottom: 5px;
-}
+  }
 
-h5.rg--cnt.modal___top_title_1 {
+  h5.rg--cnt.modal___top_title_1 {
     padding-bottom: 11px;
     margin-bottom: 0;
-}
+  }
 
-.link_page_ocde.modal___top_title_2 p {
+  .link_page_ocde.modal___top_title_2 p {
     font-size: 20px;
-}
+  }
 
-section#modal___financial .col-md-12 {
+  section#modal___financial .col-md-12 {
     padding: 20px 20px;
     align-items: center;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: auto;
-}
+  }
 
-.banner_status_img_bg.modal___top_title_3 {
+  .banner_status_img_bg.modal___top_title_3 {
     flex-direction: column;
     gap: 11px 0;
     margin: 20px 0 0 0;
-}
+  }
+
   .modal_ocde .close_btn {
     right: 29px;
     color: #fff;
@@ -3736,11 +3769,12 @@ section#modal___financial .col-md-12 {
     display: none !important;
   }
 
-.step_step_webform div#edit-flexbox-02 {
-  width: 100%;
-}
-.step_step_webform div#edit-flexbox-02 {
-  height: auto;
-  overflow: initial;
-}
+  .step_step_webform div#edit-flexbox-02 {
+    width: 100%;
+  }
+
+  .step_step_webform div#edit-flexbox-02 {
+    height: auto;
+    overflow: initial;
+  }
 }
