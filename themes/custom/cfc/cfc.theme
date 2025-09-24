@@ -203,26 +203,27 @@ function cfc_preprocess_views_exposed_form(&$variables)
 //     }
 //   }
 // }
-function cfc_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id)
-{
+// function cfc_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id)
+// {
 
-  // Replace 'contact' with your webform's machine name.
-  // "#webform_id" => "contact_modal_maps"
+//   // Replace 'contact' with your webform's machine name.
+//   // "#webform_id" => "contact_modal_maps"
 
-  if ($form['#webform_id'] === 'contact_modal_maps') {
-    // dd($form['#webform_id']);
+//   if ($form['#webform_id'] === 'contact_modal_maps') {
+//     // dd($form['#webform_id']);
 
 
 
-  }
-}
+//   }
+// }
 
 
 
 /**
  * Implements hook_form_alter().
  */
-function cfc_form_user_login_form_alter(&$form, &$form_state, $form_id) {
+function cfc_form_user_login_form_alter(&$form, &$form_state, $form_id)
+{
   // Modify username field.
   $form['name']['#title_display'] = 'invisible';
   $form['name']['#attributes']['id'] = ['bannerInput'];
@@ -335,7 +336,8 @@ function cfc_form_user_login_form_alter(&$form, &$form_state, $form_id) {
 /**
  * Implements hook_route_alter().
  */
-function cfc_preprocess_html(array &$variables) {
+function cfc_preprocess_html(array &$variables)
+{
   // Get the current path
   $path = \Drupal::service('path.current')->getPath();
 
@@ -351,3 +353,66 @@ function cfc_preprocess_html(array &$variables) {
     $variables['attributes']['class'][] = 'page-' . $class;
   }
 }
+
+/**
+ * Implements hook_form_alter() in the theme.
+ */
+// function cfc_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+//   // Apply only to webform submission forms (add more checks if needed).
+//   if (strpos($form_id, 'webform_submission_') === 0 && strpos($form_id, '_add_form') !== false) {
+//     // Get the 'id' parameter from the URL.
+//     $id = \Drupal::request()->query->get('id');
+
+//     // Set default value if no id is passed.
+//     $value = $id ? $id : 'no-id';
+
+//     // Add the hidden field to the form.
+//     $form['source_id'] = [
+//       '#type' => 'hidden',
+//       '#value' => $value,
+//     ];
+
+//     // Optionally add a message depending on presence of ID.
+//     if ($id) {
+//       \Drupal::messenger()->addMessage(t('Form loaded with ID: @id', ['@id' => $id]));
+//     } else {
+//       \Drupal::messenger()->addWarning(t('This form link does not have an ID parameter.'));
+//     }
+//   }
+// }
+function cfc_form_alter(&$form, FormStateInterface $form_state, $form_id)
+{
+
+  if ($form_id == 'webform_submission_contact_add_form') {
+    // dump($form['actions']['submit']['#submit']);
+    $form['actions']['submit']['#submit'][0] = 'confirmation_message_form_submit';
+  }
+
+  if (strpos($form_id, 'webform_submission_') === 0 && strpos($form_id, '_add_form') !== false) {
+
+
+    //*************** */
+    $id = \Drupal::request()->query->get('id');
+    $request = \Drupal::request();
+    $cookies = $request->cookies;
+    $source_id = $cookies->get('source_id');
+    // dump($source_id);
+    if ($source_id === null) {
+      $source_id = $id;
+    }
+    $value = $source_id
+      ? t('This form has a source ID: @id', ['@id' => $source_id])
+      : t('This form does not have a source ID.');
+
+    $form['source_id'] = [
+      '#type' => 'hidden',
+      '#value' => $value,
+    ];
+
+  }
+
+}
+
+
+
+
