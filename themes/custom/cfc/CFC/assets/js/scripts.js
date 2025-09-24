@@ -2372,18 +2372,18 @@
 // $(document).ready(function () {
 //   $('#exampleModal').modal('show');
 // });
-// (function ($, Drupal) {
-//   Drupal.behaviors.sourceIdCookie = {
-//     attach: function (context, settings) {
-//       // Vérifier si l'URL contient ?source_id=
-//       var params = new URLSearchParams(window.location.search);
-//       var sourceId = params.get('id');
-//       // console.log("test============>");
-//       // console.log(sourceId);
-//       if (sourceId) {
-//         // Stocker dans un cookie (valable 30 jours)
-//         document.cookie = "source_id=" + sourceId + "; path=/; max-age=" + (30 * 24 * 60 * 60);
-//       }
-//     }
-//   };
-// })(jQuery, Drupal);
+(function ($, Drupal) {
+  Drupal.behaviors.sourceIdCookie = {
+    attach: function (context, settings) {
+      // Vérifier si l'URL contient ?source_id=
+      var params = new URLSearchParams(window.location.search);
+      var sourceId = params.get('id');
+      // console.log("test============>");
+      // console.log(sourceId);
+      if (sourceId) {
+        // Stocker dans un cookie (valable 30 jours)
+        document.cookie = "source_id=" + sourceId + "; path=/; max-age=" + (30 * 24 * 60 * 60);
+      }
+    }
+  };
+})(jQuery, Drupal);
