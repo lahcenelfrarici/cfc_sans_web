@@ -2329,7 +2329,7 @@
     loop: true,
     items: 1,
     lazyLoad: true,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 2000,
     autoplayTimeout: 5000,
     autoplayHoverPause: true,
