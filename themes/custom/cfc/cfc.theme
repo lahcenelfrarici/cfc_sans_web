@@ -380,39 +380,77 @@ function cfc_preprocess_html(array &$variables)
 //     }
 //   }
 // }
-function cfc_form_alter(&$form, FormStateInterface $form_state, $form_id)
-{
+// function cfc_form_alter(&$form, FormStateInterface $form_state, $form_id)
+// {
 
+//   if ($form_id == 'webform_submission_contact_add_form') {
+//     // dump($form['actions']['submit']['#submit']);
+//     $form['actions']['submit']['#submit'][0] = 'confirmation_message_form_submit';
+//   }
+
+//   if (strpos($form_id, 'webform_submission_') === 0 && strpos($form_id, '_add_form') !== false) {
+
+
+//     //*************** */
+//     $id = \Drupal::request()->query->get('id');
+//     $request = \Drupal::request();
+//     $cookies = $request->cookies;
+//     $source_id = $cookies->get('source_id');
+//     // dump($source_id);
+//     if ($source_id === null) {
+//       $source_id = $id;
+//     }
+//     $value = $source_id
+//       ? t('This form has a source ID: @id', ['@id' => $source_id])
+//       : t('This form does not have a source ID.');
+
+//     $form['source_id'] = [
+//       '#type' => 'hidden',
+//       '#value' => $value,
+//     ];
+
+//   }
+
+// }
+
+
+
+function cfc_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+
+  // Target only the contact webform.
   if ($form_id == 'webform_submission_contact_add_form') {
-    // dump($form['actions']['submit']['#submit']);
-    $form['actions']['submit']['#submit'][0] = 'confirmation_message_form_submit';
+    // Replace the default submit handler with our custom one.
+    $form['actions']['submit']['#submit'][0] = 'cfc_confirmation_message_form_submit';
   }
 
+  // Generic handling for any webform submission add form.
   if (strpos($form_id, 'webform_submission_') === 0 && strpos($form_id, '_add_form') !== false) {
 
-
-    //*************** */
+    // Get the "id" from query parameter or cookie.
     $id = \Drupal::request()->query->get('id');
     $request = \Drupal::request();
     $cookies = $request->cookies;
     $source_id = $cookies->get('source_id');
-    // dump($source_id);
+
     if ($source_id === null) {
       $source_id = $id;
     }
+
     $value = $source_id
       ? t('This form has a source ID: @id', ['@id' => $source_id])
       : t('This form does not have a source ID.');
 
+    // Add a hidden field with source_id information.
     $form['source_id'] = [
       '#type' => 'hidden',
       '#value' => $value,
     ];
-
   }
-
 }
 
-
-
-
+/**
+ * Custom submit handler for the contact webform.
+ */
+function cfc_confirmation_message_form_submit(array &$form, FormStateInterface $form_state) {
+  \Drupal::messenger()->addMessage(t('Thank you! Your message has been received.'));
+}
