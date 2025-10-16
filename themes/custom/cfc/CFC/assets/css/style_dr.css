@@ -4819,3 +4819,16 @@ section.img_event40under40_sc2_section {
 .insc__form_sc .wrapper_submit svg {
     display: none;
 }
+section.img_event40under40_sc2_copy p {
+    color: #4D4D4D;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+section.img_event40under40_sc2_copy {
+    background-color: #ebebeb5e;
+}
