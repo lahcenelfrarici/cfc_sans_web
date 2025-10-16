@@ -1195,9 +1195,34 @@
 }
 
 @media (max-width: 991px) {
+  .insc__form_sc {
+    width: 100%;
+}
+  .img_event40under40 img {
+    height: 100vh;
+    object-fit: cover;
+  }
+
+  .all_svg svg {
+    width: 40%;
+  }
+
+  .event40under40 .eyebrow {
+    font-size: 30px;
+  }
+
+  .event40under40 .note {
+    font-size: 20px;
+  }
+
+  .event40under40 .sub {
+    font-size: 20px;
+  }
+
   .hear_it_from_our_community .owl-item {
     width: 100% !important;
-}
+  }
+
   section.hear_it_from_our_community .owl-stage-outer {
     margin: 30px;
   }
