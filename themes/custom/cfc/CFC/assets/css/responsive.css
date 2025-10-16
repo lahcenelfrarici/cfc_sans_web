@@ -408,6 +408,9 @@
 }
 
 @media (min-width: 992px) {
+  .insc__form_sc form>.js-form-item:nth-child(4), .insc__form_sc form>.js-form-item:nth-child(5) {
+    width: 49%;
+}
 
 
   .insc__form_sc form {
@@ -1211,6 +1214,9 @@
 }
 
 @media (max-width: 991px) {
+  section.img_event40under40_sc2_copy {
+    padding-bottom: 40px;
+}
   .insc__form_sc {
     width: 100%;
   }
