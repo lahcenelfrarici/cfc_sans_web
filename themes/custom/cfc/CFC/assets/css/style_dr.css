@@ -4832,3 +4832,15 @@ section.img_event40under40_sc2_copy p {
 section.img_event40under40_sc2_copy {
     background-color: #ebebeb5e;
 }
+.insc__form_sc input::placeholder {
+    color: #e7e4e4 !important;
+    font-size: 18px;
+}
+
+.insc__form_sc input {
+    font-size: 18px !important;
+}
+
+.insc__form_sc form >div .wrapper_submit svg {
+    display: none;
+}
