@@ -408,6 +408,22 @@
 }
 
 @media (min-width: 992px) {
+
+
+  .insc__form_sc form {
+    flex-wrap: wrap;
+    width: 100%;
+    flex-direction: row;
+  }
+
+  .insc__form_sc form>.js-form-item {
+    width: 100%;
+  }
+
+  .insc__form_sc form div#edit-actions {
+    width: 100%;
+  }
+
   section#cfc_insights_conf img {
     width: 500px;
     height: 500px;
@@ -1197,7 +1213,8 @@
 @media (max-width: 991px) {
   .insc__form_sc {
     width: 100%;
-}
+  }
+
   .img_event40under40 img {
     height: 100vh;
     object-fit: cover;

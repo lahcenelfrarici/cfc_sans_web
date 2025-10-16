@@ -4816,3 +4816,6 @@ section.img_event40under40_sc2_section {
 .insc__form_sc form label {
     display: none;
 }
+.insc__form_sc .wrapper_submit svg {
+    display: none;
+}
