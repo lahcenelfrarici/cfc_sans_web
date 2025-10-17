@@ -1218,6 +1218,7 @@
   width: auto !important;
   padding: 15px;
   margin: 15px;
+  left: auto !important;
 }
   section.img_event40under40_sc2_copy {
     padding-bottom: 40px;
