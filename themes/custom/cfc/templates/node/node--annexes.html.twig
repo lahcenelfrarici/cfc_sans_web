@@ -1,0 +1,9 @@
+
+			{% set base_url = url('<front>')["#markup"]|split('/')|slice(0, 3)|join('/') %}
+<div id="page__pdf_viewr">
+	<div class="container">
+
+		<iframe src="{{ base_url }}/themes/custom/cfc/CFC/assets/pdf/annexes_guide.pdf" width="100%" height="600px"></iframe>
+	</div>
+
+</div>

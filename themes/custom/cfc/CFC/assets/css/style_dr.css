@@ -4844,3 +4844,13 @@ section.img_event40under40_sc2_copy {
 .insc__form_sc form >div .wrapper_submit svg {
     display: none;
 }
+.page-guide #banner-title,.page-annexes #banner-title {
+  display: none;
+}
+
+#page__pdf_viewr {
+  padding: 40px 0 0 10px;
+}
+#page__pdf_viewr iframe {
+  width: 100%;
+}
