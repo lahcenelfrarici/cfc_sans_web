@@ -58,7 +58,11 @@
         </svg>{{ row._entity.created.value|date('d M Y h:i A') }}</div> #}
       <h5 class="card-title">{{ fields.title.content }}</h5>
       <div class="btn--pls">
-        <a class="click--modal-hp" data-pdf="{{ base_url }}/{{ file_url(row._entity.field_pdf.entity.fileuri) }}" href="{{ file_url(row._entity.field_pdf.entity.fileuri) }}" download="">
+
+      {% set pdfeUrl = fields.field_pdf.content|raw|striptags %}
+
+      {# <span class="pdf">{{fields.field_pdf.content}}</span> #}
+        <a class="click--modal-hp" data-pdf="{{ base_url }}/{{ pdfeUrl|trim }}" href="{{ pdfeUrl|trim }}" download="">
           <span>{{'Download'|t}}</span>
           <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewbox="0 0 48 48" fill="none">
             <g clip-path="url(#clip0_4948_4128)">
