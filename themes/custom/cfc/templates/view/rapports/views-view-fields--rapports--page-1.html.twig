@@ -43,7 +43,8 @@
 
 <div class="col-md-4">
   <div class="card">
-    <img src="{{ file_url(row._entity.field_image_rapport.entity.fileuri) }}" class="card-img-top" alt="Image">
+
+    <img src="{{ fields.field_image_rapport_1.content|striptags|trim }}" class="card-img-top" alt="{{ fields.title.content|striptags|trim }}">
     <div class="card-body">
       {# <div class="article-date">
         <svg xmlns="http://www.w3.org/2000/svg" width="26" height="27" viewbox="0 0 26 27" fill="none">
