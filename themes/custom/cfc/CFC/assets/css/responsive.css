@@ -1214,6 +1214,12 @@
 }
 
 @media (max-width: 991px) {
+  section.img_event40under40_sc2_section {
+  height: 400px;
+}
+.title--event--insc {
+  font-size: 25px !important;
+}
   .ui-widget.ui-widget-content {
   width: auto !important;
   padding: 15px;

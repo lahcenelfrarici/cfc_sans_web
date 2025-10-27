@@ -4857,3 +4857,26 @@ section.img_event40under40_sc2_copy {
 .img_event40under40_sc2_section {
   display: none;
 }
+
+.insc__form_sc {
+  display: none;
+}
+.container.isncription___frm {
+  height: auto;
+}
+.img_event40under40_sc2 {
+  height: auto;
+}
+.img_event40under40_sc2 img {
+  display: none;
+}
+section.img_event40under40_sc2_section {
+  padding: 40px;
+  height: 100px;
+  height: 300px;
+}
+.title--event--insc {
+  text-align: center;
+  line-height: 45px !important;
+  color: #000 !important;
+}
