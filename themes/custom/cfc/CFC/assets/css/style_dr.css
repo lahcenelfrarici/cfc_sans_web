@@ -4854,3 +4854,6 @@ section.img_event40under40_sc2_copy {
 #page__pdf_viewr iframe {
   width: 100%;
 }
+.img_event40under40_sc2_section {
+  display: none;
+}
