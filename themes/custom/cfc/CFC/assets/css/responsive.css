@@ -408,9 +408,11 @@
 }
 
 @media (min-width: 992px) {
-  .insc__form_sc form>.js-form-item:nth-child(4), .insc__form_sc form>.js-form-item:nth-child(5) {
+
+  .insc__form_sc form>.js-form-item:nth-child(4),
+  .insc__form_sc form>.js-form-item:nth-child(5) {
     width: 49%;
-}
+  }
 
 
   .insc__form_sc form {
@@ -1214,21 +1216,46 @@
 }
 
 @media (max-width: 991px) {
+  .web__form_dr form .js-form-item label {
+    font-size: 16px;
+  }
+
+  .header--menu {
+    padding: 15px 0;
+  }
+
+  div#block-cfc-identitedusite img {
+    width: 150px;
+    height: auto;
+  }
+
+  #all_like_form {
+    margin-bottom: 30px;
+  }
+
+  #all_like_form .contact-form {
+    width: 100%;
+  }
+
   section.img_event40under40_sc2_section {
-  height: 400px;
-}
-.title--event--insc {
-  font-size: 25px !important;
-}
+    height: 400px;
+  }
+
+  .title--event--insc {
+    font-size: 25px !important;
+  }
+
   .ui-widget.ui-widget-content {
-  width: auto !important;
-  padding: 15px;
-  margin: 15px;
-  left: auto !important;
-}
+    width: auto !important;
+    padding: 15px;
+    margin: 15px;
+    left: auto !important;
+  }
+
   section.img_event40under40_sc2_copy {
     padding-bottom: 40px;
-}
+  }
+
   .insc__form_sc {
     width: 100%;
   }

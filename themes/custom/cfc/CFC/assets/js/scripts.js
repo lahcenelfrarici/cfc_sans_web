@@ -1,6 +1,7 @@
 (function ($) {
   $(document).ready(function () {
     //
+
     // Target date (adjust as needed)
     const targetDate = new Date("2025-07-08T22:09:30").getTime();
 
@@ -2387,3 +2388,49 @@
     }
   };
 })(jQuery, Drupal);
+
+// click telecharger pdf to webform
+(function ($, Drupal) {
+  Drupal.behaviors.webformDownloadFileNoOnce = {
+    attach: function (context, settings) {
+
+      var $form = $('#webform-submission-casablanca-private-node-407-add-form', context);
+
+      if ($form.length && !$form.attr('data-downloadfile-bound')) {
+
+        $form.attr('data-downloadfile-bound', '1');
+
+        var $submit = $form.find('input[type="submit"], button[type="submit"]');
+
+        $submit.off('click.downloadfile').on('click.downloadfile', function (e) {
+
+          // Check validity BEFORE preventing submit
+          if (!$form[0].checkValidity()) {
+            // Let HTML5 validation run normally
+            return;
+          }
+
+          // Stop submit ONLY if form is valid
+          e.preventDefault();
+
+          // ---- DOWNLOAD FILE ----
+          var fileUrl = '/themes/custom/cfc/CFC/assets/pdf/31.10.2025 Private Sector Action Plan - AfDB-CFCA.odt';
+          var filename = '31.10.2025 Private Sector Action Plan - AfDB-CFCA.odt';
+
+          var link = document.createElement('a');
+          link.href = fileUrl;
+          link.setAttribute('download', filename);
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+
+          // ---- SUBMIT AFTER DOWNLOAD ----
+          setTimeout(function () {
+            $form.submit();
+          }, 600);
+        });
+      }
+    }
+  };
+})(jQuery, Drupal);
+
