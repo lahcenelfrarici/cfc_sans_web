@@ -2413,7 +2413,7 @@
           // Stop submit ONLY if form is valid
           e.preventDefault();
 
-          // ---- DOWNLOAD FILE ----
+          // ---- DOWNLOAD FILE test ----
           var fileUrl = '/themes/custom/cfc/CFC/assets/pdf/Casablanca AfCFTA Private Sector Action Plan - AfDB-CFCA.pdf';
           var filename = 'Casablanca AfCFTA Private Sector Action Plan - AfDB-CFCA.pdf';
 
