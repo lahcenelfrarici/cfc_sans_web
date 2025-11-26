@@ -2414,8 +2414,8 @@
           e.preventDefault();
 
           // ---- DOWNLOAD FILE ----
-          var fileUrl = '/themes/custom/cfc/CFC/assets/pdf/31.10.2025 Private Sector Action Plan - AfDB-CFCA.odt';
-          var filename = '31.10.2025 Private Sector Action Plan - AfDB-CFCA.odt';
+          var fileUrl = '/themes/custom/cfc/CFC/assets/pdf/Casablanca AfCFTA Private Sector Action Plan - AfDB-CFCA.pdf';
+          var filename = 'Casablanca AfCFTA Private Sector Action Plan - AfDB-CFCA.pdf';
 
           var link = document.createElement('a');
           link.href = fileUrl;
