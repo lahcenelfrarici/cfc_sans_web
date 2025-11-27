@@ -2414,8 +2414,8 @@
           e.preventDefault();
 
           // ---- DOWNLOAD FILE test ----
-          var fileUrl = '/themes/custom/cfc/CFC/assets/pdf/Casablanca AfCFTA Private Sector Action Plan - AfDB-CFCA.pdf';
-          var filename = 'Casablanca AfCFTA Private Sector Action Plan - AfDB-CFCA.pdf';
+          var fileUrl = '/themes/custom/cfc/CFC/assets/pdf/Casablanca AfCFTA Private Sector Action Plan - AfDB-CFCA-2.pdf';
+          var filename = 'Casablanca AfCFTA Private Sector Action Plan - AfDB-CFCA-2.pdf';
 
           var link = document.createElement('a');
           link.href = fileUrl;
