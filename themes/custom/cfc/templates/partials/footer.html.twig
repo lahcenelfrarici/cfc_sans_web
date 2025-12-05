@@ -1,71 +1,43 @@
 {# Section Footer #}
-{# <section class="contact---us" id="contact---us">
+<section class="contact---us" id="contact---us">
 	<div class="contact-container">
 
-
+		<!-- Left Form Section -->
 		<div class="contact-form">
 			<h3>{{'I am interested in getting in touch with Casablanca Finance City'|t}}</h3>
 
 			<div class="web__form_dr">
 
-				{{ drupal_entity('block','cfc_webform') }}
+{{ drupal_entity('block','cfc_webform') }}
 
-				<div data-form-id="9ffd1ca5-93ae-f011-bbd2-7ced8d5e0cd7" data-form-api-url="https://public-eur.mkt.dynamics.com/api/v1.0/orgs/08646775-89b9-4c54-97ed-c796ab739367/landingpageforms" data-cached-form-url="https://assets1-eur.mkt.dynamics.com/08646775-89b9-4c54-97ed-c796ab739367/digitalassets/forms/9ffd1ca5-93ae-f011-bbd2-7ced8d5e0cd7"></div>
+        {# <div
+          data-form-id="9ffd1ca5-93ae-f011-bbd2-7ced8d5e0cd7"
+          data-form-api-url="https://public-eur.mkt.dynamics.com/api/v1.0/orgs/08646775-89b9-4c54-97ed-c796ab739367/landingpageforms"
+          data-cached-form-url="https://assets1-eur.mkt.dynamics.com/08646775-89b9-4c54-97ed-c796ab739367/digitalassets/forms/9ffd1ca5-93ae-f011-bbd2-7ced8d5e0cd7">
+        </div>
 
-				<script src="https://cxppusa1formui01cdnsa01-endpoint.azureedge.net/eur/FormLoader/FormLoader.bundle.js"></script>
+        <script src="https://cxppusa1formui01cdnsa01-endpoint.azureedge.net/eur/FormLoader/FormLoader.bundle.js"></script> #}
 
 
-				<iframe src="https://assets1-eur.mkt.dynamics.com/08646775-89b9-4c54-97ed-c796ab739367/digitalassets/forms/9ffd1ca5-93ae-f011-bbd2-7ced8d5e0cd7" width="100%" height="720" style="border:0; overflow:hidden;" loading="lazy"></iframe>
+
+         {# <iframe
+  src="https://assets1-eur.mkt.dynamics.com/08646775-89b9-4c54-97ed-c796ab739367/digitalassets/forms/9ffd1ca5-93ae-f011-bbd2-7ced8d5e0cd7"
+  width="100%"
+  height="720"
+  style="border:0; overflow:hidden;"
+  loading="lazy"
+></iframe> #}
 
 			</div>
 		</div>
 
-
+		<!-- Right Image Section -->
 		<div class="contact-image">
 			<img src="/themes/custom/cfc/CFC/assets/images/contatc-img.png" alt="Office"/>
 		</div>
 
 	</div>
-</section> #}
-<section class="contact---us" id="contact---us">
-  <div class="contact-container">
-
-    <!-- Left Form Section -->
-    <div class="contact-form">
-      <h3>{{'I am interested in getting in touch with Casablanca Finance City'|t}}</h3>
-
-      <div class="web__form_dr" id="cfc-form">
-        <div
-          data-form-id="9ffd1ca5-93ae-f011-bbd2-7ced8d5e0cd7"
-          data-form-api-url="https://public-eur.mkt.dynamics.com/api/v1.0/orgs/08646775-89b9-4c54-97ed-c796ab739367/landingpageforms"
-          data-cached-form-url="https://assets1-eur.mkt.dynamics.com/08646775-89b9-4c54-97ed-c796ab739367/digitalassets/forms/9ffd1ca5-93ae-f011-bbd2-7ced8d5e0cd7">
-        </div>
-      </div>
-
-    </div>
-
-    <!-- Right Image Section -->
-    <div class="contact-image">
-      <img src="/themes/custom/cfc/CFC/assets/images/contatc-img.png" alt="Office"/>
-    </div>
-
-  </div>
 </section>
-
-<script>
-  // ننتظر تحميل الصفحة
-  document.addEventListener("DOMContentLoaded", function() {
-    // فقط إذا كان هذا القسم موجود
-    var formContainer = document.querySelector("#cfc-form");
-    if(formContainer) {
-      var script = document.createElement('script');
-      script.src = "https://cxppusa1formui01cdnsa01-endpoint.azureedge.net/eur/FormLoader/FormLoader.bundle.js";
-      script.async = true;
-      formContainer.appendChild(script);
-    }
-  });
-</script>
-
 
 {#  #}
 <section class="section---filter-block">
@@ -122,16 +94,14 @@
 
 
 	</div>
-	<!-- Google tag (gtag.js) -->
+<!-- Google tag (gtag.js) -->
 
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-9WWD1TRBQN"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-function gtag() {
-dataLayer.push(arguments);
-}
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9WWD1TRBQN"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 
 gtag('config', 'G-9WWD1TRBQN');
-	</script>
+</script>
 </footer>
