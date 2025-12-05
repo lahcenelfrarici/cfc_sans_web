@@ -27,10 +27,12 @@ global-js:
     ./CFC/assets/js/aos.js: {}
     ./CFC/assets/js/scripts.js: {}
     ./CFC/assets/js/ayoub.js: {}
+    ./CFC/assets/js/theme.js: {}
+
   dependencies:
     - core/jquery
-    - core/jquery.form  # ✅ Add this line
     - jquery.ui
+    - core/once
 
 
 
@@ -44,6 +46,9 @@ global-css-responsive:
     theme:
       ./CFC/assets/css/responsive.css: {}
 
+ms_dynamics_form:
+  js:
+    https://cxppusa1formui01cdnsa01-endpoint.azureedge.net/eur/FormLoader/FormLoader.bundle.js: { type: external }
 
 # addtoany-js:
 #   js:
