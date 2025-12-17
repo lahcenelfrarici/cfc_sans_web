@@ -4915,3 +4915,67 @@ section.img_event40under40_sc2_section {
 .web__form_dr .marketingForm {
   width: 100%;
 }
+/* Formualaire */
+.contact---us .marketingForm {
+  border-radius: 0 !important;
+  box-shadow: initial;
+  padding: 0 !important;
+  background: initial !important;
+}
+.contact---us .marketingForm h3 {
+  text-align: left !important;
+}
+.contact---us  .contact-form >h3 {
+  display: none;
+}
+.contact---us .marketingForm div {
+  max-width: 100% !important;
+  margin: 0;
+  width: 100%;
+  padding: 0 5px !important;
+}
+.contact---us .marketingForm .columnContainer {
+  width: 100% !important;
+  justify-content: left !important;
+  min-width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.contact---us .marketingForm div .emptyContainer {
+  width: 50% !important;
+}
+
+#ms_captcha_holder {
+  padding: 0 !important;
+}
+#ms_captcha_holder  div {
+  padding: 0 !important;
+}
+.contact---us .marketingForm div .emptyContainer tr tr {
+  text-align: left;
+  display: flex;
+}
+.web__form_dr label {
+  color: #FFF;
+  font-family: "Averta CY";
+  font-size: 20px !important;
+  font-style: normal;
+  font-weight: 400 !important;
+  line-height: 24px;
+  margin-bottom: 10px !important;
+  padding-left: 20px;
+  padding: 0;
+}
+#ms_captcha_holder a {
+  color: #151515;
+  font-size: 20px;
+}
+.contact---us .marketingForm > div>div:nth-child(6) {
+  width: 100% !important;
+}
+@media (max-width: 991px) {
+  .contact---us .marketingForm div .emptyContainer{
+
+  width: 100% !important;
+  }
+}
