@@ -27,7 +27,7 @@ global-js:
     ./CFC/assets/js/aos.js: {}
     ./CFC/assets/js/scripts.js: {}
     ./CFC/assets/js/ayoub.js: {}
-    ./CFC/assets/js/theme.js: {}
+    # ./CFC/assets/js/theme.js: {}
 
   dependencies:
     - core/jquery

@@ -1,5 +1,0 @@
-.filter--pays-elements .title-primary-sc {
-  margin-bottom: 100px !important;
-}
-
-
