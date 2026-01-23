@@ -408,6 +408,15 @@
 }
 
 @media (min-width: 992px) {
+  .counter--number h3 {
+    text-align: left;
+  }
+
+  .img-counter img {
+    width: 85px;
+    height: 85px;
+    object-fit: contain;
+  }
 
   .insc__form_sc form>.js-form-item:nth-child(4),
   .insc__form_sc form>.js-form-item:nth-child(5) {
