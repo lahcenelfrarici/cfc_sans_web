@@ -5005,7 +5005,9 @@ section.img_event40under40_sc2_section {
   -webkit-mask-size: contain;
 }
 #about_maps_1 .flag--element > img {
-  width: 70px;
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
 }
 .contact---us .marketingForm div .emptyContainer:last-child {
   width: 100% !important;
