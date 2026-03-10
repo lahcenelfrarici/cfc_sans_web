@@ -4912,9 +4912,11 @@ section.img_event40under40_sc2_section {
 .page-casablanca-afcfta-private-sector-call-to-action section#banner-title {
   display: none;
 }
+
 .web__form_dr .marketingForm {
   width: 100%;
 }
+
 /* Formualaire */
 .contact---us .marketingForm {
   border-radius: 0 !important;
@@ -4922,18 +4924,22 @@ section.img_event40under40_sc2_section {
   padding: 0 !important;
   background: initial !important;
 }
+
 .contact---us .marketingForm h3 {
   text-align: left !important;
 }
-.contact---us  .contact-form >h3 {
+
+.contact---us .contact-form>h3 {
   display: none;
 }
+
 .contact---us .marketingForm div {
   max-width: 100% !important;
   margin: 0;
   width: 100%;
   padding: 0 5px !important;
 }
+
 .contact---us .marketingForm .columnContainer {
   width: 100% !important;
   justify-content: left !important;
@@ -4941,6 +4947,7 @@ section.img_event40under40_sc2_section {
   margin: 0 !important;
   padding: 0 !important;
 }
+
 .contact---us .marketingForm div .emptyContainer {
   width: 50% !important;
 }
@@ -4948,13 +4955,16 @@ section.img_event40under40_sc2_section {
 #ms_captcha_holder {
   padding: 0 !important;
 }
-#ms_captcha_holder  div {
+
+#ms_captcha_holder div {
   padding: 0 !important;
 }
+
 .contact---us .marketingForm div .emptyContainer tr tr {
   text-align: left;
   display: flex;
 }
+
 .web__form_dr label {
   color: #FFF;
   font-family: "Averta CY";
@@ -4966,13 +4976,16 @@ section.img_event40under40_sc2_section {
   padding-left: 20px;
   padding: 0;
 }
+
 #ms_captcha_holder a {
   color: #151515;
   font-size: 20px;
 }
-.contact---us .marketingForm > div>div:nth-child(6) {
+
+.contact---us .marketingForm>div>div:nth-child(6) {
   width: 100% !important;
 }
+
 .search-filter .search-wrapper label {
   display: none !important;
 }
@@ -4995,7 +5008,8 @@ section.img_event40under40_sc2_section {
   width: 70px;
   height: 70px;
 
-  background-color: #fff; /* SVG color */
+  background-color: #fff;
+  /* SVG color */
 
   -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cpath d='M40.7279 22.5873C41.1028 22.9623 41.3135 23.4709 41.3135 24.0013C41.3135 24.5316 41.1028 25.0402 40.7279 25.4153L29.4139 36.7293C29.2294 36.9203 29.0087 37.0727 28.7647 37.1775C28.5207 37.2823 28.2583 37.3375 27.9927 37.3398C27.7271 37.3421 27.4638 37.2915 27.218 37.1909C26.9722 37.0903 26.7489 36.9418 26.5611 36.7541C26.3733 36.5663 26.2248 36.343 26.1243 36.0972C26.0237 35.8514 25.9731 35.588 25.9754 35.3225C25.9777 35.0569 26.0329 34.7945 26.1377 34.5505C26.2425 34.3065 26.3949 34.0858 26.5859 33.9013L34.4859 26.0013H7.9999C7.46947 26.0013 6.96076 25.7906 6.58569 25.4155C6.21062 25.0404 5.9999 24.5317 5.9999 24.0013C5.9999 23.4708 6.21062 22.9621 6.58569 22.5871C6.96076 22.212 7.46947 22.0013 7.9999 22.0013H34.4859L26.5859 14.1013C26.2216 13.7241 26.02 13.2189 26.0246 12.6945C26.0291 12.1701 26.2395 11.6684 26.6103 11.2976C26.9811 10.9268 27.4827 10.7165 28.0071 10.7119C28.5315 10.7074 29.0367 10.9089 29.4139 11.2733L40.7279 22.5873Z'/%3E%3C/svg%3E") no-repeat center;
 
@@ -5004,42 +5018,55 @@ section.img_event40under40_sc2_section {
   mask-size: contain;
   -webkit-mask-size: contain;
 }
-#about_maps_1 .flag--element > img {
+
+#about_maps_1 .flag--element>img {
   width: 40px;
   height: 40px;
   object-fit: contain;
 }
+
 .contact---us .marketingForm div .emptyContainer:last-child {
   width: 100% !important;
 }
-@media (max-width: 991px) {
-  .contact---us .marketingForm div .emptyContainer{
 
-  width: 100% !important;
+@media (max-width: 991px) {
+  .contact---us .marketingForm div .emptyContainer {
+
+    width: 100% !important;
   }
 }
 
 
-  .management_team .row>div:nth-child(1) {
-    order: 6 !important;
-  }
+.management_team .row>div:nth-child(1) {
+  order: 6 !important;
+}
 
-  .management_team .row>div:nth-child(6) {
-    order: 1 !important;
-  }
+.management_team .row>div:nth-child(6) {
+  order: 1 !important;
+}
 
-  .management_team .row>div:nth-child(2) {
-    order: 2 !important;
-  }
+.management_team .row>div:nth-child(2) {
+  order: 2 !important;
+}
 
-  .management_team .row>div:nth-child(3) {
-    order: 3 !important;
-  }
+.management_team .row>div:nth-child(3) {
+  order: 3 !important;
+}
 
-  .management_team .row>div:nth-child(4) {
-    order: 4 !important;
-  }
+.management_team .row>div:nth-child(4) {
+  order: 4 !important;
+}
 
-  .management_team .row>div:nth-child(5) {
-    order: 5 !important;
-  }
+.management_team .row>div:nth-child(5) {
+  order: 5 !important;
+}
+
+.team-card img {
+  height: 224px;
+  width: 100%;
+  object-fit: fill;
+}
+
+.team-card>div {
+  width: 100%;
+}
