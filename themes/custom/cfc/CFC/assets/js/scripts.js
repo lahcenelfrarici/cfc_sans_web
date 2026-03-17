@@ -826,6 +826,7 @@
               slidesToShow: 1,
               slidesToScroll: 1,
               variableWidth: false,
+                infinite: true,
             }
           }]
         });
@@ -2367,7 +2368,76 @@
       $('.modal__hear_it_from_our_community').removeClass('active');
     }
   });
+$(window).scroll(function() {
+        if ($(this).scrollTop() > 50) {
+            $('.main-menu').addClass('menu_fixed');
+            $('.action-gototop').addClass('is-visible');
+        } else {
+            $('.main-menu').removeClass('menu_fixed');
+            $('.action-gototop').removeClass('is-visible');
+        }
+        if ($(this).scrollTop() > 0) $('.presentation_menu').addClass('menu_fixed');
+        else $('.presentation_menu').removeClass('menu_fixed');
+    });
+    $('.action-gototop').on("click", function(e) {
+        e.preventDefault();
+        $("html, body").animate({
+            scrollTop: 0
+        }, "800");
+    });
+/* ── COUNTDOWN ── */
+  const target = new Date('2026-04-24T09:00:00');
 
+  function updateCountdown() {
+    const now = new Date();
+    const diff = target - now;
+    if (diff <= 0) return;
+
+    const d = Math.floor(diff / 86400000);
+    const h = Math.floor((diff % 86400000) / 3600000);
+    const m = Math.floor((diff % 3600000) / 60000);
+    const s = Math.floor((diff % 60000) / 1000);
+
+    const pad = n => String(n).padStart(2, '0');
+
+    const values = [d, h, m, s];
+    const keys = ['Days', 'Hours', 'Mins', 'Secs'];
+
+    $.each(keys, function(i, k) {
+      const v = pad(values[i]);
+      $('#c' + k).text(v);
+      $('#h' + k).text(v);
+    });
+  }
+
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+
+
+  /* ── PROGRAM TABS ── */
+  window.showDay = function(n, btn) {
+    $('#day1').toggle(n === 1);
+    $('#day2').toggle(n === 2);
+
+    $('.program-tab').removeClass('active');
+    $(btn).addClass('active');
+  };
+
+
+  /* ── SCROLL REVEAL ── */
+  const observer = new IntersectionObserver(function(entries) {
+    $.each(entries, function(i, entry) {
+      if (entry.isIntersecting) {
+        $(entry.target).addClass('visible');
+      }
+    });
+  }, {
+    threshold: 0.12
+  });
+
+  $('.reveal').each(function() {
+    observer.observe(this);
+  });
 
 })(jQuery);
 // $(document).ready(function () {
@@ -2432,5 +2502,6 @@
       }
     }
   };
+
 })(jQuery, Drupal);
 
