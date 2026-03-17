@@ -65,48 +65,48 @@
 	display: block;
 }
 .action-gototop {
-  position: fixed;
-  bottom: 35px;
-  right: 30px;
-  display: block;
-  width: 45px;
-  height: 45px;
-  background: white;
-  border: 2px solid #B42F27;
-  margin: 0;
-  opacity: 0;
-  -webkit-transform: translateY(200%);
-  transform: translateY(200%);
-  pointer-events: none;
-  padding: 0;
-  z-index: 999;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-  cursor: pointer;
-  border-radius: 10px;
+	position: fixed;
+	bottom: 35px;
+	right: 30px;
+	display: block;
+	width: 45px;
+	height: 45px;
+	background: white;
+	border: 2px solid #B42F27;
+	margin: 0;
+	opacity: 0;
+	-webkit-transform: translateY(200%);
+	transform: translateY(200%);
+	pointer-events: none;
+	padding: 0;
+	z-index: 999;
+	-webkit-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+	cursor: pointer;
+	border-radius: 10px;
 }
 
 .action-gototop.is-visible {
-  border: 3px solid #fff;
-  background: transparent;
+	border: 3px solid #fff;
+	background: transparent;
 }
 .action-gototop.is-visible i {
-  color: #fff;
+	color: #fff;
 }
 .action-gototop.is-visible {
-  opacity: 1;
-  pointer-events: auto;
-  -webkit-transform: translateY(0);
-  transform: translateY(0);
+	opacity: 1;
+	pointer-events: auto;
+	-webkit-transform: translateY(0);
+	transform: translateY(0);
 }
 
 .action-gototop.is-visible {
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 30px;
-  border: 2px solid #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 30px;
+	border: 2px solid #fff;
 }
 /* ══════════════════════════════════════════════
        SECTION 1 — NAVBAR
@@ -243,11 +243,10 @@
 	display: inline-block;
 	color: var(--white);
 	font-family: "Averta CY";
-	font-size: 28px;
+	font-size: 55px;
 	font-weight: 800;
-	letter-spacing: 2px;
 	text-transform: uppercase;
-	padding: 8px 18px;
+	padding: 8px 18px 8px 0;
 	margin-bottom: 28px;
 }
 
@@ -447,14 +446,14 @@
 
 .about-img {
 	width: 100%;
-	height: 340px;
+	height: auto;
 	object-fit: cover;
 	display: block;
 }
 
 .about-img-placeholder {
 	width: 100%;
-	height: 340px;
+	height: auto;
 	background: linear-gradient(135deg, var(--teal) 0%, var(--teal-dark) 100%);
 	display: flex;
 	align-items: center;
@@ -516,6 +515,12 @@
 	color: var(--white);
 }
 
+.cible.register-form-area {
+	width: 33%;
+}
+.cible.register-form-area .wrapper_submit {
+	margin-top: 20px;
+}
 .speakers-grid {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
@@ -737,6 +742,14 @@
 	min-height: 420px;
 }
 
+.link-view-all i {
+	transform: rotate(180deg);
+}
+.link-view-all {
+	color: #fff;
+	font-size: 16px;
+}
+
 .map-area {
 	position: relative;
 	background: #d4dde4;
@@ -904,61 +917,62 @@
 }
 
 .cible.footer-inner .social-icons {
-  margin-left: 0;
+	margin-left: 0;
 }
 .cible.footer-inner .social-icons a {
-  background: #fff;
-  border-radius: 30px;
-  height: 40px;
-  width: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: red;
+	background: #fff;
+	border-radius: 30px;
+	height: 40px;
+	width: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: red;
 }
 .section-footer .social-icons i {
-  color: #007565;
+	color: #007565;
 }
 
 body .footer-newsletter input {
-  border: 0;
-  border-radius: 0 !important;
-  margin-bottom: 0 !important;
-  padding: ;
+	border: 0;
+	border-radius: 0 !important;
+	margin-bottom: 0 !important;
+	padding: ;
 }
-.footer-newsletter button ,.footer-newsletter  [type="submit"] {
-  background: #0072e4 !important;
-  padding: 12px 16px !important;
-  height: 48px;
+.footer-newsletter button,
+.footer-newsletter [type="submit"] {
+	background: #0072e4 !important;
+	padding: 12px 16px !important;
+	height: 48px;
 }
 .footer-newsletter {
-  display: flex;
-  align-items: center;
-  gap: 0 7px;
+	display: flex;
+	align-items: center;
+	gap: 0 7px;
 }
 .cible.footer-inner >div:last-child .footer-col-title {
-  text-align: right;
+	text-align: right;
 }
 
 .footer-newsletter input[type="email"] {
-  width: 300px !important;
+	width: 300px !important;
 }
 
 
 .section-footer .social-icons i {
-  font-size: 0;
+	font-size: 0;
 }
 
 .section-footer .social-icons i::before {
-  font-size: 18px;
-  color: #007565;
+	font-size: 18px;
+	color: #007565;
 }
 
 .section-footer {
-  background: linear-gradient(90deg, #3a95df 0%, #10548c 100%);
+	background: linear-gradient(90deg, #3a95df 0%, #10548c 100%);
 }
 .cible.footer-inner .social-icons a i:before {
-  color: #016bc1;
+	color: #016bc1;
 }
 
 
@@ -1027,9 +1041,6 @@ body .footer-newsletter input {
 		grid-template-columns: 1fr 1fr;
 	}
 
-	.hero-eyebrow {
-		font-size: 20px;
-	}
 }
 
 /* ── SCROLL REVEAL ── */
@@ -1048,50 +1059,50 @@ body .footer-newsletter input {
 	width: 70%;
 }
 .section-hero::after {
-  background: linear-gradient(to right, rgb(217, 75, 26) 52%, rgba(217, 75, 26, 0) 100%);
-  content: '';
-  position: absolute;
-  width: 67%;
-  height: 55px;
-  left: 0;
-  top: 21%;
+	background: linear-gradient(to right, rgb(217, 75, 26) 52%, rgba(217, 75, 26, 0) 100%);
+	content: '';
+	position: absolute;
+	width: 67%;
+	height: 75px;
+	left: 0;
+	top: 21%;
 }
 
-.section-about h2::after{
-  background: linear-gradient(to right, rgb(217, 75, 26) 52%, rgba(217, 75, 26, 0) 100%);
-  content: '';
-  position: absolute;
-  width: 76%;
-  height: 3px;
-  right: 0;
-  top: 19px;
+.section-about h2::after {
+	background: linear-gradient(to right, rgb(217, 75, 26) 52%, rgba(217, 75, 26, 0) 100%);
+	content: '';
+	position: absolute;
+	width: 76%;
+	height: 3px;
+	right: 0;
+	top: 19px;
 }
 .section-about h2 {
-  position: relative;
+	position: relative;
 }
-.section-program h2::after{
-background: linear-gradient(to right, rgb(217, 75, 26) 52%, rgba(217, 75, 26, 0) 100%);
-  content: '';
-  position: absolute;
-  width: 43%;
-  height: 3px;
-  right: 33%;
-  top: 58px;
+.section-program h2::after {
+	background: linear-gradient(to right, rgb(217, 75, 26) 52%, rgba(217, 75, 26, 0) 100%);
+	content: '';
+	position: absolute;
+	width: 43%;
+	height: 3px;
+	right: 33%;
+	top: 58px;
 }
 .section-program h2 {
-  position: relative;
+	position: relative;
 }
-.speakers-header-text .section-title::after{
-background: linear-gradient(to left, rgb(217, 75, 26) 52%, rgba(217, 75, 26, 0) 100%);
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 3px;
-  left: -100%;
-  top: 19px;
+.speakers-header-text .section-title::after {
+	background: linear-gradient(to left, rgb(217, 75, 26) 52%, rgba(217, 75, 26, 0) 100%);
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 3px;
+	left: -100%;
+	top: 19px;
 }
-.speakers-header-text .section-title{
-  position:relative;
+.speakers-header-text .section-title {
+	position: relative;
 }
 .cible.navbar-badge img {
 	width: 70%;
@@ -1194,29 +1205,6 @@ background: linear-gradient(to left, rgb(217, 75, 26) 52%, rgba(217, 75, 26, 0) 
 	font-weight: 400;
 }
 
-@media(max-width: 991px) {
-	.cible.navbar-badge img {
-		width: 100%;
-
-	}
-
-	.cible.navbar-logo img {
-		width: 100%;
-	}
-
-	#register {
-		min-height: auto;
-		flex-direction: column;
-	}
-
-	.cible.register-form-area {
-		position: relative;
-		right: auto;
-		top: auto;
-		bottom: 0;
-		height: auto;
-	}
-}
 
 /* last css ************/
 
@@ -1370,7 +1358,7 @@ background: linear-gradient(to left, rgb(217, 75, 26) 52%, rgba(217, 75, 26, 0) 
 	display: none;
 }
 .section-hero .hero-title {
-  max-width: 100%;
+	max-width: 100%;
 }
 .register-form-area .form-title {
 	font-size: 30px;
@@ -1412,49 +1400,117 @@ background: linear-gradient(to left, rgb(217, 75, 26) 52%, rgba(217, 75, 26, 0) 
 }
 
 .section-hero .hero-title span {
-  color: #fff;
+	color: #fff;
 }
 .hero-date {
-  position: relative;
-  color: #fff;
+	position: relative;
+	color: #fff;
 }
 .hero-date::before {
-  position: absolute;
-  bottom: -13px;
-  width: 395px;
+	position: absolute;
+	bottom: -13px;
+	width: 395px;
 }
 .hero-countdown-text span {
-  color: #fff;
+	color: #fff;
 }
 .section-hero::after {
-  top: 25%;
+	top: 27%;
+}
+.about-list li {
+	line-height: 15px;
+}
+
+.register-form-area .form-heading {
+	letter-spacing: 0;
+}
+.register-form-area .form-title {
+	letter-spacing: 0;
+}
+.register-form-area .form-heading {
+	letter-spacing: 0;
+}
+.section-title {
+	letter-spacing: 0;
 }
 .cible.register-form-area form .wrapper_submit {
 	text-align: right;
+}
+
+@media(max-width: 991px) {
+
+	.hero-eyebrow {
+		font-size: 30px;
+	}
+	.section-hero::after {
+		top: 24%;
+		height: 100px;
+	}
+
+	.section-speakers .row {
+		display: flex;
+		flex-direction: column-reverse;
+	}
+	.section-program h2::after {
+		left: 0;
+	}
+	.speakers-header-text {
+		text-align: left;
+	}
+	.speakers-header {
+		justify-content: left;
+	}
+	.speakers-header-text .section-title::after {
+		right: 0;
+		left: auto;
+		bottom: -10px;
+		top: auto;
+	}
+	.cible.navbar-badge img {
+		width: 100%;
+
+	}
+
+	.cible.navbar-logo img {
+		width: 100%;
+	}
+
+	#register {
+		min-height: auto;
+		flex-direction: column;
+	}
+
+	.cible.register-form-area {
+		position: relative;
+		right: auto;
+		top: auto;
+		bottom: 0;
+		height: auto;
+	}
 }</style><section class="section-navbar">
 <div class="container">
 	<div class="cible navbar-logo">
 		<a href="/en"><img src="/themes/custom/cfc/CFC/assets/images/logo_left_loadingpage.png" alt="CFC Logo"></a>
 		<!-- <div class="logo-circle">
-						          <span>CASABLANCA<br>FINANCE<br>CITY</span>
-						        </div>
-						        <div class="logo-text">
-						          Casablanca Finance City
-						          <small>Authority</small>
-						        </div> -->
+																          <span>CASABLANCA<br>FINANCE<br>CITY</span>
+																        </div>
+																        <div class="logo-text">
+																          Casablanca Finance City
+																          <small>Authority</small>
+																        </div> -->
 	</div>
 	<div class="cible navbar-badge">
 		<a href="/en"><img src="/themes/custom/cfc/CFC/assets/images/logo_right_loadingpage.png" alt="CFC Logo"></a>
 	</div>
 </div></section><!-- ══════════════════════════════════════════════
-			       SECTION 2 — HERO
-			  ══════════════════════════════════════════════ --><section class="section-hero">
+								       SECTION 2 — HERO
+								  ══════════════════════════════════════════════ --><section class="section-hero">
 <div class="container">
 	<div class="cible hero-content">
 		<div class="hero-eyebrow">Casablanca Arbitration Days</div>
 		<h1 class="hero-title">
-			CIMAC at 10 :<br>
-			<span class="accent">Globalising Morocco's Dispute Resolution Ambitions</span><br>
+			<span class="accent">Globalising Morocco's Dispute
+				<br>Resolution Ambitions</span><br>
 
 		</h1>
 		<p class="hero-date">24 – 25 April 2026 &nbsp;|&nbsp; Royal Mansour Hotel – Casablanca</p>
@@ -1471,8 +1527,8 @@ background: linear-gradient(to left, rgb(217, 75, 26) 52%, rgba(217, 75, 26, 0) 
 		<a href="#register" class="btn-register">Register Now</a>
 	</div>
 </div></section><!-- ══════════════════════════════════════════════
-			       SECTION 3 — COUNTDOWN BOXES
-			  ══════════════════════════════════════════════ --><section class="section-countdown">
+								       SECTION 3 — COUNTDOWN BOXES
+								  ══════════════════════════════════════════════ --><section class="section-countdown">
 <div class="cible countdown-grid">
 	<div class="countdown-cell">
 		<span class="countdown-num" id="cDays">57</span>
@@ -1491,8 +1547,8 @@ background: linear-gradient(to left, rgb(217, 75, 26) 52%, rgba(217, 75, 26, 0) 
 		<span class="countdown-label">Seconds</span>
 	</div>
 </div></section><!-- ══════════════════════════════════════════════
-			       SECTION 4 — ABOUT
-			  ══════════════════════════════════════════════ --><section class="section-about">
+								       SECTION 4 — ABOUT
+								  ══════════════════════════════════════════════ --><section class="section-about">
 <div class="container">
 	<div class="about-grid">
 		<div
@@ -1504,12 +1560,12 @@ background: linear-gradient(to left, rgb(217, 75, 26) 52%, rgba(217, 75, 26, 0) 
 			</h2>
 			<p class="about-text">
 				Hosted by Casablanca Finance City Authority in partnership with CIMAC – Casablanca International Mediation
-												            and Arbitration Centre, this landmark event will explore Morocco's evolving position in the global dispute
-												            resolution landscape.
+																																            and Arbitration Centre, this landmark event will explore Morocco's evolving position in the global dispute
+																																            resolution landscape.
 			</p>
 			<p class="about-text">
 				Over two days, leading practitioners, policymakers, institutional representatives and academics will
-												            discuss:
+																																            discuss:
 			</p>
 			<ul class="about-list">
 				<li>Legislative developments in arbitration and mediation</li>
@@ -1519,26 +1575,26 @@ background: linear-gradient(to left, rgb(217, 75, 26) 52%, rgba(217, 75, 26, 0) 
 			</ul>
 			<p class="about-text">
 				This 10-year milestone reflects CIMAC's continued commitment to positioning Morocco as a competitive
-												            international dispute resolution seat.
+																																            international dispute resolution seat.
 			</p>
 			<a href="#register" class="btn-register" style="margin-top:12px;">Register Now</a>
 		</div>
 		<div class="cible about-right reveal">
 			<div class="about-img-placeholder">
-				<img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&q=70" alt="Conference speaker" class="about-img" onerror="this.style.display='none'"/>
+				<img src="/themes/custom/cfc/CFC/assets/images/coche1.jpeg" alt="Conference speaker" class="about-img" onerror="this.style.display='none'"/>
 			</div>
 		</div>
 	</div>
 </div></section><!-- ══════════════════════════════════════════════
-			       SECTION 5 — SPEAKERS
-			  ══════════════════════════════════════════════ --><section class="section-speakers">
+								       SECTION 5 — SPEAKERS
+								  ══════════════════════════════════════════════ --><section class="section-speakers">
 <div class="container">
 	<div class="row">
 		<div
 			class="col-lg-8 cible speakers-grid">
 			<!-- Speaker 1 -->
 			<div class="speaker-card">
-				<img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=70" alt="Jalal El-Ahdab" onerror="this.parentElement.style.background='#2A8E92'"/>
+				<img src="/themes/custom/cfc/CFC/assets/images/coche2.jpeg" alt="Jalal El-Ahdab" onerror="this.parentElement.style.background='#2A8E92'"/>
 				<div class="speaker-card-overlay">
 					<div class="speaker-name">Jalal El-Ahdab</div>
 					<div class="speaker-role">Partner at Bird & Bird<br>Chair of the CIMAC Court</div>
@@ -1546,42 +1602,42 @@ background: linear-gradient(to left, rgb(217, 75, 26) 52%, rgba(217, 75, 26, 0) 
 			</div>
 			<!-- Speaker 2 -->
 			<div class="speaker-card">
-				<img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&q=70" alt="Speaker 2" onerror="this.parentElement.style.background='#2A8E92'"/>
+				<img src="/themes/custom/cfc/CFC/assets/images/coche3.jpeg" alt="Speaker 2" onerror="this.parentElement.style.background='#2A8E92'"/>
 				<div class="speaker-card-overlay">
-					<div class="speaker-name">Ahmed Benali</div>
-					<div class="speaker-role">Senior Partner<br>International Arbitration</div>
+					<div class="speaker-name">lorem Name</div>
+					<div class="speaker-role">lorem rol</div>
 				</div>
 			</div>
 			<!-- Speaker 3 -->
 			<div class="speaker-card">
-				<img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=70" alt="Speaker 3" onerror="this.parentElement.style.background='#2A8E92'"/>
+				<img src="/themes/custom/cfc/CFC/assets/images/coche4.jpeg" alt="Speaker 3" onerror="this.parentElement.style.background='#2A8E92'"/>
 				<div class="speaker-card-overlay">
-					<div class="speaker-name">Fatima Diallo</div>
-					<div class="speaker-role">Director, African Union<br>Dispute Centre</div>
+					<div class="speaker-name">lorem Name</div>
+					<div class="speaker-role">lorem rol</div>
 				</div>
 			</div>
 			<!-- Speaker 4 -->
 			<div class="speaker-card">
-				<img src="https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?w=400&q=70" alt="Speaker 4" onerror="this.parentElement.style.background='#2A8E92'"/>
+				<img src="/themes/custom/cfc/CFC/assets/images/coche5.jpeg" alt="Speaker 4" onerror="this.parentElement.style.background='#2A8E92'"/>
 				<div class="speaker-card-overlay">
-					<div class="speaker-name">Leila Moussaoui</div>
-					<div class="speaker-role">ICC Court Member<br>Morocco</div>
+					<div class="speaker-name">lorem Name</div>
+					<div class="speaker-role">lorem rol</div>
 				</div>
 			</div>
 			<!-- Speaker 5 -->
 			<div class="speaker-card">
-				<img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=70" alt="Speaker 5" onerror="this.parentElement.style.background='#2A8E92'"/>
+				<img src="/themes/custom/cfc/CFC/assets/images/coche6.jpeg" alt="Speaker 5" onerror="this.parentElement.style.background='#2A8E92'"/>
 				<div class="speaker-card-overlay">
-					<div class="speaker-name">Jean-Pierre Ngoma</div>
-					<div class="speaker-role">Arbitrator, OHADA<br>Common Court</div>
+					<div class="speaker-name">lorem Name</div>
+					<div class="speaker-role">lorem rol</div>
 				</div>
 			</div>
 			<!-- Speaker 6 -->
 			<div class="speaker-card">
-				<img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=400&q=70" alt="Speaker 6" onerror="this.parentElement.style.background='#2A8E92'"/>
+				<img src="/themes/custom/cfc/CFC/assets/images/coche7.jpeg" alt="Speaker 6" onerror="this.parentElement.style.background='#2A8E92'"/>
 				<div class="speaker-card-overlay">
-					<div class="speaker-name">Claire Hoffmann</div>
-					<div class="speaker-role">Partner, DLA Piper<br>Paris & Casablanca</div>
+					<div class="speaker-name">lorem Name</div>
+					<div class="speaker-role">lorem rol</div>
 				</div>
 			</div>
 		</div>
@@ -1596,18 +1652,20 @@ background: linear-gradient(to left, rgb(217, 75, 26) 52%, rgba(217, 75, 26, 0) 
 
 	</div>
 	<div class="speakers-cta">
-		<a href="#" class="link-view-all">view all speakers →</a>
+		<a href="#" class="link-view-all">view all speakers
+			<i class="fa fa-chevron-up"></i>
+		</a>
 	</div>
 </div></section><!-- ══════════════════════════════════════════════
-			       SECTION 6 — CTA BAND
-			  ══════════════════════════════════════════════ --><section class="section-cta-band">
+								       SECTION 6 — CTA BAND
+								  ══════════════════════════════════════════════ --><section class="section-cta-band">
 <div class="container">
 	<div class="cible" style="text-align:center;">
 		<a href="#register" class="btn-register">Register Now</a>
 	</div>
 </div></section><!-- ══════════════════════════════════════════════
-			       SECTION 7 — PROGRAM
-			  ══════════════════════════════════════════════ --><section class="section-program">
+								       SECTION 7 — PROGRAM
+								  ══════════════════════════════════════════════ --><section class="section-program">
 <div class="container">
 	<div
 		class="cible reveal" style="margin-bottom:36px;">
@@ -1627,11 +1685,11 @@ background: linear-gradient(to left, rgb(217, 75, 26) 52%, rgba(217, 75, 26, 0) 
 		<table
 			class="program-table">
 			<!-- <thead>
-									            <tr>
-									              <th style="width:130px">Time</th>
-									              <th>Session</th>
-									            </tr>
-									          </thead> -->
+																								            <tr>
+																								              <th style="width:130px">Time</th>
+																								              <th>Session</th>
+																								            </tr>
+																								          </thead> -->
 			<tbody>
 				<tr>
 					<td class="prog-time">09:00 – 10:30</td>
@@ -1651,7 +1709,7 @@ background: linear-gradient(to left, rgb(217, 75, 26) 52%, rgba(217, 75, 26, 0) 
 					<td>
 						<div class="prog-session">Session 1</div>
 						<div class="prog-title">Legislative Developments in Arbitration & Mediation: Morocco, the Region & the
-																					                  World</div>
+																																																								                  World</div>
 					</td>
 				</tr>
 				<tr>
@@ -1665,7 +1723,7 @@ background: linear-gradient(to left, rgb(217, 75, 26) 52%, rgba(217, 75, 26, 0) 
 					<td>
 						<div class="prog-session">Session 2</div>
 						<div class="prog-title">Integrating ADR into the Court System: The Vision of the Supreme Council of
-																					                  Judicial Power</div>
+																																																								                  Judicial Power</div>
 					</td>
 				</tr>
 				<tr>
@@ -1727,16 +1785,16 @@ background: linear-gradient(to left, rgb(217, 75, 26) 52%, rgba(217, 75, 26, 0) 
 		</table>
 	</div>
 </div></section><!-- ══════════════════════════════════════════════
-			       SECTION 8 — MAP + REGISTER FORM
-			  ══════════════════════════════════════════════ --><section
+								       SECTION 8 — MAP + REGISTER FORM
+								  ══════════════════════════════════════════════ --><section
 class="section-map-register" id="register">
 <!-- Map -->
 <div class="cible map-area">
-	<iframe src="https://www.openstreetmap.org/export/embed.html?bbox=-7.636%2C33.579%2C-7.596%2C33.601&layer=mapnik&marker=33.5898%2C-7.6160" title="Royal Mansour Casablanca" loading="lazy" allowfullscreen></iframe>
-	<div class="map-pin-card">
-		<div class="pin-name">Royal Mansour Casablanca Hotel</div>
-		<div class="pin-addr">27 Avenue des Forces Armées Royales,<br>20020 Casablanca, Morocco</div>
-	</div>
+	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3323.322332318473!2d-7.614334500000001!3d33.59694019999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda7d320f4ac6c53%3A0x58f7e268dbe1173a!2sRoyal%20Mansour%20Casablanca%20Hotel!5e0!3m2!1sen!2sma!4v1773764520338!5m2!1sen!2sma" title="Royal Mansour Casablanca" loading="lazy" allowfullscreen></iframe>
+	{# <div class="map-pin-card">
+			<div class="pin-name">Royal Mansour Casablanca Hotel</div>
+			<div class="pin-addr">27 Avenue des Forces Armées Royales,<br>20020 Casablanca, Morocco</div>
+		</div> #}
 </div>
 
 <!-- Register Form -->
@@ -1747,35 +1805,35 @@ class="section-map-register" id="register">
 		<span>Casablanca Arbitration Days</span>
 	</h3>
 	{# <div class="form-field"><input type="text" placeholder="Name" /></div>
-			      <div class="form-field"><input type="email" placeholder="Email" /></div>
-			      <div class="form-field"><input type="text" placeholder="Company" /></div>
-			      <div class="form-field"><input type="text" placeholder="Title" /></div>
-			      <button class="btn-register-white">Register Now</button> #}
+								      <div class="form-field"><input type="email" placeholder="Email" /></div>
+								      <div class="form-field"><input type="text" placeholder="Company" /></div>
+								      <div class="form-field"><input type="text" placeholder="Title" /></div>
+								      <button class="btn-register-white">Register Now</button> #}
 	{{ drupal_entity('block','cfc_webform_11') }}
 </div></section><!-- ══════════════════════════════════════════════
-			       SECTION 9 — FOOTER
-			  ══════════════════════════════════════════════ -->{# <section class="section-footer">
-			    <div class="container">
-			      <div class="cible footer-inner">
-			        <div>
-			          <p class="footer-col-title">Join us</p>
-			          <div class="social-icons">
-			            <a href="#" class="social-icon" title="LinkedIn">in</a>
-			            <a href="#" class="social-icon" title="YouTube">▶</a>
-			            <a href="#" class="social-icon" title="Instagram">◎</a>
-			            <a href="#" class="social-icon" title="Facebook">f</a>
-			          </div>
-			        </div>
-			        <div>
-			          <p class="footer-col-title">Get in touch</p>
-			          <div class="footer-newsletter">
-			            <input type="email" placeholder="Your email" />
-			            <button>Send</button>
-			          </div>
-			        </div>
-			      </div>
-			    </div>
-			  </section> #}<section class="section-footer">
+								       SECTION 9 — FOOTER
+								  ══════════════════════════════════════════════ -->{# <section class="section-footer">
+								    <div class="container">
+								      <div class="cible footer-inner">
+								        <div>
+								          <p class="footer-col-title">Join us</p>
+								          <div class="social-icons">
+								            <a href="#" class="social-icon" title="LinkedIn">in</a>
+								            <a href="#" class="social-icon" title="YouTube">▶</a>
+								            <a href="#" class="social-icon" title="Instagram">◎</a>
+								            <a href="#" class="social-icon" title="Facebook">f</a>
+								          </div>
+								        </div>
+								        <div>
+								          <p class="footer-col-title">Get in touch</p>
+								          <div class="footer-newsletter">
+								            <input type="email" placeholder="Your email" />
+								            <button>Send</button>
+								          </div>
+								        </div>
+								      </div>
+								    </div>
+								  </section> #}<section class="section-footer">
 <div class="container">
 	<div class="cible footer-inner">
 		<div>
@@ -1790,9 +1848,7 @@ class="section-map-register" id="register">
 			</div>
 		</div>
 	</div>
-</div></section>
-<span class="action-gototop is-visible">
-    <i class="fa fa-chevron-up"></i>
-    {# <div class="up__move">MOVE UP
-    </div> #}
-</span>
+</div></section><span class="action-gototop is-visible">
+<i class="fa fa-chevron-up"></i>
+{# <div class="up__move">MOVE UP
+    </div> #}</span>
