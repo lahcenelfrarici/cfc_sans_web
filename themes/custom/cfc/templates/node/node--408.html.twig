@@ -101,7 +101,7 @@
 }
 
 .action-gototop.is-visible {
- 
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -220,7 +220,7 @@
        SECTION 2 — HERO
     ══════════════════════════════════════════════ */
 .section-hero {
-	background: linear-gradient(135deg, var(--teal-dark) 0%, var(--teal) 45%, #2ba0a4 100%);
+
 	position: relative;
 	overflow: hidden;
 	padding: 60px 0 50px;
@@ -230,8 +230,8 @@
 	content: '';
 	position: absolute;
 	inset: 0;
-	background: url('https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1400&q=60') center/cover no-repeat;
-	opacity: 0.12;
+	background: url('/themes/custom/cfc/CFC/assets/images/banner_first.png') center/cover no-repeat;
+	opacity: 1;
 }
 
 .section-hero .container {
@@ -241,7 +241,6 @@
 
 .hero-eyebrow {
 	display: inline-block;
-	background: var(--orange);
 	color: var(--white);
 	font-family: "Averta CY";
 	font-size: 28px;
@@ -1046,16 +1045,61 @@ body .footer-newsletter input {
 }
 
 .cible.navbar-logo img {
-	width: 50%;
+	width: 70%;
+}
+.section-hero::after {
+  background: linear-gradient(to right, rgb(217, 75, 26) 52%, rgba(217, 75, 26, 0) 100%);
+  content: '';
+  position: absolute;
+  width: 67%;
+  height: 55px;
+  left: 0;
+  top: 21%;
 }
 
+.section-about h2::after{
+  background: linear-gradient(to right, rgb(217, 75, 26) 52%, rgba(217, 75, 26, 0) 100%);
+  content: '';
+  position: absolute;
+  width: 76%;
+  height: 3px;
+  right: 0;
+  top: 19px;
+}
+.section-about h2 {
+  position: relative;
+}
+.section-program h2::after{
+background: linear-gradient(to right, rgb(217, 75, 26) 52%, rgba(217, 75, 26, 0) 100%);
+  content: '';
+  position: absolute;
+  width: 43%;
+  height: 3px;
+  right: 33%;
+  top: 58px;
+}
+.section-program h2 {
+  position: relative;
+}
+.speakers-header-text .section-title::after{
+background: linear-gradient(to left, rgb(217, 75, 26) 52%, rgba(217, 75, 26, 0) 100%);
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  left: -100%;
+  top: 19px;
+}
+.speakers-header-text .section-title{
+  position:relative;
+}
 .cible.navbar-badge img {
-	width: 50%;
+	width: 70%;
 	float: right;
 }
 
 .section-hero {
-	padding-top: 120px;
+	padding-top: 150px;
 }
 
 .section-navbar {
@@ -1325,7 +1369,9 @@ body .footer-newsletter input {
 .page-globalising-moroccos-dispute-resolution-ambitions .bg-dark.text-light.py-5 {
 	display: none;
 }
-
+.section-hero .hero-title {
+  max-width: 100%;
+}
 .register-form-area .form-title {
 	font-size: 30px;
 	color: #fff;
@@ -1365,12 +1411,30 @@ body .footer-newsletter input {
 	display: none;
 }
 
+.section-hero .hero-title span {
+  color: #fff;
+}
+.hero-date {
+  position: relative;
+  color: #fff;
+}
+.hero-date::before {
+  position: absolute;
+  bottom: -13px;
+  width: 395px;
+}
+.hero-countdown-text span {
+  color: #fff;
+}
+.section-hero::after {
+  top: 25%;
+}
 .cible.register-form-area form .wrapper_submit {
 	text-align: right;
 }</style><section class="section-navbar">
 <div class="container">
 	<div class="cible navbar-logo">
-		<a href="/en"><img src="/themes/custom/cfc/CFC/assets/images/Logo.png" alt="CFC Logo"></a>
+		<a href="/en"><img src="/themes/custom/cfc/CFC/assets/images/logo_left_loadingpage.png" alt="CFC Logo"></a>
 		<!-- <div class="logo-circle">
 						          <span>CASABLANCA<br>FINANCE<br>CITY</span>
 						        </div>
@@ -1380,7 +1444,7 @@ body .footer-newsletter input {
 						        </div> -->
 	</div>
 	<div class="cible navbar-badge">
-		<a href="/en"><img src="/themes/custom/cfc/CFC/assets/images/Logo.png" alt="CFC Logo"></a>
+		<a href="/en"><img src="/themes/custom/cfc/CFC/assets/images/logo_right_loadingpage.png" alt="CFC Logo"></a>
 	</div>
 </div></section><!-- ══════════════════════════════════════════════
 			       SECTION 2 — HERO
@@ -1390,8 +1454,8 @@ body .footer-newsletter input {
 		<div class="hero-eyebrow">Casablanca Arbitration Days</div>
 		<h1 class="hero-title">
 			CIMAC at 10 :<br>
-			<span class="accent">Globalising Morocco's</span><br>
-			Dispute Resolution Ambitions
+			<span class="accent">Globalising Morocco's Dispute Resolution Ambitions</span><br>
+
 		</h1>
 		<p class="hero-date">24 – 25 April 2026 &nbsp;|&nbsp; Royal Mansour Hotel – Casablanca</p>
 		<p class="hero-countdown-text" id="heroCountdown">
