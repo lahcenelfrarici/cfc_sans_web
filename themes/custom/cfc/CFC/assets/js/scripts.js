@@ -826,7 +826,7 @@
               slidesToShow: 1,
               slidesToScroll: 1,
               variableWidth: false,
-                infinite: true,
+              infinite: true,
             }
           }]
         });
@@ -2368,24 +2368,30 @@
       $('.modal__hear_it_from_our_community').removeClass('active');
     }
   });
-$(window).scroll(function() {
-        if ($(this).scrollTop() > 50) {
-            $('.main-menu').addClass('menu_fixed');
-            $('.action-gototop').addClass('is-visible');
-        } else {
-            $('.main-menu').removeClass('menu_fixed');
-            $('.action-gototop').removeClass('is-visible');
-        }
-        if ($(this).scrollTop() > 0) $('.presentation_menu').addClass('menu_fixed');
-        else $('.presentation_menu').removeClass('menu_fixed');
-    });
-    $('.action-gototop').on("click", function(e) {
-        e.preventDefault();
-        $("html, body").animate({
-            scrollTop: 0
-        }, "800");
-    });
-/* ── COUNTDOWN ── */
+  //
+  $('.link-view-all').on('click', function (e) {
+  e.preventDefault();
+  $('.speakers-grid').addClass('active');
+  $(this).hide(); // optional
+});
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 50) {
+      $('.main-menu').addClass('menu_fixed');
+      $('.action-gototop').addClass('is-visible');
+    } else {
+      $('.main-menu').removeClass('menu_fixed');
+      $('.action-gototop').removeClass('is-visible');
+    }
+    if ($(this).scrollTop() > 0) $('.presentation_menu').addClass('menu_fixed');
+    else $('.presentation_menu').removeClass('menu_fixed');
+  });
+  $('.action-gototop').on("click", function (e) {
+    e.preventDefault();
+    $("html, body").animate({
+      scrollTop: 0
+    }, "800");
+  });
+  /* ── COUNTDOWN ── */
   const target = new Date('2026-04-24T09:00:00');
 
   function updateCountdown() {
@@ -2403,7 +2409,7 @@ $(window).scroll(function() {
     const values = [d, h, m, s];
     const keys = ['Days', 'Hours', 'Mins', 'Secs'];
 
-    $.each(keys, function(i, k) {
+    $.each(keys, function (i, k) {
       const v = pad(values[i]);
       $('#c' + k).text(v);
       $('#h' + k).text(v);
@@ -2415,7 +2421,7 @@ $(window).scroll(function() {
 
 
   /* ── PROGRAM TABS ── */
-  window.showDay = function(n, btn) {
+  window.showDay = function (n, btn) {
     $('#day1').toggle(n === 1);
     $('#day2').toggle(n === 2);
 
@@ -2425,8 +2431,8 @@ $(window).scroll(function() {
 
 
   /* ── SCROLL REVEAL ── */
-  const observer = new IntersectionObserver(function(entries) {
-    $.each(entries, function(i, entry) {
+  const observer = new IntersectionObserver(function (entries) {
+    $.each(entries, function (i, entry) {
       if (entry.isIntersecting) {
         $(entry.target).addClass('visible');
       }
@@ -2435,7 +2441,7 @@ $(window).scroll(function() {
     threshold: 0.12
   });
 
-  $('.reveal').each(function() {
+  $('.reveal').each(function () {
     observer.observe(this);
   });
 
@@ -2504,4 +2510,3 @@ $(window).scroll(function() {
   };
 
 })(jQuery, Drupal);
-
