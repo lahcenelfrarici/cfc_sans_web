@@ -1275,18 +1275,24 @@ body .footer-newsletter input {
 }
 
 /* Overlay */
+.speakers-grid.active .speaker-card:nth-child(n+7) img{
+  opacity: 0;
+}
 .speaker-card-overlay {
-	position: absolute;
-	inset: 0;
-	background: linear-gradient(135deg, rgba(1, 103, 126, 0.4), rgba(42, 142, 146, 0.87));
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-end;
-	padding: 25px;
-	color: #fff;
+  background: #78787869;
 
-	opacity: 0;
-	transition: opacity 0.4s ease;
+}
+.speaker-card-overlay {
+position: absolute;
+  inset: 0;
+  background: #78787869;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 25px;
+  color: #fff;
+  opacity: 1;
+  transition: opacity 0.4s ease;
 }
 
 
@@ -1649,7 +1655,7 @@ body .footer-newsletter input {
         <div class="speaker-card">
           <img src="/themes/custom/cfc/CFC/assets/images/coche6.jpeg" alt="Speaker 5" onerror="this.parentElement.style.background='#2A8E92'"/>
           <div class="speaker-card-overlay">
-            <div class="speaker-name">Mamdaou Konate,</div>
+            <div class="speaker-name">Mamadou KONATE</div>
             <div class="speaker-role">CIMAC Court Member, Bamako</div>
           </div>
         </div>
