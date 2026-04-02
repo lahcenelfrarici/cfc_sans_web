@@ -58,15 +58,15 @@
 
 
 }
-.speakers-grid .speaker-card:nth-child(n+7) {
-  display: none;
+.speakers-grid .speaker-card:nth-child(n + 7) {
+	display: none;
 }
 
 .speakers-grid.active .speaker-card {
-  display: block;
+	display: block;
 }
 .speaker-card {
-  transition: all 0.3s ease;
+	transition: all 0.3s ease;
 }
 
 .cible {
@@ -1075,7 +1075,7 @@ body .footer-newsletter input {
 	content: '';
 	position: absolute;
 	width: 67%;
-	height: 75px;
+	height: 105px;
 	left: 0;
 	top: 21%;
 }
@@ -1275,31 +1275,31 @@ body .footer-newsletter input {
 }
 
 /* Overlay */
-.speakers-grid.active .speaker-card:nth-child(n+7) img{
-  opacity: 0;
+.speakers-grid.active .speaker-card:nth-child(n+7) img {
+	opacity: 0;
 }
 
 .section-countdown {
-  display: none;
+	display: none;
 }
 #heroCountdown {
-  display: none;
+	display: none;
 }
 .speaker-card-overlay {
-  background: #7878781f !important;
+	background: #7878781f !important;
 
 }
 .speaker-card-overlay {
-position: absolute;
-  inset: 0;
-  background: #78787869;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding: 25px;
-  color: #fff;
-  opacity: 1;
-  transition: opacity 0.4s ease;
+	position: absolute;
+	inset: 0;
+	background: #78787869;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	padding: 25px;
+	color: #fff;
+	opacity: 1;
+	transition: opacity 0.4s ease;
 }
 
 
@@ -1464,7 +1464,12 @@ position: absolute;
 }
 
 @media(max-width: 991px) {
-
+	.section-hero::after {
+		opacity: 0;
+	}
+	.hero-eyebrow {
+		background: linear-gradient(to right, rgb(217, 75, 26) 52%, rgba(217, 75, 26, 0) 100%);
+	}
 	.hero-eyebrow {
 		font-size: 30px;
 	}
@@ -1537,24 +1542,38 @@ position: absolute;
 		bottom: 0;
 		height: auto;
 	}
-}</style><section class="section-navbar">
+}
+
+.speaker-card-overlay {
+  background: #01010169 !important;
+  padding: 20px;
+}
+.speaker-name {
+  font-size: 18px;
+  color: #fff;
+  font-weight: bold;
+}
+.speaker-role {
+  font-weight: 400;
+}
+</style><section class="section-navbar">
 <div class="container">
 	<div class="cible navbar-logo">
 		<a href="/en"><img src="/themes/custom/cfc/CFC/assets/images/logo_left_loadingpage.png" alt="CFC Logo"></a>
 		<!-- <div class="logo-circle">
-																				          <span>CASABLANCA<br>FINANCE<br>CITY</span>
-																				        </div>
-																				        <div class="logo-text">
-																				          Casablanca Finance City
-																				          <small>Authority</small>
-																				        </div> -->
+																						          <span>CASABLANCA<br>FINANCE<br>CITY</span>
+																						        </div>
+																						        <div class="logo-text">
+																						          Casablanca Finance City
+																						          <small>Authority</small>
+																						        </div> -->
 	</div>
 	<div class="cible navbar-badge">
 		<a href="/en"><img src="/themes/custom/cfc/CFC/assets/images/logo_right_loadingpage.png" alt="CFC Logo"></a>
 	</div>
 </div></section><!-- ══════════════════════════════════════════════
-										       SECTION 2 — HERO
-										  ══════════════════════════════════════════════ --><section class="section-hero">
+											       SECTION 2 — HERO
+											  ══════════════════════════════════════════════ --><section class="section-hero">
 <div class="container">
 	<div class="cible hero-content">
 		<div class="hero-eyebrow">Casablanca Arbitration Days</div>
@@ -1577,8 +1596,8 @@ position: absolute;
 		<a href="#register" class="btn-register">Register Now</a>
 	</div>
 </div></section><!-- ══════════════════════════════════════════════
-										       SECTION 3 — COUNTDOWN BOXES
-										  ══════════════════════════════════════════════ --><section class="section-countdown">
+											       SECTION 3 — COUNTDOWN BOXES
+											  ══════════════════════════════════════════════ --><section class="section-countdown">
 <div class="cible countdown-grid">
 	<div class="countdown-cell">
 		<span class="countdown-num" id="cDays">57</span>
@@ -1597,8 +1616,8 @@ position: absolute;
 		<span class="countdown-label">Seconds</span>
 	</div>
 </div></section><!-- ══════════════════════════════════════════════
-										       SECTION 4 — ABOUT
-										  ══════════════════════════════════════════════ --><section class="section-about">
+											       SECTION 4 — ABOUT
+											  ══════════════════════════════════════════════ --><section class="section-about">
 <div class="container">
 	<div class="about-grid">
 		<div
@@ -1610,12 +1629,12 @@ position: absolute;
 			</h2>
 			<p class="about-text">
 				Hosted by Casablanca Finance City Authority in partnership with CIMAC – Casablanca International Mediation
-																																								            and Arbitration Centre, this landmark event will explore Morocco's evolving position in the global dispute
-																																								            resolution landscape.
+																																												            and Arbitration Centre, this landmark event will explore Morocco's evolving position in the global dispute
+																																												            resolution landscape.
 			</p>
 			<p class="about-text">
 				Over two days, leading practitioners, policymakers, institutional representatives and academics will
-																																								            discuss:
+																																												            discuss:
 			</p>
 			<ul class="about-list">
 				<li>Legislative developments in arbitration and mediation</li>
@@ -1625,7 +1644,7 @@ position: absolute;
 			</ul>
 			<p class="about-text">
 				This 10-year milestone reflects CIMAC's continued commitment to positioning Morocco as a competitive
-																																								            international dispute resolution seat.
+																																												            international dispute resolution seat.
 			</p>
 			<a href="#register" class="btn-register" style="margin-top:12px;">Register Now</a>
 		</div>
@@ -1636,188 +1655,185 @@ position: absolute;
 		</div>
 	</div>
 </div></section><!-- ══════════════════════════════════════════════
-										       SECTION 5 — SPEAKERS
-										  ══════════════════════════════════════════════ -->
-<section class="section-speakers">
-  <div class="container">
-    <div class="row">
-      <div
-        class="col-lg-8 cible speakers-grid">
-        <!-- Speaker 1 -->
-        <div class="speaker-card">
-          <img src="/themes/custom/cfc/CFC/assets/images/coche2.jpeg" alt="Jalal El-Ahdab" onerror="this.parentElement.style.background='#2A8E92'"/>
-          <div class="speaker-card-overlay">
-            <div class="speaker-name">Jalal El-Ahdab</div>
-            <div class="speaker-role">CIMAC Court President, Paris</div>
-          </div>
-        </div>
-        <div class="speaker-card">
-          <img src="/themes/custom/cfc/CFC/assets/images/coche4.jpeg" alt="Speaker 3" onerror="this.parentElement.style.background='#2A8E92'"/>
-          <div class="speaker-card-overlay">
-            <div class="speaker-name">Emilia Onyema</div>
-            <div class="speaker-role">CIMAC Court Member, SOAS London</div>
-          </div>
-        </div>
-        <!-- Speaker 5 618-->
-        <div class="speaker-card">
-          <img src="/themes/custom/cfc/CFC/assets/images/coche6.jpeg" alt="Speaker 5" onerror="this.parentElement.style.background='#2A8E92'"/>
-          <div class="speaker-card-overlay">
-            <div class="speaker-name">Mamadou KONATE</div>
-            <div class="speaker-role">CIMAC Court Member, Bamako</div>
-          </div>
-        </div>
-        <!-- Speaker 2 -->
-        <div class="speaker-card">
-          <img src="/themes/custom/cfc/CFC/assets/images/img/image4.png" alt="Speaker 2" onerror="this.parentElement.style.background='#2A8E92'"/>
-          <div class="speaker-card-overlay">
-            <div class="speaker-name">Michael Black,</div>
-            <div class="speaker-role">CIMAC Court Member, Judge in DIFC Court</div>
-          </div>
-        </div>
-        <!-- Speaker 3 -->
+											       SECTION 5 — SPEAKERS
+											  ══════════════════════════════════════════════ --><section class="section-speakers">
+<div class="container">
+	<div class="row">
+		<div
+			class="col-lg-8 cible speakers-grid">
+			<!-- Speaker 1 -->
+			<div class="speaker-card">
+				<img src="/themes/custom/cfc/CFC/assets/images/coche2.jpg" alt="Jalal El-Ahdab" onerror="this.parentElement.style.background='#2A8E92'"/>
+				<div class="speaker-card-overlay">
+					<div class="speaker-name">Jalal El-Ahdab</div>
+					<div class="speaker-role">CIMAC Court President, Paris</div>
+				</div>
+			</div>
+			<div class="speaker-card">
+				<img src="/themes/custom/cfc/CFC/assets/images/coche4.jpeg" alt="Speaker 3" onerror="this.parentElement.style.background='#2A8E92'"/>
+				<div class="speaker-card-overlay">
+					<div class="speaker-name">Emilia Onyema</div>
+					<div class="speaker-role">CIMAC Court Member, SOAS London</div>
+				</div>
+			</div>
+			<!-- Speaker 5 618-->
+			<div class="speaker-card">
+				<img src="/themes/custom/cfc/CFC/assets/images/coche6.jpg" alt="Speaker 5" onerror="this.parentElement.style.background='#2A8E92'"/>
+				<div class="speaker-card-overlay">
+					<div class="speaker-name">Mamadou KONATE</div>
+					<div class="speaker-role">CIMAC Court Member, Bamako</div>
+				</div>
+			</div>
+			<!-- Speaker 2 -->
+			<div class="speaker-card">
+				<img src="/themes/custom/cfc/CFC/assets/images/img/image4.png" alt="Speaker 2" onerror="this.parentElement.style.background='#2A8E92'"/>
+				<div class="speaker-card-overlay">
+					<div class="speaker-name">Michael Black</div>
+					<div class="speaker-role">CIMAC Court Member, Judge in DIFC Court</div>
+				</div>
+			</div>
+			<!-- Speaker 3 -->
 
-        <!-- Speaker 4 -->
-        <div class="speaker-card">
-          <img src="/themes/custom/cfc/CFC/assets/images/coche5.jpeg" alt="Speaker 4" onerror="this.parentElement.style.background='#2A8E92'"/>
-          <div class="speaker-card-overlay">
-            <div class="speaker-name">Kawtar Jalal</div>
-            <div class="speaker-role">CIMAC Court Member, Casablanca Bar</div>
-          </div>
-        </div>
+			<!-- Speaker 4 -->
+			<div class="speaker-card">
+				<img src="/themes/custom/cfc/CFC/assets/images/coche5.jpg" alt="Speaker 4" onerror="this.parentElement.style.background='#2A8E92'"/>
+				<div class="speaker-card-overlay">
+					<div class="speaker-name">Kawtar Jalal</div>
+					<div class="speaker-role">CIMAC Court Member, Casablanca Bar</div>
+				</div>
+			</div>
 
-        <!-- Speaker 6 -->
-        <div class="speaker-card">
-          <img src="/themes/custom/cfc/CFC/assets/images/img/image6.png" alt="Speaker 6" onerror="this.parentElement.style.background='#2A8E92'"/>
-          <div class="speaker-card-overlay">
-            <div class="speaker-name">Magnus Jesko Langer</div>
-            <div class="speaker-role">CIMAC Court Member, Lévy-Kaufmann, Geneva</div>
-          </div>
-        </div>
-        {# ****** #}
-        <div class="speaker-card">
-          <img src="/themes/custom/cfc/CFC/assets/images/img/place.jpg" alt="Speaker 6" onerror="this.parentElement.style.background='#2A8E92'"/>
-          <div class="speaker-card-overlay">
-            <div class="speaker-name">Hassan Arab</div>
-            <div class="speaker-role">lorem ipsum</div>
-          </div>
-        </div>
-        {#  #}
-        <div class="speaker-card">
-          <img src="/themes/custom/cfc/CFC/assets/images/img/place.jpg" alt="Speaker 6" onerror="this.parentElement.style.background='#2A8E92'"/>
-          <div class="speaker-card-overlay">
-            <div class="speaker-name">Emad Hussein</div>
-            <div class="speaker-role">lorem ipsum</div>
-          </div>
-        </div>
-        {#  #}
-        <div class="speaker-card">
-          <img src="/themes/custom/cfc/CFC/assets/images/img/place.jpg" alt="Speaker 6" onerror="this.parentElement.style.background='#2A8E92'"/>
-          <div class="speaker-card-overlay">
-            <div class="speaker-name">Bryan Clark</div>
-            <div class="speaker-role">lorem ipsum</div>
-          </div>
-        </div>
-        {#  #}
-        <div class="speaker-card">
-          <img src="/themes/custom/cfc/CFC/assets/images/img/place.jpg" alt="Speaker 6" onerror="this.parentElement.style.background='#2A8E92'"/>
-          <div class="speaker-card-overlay">
-            <div class="speaker-name">Laurent Lévy</div>
-            <div class="speaker-role">lorem ipsum</div>
-          </div>
-        </div>
-        {#  #}
-        <div class="speaker-card">
-          <img src="/themes/custom/cfc/CFC/assets/images/img/place.jpg" alt="Speaker 6" onerror="this.parentElement.style.background='#2A8E92'"/>
-          <div class="speaker-card-overlay">
-            <div class="speaker-name">Arnaud de Nanteuil</div>
-            <div class="speaker-role">lorem ipsum</div>
-          </div>
-        </div>
-        {#  #}
-        <div class="speaker-card">
-          <img src="/themes/custom/cfc/CFC/assets/images/img/place.jpg" alt="Speaker 6" onerror="this.parentElement.style.background='#2A8E92'"/>
-          <div class="speaker-card-overlay">
-            <div class="speaker-name">Sheikh Thani bin Ali</div>
-            <div class="speaker-role">lorem ipsum</div>
-          </div>
-        </div>
-        {#  #}
-        <div class="speaker-card">
-          <img src="/themes/custom/cfc/CFC/assets/images/img/place.jpg" alt="Speaker 6" onerror="this.parentElement.style.background='#2A8E92'"/>
-          <div class="speaker-card-overlay">
-            <div class="speaker-name">Nadja Alexander</div>
-            <div class="speaker-role">lorem ipsum</div>
-          </div>
-        </div>
-        {#  #}
-        <div class="speaker-card">
-          <img src="/themes/custom/cfc/CFC/assets/images/img/place.jpg" alt="Speaker 6" onerror="this.parentElement.style.background='#2A8E92'"/>
-          <div class="speaker-card-overlay">
-            <div class="speaker-name">Ezzeddine Baassiri</div>
-            <div class="speaker-role">lorem ipsum</div>
-          </div>
-        </div>
-        {#  #}
-        <div class="speaker-card">
-          <img src="/themes/custom/cfc/CFC/assets/images/img/place.jpg" alt="Speaker 6" onerror="this.parentElement.style.background='#2A8E92'"/>
-          <div class="speaker-card-overlay">
-            <div class="speaker-name">Martina Polasek</div>
-            <div class="speaker-role">lorem ipsum</div>
-          </div>
-        </div>
-        {#  #}
-        <div class="speaker-card">
-          <img src="/themes/custom/cfc/CFC/assets/images/img/place.jpg" alt="Speaker 6" onerror="this.parentElement.style.background='#2A8E92'"/>
-          <div class="speaker-card-overlay">
-            <div class="speaker-name">Hicham Zegrary</div>
-            <div class="speaker-role">lorem ipsum</div>
-          </div>
-        </div>
-        {#  #}
-        <div class="speaker-card">
-          <img src="/themes/custom/cfc/CFC/assets/images/img/place.jpg" alt="Speaker 6" onerror="this.parentElement.style.background='#2A8E92'"/>
-          <div class="speaker-card-overlay">
-            <div class="speaker-name">Khalid Salim Said</div>
-            <div class="speaker-role">lorem ipsum</div>
-          </div>
-        </div>
-        {#  #}
-        <div class="speaker-card">
-          <img src="/themes/custom/cfc/CFC/assets/images/img/place.jpg" alt="Speaker 6" onerror="this.parentElement.style.background='#2A8E92'"/>
-          <div class="speaker-card-overlay">
-            <div class="speaker-name">Omar Oseni</div>
-            <div class="speaker-role">lorem ipsum</div>
-          </div>
-        </div>
-        {#  #}
-      </div>
-      <div class="col-lg-4 speakers-header">
-        <div
-          class="cible speakers-header-text">
-          <!-- <p class="section-eyebrow">Meet</p> -->
-          <h2 class="section-title">This Year's<br><span>Speakers</span>
-          </h2>
-        </div>
-      </div>
+			<!-- Speaker 6 -->
+			<div class="speaker-card">
+				<img src="/themes/custom/cfc/CFC/assets/images/img/image6.png" alt="Speaker 6" onerror="this.parentElement.style.background='#2A8E92'"/>
+				<div class="speaker-card-overlay">
+					<div class="speaker-name">Magnus Jesko Langer</div>
+					<div class="speaker-role">CIMAC Court Member, Lévy-Kaufmann, Geneva</div>
+				</div>
+			</div>
+			{# ****** #}
+			<div class="speaker-card">
+				<img src="/themes/custom/cfc/CFC/assets/images/img/place.jpg" alt="Speaker 6" onerror="this.parentElement.style.background='#2A8E92'"/>
+				<div class="speaker-card-overlay">
+					<div class="speaker-name">Hassan Arab</div>
+					<div class="speaker-role">lorem ipsum</div>
+				</div>
+			</div>
+			{#  #}
+			<div class="speaker-card">
+				<img src="/themes/custom/cfc/CFC/assets/images/img/place.jpg" alt="Speaker 6" onerror="this.parentElement.style.background='#2A8E92'"/>
+				<div class="speaker-card-overlay">
+					<div class="speaker-name">Emad Hussein</div>
+					<div class="speaker-role">lorem ipsum</div>
+				</div>
+			</div>
+			{#  #}
+			<div class="speaker-card">
+				<img src="/themes/custom/cfc/CFC/assets/images/img/place.jpg" alt="Speaker 6" onerror="this.parentElement.style.background='#2A8E92'"/>
+				<div class="speaker-card-overlay">
+					<div class="speaker-name">Bryan Clark</div>
+					<div class="speaker-role">lorem ipsum</div>
+				</div>
+			</div>
+			{#  #}
+			<div class="speaker-card">
+				<img src="/themes/custom/cfc/CFC/assets/images/img/place.jpg" alt="Speaker 6" onerror="this.parentElement.style.background='#2A8E92'"/>
+				<div class="speaker-card-overlay">
+					<div class="speaker-name">Laurent Lévy</div>
+					<div class="speaker-role">lorem ipsum</div>
+				</div>
+			</div>
+			{#  #}
+			<div class="speaker-card">
+				<img src="/themes/custom/cfc/CFC/assets/images/img/place.jpg" alt="Speaker 6" onerror="this.parentElement.style.background='#2A8E92'"/>
+				<div class="speaker-card-overlay">
+					<div class="speaker-name">Arnaud de Nanteuil</div>
+					<div class="speaker-role">lorem ipsum</div>
+				</div>
+			</div>
+			{#  #}
+			<div class="speaker-card">
+				<img src="/themes/custom/cfc/CFC/assets/images/img/place.jpg" alt="Speaker 6" onerror="this.parentElement.style.background='#2A8E92'"/>
+				<div class="speaker-card-overlay">
+					<div class="speaker-name">Sheikh Thani bin Ali</div>
+					<div class="speaker-role">lorem ipsum</div>
+				</div>
+			</div>
+			{#  #}
+			<div class="speaker-card">
+				<img src="/themes/custom/cfc/CFC/assets/images/img/place.jpg" alt="Speaker 6" onerror="this.parentElement.style.background='#2A8E92'"/>
+				<div class="speaker-card-overlay">
+					<div class="speaker-name">Nadja Alexander</div>
+					<div class="speaker-role">lorem ipsum</div>
+				</div>
+			</div>
+			{#  #}
+			<div class="speaker-card">
+				<img src="/themes/custom/cfc/CFC/assets/images/img/place.jpg" alt="Speaker 6" onerror="this.parentElement.style.background='#2A8E92'"/>
+				<div class="speaker-card-overlay">
+					<div class="speaker-name">Ezzeddine Baassiri</div>
+					<div class="speaker-role">lorem ipsum</div>
+				</div>
+			</div>
+			{#  #}
+			<div class="speaker-card">
+				<img src="/themes/custom/cfc/CFC/assets/images/img/place.jpg" alt="Speaker 6" onerror="this.parentElement.style.background='#2A8E92'"/>
+				<div class="speaker-card-overlay">
+					<div class="speaker-name">Martina Polasek</div>
+					<div class="speaker-role">lorem ipsum</div>
+				</div>
+			</div>
+			{#  #}
+			<div class="speaker-card">
+				<img src="/themes/custom/cfc/CFC/assets/images/img/place.jpg" alt="Speaker 6" onerror="this.parentElement.style.background='#2A8E92'"/>
+				<div class="speaker-card-overlay">
+					<div class="speaker-name">Hicham Zegrary</div>
+					<div class="speaker-role">lorem ipsum</div>
+				</div>
+			</div>
+			{#  #}
+			<div class="speaker-card">
+				<img src="/themes/custom/cfc/CFC/assets/images/img/place.jpg" alt="Speaker 6" onerror="this.parentElement.style.background='#2A8E92'"/>
+				<div class="speaker-card-overlay">
+					<div class="speaker-name">Khalid Salim Said</div>
+					<div class="speaker-role">lorem ipsum</div>
+				</div>
+			</div>
+			{#  #}
+			<div class="speaker-card">
+				<img src="/themes/custom/cfc/CFC/assets/images/img/place.jpg" alt="Speaker 6" onerror="this.parentElement.style.background='#2A8E92'"/>
+				<div class="speaker-card-overlay">
+					<div class="speaker-name">Omar Oseni</div>
+					<div class="speaker-role">lorem ipsum</div>
+				</div>
+			</div>
+			{#  #}
+		</div>
+		<div class="col-lg-4 speakers-header">
+			<div
+				class="cible speakers-header-text">
+				<!-- <p class="section-eyebrow">Meet</p> -->
+				<h2 class="section-title">This Year's<br><span>Speakers</span>
+				</h2>
+			</div>
+		</div>
 
-    </div>
-    <div class="speakers-cta">
-      <a href="#" class="link-view-all">view all speakers
-        <i class="fa fa-chevron-up"></i>
-      </a>
-    </div>
-  </div>
-</section>
-<!-- ══════════════════════════════════════════════
-										       SECTION 6 — CTA BAND
-										  ══════════════════════════════════════════════ --><section class="section-cta-band">
+	</div>
+	<div class="speakers-cta">
+		<a href="#" class="link-view-all">view all speakers
+			<i class="fa fa-chevron-up"></i>
+		</a>
+	</div>
+</div></section><!-- ══════════════════════════════════════════════
+											       SECTION 6 — CTA BAND
+											  ══════════════════════════════════════════════ --><section class="section-cta-band">
 <div class="container">
 	<div class="cible" style="text-align:center;">
 		<a href="#register" class="btn-register">Register Now</a>
 	</div>
 </div></section><!-- ══════════════════════════════════════════════
-										       SECTION 7 — PROGRAM
-										  ══════════════════════════════════════════════ --><section class="section-program">
+											       SECTION 7 — PROGRAM
+											  ══════════════════════════════════════════════ --><section class="section-program">
 <div class="container">
 	<div
 		class="cible reveal" style="margin-bottom:36px;">
@@ -1833,57 +1849,106 @@ position: absolute;
 	</div>
 
 	{# <div class="cible program-content" id="day1">
-			<p class="program-day-label">Friday, April 24th</p>
-			<table class="program-table">
-				<tbody>
-					<tr>
-						<td class="prog-time">09:00 – 10:30</td>
-						<td>
-							<div class="prog-session">Opening Session</div>
-						</td>
-					</tr>
-					<tr>
-						<td class="prog-time">10:30 – 11:00</td>
-						<td>
-							<div class="prog-break">Coffee Break – Networking</div>
-						</td>
-					</tr>
-					<tr>
-						<td class="prog-time">11:00 – 13:00</td>
-						<td>
-							<div class="prog-session">Session 1</div>
-							<div class="prog-title">Legislative Developments in Arbitration & Mediation: Morocco, the Region & the
-																																																																                  World</div>
-						</td>
-					</tr>
-					<tr>
-						<td class="prog-time">13:00 – 14:30</td>
-						<td>
-							<div class="prog-break">Lunch Break</div>
-						</td>
-					</tr>
-					<tr>
-						<td class="prog-time">14:30 – 16:00</td>
-						<td>
-							<div class="prog-session">Session 2</div>
-							<div class="prog-title">Integrating ADR into the Court System: The Vision of the Supreme Council of
-																																																																                  Judicial Power</div>
-						</td>
-					</tr>
-					<tr>
-						<td class="prog-time">16:00 – 17:30</td>
-						<td>
-							<div class="prog-session">Session 3</div>
-							<div class="prog-title">Arbitral Institutions: Modern Practices & the Future Institutional Landscape
-							</div>
-						</td>
-					</tr>
-				</tbody>
-			</table>
-		</div> #}
+				<p class="program-day-label">Friday, April 24th</p>
+				<table class="program-table">
+					<tbody>
+						<tr>
+							<td class="prog-time">09:00 – 10:30</td>
+							<td>
+								<div class="prog-session">Opening Session</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="prog-time">10:30 – 11:00</td>
+							<td>
+								<div class="prog-break">Coffee Break – Networking</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="prog-time">11:00 – 13:00</td>
+							<td>
+								<div class="prog-session">Session 1</div>
+								<div class="prog-title">Legislative Developments in Arbitration & Mediation: Morocco, the Region & the
+																																																																	                  World</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="prog-time">13:00 – 14:30</td>
+							<td>
+								<div class="prog-break">Lunch Break</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="prog-time">14:30 – 16:00</td>
+							<td>
+								<div class="prog-session">Session 2</div>
+								<div class="prog-title">Integrating ADR into the Court System: The Vision of the Supreme Council of
+																																																																	                  Judicial Power</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="prog-time">16:00 – 17:30</td>
+							<td>
+								<div class="prog-session">Session 3</div>
+								<div class="prog-title">Arbitral Institutions: Modern Practices & the Future Institutional Landscape
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div> #}
 
 	{# <div class="cible program-content" id="day2" style="display:none;">
-			<p class="program-day-label">Saturday, April 25th</p>
+				<p class="program-day-label">Saturday, April 25th</p>
+				<table class="program-table">
+					<tbody>
+						<tr>
+							<td class="prog-time">09:00 – 10:30</td>
+							<td>
+								<div class="prog-session">Opening Session</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="prog-time">10:30 – 11:00</td>
+							<td>
+								<div class="prog-break">Coffee Break – Networking</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="prog-time">11:00 – 13:00</td>
+							<td>
+								<div class="prog-session">Session 1</div>
+								<div class="prog-title">Legislative Developments in Arbitration & Mediation: Morocco, the Region & the
+																																																																	                  World</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="prog-time">13:00 – 14:30</td>
+							<td>
+								<div class="prog-break">Lunch Break</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="prog-time">14:30 – 16:00</td>
+							<td>
+								<div class="prog-session">Session 2</div>
+								<div class="prog-title">Integrating ADR into the Court System: The Vision of the Supreme Council of
+																																																																	                  Judicial Power</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="prog-time">16:00 – 17:30</td>
+							<td>
+								<div class="prog-session">Session 3</div>
+								<div class="prog-title">Arbitral Institutions: Modern Practices & the Future Institutional Landscape
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div> #}
+	{# <div class="cible program-content" id="day1">
+			<p class="program-day-label">Day 1 - 24 April 2026</p>
 			<table class="program-table">
 				<tbody>
 					<tr>
@@ -1895,15 +1960,16 @@ position: absolute;
 					<tr>
 						<td class="prog-time">10:30 – 11:00</td>
 						<td>
-							<div class="prog-break">Coffee Break – Networking</div>
+							<div class="prog-break">Coffee Break</div>
 						</td>
 					</tr>
 					<tr>
 						<td class="prog-time">11:00 – 13:00</td>
 						<td>
 							<div class="prog-session">Session 1</div>
-							<div class="prog-title">Legislative Developments in Arbitration & Mediation: Morocco, the Region & the
-																																																																                  World</div>
+							<div class="prog-title">
+								Legislative Developments in Arbitration & Mediation: Morocco, the Region, and the World
+							</div>
 						</td>
 					</tr>
 					<tr>
@@ -1916,39 +1982,84 @@ position: absolute;
 						<td class="prog-time">14:30 – 16:00</td>
 						<td>
 							<div class="prog-session">Session 2</div>
-							<div class="prog-title">Integrating ADR into the Court System: The Vision of the Supreme Council of
-																																																																                  Judicial Power</div>
+							<div class="prog-title">
+								Integrating ADR into the Court System: Policy, Practice, and Future Directions
+							</div>
 						</td>
 					</tr>
 					<tr>
 						<td class="prog-time">16:00 – 17:30</td>
 						<td>
 							<div class="prog-session">Session 3</div>
-							<div class="prog-title">Arbitral Institutions: Modern Practices & the Future Institutional Landscape
+							<div class="prog-title">
+								Arbitral Institutions: Modern Practices & the Future Institutional Landscape in Morocco and Beyond
 							</div>
 						</td>
 					</tr>
 				</tbody>
 			</table>
+		</div>
+		<div class="cible program-content" id="day2" style="display:none;">
+			<p class="program-day-label">Day 2 - 25 April 2026</p>
+			<table class="program-table">
+				<tbody>
+					<tr>
+						<td class="prog-time">09:00 – 09:30</td>
+						<td>
+							<div class="prog-break">Coffee and Registration</div>
+						</td>
+					</tr>
+					<tr>
+						<td class="prog-time">09:30 – 11:00</td>
+						<td>
+							<div class="prog-session">Session 1</div>
+							<div class="prog-title">
+								The Evolution of Regional & International Arbitration Seats: Will Casablanca Become One?
+								            (Perspectives from developed and developing arbitral jurisdictions)
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td class="prog-time">11:00 – 13:00</td>
+						<td>
+							<div class="prog-session">Session 2</div>
+							<div class="prog-title">
+								Attracting Investment in Morocco: Building Investor Confidence through Effective Dispute Resolution
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td class="prog-time">13:00</td>
+						<td>
+							<div class="prog-session">Closing Remarks and Lunch</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
 		</div> #}
-	<div class="cible program-content" id="day1">
-		<p class="program-day-label">Day 1 - 24 April 2026</p>
+		<div class="cible program-content" id="day1"> <p class="program-day-label">Day 1 - 24 April 2026</p>
 		<table class="program-table">
 			<tbody>
 				<tr>
-					<td class="prog-time">09:00 – 10:30</td>
+					<td class="prog-time">09:00 – 09:30</td>
 					<td>
-						<div class="prog-session">Opening Session</div>
+						<div class="prog-session">Opening Ceremony</div>
 					</td>
 				</tr>
 				<tr>
-					<td class="prog-time">10:30 – 11:00</td>
+					<td class="prog-time">09:30 – 10:00</td>
+					<td>
+						<div class="prog-session">Signing Ceremony</div>
+					</td>
+				</tr>
+				<tr>
+					<td class="prog-time">10:00 – 10:30</td>
 					<td>
 						<div class="prog-break">Coffee Break</div>
 					</td>
 				</tr>
 				<tr>
-					<td class="prog-time">11:00 – 13:00</td>
+					<td class="prog-time">10:30 – 12:30</td>
 					<td>
 						<div class="prog-session">Session 1</div>
 						<div class="prog-title">
@@ -1957,7 +2068,7 @@ position: absolute;
 					</td>
 				</tr>
 				<tr>
-					<td class="prog-time">13:00 – 14:30</td>
+					<td class="prog-time">12:30 – 14:15</td>
 					<td>
 						<div class="prog-break">Lunch Break</div>
 					</td>
@@ -1983,6 +2094,7 @@ position: absolute;
 			</tbody>
 		</table>
 	</div>
+
 	<div class="cible program-content" id="day2" style="display:none;">
 		<p class="program-day-label">Day 2 - 25 April 2026</p>
 		<table class="program-table">
@@ -1999,12 +2111,12 @@ position: absolute;
 						<div class="prog-session">Session 1</div>
 						<div class="prog-title">
 							The Evolution of Regional & International Arbitration Seats: Will Casablanca Become One?
-							            (Perspectives from developed and developing arbitral jurisdictions)
+													(Perspectives from developed and developing arbitral jurisdictions)
 						</div>
 					</td>
 				</tr>
 				<tr>
-					<td class="prog-time">11:00 – 13:00</td>
+					<td class="prog-time">11:00 – 12:30</td>
 					<td>
 						<div class="prog-session">Session 2</div>
 						<div class="prog-title">
@@ -2013,7 +2125,7 @@ position: absolute;
 					</td>
 				</tr>
 				<tr>
-					<td class="prog-time">13:00</td>
+					<td class="prog-time">12:30</td>
 					<td>
 						<div class="prog-session">Closing Remarks and Lunch</div>
 					</td>
@@ -2023,8 +2135,8 @@ position: absolute;
 	</div>
 
 </div></section><!-- ══════════════════════════════════════════════
-										       SECTION 8 — MAP + REGISTER FORM
-										  ══════════════════════════════════════════════ --><section
+											       SECTION 8 — MAP + REGISTER FORM
+											  ══════════════════════════════════════════════ --><section
 class="section-map-register" id="register">
 <!-- Map -->
 <div class="cible map-area">
@@ -2044,35 +2156,35 @@ class="section-map-register" id="register">
 		<span>Casablanca Arbitration Days</span>
 	</h3>
 	{# <div class="form-field"><input type="text" placeholder="Name" /></div>
-										      <div class="form-field"><input type="email" placeholder="Email" /></div>
-										      <div class="form-field"><input type="text" placeholder="Company" /></div>
-										      <div class="form-field"><input type="text" placeholder="Title" /></div>
-										      <button class="btn-register-white">Register Now</button> #}
+											      <div class="form-field"><input type="email" placeholder="Email" /></div>
+											      <div class="form-field"><input type="text" placeholder="Company" /></div>
+											      <div class="form-field"><input type="text" placeholder="Title" /></div>
+											      <button class="btn-register-white">Register Now</button> #}
 	{{ drupal_entity('block','cfc_webform_13') }}
 </div></section><!-- ══════════════════════════════════════════════
-										       SECTION 9 — FOOTER
-										  ══════════════════════════════════════════════ -->{# <section class="section-footer">
-										    <div class="container">
-										      <div class="cible footer-inner">
-										        <div>
-										          <p class="footer-col-title">Join us</p>
-										          <div class="social-icons">
-										            <a href="#" class="social-icon" title="LinkedIn">in</a>
-										            <a href="#" class="social-icon" title="YouTube">▶</a>
-										            <a href="#" class="social-icon" title="Instagram">◎</a>
-										            <a href="#" class="social-icon" title="Facebook">f</a>
-										          </div>
-										        </div>
-										        <div>
-										          <p class="footer-col-title">Get in touch</p>
-										          <div class="footer-newsletter">
-										            <input type="email" placeholder="Your email" />
-										            <button>Send</button>
-										          </div>
-										        </div>
-										      </div>
-										    </div>
-										  </section> #}<section class="section-footer">
+											       SECTION 9 — FOOTER
+											  ══════════════════════════════════════════════ -->{# <section class="section-footer">
+											    <div class="container">
+											      <div class="cible footer-inner">
+											        <div>
+											          <p class="footer-col-title">Join us</p>
+											          <div class="social-icons">
+											            <a href="#" class="social-icon" title="LinkedIn">in</a>
+											            <a href="#" class="social-icon" title="YouTube">▶</a>
+											            <a href="#" class="social-icon" title="Instagram">◎</a>
+											            <a href="#" class="social-icon" title="Facebook">f</a>
+											          </div>
+											        </div>
+											        <div>
+											          <p class="footer-col-title">Get in touch</p>
+											          <div class="footer-newsletter">
+											            <input type="email" placeholder="Your email" />
+											            <button>Send</button>
+											          </div>
+											        </div>
+											      </div>
+											    </div>
+											  </section> #}<section class="section-footer">
 <div class="container">
 	<div class="cible footer-inner">
 		<div>
