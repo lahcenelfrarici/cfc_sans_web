@@ -2369,11 +2369,11 @@
     }
   });
   //
-  // $('.link-view-all').on('click', function (e) {
-  //   e.preventDefault();
-  //   $('.speakers-grid').addClass('active');
-  //   $(this).hide(); // optional
-  // });
+  $('.link-view-all').on('click', function (e) {
+    e.preventDefault();
+    $('.speakers-grid').addClass('active');
+    $(this).hide(); // optional
+  });
   $(window).scroll(function () {
     if ($(this).scrollTop() > 50) {
       $('.main-menu').addClass('menu_fixed');
