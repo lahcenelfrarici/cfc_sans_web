@@ -3635,6 +3635,13 @@
     height: auto;
     overflow: initial;
   }
+
+.speaker-card {
+  margin: 5px;
+}
+.speaker-name {
+  font-size: 14px;
+}
 }
 
 @media (max-width: 767px) {
