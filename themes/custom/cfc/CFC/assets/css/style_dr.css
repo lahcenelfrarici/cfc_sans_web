@@ -5070,3 +5070,16 @@ section.img_event40under40_sc2_section {
 .team-card>div {
   width: 100%;
 }
+
+#modal-event #top__logo_modal img {
+  width: 100%;
+  height: 100%;
+}
+section#modal___financial .col-md-12 {
+  margin: 0;
+  padding: 0;
+}
+.modal_ocde .close_btn {
+  top: -49px;
+  font-size: 48px;
+}

@@ -1225,6 +1225,9 @@
 }
 
 @media (max-width: 991px) {
+
+
+
   .web__form_dr form .js-form-item label {
     font-size: 16px;
   }
@@ -3615,6 +3618,23 @@
     height: 650px;
     overflow-x: hidden;
   } */
+    section#modal___financial .col-md-12 {
+    padding: 0;
+    margin: auto;
+  }
+
+  .modal_ocde .modal_content section {
+    margin: auto;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    height: 100% !important;
+  }
+
+  .modal_ocde .modal_content {
+    height: auto;
+    overflow: initial;
+  }
 }
 
 @media (max-width: 767px) {
