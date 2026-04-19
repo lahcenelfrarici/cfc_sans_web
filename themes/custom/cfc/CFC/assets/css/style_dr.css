@@ -5083,3 +5083,70 @@ section#modal___financial .col-md-12 {
   top: -49px;
   font-size: 48px;
 }
+
+.page-cimac-casablanca-international-mediation-and-arbitration-centre #banner-title {
+  display: none;
+}
+
+.page-cimac-casablanca-international-mediation-and-arbitration-centre  footer {
+  display: none;
+}
+.page-cimac-casablanca-international-mediation-and-arbitration-centre  #contact---us {
+  display: none;
+}
+.page-cimac-casablanca-international-mediation-and-arbitration-centre  .section---filter-block {
+  display: none;
+}
+.page-cimac-casablanca-international-mediation-and-arbitration-centre header {
+  display: none;
+}
+
+.section-navbar.cimag_bg {
+  display: none;
+}
+.section-hero.bg___cimag .container {
+  display: none;
+}
+.section-hero.bg___cimag::after {
+  opacity: 0;
+}
+.section-hero.bg___cimag::before {
+  background: url('/themes/custom/cfc/CFC/assets/images/bg_cimag.png') center/cover no-repeat;
+}
+
+.section-hero.bg___cimag {
+
+  height: 905px;
+}
+.sc___2 .about-img-placeholder {
+  background: transparent;
+  height: 490px;
+  width: 450px;
+  text-align: right;
+  position: relative;
+}
+/* .sc___2 .about-img-placeholder {
+  background: transparent;
+  height: 490px;
+  width: 450px;
+  text-align: right;
+  position: relative;
+}
+.sc___2  .cible.about-right {
+  text-align: right;
+  right: 0;
+  float: right;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.cible.about-right .about-img-placeholder::after {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 4px;
+  height: 100%;
+  background: rgb(200, 149, 42);
+  content: "";
+} */
