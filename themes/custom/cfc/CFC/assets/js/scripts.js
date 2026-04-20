@@ -1,7 +1,39 @@
 (function ($) {
   $(document).ready(function () {
     //
+    $('.tab-btn').on('click', function () {
+      var target = $(this).data('tab');
 
+      // switch active button
+      $('.tab-btn').removeClass('active');
+      $(this).addClass('active');
+
+      // switch content
+      $('.tab-content').hide().removeClass('active');
+      $('#' + target).fadeIn(200).addClass('active');
+    });
+
+       var items = $('.all__items > div');
+    var btn = $('.click____items a');
+    var itemsToShow = 4;
+
+    // hide items after 4
+    items.slice(itemsToShow).hide();
+
+    btn.on('click', function (e) {
+      e.preventDefault();
+
+      // show all items
+      items.slideDown();
+
+      // scroll smoothly to new content
+      $('html, body').animate({
+        scrollTop: items.eq(itemsToShow).offset().top - 100
+      }, 600);
+
+      // hide button after click (optional)
+      $(this).fadeOut();
+    });
     // Target date (adjust as needed)
     const targetDate = new Date("2025-07-08T22:09:30").getTime();
 
