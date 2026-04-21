@@ -5172,3 +5172,29 @@ section#modal___financial .col-md-12 {
 .all__items > div:nth-child(n+5) {
   display: none;
 }
+
+#top__logo_modal a {
+  display: inline-block;
+  background: #db5434;
+  color: var(--white);
+  font-family: "Averta CY";
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 10px 32px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+  position: absolute;
+  bottom: 8px;
+  z-index: 99;
+  left: 0;
+  right: 0;
+  width: max-content;
+  margin: auto;
+}
+#top__logo_modal {
+  position: relative;
+}
