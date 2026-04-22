@@ -1226,7 +1226,10 @@
 
 @media (max-width: 991px) {
 
-
+#top__logo_modal a {
+  padding: 5px;
+  bottom: 0;
+}
 
   .web__form_dr form .js-form-item label {
     font-size: 16px;

@@ -5198,3 +5198,7 @@ section#modal___financial .col-md-12 {
 #top__logo_modal {
   position: relative;
 }
+div#top__logo_modal div {
+  width: 100%;
+  height: 100%;
+}
