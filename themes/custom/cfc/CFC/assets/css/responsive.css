@@ -1226,10 +1226,10 @@
 
 @media (max-width: 991px) {
 
-#top__logo_modal a {
-  padding: 5px;
-  bottom: 0;
-}
+  #top__logo_modal a {
+    padding: 5px;
+    bottom: 0;
+  }
 
   .web__form_dr form .js-form-item label {
     font-size: 16px;
@@ -3621,7 +3621,7 @@
     height: 650px;
     overflow-x: hidden;
   } */
-    section#modal___financial .col-md-12 {
+  section#modal___financial .col-md-12 {
     padding: 0;
     margin: auto;
   }
@@ -3639,12 +3639,39 @@
     overflow: initial;
   }
 
-.speaker-card {
-  margin: 5px;
-}
-.speaker-name {
-  font-size: 14px;
-}
+  .speaker-card {
+    margin: 5px;
+  }
+
+  .speaker-name {
+    font-size: 14px;
+  }
+
+  #about_maps_1 .wrapper-element-africa>div {
+    text-transform: inherit;
+  }
+
+  .item-info-content {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .item-info-content .flag--element {
+    width: 100%;
+    height: 100%;
+    padding-bottom: 30px;
+  }
+
+  .item-info-content .flag--element img {
+    width: auto !important;
+    height: 100% !important;
+  }
+
+  .item-info-content .wrapper-element-africa {
+    right: auto;
+  }
+
+
 }
 
 @media (max-width: 767px) {

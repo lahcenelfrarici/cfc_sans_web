@@ -1709,7 +1709,7 @@ fieldset.captcha.captcha-type-challenge--recaptcha p.error {
 }
 
 .all_form_inter .wrapper_submit input {
-  font-size: 21px;
+  font-size: 18px;
 }
 
 .item-info-content .wrapper-element-africa {
@@ -5075,10 +5075,12 @@ section.img_event40under40_sc2_section {
   width: 100%;
   height: 100%;
 }
+
 section#modal___financial .col-md-12 {
   margin: 0;
   padding: 0;
 }
+
 .modal_ocde .close_btn {
   top: -49px;
   font-size: 48px;
@@ -5088,15 +5090,18 @@ section#modal___financial .col-md-12 {
   display: none;
 }
 
-.page-cimac-casablanca-international-mediation-and-arbitration-centre  footer {
+.page-cimac-casablanca-international-mediation-and-arbitration-centre footer {
   display: none;
 }
-.page-cimac-casablanca-international-mediation-and-arbitration-centre  #contact---us {
+
+.page-cimac-casablanca-international-mediation-and-arbitration-centre #contact---us {
   display: none;
 }
-.page-cimac-casablanca-international-mediation-and-arbitration-centre  .section---filter-block {
+
+.page-cimac-casablanca-international-mediation-and-arbitration-centre .section---filter-block {
   display: none;
 }
+
 .page-cimac-casablanca-international-mediation-and-arbitration-centre header {
   display: none;
 }
@@ -5130,6 +5135,7 @@ section#modal___financial .col-md-12 {
 
   height: 905px;
 }
+
 .sc___2 .about-img-placeholder {
   background: transparent;
   height: 490px;
@@ -5137,6 +5143,7 @@ section#modal___financial .col-md-12 {
   text-align: right;
   position: relative;
 }
+
 /* .sc___2 .about-img-placeholder {
   background: transparent;
   height: 490px;
@@ -5166,10 +5173,12 @@ section#modal___financial .col-md-12 {
   display: flex;
   flex-direction: column;
 }
+
 .container.cpcn {
   display: flex;
 }
-.all__items > div:nth-child(n+5) {
+
+.all__items>div:nth-child(n+5) {
   display: none;
 }
 
@@ -5195,10 +5204,28 @@ section#modal___financial .col-md-12 {
   width: max-content;
   margin: auto;
 }
+
 #top__logo_modal {
   position: relative;
 }
+
 div#top__logo_modal div {
   width: 100%;
   height: 100%;
+}
+
+.item-info-content .wrapper-element-africa #edit-email {
+  border: 1px solid #376a7b !important;
+}
+
+html[lang="fr"]  .management_team .row > div:nth-child(1){
+  order: 3 !important;
+}
+
+html[lang="fr"] .management_team .row > div:nth-child(3){
+  order:  5 !important;
+}
+
+html[lang="fr"] .management_team .row > div:nth-child(6) {
+  order: 6 !important;
 }
