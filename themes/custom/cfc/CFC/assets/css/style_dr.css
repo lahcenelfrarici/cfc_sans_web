@@ -5218,14 +5218,36 @@ div#top__logo_modal div {
   border: 1px solid #376a7b !important;
 }
 
-html[lang="fr"]  .management_team .row > div:nth-child(1){
+html[lang="fr"] .management_team .row>div:nth-child(1) {
   order: 3 !important;
 }
 
-html[lang="fr"] .management_team .row > div:nth-child(3){
-  order:  5 !important;
+html[lang="fr"] .management_team .row>div:nth-child(3) {
+  order: 5 !important;
 }
 
-html[lang="fr"] .management_team .row > div:nth-child(6) {
+html[lang="fr"] .management_team .row>div:nth-child(6) {
   order: 6 !important;
+}
+
+.maps-africa .img--wrapper {
+  display: none;
+}
+
+.maps-africa .container-layout {
+  margin-top: 50px;
+}
+
+html[lang="fr"] .management_team .row>div:nth-child(2) {
+  order: 4 !important;
+}
+
+html[lang="fr"] .management_team .row>div:nth-child(5) {
+  order: 1 !important;
+}
+
+html[lang="fr"] .management_team .row>div:nth-child(2) {}
+
+html[lang="fr"] .management_team .row>div:nth-child(4) {
+  order: 2 !important;
 }
