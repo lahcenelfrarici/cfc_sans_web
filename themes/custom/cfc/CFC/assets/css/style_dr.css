@@ -5251,3 +5251,6 @@ html[lang="fr"] .management_team .row>div:nth-child(2) {}
 html[lang="fr"] .management_team .row>div:nth-child(4) {
   order: 2 !important;
 }
+.form__formualaire .js-form-item input {
+  border: 1px solid #007565 !important;
+}
