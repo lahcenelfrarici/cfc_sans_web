@@ -13,7 +13,7 @@
       $('#' + target).fadeIn(200).addClass('active');
     });
 
-       var items = $('.all__items > div');
+    var items = $('.all__items > div');
     var btn = $('.click____items a');
     var itemsToShow = 4;
 
