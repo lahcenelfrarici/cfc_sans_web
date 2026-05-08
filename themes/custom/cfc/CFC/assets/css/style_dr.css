@@ -5254,3 +5254,6 @@ html[lang="fr"] .management_team .row>div:nth-child(4) {
 .form__formualaire .js-form-item input {
   border: 1px solid #007565 !important;
 }
+.wrapper--logo-after-maps p {
+  display: none;
+}
