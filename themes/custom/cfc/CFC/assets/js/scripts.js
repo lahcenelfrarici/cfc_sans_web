@@ -1154,17 +1154,37 @@
 
     // Function to show item info and add class to the clicked path
     function showItemInfo(item, country, factSheet, factSheet_img) {
+      const currentLang = $('html').attr('lang');
+
+      const downloadText =
+        currentLang === 'fr' ?
+        "Téléchargez la fiche d'information du pays" :
+        "Download the country facts sheet";
+
       const content = `
-        <div class="item-info-content">
-          <div class="flag--element">
-            <img src="${factSheet_img}" alt="Fact Sheet Flag">
-          </div>
-          <div class="wrapper-element-africa">
-            <div>${country}</div>
-            <div class="click--modal-hp" data-pdf="${factSheet}" data-country="${country}">Download the country facts sheet</div>
-          </div>
+    <div class="item-info-content">
+      <div class="flag--element">
+        <img src="${factSheet_img}" alt="Fact Sheet Flag">
+      </div>
+      <div class="wrapper-element-africa">
+        <div>${country}</div>
+        <div class="click--modal-hp" data-pdf="${factSheet}" data-country="${country}">
+          ${downloadText}
         </div>
-      `;
+      </div>
+    </div>
+  `;
+      // const content = `
+      //   <div class="item-info-content">
+      //     <div class="flag--element">
+      //       <img src="${factSheet_img}" alt="Fact Sheet Flag">
+      //     </div>
+      //     <div class="wrapper-element-africa">
+      //       <div>${country}</div>
+      //       <div class="click--modal-hp" data-pdf="${factSheet}" data-country="${country}">Download the country facts sheet</div>
+      //     </div>
+      //   </div>
+      // `;
 
       let itemInfo = $('.item-info');
       if (itemInfo.length === 0) {
