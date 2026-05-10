@@ -5257,3 +5257,23 @@ html[lang="fr"] .management_team .row>div:nth-child(4) {
 .wrapper--logo-after-maps p {
   display: none;
 }
+
+.page-gfci #banner-title {
+  display: none;
+}
+.page-gfci #contact---us {
+  display: none;
+}
+.page-gfci .section---filter-block {
+  display: none;
+}
+
+.page-gfci footer ,.page-gfci header.bg-white.shadow-sm.header--menu{
+  display: none;
+}
+.page-gfci header.absolute.top-0.left-0.right-0.z-50 {
+  position: absolute;
+}
+#d-block-ft {
+  display: block;
+}
