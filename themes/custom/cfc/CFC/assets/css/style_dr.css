@@ -5280,3 +5280,13 @@ html[lang="fr"] .management_team .row>div:nth-child(4) {
 /* .mt-4.paginations-list.text-center {
   display: none;
 } */
+
+.step_step_webform textarea#edit-suggestion {
+  border: 1px solid #007565 !important;
+}
+.step_step_webform .webform-flex.webform-flex--1 input, .step_step_webform .webform-flex.webform-flex--1 select {
+  border: 1px solid #007565 !important;
+}
+.step_step_webform div#edit-flexbox-01 .webform-flex.webform-flex--1 label {
+  color: #000 !important;
+}
