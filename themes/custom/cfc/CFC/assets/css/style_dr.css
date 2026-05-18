@@ -5290,3 +5290,15 @@ html[lang="fr"] .management_team .row>div:nth-child(4) {
 .step_step_webform div#edit-flexbox-01 .webform-flex.webform-flex--1 label {
   color: #000 !important;
 }
+.step_step_webform div#edit-flexbox-02 .webform-flex.webform-flex--1 .wrapper__list label {
+  color: #007464 !important;
+  position: relative !important;
+  display: block !important;
+  opacity: 1 !important;
+}
+.step_step_webform div#edit-flexbox-02 .webform-flex.webform-flex--1 label {
+  opacity: 0;
+}
+#edit-processed-text-05 {
+  display: none;
+}
