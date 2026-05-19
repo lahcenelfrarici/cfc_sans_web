@@ -1968,37 +1968,34 @@
   //   }
   // });
   const modal_1 = $('.all_modale_albume');
-  const modalVideo = modal_1.find('video');
+const modalVideo = modal_1.find('video');
 
-  $('.all___class_box_albume').click(function () {
-    const videoSrc = $(this).data('video');
+$('.all___class_box_albume').click(function () {
+  const videoSrc = $(this).data('video');
 
-    // Stop current video first
-    modalVideo[0].pause();
-    modalVideo.attr('src', '');
+  modalVideo[0].pause();
+  modalVideo.attr('src', videoSrc);
+  modalVideo[0].load();
+  modal_1.addClass('active');
 
-    // Set new source and open modal
-    modalVideo.attr('src', videoSrc);
-    modal_1.addClass('active');
-
-    // Load then play
-    modalVideo[0].load();
-    modalVideo[0].play();
+  modalVideo[0].play().catch(function(e) {
+    console.log('Autoplay blocked:', e);
   });
+});
 
-  $('.close-btn').click(function () {
+$('.close-btn').click(function () {
+  modal_1.removeClass('active');
+  modalVideo[0].pause();
+  modalVideo.attr('src', '');
+});
+
+modal_1.click(function (e) {
+  if ($(e.target).is(modal_1)) {
     modal_1.removeClass('active');
     modalVideo[0].pause();
     modalVideo.attr('src', '');
-  });
-
-  modal_1.click(function (e) {
-    if ($(e.target).is(modal_1)) {
-      modal_1.removeClass('active');
-      modalVideo[0].pause();
-      modalVideo.attr('src', '');
-    }
-  });
+  }
+});
   //
   $('.investment-box').each(function () {
     const href = $(this).attr('href'); // Get the href attribute
