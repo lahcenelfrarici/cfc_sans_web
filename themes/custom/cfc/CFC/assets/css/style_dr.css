@@ -5329,3 +5329,6 @@ html[lang="fr"] .management_team .row>div:nth-child(4) {
 .page-survey #banner-title {
   display: none;
 }
+.icon__play_vd svg path {
+  fill: #39808d;
+}
