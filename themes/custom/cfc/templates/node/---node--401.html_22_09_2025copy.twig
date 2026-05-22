@@ -1,0 +1,80 @@
+{# <div class="page__esp">
+{{ drupal_entity('block','cfc_bannercasablancafinancecityconectandooportunidades') }}
+{{ drupal_entity('block','cfc_safelandingbloc1') }}
+{{ drupal_entity('block','cfc_doingbusinessbloc1') }}
+{{ drupal_entity('block','cfc_doingbusinessbloc2') }}
+{{ drupal_entity('block','cfc_effortlessbusinessconnectionsbloc3_v1') }}
+{{ drupal_entity('block','cfc_moroccoanafricanpioneerandatrustedpartnerforgrowth') }}
+	{{ drupal_view('country_list','block_1') }}
+  	{{ drupal_entity('block','cfc_doingbusinessbloc4') }}
+
+</div>
+<section class="contact---us contact---us-block" id="contact---us">
+	<div
+		class="contact-container">
+
+		<div class="contact-form">
+			<h3>{{'I am interested in getting in touch with Casablanca Finance City'|t}}</h3>
+
+			<div class="web__form_dr">
+				{{ drupal_entity('block','cfc_webform_10') }}
+			</div>
+		</div>
+
+
+		<div class="contact-image">
+			<img src="/themes/custom/cfc/CFC/assets/images/contatc-img.png" alt="Office"/>
+		</div>
+	</div>
+</section> #}
+
+
+{# **************** #}
+{# node--380.html.twig #}
+
+{# Add GTM script for head #}
+{% block head_scripts %}
+<!-- Google Tag Manager -->
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-P744XVXB');
+</script>
+<!-- End Google Tag Manager -->
+{% endblock %}
+
+{# Body content starts #}
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P744XVXB"
+height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div class="page__esp">
+  {{ drupal_entity('block','cfc_bannercasablancafinancecityconectandooportunidades') }}
+  {{ drupal_entity('block','cfc_safelandingbloc1') }}
+  {{ drupal_entity('block','cfc_doingbusinessbloc1') }}
+  {{ drupal_entity('block','cfc_doingbusinessbloc2') }}
+  {{ drupal_entity('block','cfc_effortlessbusinessconnectionsbloc3_v1') }}
+  {{ drupal_entity('block','cfc_moroccoanafricanpioneerandatrustedpartnerforgrowth') }}
+  {{ drupal_view('country_list','block_1') }}
+  {{ drupal_entity('block','cfc_doingbusinessbloc4') }}
+  {# 401 #}
+</div>
+
+<section class="contact---us contact---us-block" id="contact---us">
+  <div class="contact-container">
+    <div class="contact-form">
+      <h3>{{ 'I am interested in getting in touch with Casablanca Finance City'|t }}</h3>
+      <div class="web__form_dr">
+        {{ drupal_entity('block','cfc_webform_10') }}
+      </div>
+    </div>
+    <div class="contact-image">
+      <img src="/themes/custom/cfc/CFC/assets/images/contatc-img.png" alt="Office"/>
+    </div>
+  </div>
+</section>
