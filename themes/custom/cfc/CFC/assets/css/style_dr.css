@@ -5380,3 +5380,9 @@ html[lang="fr"] .management_team .row>div:nth-child(4) {
   background: #009681 !important;
   border: 0 !important;
 }
+.page_2_adv.page-carbon-market-africa form input {
+  border: 1px solid #009681 !important;
+}
+.page_2_adv.page-carbon-market-africa form label {
+  color: #007c80 !important;
+}
