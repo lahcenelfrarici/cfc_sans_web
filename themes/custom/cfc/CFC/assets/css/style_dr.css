@@ -5366,3 +5366,17 @@ html[lang="fr"] .management_team .row>div:nth-child(4) {
 .page_2_adv.page-carbon-market-africa .logo_form_bottom {
   margin-top: -250px;
 }
+
+.page_2_adv.page-carbon-market-africa #contact---webform4 {
+  background: var(--lin, linear-gradient(102deg, #009681 0.97%, #00677F 97.19%));
+  z-index: initial;
+}
+
+.page_2_adv.page-carbon-market-africa #join_the_coin {
+  background: #009681;
+}
+
+.page_2_adv.page-carbon-market-africa div#join_the_coin .web_form_the_coin .wrapper_submit input {
+  background: #009681 !important;
+  border: 0 !important;
+}
