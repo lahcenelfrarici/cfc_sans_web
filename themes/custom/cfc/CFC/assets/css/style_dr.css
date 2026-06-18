@@ -5396,3 +5396,14 @@ html[lang="fr"] .management_team .row>div:nth-child(4) {
 .page-diaspora  .la_slider_members_elements {
   padding: 0;
 }
+.webform-confirmation-modal--content a {
+
+  display: flex;
+  align-content: center;
+  margin: auto;
+  text-align: center;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 0 5px;
+}
