@@ -3681,12 +3681,12 @@
 @media (max-width: 767px) {
 
   .speakers__grid {
-    display: flex;
+    display: flex !important;
     flex-direction: column;
   }
 
   .programme .container {
-    padding: 0 15px;
+    padding: 0 15px !important;
   }
 
   .members {
