@@ -5407,3 +5407,7 @@ html[lang="fr"] .management_team .row>div:nth-child(4) {
   align-items: center;
   gap: 0 5px;
 }
+.webform-confirmation-modal--content h3 {
+
+  font-size: 25px;
+}
