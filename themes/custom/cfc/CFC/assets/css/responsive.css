@@ -3679,6 +3679,16 @@
 }
 
 @media (max-width: 767px) {
+
+  .speakers__grid {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .programme .container {
+    padding: 0 15px;
+  }
+
   .members {
     width: 100%;
   }
