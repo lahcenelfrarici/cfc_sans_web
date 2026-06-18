@@ -5386,3 +5386,13 @@ html[lang="fr"] .management_team .row>div:nth-child(4) {
 .page_2_adv.page-carbon-market-africa form label {
   color: #007c80 !important;
 }
+
+.page-diaspora  .bg-dark.text-light.py-5 {
+  display: none;
+}
+.page-diaspora  .bg-white.shadow-sm.header--menu {
+  display: none;
+}
+.page-diaspora  .la_slider_members_elements {
+  padding: 0;
+}
