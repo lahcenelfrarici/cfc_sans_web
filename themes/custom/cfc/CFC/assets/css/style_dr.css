@@ -5411,3 +5411,6 @@ html[lang="fr"] .management_team .row>div:nth-child(4) {
 
   font-size: 25px;
 }
+.page-diaspora .register {
+  display: none;
+}
