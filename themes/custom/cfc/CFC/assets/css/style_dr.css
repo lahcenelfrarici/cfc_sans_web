@@ -5414,3 +5414,26 @@ html[lang="fr"] .management_team .row>div:nth-child(4) {
 .page-diaspora .register {
   display: none;
 }
+
+.page-cbf .contact-form {
+  display: none;
+}
+.page-cbf .section---filter-block {
+  display: none;
+}
+.page-cbf .bg-dark.text-light.py-5 {
+  display: none;
+}
+
+.page-cbf .bg-white.shadow-sm.header--menu {
+  display: none;
+}
+
+
+.page-cbf #contact---us {
+  display: none;
+}
+.page-cbf #banner-title {
+  display: none;
+}
+

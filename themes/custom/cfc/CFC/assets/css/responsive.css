@@ -1225,6 +1225,7 @@
 }
 
 @media (max-width: 991px) {
+
   .step_step_webform div#edit-flexbox-02 .webform-flex.webform-flex--1 label {
     opacity: 1;
     color: #007464 !important;
