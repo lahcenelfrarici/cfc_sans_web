@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Casablanca Business Forum</title>
+		<style>:root
+		{
+			--navy: #10232d;
+			--navy-soft: #16303d;
+			--teal-1: #2c6e6a;
+			--teal-2: #4fa89c;
+			--teal-3: #7fd6c2;
+			--teal-4: #bff0e2;
+			--mint: #e7f5f1;
+			--red: #c94a34;
+			--white: #ffffff;
+			--ink: #1c2b30;
+		}
+		* {
+			box-sizing: border-box;
+		}
+		body {
+			margin: 0;
+			font-family: 'Segoe UI', Arial, sans-serif;
+			background: var(--white);
+			color: var(--ink);
+		}
+		h1,
+		h2,
+		h3 {
+			font-family: 'Segoe UI', Arial, sans-serif;
+			letter-spacing: 0.5px;
+			margin: 0;
+		}
+		a {
+			color: inherit;
+		}
+		.btn-register {
+			display: inline-block;
+			background: var(--teal-3);
+			color: var(--navy);
+			font-weight: 700;
+			font-size: 13px;
+			letter-spacing: 1px;
+			padding: 10px 26px;
+			border: none;
+			border-radius: 20px;
+			cursor: pointer;
+			text-transform: uppercase;
+		}
+		.btn-register:hover {
+			background: var(--teal-4);
+		}
+
+		/* ============ HEADER SECTION ============ */
+		.header-section {
+			position: relative;
+			background: var(--navy);
+			color: var(--white);
+			padding: 28px 6% 60px;
+			overflow: hidden;
+		}
+		.header-section .nav-bar {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			position: relative;
+			z-index: 2;
+		}
+		.header-section .logo-slot img {
+			height: 44px;
+			display: block;
+		}
+		.header-section .nav-links {
+			display: flex;
+			gap: 22px;
+			background: rgba(255, 255, 255, 0.06);
+			padding: 10px 18px;
+			border-radius: 24px;
+			font-size: 13px;
+		}
+		.header-section .hero-content {
+			position: relative;
+			z-index: 2;
+			margin-top: 60px;
+			max-width: 560px;
+		}
+		.header-section .hero-content h1 {
+			font-size: 44px;
+			line-height: 1.15;
+		}
+		.header-section .hero-content h1 span {
+			color: var(--teal-3);
+		}
+		.header-section .edition-row {
+			display: flex;
+			align-items: center;
+			gap: 12px;
+			margin: 14px 0;
+			font-size: 13px;
+		}
+		.header-section .edition-row .date-pill {
+			background: var(--teal-3);
+			color: var(--navy);
+			font-weight: 700;
+			padding: 5px 14px;
+			border-radius: 14px;
+		}
+		.header-section .hero-sub {
+			font-size: 20px;
+			font-weight: 600;
+			margin-bottom: 22px;
+		}
+		.header-section .support-row {
+			display: flex;
+			align-items: center;
+			gap: 10px;
+			font-size: 12px;
+			opacity: .85;
+			margin-bottom: 24px;
+		}
+		.header-section .support-row .support-logo-slot img {
+			height: 26px;
+		}
+		/* decorative fan graphic — replace via .header-section .fan-graphic svg if desired */
+		.fan-graphic {
+			position: absolute;
+			top: -40px;
+			right: -40px;
+			z-index: 1;
+			opacity: .9;
+		}
+
+		/* ============ INTRO / ABOUT SECTION (section 2) ============ */
+		.intro-section {
+			background: var(--white);
+			padding: 70px 8%;
+		}
+		.intro-section .intro-title {
+			font-size: 30px;
+			color: var(--navy);
+			margin-bottom: 26px;
+		}
+		.intro-section .intro-text {
+			max-width: 900px;
+			font-size: 14.5px;
+			line-height: 1.7;
+			color: #3a4a4f;
+		}
+		.intro-section .intro-text p {
+			margin: 0 0 16px;
+		}
+		.intro-section .intro-text a {
+			color: var(--red);
+			text-decoration: underline;
+			font-weight: 600;
+		}
+		.intro-section .featured-speaker {
+			display: flex;
+			gap: 24px;
+			align-items: center;
+			margin-top: 40px;
+			padding-top: 34px;
+			border-top: 1px solid #e6e6e6;
+		}
+		.intro-section .featured-speaker .img-slot {
+			width: 110px;
+			height: 110px;
+			border-radius: 8px;
+			overflow: hidden;
+			flex-shrink: 0;
+			background: #dcecec;
+		}
+		.intro-section .featured-speaker .img-slot img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			display: block;
+		}
+		.intro-section .featured-speaker .fs-name {
+			font-size: 20px;
+			color: var(--navy);
+			font-weight: 700;
+		}
+		.intro-section .featured-speaker .fs-badge {
+			display: inline-block;
+			background: var(--red);
+			color: #fff;
+			font-size: 11px;
+			font-weight: 700;
+			padding: 3px 10px;
+			border-radius: 3px;
+			margin: 8px 0;
+		}
+		.intro-section .featured-speaker .fs-bio {
+			font-size: 13px;
+			color: #4a4a4a;
+			max-width: 640px;
+			line-height: 1.6;
+		}
+
+		/* ============ SPEAKERS SECTION (section 3) ============ */
+		.speakers-section {
+			background: var(--navy);
+			color: var(--white);
+			padding: 70px 8% 90px;
+		}
+		.speakers-section .speakers-title {
+			font-size: 28px;
+			margin-bottom: 36px;
+		}
+		.speakers-section .speakers-grid {
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			gap: 36px 24px;
+		}
+		.speaker-card {
+			position: relative;
+			text-align: center;
+			cursor: pointer;
+		}
+		.speaker-card.hidden-speaker {
+			display: none;
+		}
+		.speaker-card .avatar-ring {
+			width: 160px;
+			height: 160px;
+			margin: 0 auto 35px;
+			border-radius: 50%;
+			background: conic-gradient(var(--teal-3) 0turn,var(--teal-1) 0.5turn,var(--teal-3) 1turn);
+			padding: 6px;
+		}
+		.speaker-card .avatar-ring .avatar-slot {
+			width: 100%;
+			height: 100%;
+			border-radius: 50%;
+			overflow: hidden;
+			background: #2a3f47;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		.speaker-card .avatar-ring .avatar-slot img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			display: block;
+		}
+		.speaker-card .sp-name {
+			font-weight: 700;
+			font-size: 14px;
+		}
+		.speaker-card .sp-role {
+			font-size: 11px;
+			opacity: .75;
+			line-height: 1.4;
+			margin-top: 2px;
+		}
+
+		/* hover tooltip bio card */
+		.speaker-card .sp-tooltip {
+			position: absolute;
+			bottom: calc(100% + 12px);
+			left: 50%;
+			transform: translateX(-50%) translateY(6px);
+			width: 260px;
+			background: var(--white);
+			color: var(--ink);
+			font-size: 12px;
+			line-height: 1.6;
+			padding: 16px;
+			border-radius: 6px;
+			box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+			opacity: 0;
+			visibility: hidden;
+			transition: opacity 0.18s ease, transform 0.18s ease;
+			z-index: 5;
+			text-align: left;
+		}
+		.speaker-card:hover .sp-tooltip {
+			opacity: 1;
+			visibility: visible;
+			transform: translateX(-50%) translateY(0);
+		}
+		.speakers-section .view-all-wrap {
+			text-align: right;
+			margin-top: 30px;
+		}
+		.speakers-section .view-all-btn {
+			background: none;
+			border: none;
+			color: var(--teal-3);
+			font-size: 13px;
+			font-weight: 600;
+			cursor: pointer;
+			text-decoration: underline;
+		}
+
+		/* ============ HIGHLIGHTS SECTION (section 4) ============ */
+		.highlights-section {
+			background: var(--mint);
+			padding: 70px 8% 90px;
+			text-align: center;
+		}
+		.highlights-section .highlights-title {
+			font-size: 28px;
+			color: var(--navy);
+			margin-bottom: 40px;
+		}
+		.highlights-section .highlight-row {
+			display: flex;
+			gap: 26px;
+			text-align: left;
+			max-width: 980px;
+			margin: 0 auto 30px;
+			align-items: flex-start;
+		}
+		.sp-name {
+			position: relative;
+			display: block;
+			font-size: 28px;
+			font-weight: 600;
+			color: #fff;
+			text-align: center;
+
+		}
+
+		.sp-name::after {
+			content: "";
+			display: block;
+			width: 100%;
+			max-width: 40%; /* adjust as needed */
+			height: 2px;
+			background: #3ec7c3;
+			margin: 5px auto 0;
+		}
+		.highlights-section .tag {
+			flex-shrink: 0;
+			width: 130px;
+			text-align: center;
+			border: 1px solid var(--navy);
+			border-radius: 16px;
+			padding: 6px 10px;
+			font-size: 12px;
+			font-weight: 700;
+			color: var(--navy);
+		}
+		.highlights-section .highlight-body h3 {
+			font-size: 14px;
+			color: var(--red);
+			margin-bottom: 6px;
+		}
+		.highlights-section .highlight-body p {
+			font-size: 13px;
+			line-height: 1.6;
+			color: #3a4a4f;
+			margin: 0;
+		}
+
+		/* ============ REGISTER SECTION (section 5) ============ */
+		.register-section {
+			position: relative;
+			padding: 80px 8% 40px;
+			color: var(--white);
+			text-align: center;
+			background: linear-gradient(180deg, rgba(16,35,45,.55), rgba(16,35,45,.9)), var(--bg-slot, linear-gradient(160deg, #1c3742, #0c1a20));
+			background-size: cover;
+			background-position: center;
+		}
+		/* to use a real photo: set --bg-slot via inline style or replace the linear-gradient above with url('your-image.jpg') */
+		.register-section .register-title {
+			font-size: 26px;
+			margin-bottom: 30px;
+		}
+		.register-section form {
+			display: flex;
+			flex-direction: column;
+			gap: 12px;
+			max-width: 380px;
+			margin: 0 auto 26px;
+		}
+		.register-section input {
+			padding: 12px 16px;
+			border-radius: 6px;
+			border: none;
+			font-size: 13px;
+			background: rgba(255, 255, 255, 0.12);
+			color: #fff;
+		}
+		#header {
+			padding: 0;
+		}
+		#header img {
+			width: 100%;
+			height: 100%;
+		}
+
+		#header .hero-content {
+			margin: 0;
+			max-width: initial;
+			position: relative;
+		}
+
+		.kk_kk .btn-register {
+			margin: auto;
+			text-align: center;
+			width: auto;
+			display: flex;
+			position: relative;
+			top: -17px;
+			z-index: 99;
+		}
+		.register-section input::placeholder {
+			color: rgba(255, 255, 255, 0.7);
+		}
+		.register-section .join-us {
+			font-size: 13px;
+			margin-bottom: 10px;
+		}
+		.register-section .social-row {
+			display: flex;
+			justify-content: center;
+			gap: 14px;
+			margin-bottom: 26px;
+		}
+		.register-section .social-row .icon-slot {
+			width: 30px;
+			height: 30px;
+			border-radius: 50%;
+			background: rgba(255, 255, 255, 0.12);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 12px;
+		}
+		.register-section .footer-note {
+			font-size: 11px;
+			opacity: .7;
+			padding-bottom: 20px;
+		}
+
+		@media(max-width:900px) {
+			.speakers-section .speakers-grid {
+				grid-template-columns: repeat(2, 1fr);
+			}
+			.highlights-section .highlight-row {
+				flex-direction: column;
+			}
+			.header-section .hero-content h1 {
+				font-size: 32px;
+			}
+		}
+		.intro-section .intro-title {
+			text-transform: uppercase;
+			font-size: 40px;
+		}
+		.intro-section .intro-text a {
+			color: #18c392;
+		}
+
+		.highlights-section .highlights-title {
+			text-align: left;
+			text-transform: uppercase;
+			font-size: 40px;
+		}
+		.highlights-section .tag {
+			border: 1px solid var(--red);
+			color: var(--red);
+		}
+		.register-section form {
+
+			width: 50%;
+
+			max-width: initial;
+		}
+
+		.intro-section .intro-title {
+			text-transform: uppercase;
+		}
+		.intro-section .intro-text a {
+			color: #18c392;
+		}
+		.highlights-section .highlights-title {
+			text-align: left;
+			text-transform: uppercase;
+			font-size: 40px;
+		}
+		.highlights-section .tag {
+			border: 1px solid var(--red);
+			color: var(--red);
+		}
+		.register-section .register-title {
+			text-transform: uppercase;
+			font-size: 40px;
+		}
+
+		.register-section form [type="submit"] {
+			width: 50%;
+			margin: auto;
+		}
+		.speakers-section .speakers-title {
+			text-transform: uppercase;
+			font-size: 40px;
+		}
+
+		body .register-section form input {
+			background: #ffffff42 !important;
+			border: 1px solid #fff !important;
+			color: #fff;
+		}
+
+		.register-section input::placeholder {
+			color: #fff !important;
+		}
+		.highlights-section .highlight-row {
+			max-width: initial;
+		}
+		.speaker-card .sp-tooltip {
+
+			width: 500 PX;
+		}
+		.avatar-ring {
+			position: relative;
+			width: 180px;
+			height: 180px;
+			margin: auto;
+			border-radius: 50%;
+		}
+
+		/* Decorative ring */
+		.avatar-ring::before {
+			content: "";
+			position: absolute;
+			inset: -20px;
+			border-radius: 50%;
+
+			background: repeating-conic-gradient(#20c4ff 0deg 8deg, transparent 8deg 18deg);
+
+			/* thickness of the bars */
+			-webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 28px), #000 calc(100% - 28px));
+
+			mask: radial-gradient(farthest-side, transparent calc(100% - 28px), #000 calc(100% - 28px));
+		}
+
+		/* Image */
+		.avatar-slot {
+			position: absolute;
+			inset: 0;
+			border-radius: 50%;
+			overflow: hidden;
+			border: 8px solid #57cfc6;
+			z-index: 2;
+		}
+
+		.avatar-slot img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+
+		.featured-speaker {
+			display: flex;
+			align-items: center;
+			gap: 0 30px;
+			margin-bottom: 5%;
+		}
+
+		.fs-badge {
+			color: var(--red);
+			font-size: 23px;
+		}
+
+		.featured-speaker .fs-badge {
+			margin: 5px 0;
+		}
+		.fs-name {
+			font-size: 23px;
+		}
+		.register-section {
+			position: relative;
+			padding: 80px 8% 40px;
+			color: var(--white);
+			text-align: center;
+
+			background: linear-gradient(180deg, rgba(16, 35, 45, 0.55), rgba(16, 35, 45, 0.9)), url("/themes/custom/cfc/CFC/assets/images/footer_1.jpg");
+
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+		}
+		@media(max-width: 991px) {
+.featured-speaker {
+  margin-bottom: 20px;
+  gap: 20px 0;
+}
+			.featured-speaker {
+				margin-bottom: 0;
+				flex-direction: column;
+			}
+			.img-slot {
+				width: 100%;
+			}
+			.img-slot img {
+				width: 100%;
+			}
+			.speakers-section .speakers-grid {
+				flex-direction: column;
+				display: flex;
+			}
+			.register-section form {
+				width: 100%;
+			}
+			.register-section form [type="submit"] {
+				width: 100%;
+			}
+		}
+    .img-slot img {
+  width: 100%;
+}
+	</style>
+</head>
+<body>
+
+	<!-- ============================================================ top: calc(100% + 12px); -->
+
+	<!-- 1. HEADER SECTION — class="header-section"                   -->
+	<!-- Replace .logo-slot img src with the real CFC logo.            -->
+	<!-- Replace .support-logo-slot img src with the partner logo.     -->
+	<!-- The fan-graphic svg is a placeholder for the radiating motif. -->
+	<!-- ============================================================ -->
+		<div class="header-section" id="header"> <div class="hero-content">
+			<div class="edition-row-img">
+				<img src="/themes/custom/cfc/CFC/assets/images/header__1.png" alt="partner logo placeholder">
+			</div>
+			{# <h1>CASABLANCA<br><span>BUSINESS</span> FORUM</h1>
+									    <div class="edition-row">
+									     <img src="/themes/custom/cfc/CFC/assets/images/diaport_1.jpeg" alt="partner logo placeholder">
+									    </div>
+									    <div class="hero-sub">Africa's Next Economic Chapter</div> #}
+
+
+		</div>
+	</div>
+	<a href="/cbf/#register" class="kk_kk">
+
+		<button class="btn-register">Register now</button>
+	</a>
+	<!-- ============================================================ -->
+	<!-- 2. INTRO SECTION — class="intro-section"                     -->
+	<!-- ============================================================ -->
+		<section class="intro-section" id="intro"> <h2 class="intro-title">Africa's Next<br>Economic Chapter</h2>
+		<div class="intro-text">
+			<p>In a world shaped by geopolitical shifts, technological disruption, climate challenges and evolving investment dynamics, Africa is entering a defining phase of its economic transformation. With its demographic momentum, abundant natural resources, expanding entrepreneurial ecosystems and growing regional integration, the continent has all the ingredients to become one of the world's next major growth engines. Unlocking this potential, however, requires stronger partnerships, greater investment and bold collective action.</p>
+			<p>As Africa's leading financial centre, Casablanca Finance City has established itself as a strategic gateway connecting international capital with opportunities across the continent. Bringing together nearly 300 companies operating in more than 50 African countries, CFC plays a central role in supporting investment, regional integration and sustainable economic development.</p>
+			<p>Building on the success of its inaugural edition, the
+				<a href="#">
+					Casablanca Business Forum
+				</a>
+				returns on
+				<a href="#">2 October 2026</a>
+				under the theme
+				<a href="#">"Africa's Next Economic Chapter.</a>" The Forum will convene senior government officials, business leaders, investors, financial institutions and international experts to explore the opportunities shaping Africa's next phase of growth and identify the partnerships, policies and investment strategies needed to accelerate the continent's transformation.</p>
+		</div>
+
+
+	</section>
+
+	<!-- ============================================================ -->
+	<!-- 3. SPEAKERS SECTION — class="speakers-section"                -->
+	<!-- 4 cards show by default; "View all speakers" reveals the rest -->
+	<!-- inside this same grid. Hover any avatar to see the bios        -->
+	<!-- tooltip (mirrors the screenshot you shared).                  -->
+	<!-- Replace each .avatar-slot img and text with the real speaker. -->
+	<!-- ============================================================ -->
+		<section class="speakers-section" id="speakers"> <div class="featured-speaker">
+			<div class="img-slot">
+				<img src="/themes/custom/cfc/CFC/assets/images/sp11.png" alt="featured speaker placeholder">
+			</div>
+			<div>
+				<div class="fs-name">Featuring Pr. Philippe Aghion</div>
+				<div class="fs-badge">2025 Nobel Laureate in Economic Sciences</div>
+				<div class="fs-bio">Recognized as one of the world's most influential economists, Philippe Aghion was awarded the 2025 Nobel Prize in Economic Sciences for his groundbreaking contributions to the understanding of innovation and economic growth. His research has shaped academic thinking and informed public policy across the globe.</div>
+			</div>
+		</div>
+		<h2 class="speakers-title">Our Speaker<br>Line-up</h2>
+
+		<div class="speakers-grid" id="speakersGrid">
+
+			<div class="speaker-card">
+				<div class="avatar-ring">
+					<div class="avatar-slot">
+						<img src="/themes/custom/cfc/CFC/assets/images/sp1.png" alt="speaker placeholder">
+					</div>
+				</div>
+				<div class="sp-name">Philipe Valahu</div>
+				<div class="sp-role">CEO PIDG</div>
+				<div class="sp-tooltip">Philippe joined PIDG as Chief Executive Officer in 2014. He has 30 years of international experience in emerging markets infrastructure project and export finance in Latin America, sub-Saharan Africa and Asia. Prior to joining PIDG, Philippe was one of the founding partners of an EM infrastructure finance advisory firm and before that worked for Depfa Bank’s infrastructure finance unit. Philippe spent 13 years at the Multilateral Investment Guarantee Agency (World Bank Group) in Washington and Singapore, where he headed the guarantees department and was global head of infrastructure. Philippe’s infrastructure experience covers power, renewables, water, transportation, and social infrastructure. He attended Harvard University’s Business School Executive Program and holds an MBA in International Business and a Bachelor’s degree from George Washington Univers</div>
+			</div>
+
+			<div class="speaker-card">
+				<div class="avatar-ring">
+					<div class="avatar-slot">
+						<img src="/themes/custom/cfc/CFC/assets/images/sp2.png" alt="speaker placeholder">
+					</div>
+				</div>
+				<div class="sp-name">Alain Ebobissé</div>
+				<div class="sp-role">CEO Africa 50</div>
+				<div class="sp-tooltip">Mr. Ebobissé is the Chief Executive Officer of Africa50, the pan-African infrastructure investment platform, with 33 African countries as shareholders, the African Development Bank and two African Central Banks.
+															Prior to joining Africa50, Mr. Ebobissé served as the Global Head for the World Bank Group’s Global Infrastructure Project Development Fund (“IFC InfraVentures”), where he oversaw a team of experienced infrastructure specialists and led the development of and investment in numerous infrastructure projects in Africa, Asia, Europe, and Latin America. Mr. Ebobissé led the design, structuring, and implementation of IFC InfraVentures from its inception.
+															He also served as Chief Investment Officer in the Global Infrastructure and Natural Resources Department of the International Finance Corporation (IFC), the private-sector arm of the World Bank Group, based in Washington.
+															Prior to joining the IFC in 1998, Mr. Ebobissé held several positions in the financial services industry in France, including Deputy Head of Project and Structured Finance at Caisse des Depots et Consignations, based in Paris.
+															He holds a Master of Business Administration degree from the International School for Management Development (IMD) in Lausanne, Switzerland.
+				</div>
+			</div>
+
+			<div class="speaker-card">
+				<div class="avatar-ring">
+					<div class="avatar-slot">
+						<img src="/themes/custom/cfc/CFC/assets/images/sp3.png" alt="speaker placeholder">
+					</div>
+				</div>
+				<div class="sp-name">Mehdi Tazi</div>
+				<div class="sp-role">CEO TANGER MED</div>
+				<div class="sp-tooltip">Mehdi Tazi-Riffi is the CEO of Tanger Med, an integrated developer and operator of ports, logistics and industrial platforms. The group manages Tanger Med Port Complex, the leading port in the Mediterranean and Africa, as well as the adjacent industrial platform. Through «Marsa Maroc», it also manages 35 container and bulk terminals across 21 ports.
+															Mehdi started his career in 1998 as Marketing Manager for Nokia Networks in Germany before joining, in 2001, the Swiss-based Kudelski Group as Head of Business Development, then as General Manager MENA based in Dubai until mid-2010.
+															Mehdi holds an MSc in Electrical Engineering from the Swiss Federal Institute of Technology and Technology Management from HEC.
+				</div>
+			</div>
+
+			<div class="speaker-card">
+				<div class="avatar-ring">
+					<div class="avatar-slot">
+						<img src="/themes/custom/cfc/CFC/assets/images/sp4.png" alt="speaker placeholder">
+					</div>
+				</div>
+				<div class="sp-name">
+					Wolfgang Engel</div>
+				<div class="sp-role">General Manager & Chief Representative - Institute of International Fin</div>
+				<div class="sp-tooltip">
+					Wolfgang Engel is in charge of the IIF Middle East & Africa Regional Office and he leads the Institute’s efforts to engage and advise our private- and public sector members in the region. He maintains ongoing dialogue with senior decision makers and he identifies and addresses their most important and critical challenges, opportunities and risks. He also brings relevant global perspectives, insights and trends to our members as an objective and trusted advisor. He assumed this role in 2014 when the IIF opened its Middle East & Africa Regional Office in Dubai.
+															Prior to this appointment, Wolfgang Engel was the Director of Global Membership at the IIF’s headquarters in Washington, D.C. Before joining IIF, he was a member of the Management Committee at Société Générale in charge of the Financial Institutions Group Germany and Austria. In that role, he was primarily responsible for advising institutional clients on regulatory issues and debt and equity capital markets solutions.
+															Wolfgang Engel held several positions at BNP Paribas, including Head of Debt Capital Markets Europe in London, Head of Institutional Clients Coverage Group for Germany and Austria and Head of Corporate Banking Division in Germany, among other roles.
+					<br>His earlier career included roles at Dresdner Kleinwort Benson in Frankfurt, the Asian Development Bank in Asia and JPMorgan in Frankfurt and New York.
+
+				</div>
+			</div>
+
+			<!-- extra speakers: hidden until "view all speakers" is clicked -->
+			<div class="speaker-card hidden-speaker">
+				<div class="avatar-ring">
+					<div class="avatar-slot">
+						<img src="https://placehold.co/110x110/2a3f47/7fd6c2?text=Name" alt="speaker placeholder">
+					</div>
+				</div>
+				<div class="sp-name">Prenom NOM</div>
+				<div class="sp-role">Xxxxxxxxx<br>Xxxxxxxxx</div>
+				<div class="sp-tooltip">lorem ipsum</div>
+			</div>
+
+			<div class="speaker-card hidden-speaker">
+				<div class="avatar-ring">
+					<div class="avatar-slot">
+						<img src="https://placehold.co/110x110/2a3f47/7fd6c2?text=Name" alt="speaker placeholder">
+					</div>
+				</div>
+				<div class="sp-name">Prenom NOM</div>
+				<div class="sp-role">Xxxxxxxxx<br>Xxxxxxxxx</div>
+				<div class="sp-tooltip">lorem ipsum</div>
+			</div>
+
+			<div class="speaker-card hidden-speaker">
+				<div class="avatar-ring">
+					<div class="avatar-slot">
+						<img src="https://placehold.co/110x110/2a3f47/7fd6c2?text=Name" alt="speaker placeholder">
+					</div>
+				</div>
+				<div class="sp-name">Prenom NOM</div>
+				<div class="sp-role">Xxxxxxxxx<br>Xxxxxxxxx</div>
+				<div class="sp-tooltip">lorem ipsum</div>
+			</div>
+
+			<div class="speaker-card hidden-speaker">
+				<div class="avatar-ring">
+					<div class="avatar-slot">
+						<img src="https://placehold.co/110x110/2a3f47/7fd6c2?text=Name" alt="speaker placeholder">
+					</div>
+				</div>
+				<div class="sp-name">Prenom NOM</div>
+				<div class="sp-role">Xxxxxxxxx<br>Xxxxxxxxx</div>
+				<div class="sp-tooltip">lorem ipsum</div>
+			</div>
+
+		</div>
+
+		<div class="view-all-wrap">
+			<button class="view-all-btn" id="viewAllBtn">view all speakers ⌄</button>
+		</div>
+	</section>
+
+	<!-- ============================================================ -->
+	<!-- 4. HIGHLIGHTS SECTION — class="highlights-section"            -->
+	<!-- ============================================================ -->
+		<section class="highlights-section" id="highlights"> <h2 class="highlights-title">Key Session<br>Highlights</h2>
+
+		<div class="highlight-row">
+			<div class="tag">Keynote speech</div>
+			<div class="highlight-body">
+				<p>Featuring
+					<strong style="color:var(--red)">Philippe AGHION</strong>, 2025 Nobel Laureate in Economic Sciences.</p>
+			</div>
+		</div>
+
+		<div class="highlight-row">
+			<div class="tag">Panel 1</div>
+			<div class="highlight-body">
+				<h3>Global Transformation: What Levers for Africa's Sovereignty and Growth</h3>
+				<p>In a world fragmented by geopolitical tensions, the energy transition, rivalries between major powers, technological disruption and the reconfiguration of value chains, Africa is assuming an increasingly central role. This framing panel will analyse the opportunities and risks associated with this new centrality: diversification of partnerships, security of supply chains, the rise of African markets and intensifying competition for influence.</p>
+			</div>
+		</div>
+
+		<div class="highlight-row">
+			<div class="tag">Panel 2</div>
+			<div class="highlight-body">
+				<h3>Africa in the Global Competition for Capital</h3>
+				<p>In a context of tightening financial conditions and increasing competition among emerging regions, access to capital has become a decisive issue. This panel will examine the conditions enabling Africa to strengthen its attractiveness to international investors: improving the investment climate, structuring bankable projects, developing risk mitigation mechanisms, mobilising institutional investors and creating adapted financial solutions.</p>
+			</div>
+		</div>
+
+		<div class="highlight-row">
+			<div class="tag">Fireside chat</div>
+			<div class="highlight-body">
+				<h3>Global Economic Governance: How Can Africa Shape the Rules of the Game?</h3>
+				<p>As international trade, financial, technological and climate standards continue to evolve, Africa's ability to make its voice heard within global economic institutions is becoming a strategic issue. This fireside chat will analyse the conditions required to move from participation to influence.</p>
+			</div>
+		</div>
+
+		<div class="highlight-row">
+			<div class="tag">Panel 3</div>
+			<div class="highlight-body">
+				<h3>African Integration or the Imperative of Scale</h3>
+				<p>The progressive implementation of the AfCFTA opens the prospect of an integrated continental market capable of supporting the emergence of regional value chains and strengthening the competitiveness of African economies. This panel will explore the levers that can make regional integration a driver of growth.</p>
+			</div>
+		</div>
+
+		<div class="highlight-row">
+			<div class="tag">Panel 4</div>
+			<div class="highlight-body">
+				<h3>Mobilising Talent: From Brain Drain to Skills Circulation</h3>
+				<p>With the youngest population in the world and a rapidly growing skilled workforce, Africa possesses considerable human capital. This conversation will examine how to transform this potential into a sustainable competitive advantage, from education and reskilling to talent mobility and diaspora engagement.</p>
+			</div>
+		</div>
+	</section>
+
+	<!-- ============================================================ -->
+	<!-- 5. REGISTER SECTION — class="register-section"                -->
+	<!-- To use a real photo behind the form, set an inline style like -->
+	<!-- style="--bg-slot:url('skyline.jpg')" on the <section> tag,    -->
+	<!-- or edit the .register-section background rule in the CSS.     -->
+	<!-- ============================================================ -->
+		<section class="register-section" id="register"> <h2 class="register-title">Register for<br>Casablanca Business Forum</h2>
+		<form onsubmit="return false;">
+			<input type="text" placeholder="First Name">
+			<input type="text" placeholder="Last Name">
+			<input type="email" placeholder="Email">
+			<input type="text" placeholder="Company">
+			<input type="text" placeholder="Title">
+			<button type="submit" class="btn-register">Register now</button>
+		</form>
+		<div class="join-us">Join us</div>
+		<div class="social-row">
+			<span class="icon-slot">in</span>
+			<span class="icon-slot">▶</span>
+			<span class="icon-slot">@</span>
+			<span class="icon-slot">f</span>
+		</div>
+		<div class="footer-note">© 2026 Casablanca Finance City</div>
+	</section>
+
+	<script>
+		// draw the radiating fan bars (placeholder decorative motif)
+(function () {
+const g = document.getElementById('fanBars');
+const bars = 24;
+for (let i = 0; i < bars; i++) {
+const angle = 90 + (i * (90 / bars));
+const rad = angle * Math.PI / 180;
+const r1 = 60,
+r2 = 40 + (i % 3) * 40;
+const x1 = Math.cos(rad) * r1,
+y1 = Math.sin(rad) * r1;
+const x2 = Math.cos(rad) * (r1 + r2),
+y2 = Math.sin(rad) * (r1 + r2);
+const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+line.setAttribute('x1', x1);
+line.setAttribute('y1', y1);
+line.setAttribute('x2', x2);
+line.setAttribute('y2', y2);
+line.setAttribute('stroke', i % 2 === 0 ? '#7fd6c2' : '#3fa89c');
+line.setAttribute('stroke-width', '6');
+line.setAttribute('stroke-linecap', 'round');
+g.appendChild(line);
+}
+})();
+
+// "view all speakers" toggle
+const viewAllBtn = document.getElementById('viewAllBtn');
+viewAllBtn.addEventListener('click', function () {
+const hidden = document.querySelectorAll('.speaker-card.hidden-speaker');
+const isHidden = hidden[0] && hidden[0].style.display === 'none' ? false : hidden.length > 0 && getComputedStyle(hidden[0]).display === 'none';
+let showing = viewAllBtn.dataset.state === 'open';
+hidden.forEach(el => el.style.display = showing ? 'none' : 'block');
+viewAllBtn.dataset.state = showing ? 'closed' : 'open';
+viewAllBtn.textContent = showing ? 'view all speakers ⌄' : 'view less ⌃';
+});
+	</script>
+
+</body></html>
