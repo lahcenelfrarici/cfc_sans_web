@@ -5437,3 +5437,23 @@ html[lang="fr"] .management_team .row>div:nth-child(4) {
   display: none;
 }
 
+
+.page-confidentialité-linkedin #banner-title {
+  display: none;
+}
+.page-confidentialité-linkedin .section---filter-block {
+  display: none;
+}
+.page-confidentialité-linkedin #contact---us {
+  display: none;
+}
+
+.cnd_link h3 {
+  color: #009681;
+  font-weight: bold;
+  padding-bottom: 20px;
+  font-size: 31px;
+}
+.cnd_link {
+  padding-top: 3%;
+}
