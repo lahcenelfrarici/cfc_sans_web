@@ -5438,13 +5438,13 @@ html[lang="fr"] .management_team .row>div:nth-child(4) {
 }
 
 
-.page-confidentialite_linkedin #banner-title {
+.page-confidentialite-linkedin #banner-title {
   display: none;
 }
-.page-confidentialite_linkedin .section---filter-block {
+.page-confidentialite-linkedin .section---filter-block {
   display: none;
 }
-.page-confidentialite_linkedin #contact---us {
+.page-confidentialite-linkedin #contact---us {
   display: none;
 }
 
