@@ -642,10 +642,10 @@
 		body .register-section form .wrapper_submit svg {
 			display: none;
 		}
-    body .speaker-card .sp-tooltip {
-  width: 500PX !important;
-  bottom: auto;
-}
+		body .speaker-card .sp-tooltip {
+			width: 500 PX !important;
+			bottom: auto;
+		}
 	</style>
 </head>
 <body>
@@ -654,7 +654,7 @@
 
 	<!-- 1. HEADER SECTION — class="header-section"                   -->
 	<!-- Replace .logo-slot img src with the real CFC logo.
-		  HEADER SECTION — class="header-section"              -->
+			  HEADER SECTION — class="header-section"              -->
 	<!-- Replace .support-logo-slot img src with the partner logo.     -->
 	<!-- The fan-graphic svg is a placeholder for the radiating motif. -->
 	<!-- ============================================================ -->
@@ -663,10 +663,10 @@
 				<img src="/themes/custom/cfc/CFC/assets/images/header__1.png" alt="partner logo placeholder">
 			</div>
 			{# <h1>CASABLANCA<br><span>BUSINESS</span> FORUM</h1>
-																		    <div class="edition-row">
-																		     <img src="/themes/custom/cfc/CFC/assets/images/diaport_1.jpeg" alt="partner logo placeholder">
-																		    </div>
-																		    <div class="hero-sub">Africa's Next Economic Chapter</div> #}
+																					    <div class="edition-row">
+																					     <img src="/themes/custom/cfc/CFC/assets/images/diaport_1.jpeg" alt="partner logo placeholder">
+																					    </div>
+																					    <div class="hero-sub">Africa's Next Economic Chapter</div> #}
 
 
 		</div>
@@ -702,8 +702,7 @@
 	<!-- tooltip (mirrors the screenshot you shared).                  -->
 	<!-- Replace each .avatar-slot img and text with the real speaker. -->
 	<!-- ============================================================ -->
-		<section class="speakers-section" id="speakers">
-    <div class="featured-speaker">
+		<section class="speakers-section" id="speakers"> <div class="featured-speaker">
 			<div class="img-slot">
 				<img src="/themes/custom/cfc/CFC/assets/images/sp11.png" alt="featured speaker placeholder">
 			</div>
@@ -715,7 +714,9 @@
 		</div>
 		<h2 class="speakers-title">Our Speaker<br>Line-up</h2>
 
-	<div class="speakers-grid" id="speakersGrid">
+		<div class="speakers-grid" id="speakersGrid">
+
+  	<div class="speakers-grid" id="speakersGrid">
 
 			<div class="speaker-card">
 				<div class="avatar-ring">
@@ -858,6 +859,8 @@
 
 		</div>
 
+		</div>
+
 		<div class="view-all-wrap">
 			<button class="view-all-btn" id="viewAllBtn">view all speakers ⌄</button>
 		</div>
@@ -925,13 +928,13 @@
 	<!-- ============================================================ -->
 		<section class="register-section" id="register"> <h2 class="register-title">Register for<br>Casablanca Business Forum</h2>
 		{# <form onsubmit="return false;">
-							<input type="text" placeholder="First Name">
-							<input type="text" placeholder="Last Name">
-							<input type="email" placeholder="Email">
-							<input type="text" placeholder="Company">
-							<input type="text" placeholder="Title">
-							<button type="submit" class="btn-register">Register now</button>
-						</form> #}
+									<input type="text" placeholder="First Name">
+									<input type="text" placeholder="Last Name">
+									<input type="email" placeholder="Email">
+									<input type="text" placeholder="Company">
+									<input type="text" placeholder="Title">
+									<button type="submit" class="btn-register">Register now</button>
+								</form> #}
 		{{ drupal_entity('block','cfc_webform_6') }}
 		<div class="join-us">Join us</div>
 		<div class="social-row">
@@ -942,58 +945,58 @@
 		</div>
 		<div class="footer-note">© 2026 Casablanca Finance City</div>
 	</section>
-<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-<script>
-$(function () {
-  $('#viewAllBtn').on('click', function () {
-    var $btn = $(this);
-    var isOpen = $btn.data('state') === 'open';
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+	<script>
+		$(function () {
+$('#viewAllBtn').on('click', function () {
+var $btn = $(this);
+var isOpen = $btn.data('state') === 'open';
 
-    if (isOpen) {
-      $('.speaker-card.hidden-speaker').hide();
-      $btn.data('state', 'closed').text('view all speakers ⌄');
-    } else {
-      $('.speaker-card.hidden-speaker').show();
-      $btn.data('state', 'open').text('view less ⌃');
-    }
-  });
+if (isOpen) {
+$('.speaker-card.hidden-speaker').hide();
+$btn.data('state', 'closed').text('view all speakers ⌄');
+} else {
+$('.speaker-card.hidden-speaker').show();
+$btn.data('state', 'open').text('view less ⌃');
+}
 });
-</script>
+});
+	</script>
 	{# <script>
 
-(function () {
-const g = document.getElementById('fanBars');
-const bars = 24;
-for (let i = 0; i < bars; i++) {
-const angle = 90 + (i * (90 / bars));
-const rad = angle * Math.PI / 180;
-const r1 = 60,
-r2 = 40 + (i % 3) * 40;
-const x1 = Math.cos(rad) * r1,
-y1 = Math.sin(rad) * r1;
-const x2 = Math.cos(rad) * (r1 + r2),
-y2 = Math.sin(rad) * (r1 + r2);
-const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-line.setAttribute('x1', x1);
-line.setAttribute('y1', y1);
-line.setAttribute('x2', x2);
-line.setAttribute('y2', y2);
-line.setAttribute('stroke', i % 2 === 0 ? '#7fd6c2' : '#3fa89c');
-line.setAttribute('stroke-width', '6');
-line.setAttribute('stroke-linecap', 'round');
-g.appendChild(line);
-}
-})();
+	(function () {
+	const g = document.getElementById('fanBars');
+	const bars = 24;
+	for (let i = 0; i < bars; i++) {
+	const angle = 90 + (i * (90 / bars));
+	const rad = angle * Math.PI / 180;
+	const r1 = 60,
+	r2 = 40 + (i % 3) * 40;
+	const x1 = Math.cos(rad) * r1,
+	y1 = Math.sin(rad) * r1;
+	const x2 = Math.cos(rad) * (r1 + r2),
+	y2 = Math.sin(rad) * (r1 + r2);
+	const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+	line.setAttribute('x1', x1);
+	line.setAttribute('y1', y1);
+	line.setAttribute('x2', x2);
+	line.setAttribute('y2', y2);
+	line.setAttribute('stroke', i % 2 === 0 ? '#7fd6c2' : '#3fa89c');
+	line.setAttribute('stroke-width', '6');
+	line.setAttribute('stroke-linecap', 'round');
+	g.appendChild(line);
+	}
+	})();
 
-// "view all speakers" const viewAllBtn = document.getElementById('viewAllBtn');
-viewAllBtn.addEventListener('click', function () {
-const hidden = document.querySelectorAll('.speaker-card.hidden-speaker');
-const isHidden = hidden[0] && hidden[0].style.display === 'none' ? false : hidden.length > 0 && getComputedStyle(hidden[0]).display === 'none';
-let showing = viewAllBtn.dataset.state === 'open';
-hidden.forEach(el => el.style.display = showing ? 'none' : 'block');
-viewAllBtn.dataset.state = showing ? 'closed' : 'open';
-viewAllBtn.textContent = showing ? 'view all speakers ⌄' : 'view less ⌃';
-});
-	</script> #}
+	// "view all speakers" const viewAllBtn = document.getElementById('viewAllBtn');
+	viewAllBtn.addEventListener('click', function () {
+	const hidden = document.querySelectorAll('.speaker-card.hidden-speaker');
+	const isHidden = hidden[0] && hidden[0].style.display === 'none' ? false : hidden.length > 0 && getComputedStyle(hidden[0]).display === 'none';
+	let showing = viewAllBtn.dataset.state === 'open';
+	hidden.forEach(el => el.style.display = showing ? 'none' : 'block');
+	viewAllBtn.dataset.state = showing ? 'closed' : 'open';
+	viewAllBtn.textContent = showing ? 'view all speakers ⌄' : 'view less ⌃';
+	});
+		</script> #}
 
 </body></html>
