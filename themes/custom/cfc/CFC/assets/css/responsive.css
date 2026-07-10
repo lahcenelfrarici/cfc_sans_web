@@ -413,8 +413,8 @@
   }
 
   .register-section form {
-    display: flex;
-    flex-direction: row;
+display: flex !important;
+    flex-direction: row !important;
     flex-wrap: wrap;
     margin: auto;
   }
@@ -426,6 +426,9 @@
   .counter--number h3 {
     text-align: left;
   }
+  .register-section form .js-form-item-email {
+  width: 100%;
+}
 
   .img-counter img {
     width: 85px;
