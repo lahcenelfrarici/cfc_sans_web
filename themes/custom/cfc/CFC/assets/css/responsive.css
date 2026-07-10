@@ -429,7 +429,9 @@ display: flex !important;
   .register-section form .js-form-item-email {
   width: 100%;
 }
-
+.register-section form .js-form-type-checkbox {
+    width: 100% !important;
+}
   .img-counter img {
     width: 85px;
     height: 85px;
