@@ -408,6 +408,21 @@
 }
 
 @media (min-width: 992px) {
+    .register-section form .form-item {
+    width: 49%;
+  }
+
+  .register-section form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: auto;
+  }
+
+  .register-section form #edit-actions {
+    width: 100%;
+    padding-bottom: 3%;
+  }
   .counter--number h3 {
     text-align: left;
   }
@@ -1226,21 +1241,7 @@
 
 @media (max-width: 991px) {
 
-  .register-section form .form-item {
-    width: 49%;
-  }
 
-  .register-section form {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin: auto;
-  }
-
-  .register-section form #edit-actions {
-    width: 100%;
-    padding-bottom: 3%;
-  }
 
   .step_step_webform div#edit-flexbox-02 .webform-flex.webform-flex--1 label {
     opacity: 1;
