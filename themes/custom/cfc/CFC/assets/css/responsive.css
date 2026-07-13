@@ -411,7 +411,10 @@
     .register-section form .form-item {
     width: 49%;
   }
+.register-section form {
+  width: 680px !important;
 
+}
   .register-section form {
 display: flex !important;
     flex-direction: row !important;
