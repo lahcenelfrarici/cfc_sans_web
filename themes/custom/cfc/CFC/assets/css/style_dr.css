@@ -5543,3 +5543,10 @@ html[lang="fr"] .management_team .row>div:nth-child(4) {
   transform-origin:0 85px;                                    /* ~radius of the 200px ring */
   transform:rotate(calc(0deg + (var(--i) * 4.5deg))) translateY(-44px);
 }
+
+.speaker-detail-name {
+  color: var(--navy) !important;;
+}
+#speakerRole {
+  color: var(--navy) !important;;
+}
