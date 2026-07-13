@@ -643,8 +643,96 @@
 			display: none;
 		}
 		body .speaker-card .sp-tooltip {
-			width: 500PX !important;
+			width: 500 PX !important;
 			bottom: auto;
+		}
+		.speaker-detail-panel {
+			position: fixed;
+			top: 0;
+			right: 0;
+			height: 100%;
+			width: 420px;
+			max-width: 90vw;
+			background: var(--white);
+			box-shadow: -12px 0 30px rgba(0, 0, 0, 0.35);
+			z-index: 1000;
+			overflow-y: auto;
+			padding: 40px 32px;
+			transform: translateX(100%);
+			transition: transform 0.35s ease;
+		}
+
+		.speaker-detail-panel.active {
+			transform: translateX(0);
+		}
+
+		.speaker-detail-overlay {
+			position: fixed;
+			inset: 0;
+			background: rgba(0, 0, 0, 0.5);
+			z-index: 999;
+			opacity: 0;
+			visibility: hidden;
+			transition: opacity 0.3s ease;
+		}
+
+		.speaker-detail-overlay.active {
+			opacity: 1;
+			visibility: visible;
+		}
+
+		.speaker-detail-close {
+			position: absolute;
+			top: 20px;
+			right: 20px;
+			background: none;
+			border: none;
+			font-size: 22px;
+			cursor: pointer;
+			color: var(--ink);
+		}
+
+		.speaker-detail-photo {
+			width: 140px;
+			height: 140px;
+			border-radius: 50%;
+			object-fit: cover;
+			margin-bottom: 20px;
+		}
+
+		.speaker-detail-name {
+			font-size: 20px;
+			font-weight: 700;
+			margin: 0 0 6px;
+			color: var(--maroon, #7a1e2b);
+		}
+
+		.speaker-detail-role {
+			font-size: 13px;
+			text-transform: uppercase;
+			font-weight: 600;
+			color: var(--maroon, #7a1e2b);
+			line-height: 1.5;
+			margin-bottom: 20px;
+		}
+
+		.speaker-detail-bio {
+			font-size: 14px;
+			line-height: 1.7;
+			color: var(--ink);
+			white-space: pre-line;
+		}
+
+		.speaker-card {
+			cursor: pointer;
+		}
+
+		body.panel-open {
+			overflow: hidden;
+		}
+
+		.sp-tooltip {
+			display: none;
 		}
 	</style>
 </head>
@@ -654,7 +742,7 @@
 
 	<!-- 1. HEADER SECTION — class="header-section"                   -->
 	<!-- Replace .logo-slot img src with the real CFC logo.
-										  HEADER SECTION — class="header-section"              -->
+											  HEADER SECTION — class="header-section"              -->
 	<!-- Replace .support-logo-slot img src with the partner logo.     -->
 	<!-- The fan-graphic svg is a placeholder for the radiating motif. -->
 	<!-- ============================================================ -->
@@ -663,10 +751,10 @@
 				<img src="/themes/custom/cfc/CFC/assets/images/header__1.png" alt="partner logo placeholder">
 			</div>
 			{# <h1>CASABLANCA<br><span>BUSINESS</span> FORUM</h1>
-																																										    <div class="edition-row">
-																																										     <img src="/themes/custom/cfc/CFC/assets/images/diaport_1.jpeg" alt="partner logo placeholder">
-																																										    </div>
-																																										    <div class="hero-sub">Africa's Next Economic Chapter</div> #}
+																																													    <div class="edition-row">
+																																													     <img src="/themes/custom/cfc/CFC/assets/images/diaport_1.jpeg" alt="partner logo placeholder">
+																																													    </div>
+																																													    <div class="hero-sub">Africa's Next Economic Chapter</div> #}
 
 
 		</div>
@@ -737,10 +825,10 @@
 				<div class="sp-name">Alain Ebobissé</div>
 				<div class="sp-role">CEO Africa 50</div>
 				<div class="sp-tooltip">Mr. Ebobissé is the Chief Executive Officer of Africa50, the pan-African infrastructure investment platform, with 33 African countries as shareholders, the African Development Bank and two African Central Banks.
-																																																																						Prior to joining Africa50, Mr. Ebobissé served as the Global Head for the World Bank Group’s Global Infrastructure Project Development Fund (“IFC InfraVentures”), where he oversaw a team of experienced infrastructure specialists and led the development of and investment in numerous infrastructure projects in Africa, Asia, Europe, and Latin America. Mr. Ebobissé led the design, structuring, and implementation of IFC InfraVentures from its inception.
-																																																																						He also served as Chief Investment Officer in the Global Infrastructure and Natural Resources Department of the International Finance Corporation (IFC), the private-sector arm of the World Bank Group, based in Washington.
-																																																																						Prior to joining the IFC in 1998, Mr. Ebobissé held several positions in the financial services industry in France, including Deputy Head of Project and Structured Finance at Caisse des Depots et Consignations, based in Paris.
-																																																																						He holds a Master of Business Administration degree from the International School for Management Development (IMD) in Lausanne, Switzerland.
+																																																																											Prior to joining Africa50, Mr. Ebobissé served as the Global Head for the World Bank Group’s Global Infrastructure Project Development Fund (“IFC InfraVentures”), where he oversaw a team of experienced infrastructure specialists and led the development of and investment in numerous infrastructure projects in Africa, Asia, Europe, and Latin America. Mr. Ebobissé led the design, structuring, and implementation of IFC InfraVentures from its inception.
+																																																																											He also served as Chief Investment Officer in the Global Infrastructure and Natural Resources Department of the International Finance Corporation (IFC), the private-sector arm of the World Bank Group, based in Washington.
+																																																																											Prior to joining the IFC in 1998, Mr. Ebobissé held several positions in the financial services industry in France, including Deputy Head of Project and Structured Finance at Caisse des Depots et Consignations, based in Paris.
+																																																																											He holds a Master of Business Administration degree from the International School for Management Development (IMD) in Lausanne, Switzerland.
 				</div>
 			</div>
 
@@ -753,8 +841,8 @@
 				<div class="sp-name">Mehdi TAZZI-RIFFI</div>
 				<div class="sp-role">CEO TANGER MED</div>
 				<div class="sp-tooltip">Mehdi Tazi-Riffi is the CEO of Tanger Med, an integrated developer and operator of ports, logistics and industrial platforms. The group manages Tanger Med Port Complex, the leading port in the Mediterranean and Africa, as well as the adjacent industrial platform. Through «Marsa Maroc», it also manages 35 container and bulk terminals across 21 ports.
-																																																																						Mehdi started his career in 1998 as Marketing Manager for Nokia Networks in Germany before joining, in 2001, the Swiss-based Kudelski Group as Head of Business Development, then as General Manager MENA based in Dubai until mid-2010.
-																																																																						Mehdi holds an MSc in Electrical Engineering from the Swiss Federal Institute of Technology and Technology Management from HEC.
+																																																																											Mehdi started his career in 1998 as Marketing Manager for Nokia Networks in Germany before joining, in 2001, the Swiss-based Kudelski Group as Head of Business Development, then as General Manager MENA based in Dubai until mid-2010.
+																																																																											Mehdi holds an MSc in Electrical Engineering from the Swiss Federal Institute of Technology and Technology Management from HEC.
 				</div>
 			</div>
 
@@ -769,8 +857,8 @@
 				<div class="sp-role">General Manager & Chief Representative - Institute of International Fin</div>
 				<div class="sp-tooltip">
 					Wolfgang Engel is in charge of the IIF Middle East & Africa Regional Office and he leads the Institute’s efforts to engage and advise our private- and public sector members in the region. He maintains ongoing dialogue with senior decision makers and he identifies and addresses their most important and critical challenges, opportunities and risks. He also brings relevant global perspectives, insights and trends to our members as an objective and trusted advisor. He assumed this role in 2014 when the IIF opened its Middle East & Africa Regional Office in Dubai.
-																																																																						Prior to this appointment, Wolfgang Engel was the Director of Global Membership at the IIF’s headquarters in Washington, D.C. Before joining IIF, he was a member of the Management Committee at Société Générale in charge of the Financial Institutions Group Germany and Austria. In that role, he was primarily responsible for advising institutional clients on regulatory issues and debt and equity capital markets solutions.
-																																																																						Wolfgang Engel held several positions at BNP Paribas, including Head of Debt Capital Markets Europe in London, Head of Institutional Clients Coverage Group for Germany and Austria and Head of Corporate Banking Division in Germany, among other roles.
+																																																																											Prior to this appointment, Wolfgang Engel was the Director of Global Membership at the IIF’s headquarters in Washington, D.C. Before joining IIF, he was a member of the Management Committee at Société Générale in charge of the Financial Institutions Group Germany and Austria. In that role, he was primarily responsible for advising institutional clients on regulatory issues and debt and equity capital markets solutions.
+																																																																											Wolfgang Engel held several positions at BNP Paribas, including Head of Debt Capital Markets Europe in London, Head of Institutional Clients Coverage Group for Germany and Austria and Head of Corporate Banking Division in Germany, among other roles.
 					<br>His earlier career included roles at Dresdner Kleinwort Benson in Frankfurt, the Asian Development Bank in Asia and JPMorgan in Frankfurt and New York.
 
 				</div>
@@ -821,7 +909,7 @@
 				<div class="sp-name">Christine OCKRENT</div>
 				<div class="sp-role">
 					Journalist & Producer of the “Affaires étrangères” Program,
-																																									France Culture
+																																														France Culture
 				</div>
 				{# <div class="sp-tooltip">lorem ipsum</div> #}
 			</div>
@@ -885,7 +973,6 @@
 					African Union Commission</div>
 				{# <div class="sp-tooltip">lorem ipsum</div> #}
 			</div>
-
 
 
 		</div>
@@ -956,13 +1043,13 @@
 	<!-- ============================================================ -->
 		<section class="register-section" id="register"> <h2 class="register-title">Confirm your online attendance</h2>
 		{# <form onsubmit="return false;">
-																												<input type="text" placeholder="First Name">
-																												<input type="text" placeholder="Last Name">
-																												<input type="email" placeholder="Email">
-																												<input type="text" placeholder="Company">
-																												<input type="text" placeholder="Title">
-																												<button type="submit" class="btn-register">Register now</button>
-																											</form> #}
+																														<input type="text" placeholder="First Name">
+																														<input type="text" placeholder="Last Name">
+																														<input type="email" placeholder="Email">
+																														<input type="text" placeholder="Company">
+																														<input type="text" placeholder="Title">
+																														<button type="submit" class="btn-register">Register now</button>
+																													</form> #}
 
 		{{ drupal_entity('block','cfc_webform_7') }}
 
@@ -975,6 +1062,14 @@
 		</div>
 		<div class="footer-note">© 2026 Casablanca Finance City</div>
 	</section>
+	<div class="speaker-detail-overlay" id="speakerOverlay"></div>
+	<div class="speaker-detail-panel" id="speakerPanel">
+		<button class="speaker-detail-close" id="speakerClose" aria-label="Close">&times;</button>
+		<img class="speaker-detail-photo" id="speakerPhoto" src="" alt="">
+		<h3 class="speaker-detail-name" id="speakerName"></h3>
+		<p class="speaker-detail-role" id="speakerRole"></p>
+		<p class="speaker-detail-bio" id="speakerBio"></p>
+	</div>
 	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 	<script>
 		$(function () {
@@ -991,41 +1086,80 @@ $btn.data('state', 'open').text('view less ⌃');
 }
 });
 });
+jQuery(function ($) {
+var $speakerDetailPanel = $('#speakerPanel');
+var $speakerDetailOverlay = $('#speakerOverlay');
+var $pageBody = $('body');
+
+function openSpeakerDetail($clickedCard) {
+var $cardPhoto = $clickedCard.find('.avatar-slot img');
+var speakerName = $clickedCard.find('.sp-name').text().trim();
+var speakerRole = $clickedCard.find('.sp-role').text().trim();
+var speakerBio = $clickedCard.find('.sp-tooltip').text().trim();
+
+$('#speakerPhoto').attr('src', $cardPhoto.attr('src') || '').attr('alt', speakerName);
+$('#speakerName').text(speakerName);
+$('#speakerRole').text(speakerRole);
+$('#speakerBio').text(speakerBio);
+
+$speakerDetailPanel.addClass('active');
+$speakerDetailOverlay.addClass('active');
+$pageBody.addClass('panel-open');
+}
+
+function closeSpeakerDetail() {
+$speakerDetailPanel.removeClass('active');
+$speakerDetailOverlay.removeClass('active');
+$pageBody.removeClass('panel-open');
+}
+
+$(document).on('click', '.speaker-card', function () {
+openSpeakerDetail($(this));
+});
+
+$('#speakerClose, #speakerOverlay').on('click', closeSpeakerDetail);
+
+$(document).on('keydown', function (e) {
+if (e.key === 'Escape')
+closeSpeakerDetail();
+
+});
+});
 	</script>
 	{# <script>
 
-													(function () {
-													const g = document.getElementById('fanBars');
-													const bars = 24;
-													for (let i = 0; i < bars; i++) {
-													const angle = 90 + (i * (90 / bars));
-													const rad = angle * Math.PI / 180;
-													const r1 = 60,
-													r2 = 40 + (i % 3) * 40;
-													const x1 = Math.cos(rad) * r1,
-													y1 = Math.sin(rad) * r1;
-													const x2 = Math.cos(rad) * (r1 + r2),
-													y2 = Math.sin(rad) * (r1 + r2);
-													const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-													line.setAttribute('x1', x1);
-													line.setAttribute('y1', y1);
-													line.setAttribute('x2', x2);
-													line.setAttribute('y2', y2);
-													line.setAttribute('stroke', i % 2 === 0 ? '#7fd6c2' : '#3fa89c');
-													line.setAttribute('stroke-width', '6');
-													line.setAttribute('stroke-linecap', 'round');
-													g.appendChild(line);
-													}
-													})();
+														(function () {
+														const g = document.getElementById('fanBars');
+														const bars = 24;
+														for (let i = 0; i < bars; i++) {
+														const angle = 90 + (i * (90 / bars));
+														const rad = angle * Math.PI / 180;
+														const r1 = 60,
+														r2 = 40 + (i % 3) * 40;
+														const x1 = Math.cos(rad) * r1,
+														y1 = Math.sin(rad) * r1;
+														const x2 = Math.cos(rad) * (r1 + r2),
+														y2 = Math.sin(rad) * (r1 + r2);
+														const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+														line.setAttribute('x1', x1);
+														line.setAttribute('y1', y1);
+														line.setAttribute('x2', x2);
+														line.setAttribute('y2', y2);
+														line.setAttribute('stroke', i % 2 === 0 ? '#7fd6c2' : '#3fa89c');
+														line.setAttribute('stroke-width', '6');
+														line.setAttribute('stroke-linecap', 'round');
+														g.appendChild(line);
+														}
+														})();
 
-													// "view all speakers" const viewAllBtn = document.getElementById('viewAllBtn');
-													viewAllBtn.addEventListener('click', function () {
-													const hidden = document.querySelectorAll('.speaker-card.hidden-speaker');
-													const isHidden = hidden[0] && hidden[0].style.display === 'none' ? false : hidden.length > 0 && getComputedStyle(hidden[0]).display === 'none';
-													let showing = viewAllBtn.dataset.state === 'open';
-													hidden.forEach(el => el.style.display = showing ? 'none' : 'block');
-													viewAllBtn.dataset.state = showing ? 'closed' : 'open';
-													viewAllBtn.textContent = showing ? 'view all speakers ⌄' : 'view less ⌃';
-													});
-														</script> #}
+														// "view all speakers" const viewAllBtn = document.getElementById('viewAllBtn');
+														viewAllBtn.addEventListener('click', function () {
+														const hidden = document.querySelectorAll('.speaker-card.hidden-speaker');
+														const isHidden = hidden[0] && hidden[0].style.display === 'none' ? false : hidden.length > 0 && getComputedStyle(hidden[0]).display === 'none';
+														let showing = viewAllBtn.dataset.state === 'open';
+														hidden.forEach(el => el.style.display = showing ? 'none' : 'block');
+														viewAllBtn.dataset.state = showing ? 'closed' : 'open';
+														viewAllBtn.textContent = showing ? 'view all speakers ⌄' : 'view less ⌃';
+														});
+															</script> #}
 </body></html></body></html></body></html>
