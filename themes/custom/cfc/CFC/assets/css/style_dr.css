@@ -5436,25 +5436,25 @@ html[lang="fr"] .management_team .row>div:nth-child(4) {
 .page-cbf #banner-title  {
   display: none;
 }
-.page-cbf-online .contact-form {
+.page-cbforum .contact-form {
   display: none;
 }
-.page-cbf-online .section---filter-block {
+.page-cbforum .section---filter-block {
   display: none;
 }
-.page-cbf-online .bg-dark.text-light.py-5 {
-  display: none;
-}
-
-.page-cbf-online .bg-white.shadow-sm.header--menu {
+.page-cbforum .bg-dark.text-light.py-5 {
   display: none;
 }
 
-
-.page-cbf-online #contact---us {
+.page-cbforum .bg-white.shadow-sm.header--menu {
   display: none;
 }
-.page-cbf-online #banner-title  {
+
+
+.page-cbforum #contact---us {
+  display: none;
+}
+.page-cbforum #banner-title  {
   display: none;
 }
 
