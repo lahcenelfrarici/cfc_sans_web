@@ -728,6 +728,19 @@
 body.panel-open { overflow: hidden; }
 
 .sp-tooltip { display: none; }
+bio-toggle {
+  display: inline-block;
+  margin-top: 8px;
+  background: none;
+  border: none;
+  color: #1a9e8f; /* couleur à ajuster selon ton design */
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0;
+}
+.bio-toggle:hover {
+  text-decoration: underline;
+}
 	</style>
 </head>
 <body>
@@ -793,17 +806,21 @@ body.panel-open { overflow: hidden; }
 			<div>
 				<div class="fs-name">Featuring Pr. Philippe Aghion</div>
 				<div class="fs-badge">2025 Nobel Laureate in Economic Sciences</div>
-				<div class="fs-bio">
-Winner of the 2025 Nobel Prize in Economic Sciences, shared with Joel Mokyr and Peter Howitt for their work on the impact of new technologies on economic growth, Philippe Aghion has been a professor at the Collège de France since 2015, where he holds the Chair of "Economics of Institutions, Innovation, and Growth." He also teaches at INSEAD and at the London School of Economics (LSE), where he serves as a Centennial Professor.<br>
+		<div class="fs-bio">
+  <div class="bio-preview">
+    Winner of the 2025 Nobel Prize in Economic Sciences, shared with Joel Mokyr and Peter Howitt for their work on the impact of new technologies on economic growth, Philippe Aghion has been a professor at the Collège de France since 2015, where he holds the Chair of "Economics of Institutions, Innovation, and Growth." He also teaches at INSEAD and at the London School of Economics (LSE), where he serves as a Centennial Professor.
+  </div>
 
-Philippe Aghion entered the Department of Mathematics at the École Normale Supérieure in 1976. He continued his studies in applied mathematics for economics at Paris 1 Panthéon-Sorbonne University, earning a DEA (Master’s degree) in 1981 and a Doctorate (Third Cycle) in 1983, before obtaining a PhD in Economics from Harvard University in 1987. He began his academic career as an Assistant Professor at the Massachusetts Institute of Technology (MIT) from 1987 to 1989. He then became a Research Fellow at the French National Centre for Scientific Research (CNRS) from 1989 to 1990, and an Economist at the European Bank for Reconstruction and Development from 1990 to 1992. He was subsequently a Fellow at Nuffield College, University of Oxford, until 1996, and then Professor of Economics at University College London until 2002. That same year, he joined Harvard University as a Professor of Economics before moving to the Collège de France in 2015.<br>
+  <div class="bio-full" style="display:none;">
+    <br>
+    Philippe Aghion entered the Department of Mathematics at the École Normale Supérieure in 1976. He continued his studies in applied mathematics for economics at Paris 1 Panthéon-Sorbonne University, earning a DEA (Master's degree) in 1981 and a Doctorate (Third Cycle) in 1983, before obtaining a PhD in Economics from Harvard University in 1987. He began his academic career as an Assistant Professor at the Massachusetts Institute of Technology (MIT) from 1987 to 1989. He then became a Research Fellow at the French National Centre for Scientific Research (CNRS) from 1989 to 1990, and an Economist at the European Bank for Reconstruction and Development from 1990 to 1992. He was subsequently a Fellow at Nuffield College, University of Oxford, until 1996, and then Professor of Economics at University College London until 2002. That same year, he joined Harvard University as a Professor of Economics before moving to the Collège de France in 2015.<br>
+    His research focuses on the economics of growth. Together with Peter Howitt, he developed the paradigm of Schumpeterian growth, based on the mechanism of creative destruction. With Rachel Griffith, he examined the relationship between competition and economic growth (MIT Press, 2006), demonstrating how competitive pressure can stimulate innovation and how institutions transform individual creativity into collective progress. With Alexandra Roulet, he analyzed the effects of innovation on inequality and social mobility in Rethinking the State (Le Seuil, 2011). In 2020, together with Céline Antonin and Simon Bunel, he published The Power of Creative Destruction (Odile Jacob / Harvard University Press), a synthesis of his work on the foundations of economic prosperity and the future of capitalism. More recently, with Simon Bunel, he has explored how artificial intelligence can increase productivity and support employment, provided that institutions adapt education, training, and labor reallocation to this technological transformation.<br>
+    Throughout his career, Philippe Aghion has received numerous distinctions, including the Yrjö Jahnsson Award for the best European economist under the age of 45 in 2001, the CNRS Silver Medal in 2006, the John von Neumann Award in 2009, the BBVA Frontiers of Knowledge Award in 2020 (shared with Peter Howitt), and finally, in 2025, the Nobel Prize in Economic Sciences, shared with Joel Mokyr and Peter Howitt. These honors recognize a career that has profoundly transformed our understanding of the role of innovation, competition, and institutions in driving economic growth.<br>
+    Philippe Aghion is also a member of the Econometric Society, the American Academy of Arts and Sciences, and the Cercle des économistes.
+  </div>
 
-His research focuses on the economics of growth. Together with Peter Howitt, he developed the paradigm of Schumpeterian growth, based on the mechanism of creative destruction. With Rachel Griffith, he examined the relationship between competition and economic growth (MIT Press, 2006), demonstrating how competitive pressure can stimulate innovation and how institutions transform individual creativity into collective progress. With Alexandra Roulet, he analyzed the effects of innovation on inequality and social mobility in Rethinking the State (Le Seuil, 2011). In 2020, together with Céline Antonin and Simon Bunel, he published The Power of Creative Destruction (Odile Jacob / Harvard University Press), a synthesis of his work on the foundations of economic prosperity and the future of capitalism. More recently, with Simon Bunel, he has explored how artificial intelligence can increase productivity and support employment, provided that institutions adapt education, training, and labor reallocation to this technological transformation.<br>
-
-Throughout his career, Philippe Aghion has received numerous distinctions, including the Yrjö Jahnsson Award for the best European economist under the age of 45 in 2001, the CNRS Silver Medal in 2006, the John von Neumann Award in 2009, the BBVA Frontiers of Knowledge Award in 2020 (shared with Peter Howitt), and finally, in 2025, the Nobel Prize in Economic Sciences, shared with Joel Mokyr and Peter Howitt. These honors recognize a career that has profoundly transformed our understanding of the role of innovation, competition, and institutions in driving economic growth.<br>
-
-Philippe Aghion is also a member of the Econometric Society, the American Academy of Arts and Sciences, and the Cercle des économistes.
-        </div>
+  <button class="bio-toggle">+ Show more</button>
+</div>
 			</div>
 		  </div>
 		<h2 class="speakers-title">OUR SPEAKERS AND MODERATORS<br>Line-up</h2>
@@ -879,8 +896,8 @@ Philippe Aghion is also a member of the Econometric Society, the American Academ
 					</div>
 				</div>
 				<div class="sp-name">Said IBRAHIMI</div>
-				<div class="sp-role">CEO of (CFCA)
-        casablanca finance city authority
+				<div class="sp-role">CEO of
+        casablanca finance city authority (CFCA)
         </div>
 
 				<div class="sp-tooltip">Said Ibrahimi was appointed as CEO of Casablanca Finance City Authority in April 2010 by His Majesty King Mohammed VI.
@@ -1210,6 +1227,17 @@ jQuery(function ($) {
 
   $(document).on('keydown', function (e) {
     if (e.key === 'Escape') closeSpeakerDetail();
+  });
+});
+$(document).ready(function() {
+  $('.bio-toggle').on('click', function() {
+    var $btn = $(this);
+    var $full = $btn.closest('.fs-bio').find('.bio-full');
+
+    $full.slideToggle(200, function() {
+      var isVisible = $full.is(':visible');
+      $btn.text(isVisible ? '- Show less' : '+ Show more');
+    });
   });
 });
 	</script>
