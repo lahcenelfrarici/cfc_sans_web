@@ -408,6 +408,17 @@
 }
 
 @media (min-width: 992px) {
+
+.featured-speaker >div {
+  width: 25% !important;
+}
+.featured-speaker >div:last-child {
+  width: 65% !important;
+}
+.featured-speaker {
+  justify-content: space-between !important;
+}
+
   .register-section form .form-item {
     width: 49%;
   }
