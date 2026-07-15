@@ -1286,7 +1286,9 @@
   .register-section form .form-item:nth-child(5) {
     order: 5;
   }
-
+.register-section form .form-item:nth-child(6) {
+  order: 6;
+}
   .register-section form #edit-actions {
     order: 6;
   }
