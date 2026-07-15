@@ -5564,3 +5564,6 @@ body .register-section form input {
 .speaker-card:hover .sp-name {
   color: #4fca9c;
 }
+.speaker-detail-name {
+  text-transform: uppercase;
+}
