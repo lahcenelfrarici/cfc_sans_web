@@ -5551,9 +5551,9 @@ html[lang="fr"] .management_team .row>div:nth-child(4) {
 #speakerRole {
   color: var(--navy) !important;;
 }
-.speaker-card:nth-child(8) {
+/* .speaker-card:nth-child(8) {
   opacity: 0;
-}
+} */
 .featured-speaker > div:last-child >div {
   font-size: 15px !important;
 }
