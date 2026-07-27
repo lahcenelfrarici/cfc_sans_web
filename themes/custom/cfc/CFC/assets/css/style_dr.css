@@ -5570,3 +5570,7 @@ body .register-section form input {
 .page-export-members .field-content img {
   margin: 5% 0;
 }
+.page-export-members .views-field.views-field-title {
+  background: yellow;
+  font-size: 30px;
+}
