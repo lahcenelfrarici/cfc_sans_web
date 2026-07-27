@@ -5567,3 +5567,6 @@ body .register-section form input {
 .speaker-detail-name {
   text-transform: uppercase;
 }
+.page-export-members .field-content img {
+  margin: 5% 0;
+}
