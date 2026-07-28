@@ -5571,7 +5571,7 @@ body .register-section form input {
   margin: 5% 0;
 }
 .page-export-members .views-field.views-field-title {
-  background: yellow;
+  /* background: yellow; */
   font-size: 30px;
 }
 .page-export-members .item-list ul {
