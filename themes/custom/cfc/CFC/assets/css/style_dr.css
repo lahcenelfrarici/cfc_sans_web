@@ -5574,3 +5574,65 @@ body .register-section form input {
   background: yellow;
   font-size: 30px;
 }
+.page-export-members .item-list ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.page-export-members .item-list ul li {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 16px;
+  text-align: center;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+}
+
+/* إخفاء الحقول اللي ما بغيناهاش (Links و Industries) */
+.page-export-members .views-field-field-members-links,
+.page-export-members .views-field-field-all-industries {
+  display: none;
+}
+
+/* الصورة */
+.page-export-members .views-field-field-image-member {
+  margin-bottom: 10px;
+}
+.page-export-members .views-field-field-image-member img {
+  max-width: 100%;
+  height: 80px;
+  width: auto;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+/* العنوان (اسم الشركة) */
+.page-export-members .views-field-title {
+  font-weight: 600;
+  font-size: 14px;
+  color: #1a1a1a;
+  margin-bottom: 6px;
+  line-height: 1.3;
+}
+
+/* البلد */
+.page-export-members .views-field-field-country-pays {
+  font-size: 13px;
+  color: #777;
+}
+
+/* استجابة للموبايل */
+@media (max-width: 900px) {
+  .page-export-members .item-list ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 500px) {
+  .page-export-members .item-list ul {
+    grid-template-columns: 1fr;
+  }
+}
