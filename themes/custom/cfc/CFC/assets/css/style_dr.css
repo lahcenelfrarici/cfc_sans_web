@@ -5636,3 +5636,7 @@ body .register-section form input {
     grid-template-columns: 1fr;
   }
 }
+
+.increment--bx {
+  display: none;
+}
