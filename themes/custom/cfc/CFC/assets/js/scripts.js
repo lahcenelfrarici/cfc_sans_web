@@ -1967,33 +1967,26 @@
   //     modalVideo.attr('src', '');
   //   }
   // });
-  const modal_1 = $('.all_modale_albume');
-const modalVideo = modal_1.find('video');
+const modal_1 = $('.all_modale_albume');
+const modalIframe = modal_1.find('iframe');
 
 $('.all___class_box_albume').click(function () {
   const videoSrc = $(this).data('video');
+  const autoplaySrc = videoSrc + (videoSrc.includes('?') ? '&' : '?') + 'autoplay=true';
 
-  modalVideo[0].pause();
-  modalVideo.attr('src', videoSrc);
-  modalVideo[0].load();
+  modalIframe.attr('src', autoplaySrc);
   modal_1.addClass('active');
-
-  modalVideo[0].play().catch(function(e) {
-    console.log('Autoplay blocked:', e);
-  });
 });
 
 $('.close-btn').click(function () {
   modal_1.removeClass('active');
-  modalVideo[0].pause();
-  modalVideo.attr('src', '');
+  modalIframe.attr('src', '');
 });
 
 modal_1.click(function (e) {
   if ($(e.target).is(modal_1)) {
     modal_1.removeClass('active');
-    modalVideo[0].pause();
-    modalVideo.attr('src', '');
+    modalIframe.attr('src', '');
   }
 });
   //
@@ -2432,23 +2425,64 @@ modal_1.click(function (e) {
     }
   });
 
-  // Modal play video
+  // // Modal play video
+  // $('.hear_it_from_our_community .item').on('click', function () {
+  //   var videoSrc = $(this).data('video');
+  //   $('#communityVideo source').attr('src', videoSrc);
+  //   $('#communityVideo')[0].load();
+  //   $('#communityVideo')[0].play();
+  //   $('.modal__hear_it_from_our_community').addClass('active');
+  // });
+
+  // // Close modal + stop video
+  // $('.modal__hear_it_from_our_community .modal-close, .modal__hear_it_from_our_community').on('click', function (e) {
+  //   if ($(e.target).hasClass('modal__hear_it_from_our_community') || $(e.target).hasClass('modal-close')) {
+  //     $('#communityVideo')[0].pause();
+  //     $('#communityVideo')[0].currentTime = 0;
+  //     $('.modal__hear_it_from_our_community').removeClass('active');
+  //   }
+  // });
   $('.hear_it_from_our_community .item').on('click', function () {
     var videoSrc = $(this).data('video');
-    $('#communityVideo source').attr('src', videoSrc);
-    $('#communityVideo')[0].load();
-    $('#communityVideo')[0].play();
-    $('.modal__hear_it_from_our_community').addClass('active');
-  });
+    var type = $(this).data('type'); // "video" ou "iframe"
 
-  // Close modal + stop video
-  $('.modal__hear_it_from_our_community .modal-close, .modal__hear_it_from_our_community').on('click', function (e) {
-    if ($(e.target).hasClass('modal__hear_it_from_our_community') || $(e.target).hasClass('modal-close')) {
-      $('#communityVideo')[0].pause();
-      $('#communityVideo')[0].currentTime = 0;
-      $('.modal__hear_it_from_our_community').removeClass('active');
+    var $video = $('#communityVideo');
+    var $iframe = $('#communityIframe');
+
+    if (type === 'iframe') {
+        // Mux player / YouTube / embed b iframe
+        $video.hide()[0].pause();
+        $video.attr('src', '');
+
+        $iframe.attr('src', videoSrc + (videoSrc.includes('?') ? '&' : '?') + 'autoplay=true')
+               .show();
+    } else {
+        // mp4 direct b <video>
+        $iframe.hide().attr('src', '');
+
+        $video.find('source').attr('src', videoSrc);
+        $video[0].load();
+        $video.show()[0].play();
     }
-  });
+
+    $('.modal__hear_it_from_our_community').addClass('active');
+});
+
+// Close modal + stop video/iframe
+$('.modal__hear_it_from_our_community .modal-close, .modal__hear_it_from_our_community').on('click', function (e) {
+    if ($(e.target).hasClass('modal__hear_it_from_our_community') || $(e.target).hasClass('modal-close')) {
+        var $video = $('#communityVideo');
+        var $iframe = $('#communityIframe');
+
+        $video[0].pause();
+        $video[0].currentTime = 0;
+        $video.hide().attr('src', '');
+
+        $iframe.hide().attr('src', ''); // ki-tsali l'iframe = stop total (autoplay ma khdamch b prevention f certains browsers ila ma stoppitich src)
+
+        $('.modal__hear_it_from_our_community').removeClass('active');
+    }
+});
   //
   $('.link-view-all').on('click', function (e) {
     e.preventDefault();
@@ -2526,6 +2560,10 @@ modal_1.click(function (e) {
     observer.observe(this);
   });
 
+  //
+
+
+
 })(jQuery);
 // $(document).ready(function () {
 //   $('#exampleModal').modal('show');
@@ -2591,3 +2629,17 @@ modal_1.click(function (e) {
   };
 
 })(jQuery, Drupal);
+//   $(function () {
+//   $('#viewAllBtn').on('click', function () {
+//     var $btn = $(this);
+//     var isOpen = $btn.data('state') === 'open';
+
+//     if (isOpen) {
+//       $('.speaker-card.hidden-speaker').hide();
+//       $btn.data('state', 'closed').text('view all speakers ⌄');
+//     } else {
+//       $('.speaker-card.hidden-speaker').show();
+//       $btn.data('state', 'open').text('view less ⌃');
+//     }
+//   });
+// });

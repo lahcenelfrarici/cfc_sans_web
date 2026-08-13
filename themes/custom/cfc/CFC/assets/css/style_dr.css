@@ -5640,3 +5640,13 @@ body .register-section form input {
 .increment--bx {
   display: none;
 }
+.modal__hear_it_from_our_community iframe {
+  height: 500px !important;
+}
+.all_modale_albume.active iframe {
+  height: 500px;
+  width: 50%;
+}
+.all___class_box_albume.container {
+  position: relative;
+}
