@@ -5655,6 +5655,7 @@ body .register-section form input {
   transform: rotate(calc(0deg + (var(--i) * 4.5deg))) translateY(-49px);
   left: 48%;
   top: 19%;
+  text-transform: capitalize;
 }
 #speaker__cfc .avatar-ring::before {
   content: "";
