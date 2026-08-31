@@ -5651,7 +5651,7 @@ body .register-section form input {
   position: relative;
 }
 #speaker__cfc .round-text span {
-  transform-origin: 0 65px;
+  transform-origin: 0 53px;
   transform: rotate(calc(0deg + (var(--i) * 4.5deg))) translateY(-49px);
   left: 48%;
   top: 19%;
