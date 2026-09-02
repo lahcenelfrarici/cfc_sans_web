@@ -5668,3 +5668,20 @@ body .register-section form input {
 #wrapper_test  .custom-card.card-doing >div > img{
   width: 30%;
 }
+
+html[lang="fr"]  .gfcm-sc.section_show_english {
+  display: none;
+}
+html[lang="en"] .gfcm-sc.section_show_english {
+  display: block;
+}
+html[lang="fr"] .gfcm-sc.section_show_french {
+  display: block;
+}
+html[lang="en"] .gfcm-sc.section_show_french {
+  display: none;
+}
+#modal___financial img {
+  width: 100%;
+  height: 100%;
+}

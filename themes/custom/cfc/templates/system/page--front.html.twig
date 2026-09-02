@@ -52,42 +52,44 @@
 	{{ drupal_entity('block','cfc_modalhp') }}
 	{# {{ drupal_entity('block','cfc_modalhpevent') }} #}
 	{{ drupal_entity('block','cfc_africanleadingfinancialhub') }}
-	{# <div class="modal_ocde" id="modal-event">
-					<div class="modal_content">
-						<p>
-							<button class="close_btn">×</button>
-						</p>
-						<section class="all_invitation-card" id="modal___financial">
-							<div class="container">
-								<div class="row">
-									<div class="col-md-12">
-			              testttttttttttt
-			            </div>
-								</div>
-							</div>
-						</section>
-					</div>
-				</div> #}
-
-	{# <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-									<div class="modal-dialog" role="document">
-										<div class="modal-content">
-											<div class="modal-header">
-												<h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-												<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-													<span aria-hidden="true">&times;</span>
-												</button>
-											</div>
-											<div class="modal-body">
-												Content
-											</div>
-											<div class="modal-footer">
-												<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-												<button type="button" class="btn btn-primary">Save changes</button>
-											</div>
+	<div class="modal_ocde" id="modal-event">
+							<div class="modal_content">
+								<p>
+									<button class="close_btn">×</button>
+								</p>
+								<section class="all_invitation-card" id="modal___financial">
+									<div class="container">
+										<div class="row">
+											<div class="col-md-12">
+                        <a href="https://casablancafinancecity.com/en/cbf">
+					              				<img src="/themes/custom/cfc/CFC/assets/images/Popup@1x-100.jpg" alt="Video 1"/>
+</a>
+					            </div>
 										</div>
 									</div>
-								</div> #}
+								</section>
+							</div>
+						</div>
+
+	{# <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+											<div class="modal-dialog" role="document">
+												<div class="modal-content">
+													<div class="modal-header">
+														<h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+														<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+															<span aria-hidden="true">&times;</span>
+														</button>
+													</div>
+													<div class="modal-body">
+														Content
+													</div>
+													<div class="modal-footer">
+														<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+														<button type="button" class="btn btn-primary">Save changes</button>
+													</div>
+												</div>
+											</div>
+										</div> #}
 
 	{#  #}
 	{{ drupal_entity('block','cfc_hpslider') }}
@@ -112,11 +114,8 @@
 				<img src="/themes/custom/cfc/CFC/assets/images/1item.png" alt="Video 1"/>
 				<div class="play-icon"></div>
 			</div>
-			{# <div class="item" data-video="https://cfcdev.gebanalysis.cloud/themes/custom/cfc/CFC/assets/video/OUNS%20LEMSEFFER.mp4">
-				<img src="/themes/custom/cfc/CFC/assets/images/2item.png" alt="Video 1"/>
-				<div class="play-icon"></div>
-			</div> #}
-      <div class="item" data-video="https://cfcdev.gebanalysis.cloud/themes/custom/cfc/CFC/assets/video/vedio___1.mp4">
+
+			<div class="item" data-video="https://cfcdev.gebanalysis.cloud/themes/custom/cfc/CFC/assets/video/vedio___1.mp4">
 				<img src="/themes/custom/cfc/CFC/assets/images/img__1_img.jpeg" alt="Video 1"/>
 				<div class="play-icon"></div>
 			</div>
@@ -177,9 +176,9 @@
 				<div
 					class="form__formualaire">
 					{# <input type="text" id="first_name" placeholder="First name">
-																																			<input type="text" id="last_name" placeholder="Last name">
-																																			<input type="text" id="company_item" placeholder="Company">
-																																			<input type="email" id="email-address" placeholder="Email address"> #}
+																																													<input type="text" id="last_name" placeholder="Last name">
+																																													<input type="text" id="company_item" placeholder="Company">
+																																													<input type="email" id="email-address" placeholder="Email address"> #}
 					{{ drupal_entity('block','cfc_webform_3') }}
 				</div>
 			</div>
@@ -217,23 +216,23 @@
 
 
 	{# <section class="contact---us" id="contact---us">
-										<div
-											class="contact-container">
-											<!-- Left Form Section -->
-											<div class="contact-form">
-												<h3>{{'I am interested in getting in touch with Casablanca Finance City'|t}}</h3>
-
-												<div class="web__form_dr">
-												            {{ drupal_entity('block','cfc_webform') }}
+												<div
+													class="contact-container">
+													<!-- Left Form Section -->
+													<div class="contact-form">
+														<h3>{{'I am interested in getting in touch with Casablanca Finance City'|t}}</h3>
+	
+														<div class="web__form_dr">
+														            {{ drupal_entity('block','cfc_webform') }}
+														</div>
+													</div>
+	
+													<!-- Right Image Section -->
+													<div class="contact-image">
+														<img src="/themes/custom/cfc/CFC/assets/images/contatc-img.png" alt="Office"/>
+													</div>
 												</div>
-											</div>
-
-											<!-- Right Image Section -->
-											<div class="contact-image">
-												<img src="/themes/custom/cfc/CFC/assets/images/contatc-img.png" alt="Office"/>
-											</div>
-										</div>
-									</section> #}
+											</section> #}
 
 </main>
 {% include "@cfc/partials/footer.html.twig" %}
