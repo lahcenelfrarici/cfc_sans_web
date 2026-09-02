@@ -5663,3 +5663,8 @@ body .register-section form input {
   background-image: url('/themes/custom/cfc/CFC/assets/images/cercle__b_1.png');
 
 }
+#wrapper__tst .custom-card.card-doing >div> img
+,
+#wrapper_test  .custom-card.card-doing >div > img{
+  width: 30%;
+}
