@@ -19,16 +19,22 @@
 
   <script src="https://cxppusa1formui01cdnsa01-endpoint.azureedge.net/eur/FormLoader/FormLoader.bundle.js"></script>
 
-{# {% elseif language.getId == 'fr' %}
+{% elseif language.getId == 'fr' %}
+<div
+    data-form-id="499b3343-76a7-f111-b8de-6045bd9aa4ae"
+    data-form-api-url="https://public-eur.mkt.dynamics.com/api/v1.0/orgs/08646775-89b9-4c54-97ed-c796ab739367/landingpageforms"
+    data-cached-form-url="https://assets1-eur.mkt.dynamics.com/08646775-89b9-4c54-97ed-c796ab739367/digitalassets/forms/499b3343-76a7-f111-b8de-6045bd9aa4ae">
+  </div>
 
-  <div
+  <script src="https://formui-usa1.mkt.dynamics.com/eur/FormLoader/FormLoader.bundle.js"></script>
+  {# <div
     data-form-id="9ffd1ca5-93ae-f011-bbd2-7ced8d5e0cd7"
     data-form-api-url="https://public-eur.mkt.dynamics.com/api/v1.0/orgs/08646775-89b9-4c54-97ed-c796ab739367/landingpageforms"
     data-cached-form-url="https://assets1-eur.mkt.dynamics.com/08646775-89b9-4c54-97ed-c796ab739367/digitalassets/forms/9ffd1ca5-93ae-f011-bbd2-7ced8d5e0cd7">
   </div>
 
-  <script src="https://cxppusa1formui01cdnsa01-endpoint.azureedge.net/eur/FormLoader/FormLoader.bundle.js"></script>
-{% endif %} #}
+  <script src="https://cxppusa1formui01cdnsa01-endpoint.azureedge.net/eur/FormLoader/FormLoader.bundle.js"></script> #}
+{% endif %}
 
 {#
   Solution temporaire (fournie par l'équipe) : nouveau formulaire Dynamics 365 FR à tester
@@ -36,7 +42,7 @@
   À tester en parallèle du formulaire FR ci-dessus (id 9ffd1ca5-93ae-f011-bbd2-7ced8d5e0cd7).
   Pour ne garder que celui-ci, commenter le bloc {% if language.getId == 'en' %} ... {% endif %} ci-dessus.
 #}
-{% if language.getId == 'fr' %}
+{# {% if language.getId == 'fr' %}
 
   <div
     data-form-id="499b3343-76a7-f111-b8de-6045bd9aa4ae"
@@ -45,7 +51,7 @@
   </div>
 
   <script src="https://formui-usa1.mkt.dynamics.com/eur/FormLoader/FormLoader.bundle.js"></script>
-{% endif %}
+{% endif %} #}
 
 
 			{# <div
