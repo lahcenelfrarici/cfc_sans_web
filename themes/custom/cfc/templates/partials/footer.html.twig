@@ -1,172 +1,118 @@
 {# Section Footer #}
 <section class="contact---us" id="contact---us">
-	<div
-		class="contact-container">
+    <div
+        class="contact-container">
 
-		<!-- Left Form Section -->
-		<div class="contact-form">
-			<h3>{{'I am interested in getting in touch with Casablanca Finance City'|t}}</h3>
+        <!-- Left Form Section -->
+        <div class="contact-form">
+            <h3>{{'I am interested in getting in touch with Casablanca Finance City'|t}}</h3>
 
-			<div class="web__form_dr">
+            <div class="web__form_dr">
 
-				{% if language.getId == 'en' %}
+                {% if language.getId == 'en' %}
 
-					<div data-form-id="9c4a059d-57db-f011-8543-7ced8d8cbc2b" data-form-api-url="https://public-eur.mkt.dynamics.com/api/v1.0/orgs/08646775-89b9-4c54-97ed-c796ab739367/landingpageforms" data-cached-form-url="https://assets1-eur.mkt.dynamics.com/08646775-89b9-4c54-97ed-c796ab739367/digitalassets/forms/9c4a059d-57db-f011-8543-7ced8d8cbc2b"></div>
+                    <div data-form-id="9c4a059d-57db-f011-8543-7ced8d8cbc2b" data-form-api-url="https://public-eur.mkt.dynamics.com/api/v1.0/orgs/08646775-89b9-4c54-97ed-c796ab739367/landingpageforms" data-cached-form-url="https://assets1-eur.mkt.dynamics.com/08646775-89b9-4c54-97ed-c796ab739367/digitalassets/forms/9c4a059d-57db-f011-8543-7ced8d8cbc2b"></div>
 
-					<script src="https://cxppusa1formui01cdnsa01-endpoint.azureedge.net/eur/FormLoader/FormLoader.bundle.js"></script>
+                    <script src="https://cxppusa1formui01cdnsa01-endpoint.azureedge.net/eur/FormLoader/FormLoader.bundle.js"></script>
 
-				{% elseif language.getId == 'fr' %}
-					<div  data-form-id="499b3343-76a7-f111-b8de-6045bd9aa4ae" data-form-api-url="https://public-eur.mkt.dynamics.com/api/v1.0/orgs/08646775-89b9-4c54-97ed-c796ab739367/landingpageforms" data-cached-form-url="https://assets1-eur.mkt.dynamics.com/08646775-89b9-4c54-97ed-c796ab739367/digitalassets/forms/499b3343-76a7-f111-b8de-6045bd9aa4ae"></div>
+                {% elseif language.getId == 'fr' %}
+                    <div data-form-id="499b3343-76a7-f111-b8de-6045bd9aa4ae" data-form-api-url="https://public-eur.mkt.dynamics.com/api/v1.0/orgs/08646775-89b9-4c54-97ed-c796ab739367/landingpageforms" data-cached-form-url="https://assets1-eur.mkt.dynamics.com/08646775-89b9-4c54-97ed-c796ab739367/digitalassets/forms/499b3343-76a7-f111-b8de-6045bd9aa4ae"></div>
 
-					<script src="https://formui-usa1.mkt.dynamics.com/eur/FormLoader/FormLoader.bundle.js"></script>
-					{# <div
-					    data-form-id="9ffd1ca5-93ae-f011-bbd2-7ced8d5e0cd7"
-					    data-form-api-url="https://public-eur.mkt.dynamics.com/api/v1.0/orgs/08646775-89b9-4c54-97ed-c796ab739367/landingpageforms"
-					    data-cached-form-url="https://assets1-eur.mkt.dynamics.com/08646775-89b9-4c54-97ed-c796ab739367/digitalassets/forms/9ffd1ca5-93ae-f011-bbd2-7ced8d5e0cd7">
-					  </div>
+                    <script src="https://formui-usa1.mkt.dynamics.com/eur/FormLoader/FormLoader.bundle.js"></script>
+                {% endif %}
 
-					  <script src="https://cxppusa1formui01cdnsa01-endpoint.azureedge.net/eur/FormLoader/FormLoader.bundle.js"></script> #}
-				{% endif %}
+            </div>
+        </div>
 
-				{#
-				  Solution temporaire (fournie par l'équipe) : nouveau formulaire Dynamics 365 FR à tester
-				  pendant que le formulaire du site est corrigé / les CAPTCHA désactivés.
-				  À tester en parallèle du formulaire FR ci-dessus (id 9ffd1ca5-93ae-f011-bbd2-7ced8d5e0cd7).
-				  Pour ne garder que celui-ci, commenter le bloc {% if language.getId == 'en' %} ... {% endif %} ci-dessus.
-				#}
-			{# {% if language.getId == 'fr' %}
+        <!-- Right Image Section -->
+        <div class="contact-image">
+            <img src="/themes/custom/cfc/CFC/assets/images/contatc-img.png" alt="Office"/>
+        </div>
 
-			  <div
-			    data-form-id="499b3343-76a7-f111-b8de-6045bd9aa4ae"
-			    data-form-api-url="https://public-eur.mkt.dynamics.com/api/v1.0/orgs/08646775-89b9-4c54-97ed-c796ab739367/landingpageforms"
-			    data-cached-form-url="https://assets1-eur.mkt.dynamics.com/08646775-89b9-4c54-97ed-c796ab739367/digitalassets/forms/499b3343-76a7-f111-b8de-6045bd9aa4ae">
-			  </div>
-
-			  <script src="https://formui-usa1.mkt.dynamics.com/eur/FormLoader/FormLoader.bundle.js"></script>
-			{% endif %} #}
-
-
-				{# <div
-							          data-form-id="9ffd1ca5-93ae-f011-bbd2-7ced8d5e0cd7"
-							          data-form-api-url="https://public-eur.mkt.dynamics.com/api/v1.0/orgs/08646775-89b9-4c54-97ed-c796ab739367/landingpageforms"
-							          data-cached-form-url="https://assets1-eur.mkt.dynamics.com/08646775-89b9-4c54-97ed-c796ab739367/digitalassets/forms/9ffd1ca5-93ae-f011-bbd2-7ced8d5e0cd7">
-							        </div>
-
-							        <script src="https://cxppusa1formui01cdnsa01-endpoint.azureedge.net/eur/FormLoader/FormLoader.bundle.js"></script> #}
-
-
-				{# <iframe
-								  src="https://assets1-eur.mkt.dynamics.com/08646775-89b9-4c54-97ed-c796ab739367/digitalassets/forms/9ffd1ca5-93ae-f011-bbd2-7ced8d5e0cd7"
-								  width="100%"
-								  height="720"
-								  style="border:0; overflow:hidden;"
-								  loading="lazy"
-								></iframe> #}
-
-			</div>
-		</div>
-
-		<!-- Right Image Section -->
-		<div class="contact-image">
-			<img src="/themes/custom/cfc/CFC/assets/images/contatc-img.png" alt="Office"/>
-		</div>
-
-	</div>
+    </div>
 </section>
 
-{#  #}
 <section class="section---filter-block">
-	{{ drupal_view('news','block_1') }}
+    {{ drupal_view('news','block_1') }}
 </section>
 
 <!-- Section Footer-->
-{# <script
-    src="https://app.wonderchat.io/scripts/wonderchat.js"
-    data-name="wonderchat"
-    data-address="app.wonderchat.io"
-    data-id="cm5ay9cph0fah12b56z80lo4q"
-    data-widget-size="normal"
-    data-widget-button-size="normal"
-    defer
-  ></script> #}
 
+<footer class="bg-dark text-light py-5">
+    <div class="container">
+        <div class="row">
 
-{#  #}
-	<footer class="bg-dark text-light py-5"> <div class="container">
-		<div
-			class="row">
+            <!-- Copyright -->
+            <div class="text-center mb-4">
+                <p class="mb-0">
+                    {{ drupal_entity('block','cfc_copyright') }}
+                </p>
+            </div>
 
-			<!-- Copyright -->
-			<div class="text-center mb-4">
-				<p class="mb-0">
-					{{ drupal_entity('block','cfc_copyright') }}
-				</p>
-			</div>
+            <!-- Logo and Social Links -->
+            <div class="col-md-4">
+                {{ drupal_entity('block','cfc_logofooter') }}
+                {{ drupal_entity('block','cfc_socialmedia') }}
+            </div>
 
-			<!-- Logo and Social Links -->
-			<div class="col-md-4">
-				{{ drupal_entity('block','cfc_logofooter') }}
-				{{ drupal_entity('block','cfc_socialmedia') }}
-			</div>
+            <!-- Stay Updated -->
+            <div class="col-md-4">
+                <h5>{{ 'Stay Updated'|t }}</h5>
+                {{ drupal_entity('block','cfc_stayupdated') }}
+                <form class="d-flex mt-3">
+                    <input type="email" class="form-control rounded-pill" placeholder="Email..." required="">
+                    <button type="submit" class="form--news">
+                        {{ 'Subscribe'|t }}
+                        <i class="fas fa-arrow-right ms-2"></i>
+                    </button>
+                </form>
+            </div>
 
-			<!-- Stay Updated -->
-			<div class="col-md-4">
-				<h5>{{ 'Stay Updated'|t }}</h5>
-				{{ drupal_entity('block','cfc_stayupdated') }}
-				<form class="d-flex mt-3">
-					<input type="email" class="form-control rounded-pill" placeholder="Email..." required="">
-					<button type="submit" class="form--news">
-						{{ 'Subscribe'|t }}
-						<i class="fas fa-arrow-right ms-2"></i>
-					</button>
-				</form>
-			</div>
+            <!-- Quick Links -->
+            <div class="col-md-4">
+                {{ drupal_entity('block','cfc_quicklinks') }}
+            </div>
 
-			<!-- Quick Links -->
-			<div class="col-md-4">
-				{{ drupal_entity('block','cfc_quicklinks') }}
-			</div>
+        </div>
+    </div>
 
-		</div>
-	</div>
+    <!-- Google tag -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9WWD1TRBQN"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'G-9WWD1TRBQN');
+    </script>
 
-	<!-- ✅ GOOGLE TAG -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-9WWD1TRBQN"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-function gtag() {
-dataLayer.push(arguments);
-}
-gtag('js', new Date());
-gtag('config', 'G-9WWD1TRBQN');
-	</script>
+    <!-- LinkedIn insight tag -->
+    <script type="text/javascript">
+        _linkedin_partner_id = "8379876";
+        window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+        window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+    </script>
 
-	<!-- ✅ LINKEDIN INSIGHT TAG -->
-	<script type="text/javascript">
-		_linkedin_partner_id = "8379876";
-window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
-window._linkedin_data_partner_ids.push(_linkedin_partner_id);
-	</script>
+    <script type="text/javascript">
+        (function (l) {
+            if (!l) {
+                window.lintrk = function (a, b) {
+                    window.lintrk.q.push([a, b])
+                };
+                window.lintrk.q = [];
+            }
+            var s = document.getElementsByTagName("script")[0];
+            var b = document.createElement("script");
+            b.type = "text/javascript";
+            b.async = true;
+            b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+            s.parentNode.insertBefore(b, s);
+        })(window.lintrk);
+    </script>
 
-	<script type="text/javascript">
-		(function (l) {
-if (! l) {
-window.lintrk = function (a, b) {
-window.lintrk.q.push([a, b])
-};
-window.lintrk.q = [];
-}
-var s = document.getElementsByTagName("script")[0];
-var b = document.createElement("script");
-b.type = "text/javascript";
-b.async = true;
-b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
-s.parentNode.insertBefore(b, s);
-})(window.lintrk);
-	</script>
-
-	<noscript>
-		<img height="1" width="1" style="display:none;" alt="" src="https://px.ads.linkedin.com/collect/?pid=8379876&fmt=gif"/>
-	</noscript>
+    <noscript>
+        <img height="1" width="1" style="display:none;" alt="" src="https://px.ads.linkedin.com/collect/?pid=8379876&fmt=gif"/>
+    </noscript>
 
 </footer>
