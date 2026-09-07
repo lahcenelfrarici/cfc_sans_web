@@ -24,6 +24,16 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
  * Each item is one (path, language) pair. Its indexable text is the visible
  * text of the fully rendered page, so headings and copy that only live in Twig
  * templates become searchable.
+ *
+ * The annotation below is kept alongside the PHP attribute so the plugin is
+ * still discovered on older Search API releases whose datasource manager only
+ * scans annotations (e.g. 8.x-1.35); newer releases use the attribute.
+ *
+ * @SearchApiDatasource(
+ *   id = "cfc_page",
+ *   label = @Translation("Site pages (CFC)"),
+ *   description = @Translation("Visible text of configured pages, including text that only exists in templates."),
+ * )
  */
 #[SearchApiDatasource(
   id: 'cfc_page',
