@@ -481,6 +481,14 @@ function cfc_theme_suggestions_node_alter(array &$suggestions, array $variables)
 
     // Add suggestion
     $suggestions[] = 'node__' . $alias;
+
+    // Also suggest a template named after the node title (case preserved), so
+    // existing templates such as node--CBF.html.twig / node--Survey.html.twig
+    // keep matching on case-sensitive (Linux) file systems.
+    $title = (string) $node->label();
+    if ($title !== '') {
+      $suggestions[] = 'node__' . preg_replace('/[^A-Za-z0-9_]+/', '_', str_replace(' ', '_', $title));
+    }
   }
 }
 
