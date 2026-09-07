@@ -1,0 +1,28 @@
+services:
+  cfc_page_index.extractor:
+    class: Drupal\cfc_page_index\PageTextExtractor
+    arguments:
+      - '@http_client'
+      - '@language_manager'
+      - '@keyvalue'
+      - '@config.factory'
+      - '@logger.channel.cfc_page_index'
+      - '@request_stack'
+  cfc_page_index.discovery:
+    class: Drupal\cfc_page_index\PageDiscovery
+    arguments:
+      - '@cfc_page_index.extractor'
+      - '@config.factory'
+      - '@state'
+      - '@language_manager'
+      - '@path.validator'
+      - '@menu.link_tree'
+      - '@logger.channel.cfc_page_index'
+  cfc_page_index.manager:
+    class: Drupal\cfc_page_index\PageIndexManager
+    arguments:
+      - '@cfc_page_index.discovery'
+      - '@cfc_page_index.extractor'
+  logger.channel.cfc_page_index:
+    parent: logger.channel_base
+    arguments: ['cfc_page_index']

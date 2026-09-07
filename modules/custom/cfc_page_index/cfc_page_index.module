@@ -1,0 +1,60 @@
+<?php
+
+/**
+ * @file
+ * CFC Page Index.
+ *
+ * Adds a Search API datasource ("Site pages (CFC)") that indexes the visible
+ * text of configured non-node pages, so headings and copy that only live in
+ * Twig templates become searchable. Results are shown in the existing
+ * "Search content" view; the card markup for a page result is produced in
+ * cfc_preprocess_views_view_unformatted() in the theme.
+ */
+
+declare(strict_types=1);
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\search_api\Query\QueryInterface;
+
+/**
+ * Implements hook_search_api_query_TAG_alter() for the "search_content" view.
+ *
+ * Makes Search API hand back the stored display fields for "site page" results,
+ * so the theme renders the card from indexed data (which survives a cache
+ * rebuild) instead of re-rendering the page. Using the Search API query hook
+ * rather than hook_views_query_alter(), because the latter is skipped when
+ * Views reuses an already-built query.
+ */
+function cfc_page_index_search_api_query_views_search_content_alter(QueryInterface $query): void {
+  $existing = (array) $query->getOption('search_api_retrieved_field_values', []);
+  $query->setOption('search_api_retrieved_field_values', array_values(array_unique([
+    ...$existing,
+    'page_label', 'page_excerpt', 'page_image', 'page_url',
+  ])));
+}
+
+/**
+ * Implements hook_cron().
+ *
+ * Once a week, rebuild the crawl and re-queue the page items so newly added
+ * pages become searchable without anyone having to visit the settings form.
+ */
+function cfc_page_index_cron(): void {
+  $state = \Drupal::state();
+  $last = (int) $state->get('cfc_page_index.last_refresh', 0);
+  if (\Drupal::time()->getRequestTime() - $last < 604800) {
+    return;
+  }
+  $state->set('cfc_page_index.last_refresh', \Drupal::time()->getRequestTime());
+  \Drupal::service('cfc_page_index.manager')->refresh();
+}
+
+/**
+ * Implements hook_help().
+ */
+function cfc_page_index_help($route_name, RouteMatchInterface $route_match): string {
+  if ($route_name === 'help.page.cfc_page_index') {
+    return '<p>' . t('This module indexes the visible text of the pages listed at <em>Configuration → Search and metadata → CFC Page Index</em>. Use it for pages whose text only exists in templates (the front page, custom landing pages). Node pages are already indexed by Search API and should not be listed here.') . '</p>';
+  }
+  return '';
+}

@@ -1,0 +1,7 @@
+cfc_page_index.settings:
+  path: '/admin/config/search/cfc-page-index'
+  defaults:
+    _form: 'Drupal\cfc_page_index\Form\SettingsForm'
+    _title: 'CFC Page Index'
+  requirements:
+    _permission: 'administer search_api'

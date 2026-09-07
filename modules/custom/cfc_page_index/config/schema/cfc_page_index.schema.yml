@@ -1,0 +1,37 @@
+cfc_page_index.settings:
+  type: config_object
+  label: 'CFC Page Index settings'
+  mapping:
+    base_url:
+      type: string
+      label: 'Site base URL for the crawler'
+    excluded_node_types:
+      type: sequence
+      label: 'Node types the crawler skips'
+      sequence:
+        type: string
+        label: 'Content type machine name'
+    paths:
+      type: sequence
+      label: 'Seed page paths'
+      sequence:
+        type: string
+        label: 'Path'
+    crawl:
+      type: boolean
+      label: 'Follow links from the seed pages'
+    max_pages:
+      type: integer
+      label: 'Maximum pages to crawl'
+    langcodes:
+      type: sequence
+      label: 'Languages'
+      sequence:
+        type: string
+        label: 'Language code'
+    hidden_classes:
+      type: sequence
+      label: 'Hidden CSS classes'
+      sequence:
+        type: string
+        label: 'Class name'

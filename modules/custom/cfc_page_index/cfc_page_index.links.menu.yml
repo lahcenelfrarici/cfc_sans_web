@@ -1,0 +1,6 @@
+cfc_page_index.settings:
+  title: 'CFC Page Index'
+  description: 'Choose which non-node pages have their visible text indexed for search.'
+  parent: system.admin_config_search
+  route_name: cfc_page_index.settings
+  weight: 10

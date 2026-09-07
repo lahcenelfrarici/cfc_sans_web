@@ -1,0 +1,112 @@
+<?php
+
+/**
+ * @file
+ * Install / update hooks for CFC Page Index.
+ *
+ * The heavy lifting lives in the "cfc_page_index.manager" service so it can be
+ * reused and is idempotent (safe on an environment where the same change was
+ * already made by hand).
+ */
+
+declare(strict_types=1);
+
+/**
+ * Implements hook_install().
+ */
+function cfc_page_index_install(): void {
+  \Drupal::service('cfc_page_index.manager')->install();
+  // Blocks are covered by the page crawl (with the correct link), so the
+  // separate block datasource is removed.
+  \Drupal::service('cfc_page_index.manager')->removeBlockContentDatasource();
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function cfc_page_index_uninstall(): void {
+  \Drupal::service('cfc_page_index.manager')->uninstall();
+  \Drupal::state()->delete('cfc_page_index.discovered_paths');
+  \Drupal::state()->delete('cfc_page_index.last_refresh');
+}
+
+/**
+ * Add stored display fields for site-page results.
+ */
+function cfc_page_index_update_10001(): void {
+  \Drupal::service('cfc_page_index.manager')->install();
+}
+
+/**
+ * Switch from indexing custom blocks directly to crawling the pages that show
+ * them (so every result links to a real page).
+ */
+function cfc_page_index_update_10002(): void {
+  \Drupal::service('cfc_page_index.manager')->removeBlockContentDatasource();
+  \Drupal::service('cfc_page_index.manager')->refresh();
+}
+
+/**
+ * Add the stored "page_image" field.
+ */
+function cfc_page_index_update_10003(): void {
+  \Drupal::service('cfc_page_index.manager')->install();
+}
+
+/**
+ * Add crawl defaults for installs that predate them.
+ */
+function cfc_page_index_update_10004(): void {
+  $config = \Drupal::configFactory()->getEditable('cfc_page_index.settings');
+  if ($config->get('crawl') === NULL) {
+    $config->set('crawl', TRUE);
+  }
+  if (!$config->get('max_pages')) {
+    $config->set('max_pages', 150);
+  }
+  $config->save();
+  \Drupal::service('cfc_page_index.manager')->refresh();
+}
+
+/**
+ * Give the display "page_label" field its own property path so Search API can
+ * retrieve it (it used to collide with the fulltext "page_title" field).
+ */
+function cfc_page_index_update_10005(): void {
+  \Drupal::service('cfc_page_index.manager')->install();
+  \Drupal::service('cfc_page_index.manager')->refresh();
+}
+
+/**
+ * Switch the search to phrase matching and to fetching pages over real HTTP.
+ */
+function cfc_page_index_update_10006(): void {
+  $config = \Drupal::configFactory()->getEditable('cfc_page_index.settings');
+  if ($config->get('base_url') === NULL) {
+    $config->set('base_url', '')->save();
+  }
+  \Drupal::service('cfc_page_index.manager')->install();
+  \Drupal::service('cfc_page_index.manager')->refresh();
+}
+
+/**
+ * Stop the crawler indexing article-style nodes (news, reports, events, …) so a
+ * search matches the article body, not the "latest news" widgets on every page.
+ */
+function cfc_page_index_update_10007(): void {
+  $config = \Drupal::configFactory()->getEditable('cfc_page_index.settings');
+  if ($config->get('excluded_node_types') === NULL) {
+    $config->set('excluded_node_types', ['news', 'rapports', 'events', 'article'])->save();
+  }
+  \Drupal::service('cfc_page_index.manager')->refresh();
+}
+
+/**
+ * Make the "rendered_item" search field cover every node bundle (was article +
+ * page only), so a search also matches text a content type only shows through
+ * its rendered display.
+ */
+function cfc_page_index_update_10008(): void {
+  \Drupal::service('cfc_page_index.manager')->install();
+  \Drupal::service('cfc_page_index.manager')->refresh();
+}

@@ -1,0 +1,32 @@
+# Absolute site URL the crawler fetches from (e.g. https://www.example.com).
+# Leave empty to use the current request's host — but cron / drush have no
+# host, so set this on any environment where the crawl runs from the CLI.
+base_url: ''
+# Node content types the crawler must NOT index (their body is already
+# searchable through the standard content datasource; crawling them would also
+# pull in the "latest news" widgets that repeat on every page). Their links are
+# still followed during the crawl.
+excluded_node_types:
+  - news
+  - rapports
+  - events
+  - article
+# Seed pages for the crawler. Paths are internal, language-neutral and start
+# with "/".
+paths:
+  - '/'
+# When TRUE the crawler follows same-site links from the seeds and the site
+# menus. When FALSE only the "paths" above are indexed.
+crawl: true
+# Safety cap on the number of pages fetched during one crawl.
+max_pages: 150
+# Language codes to index each page in. Must match the site's languages.
+langcodes:
+  - en
+  - fr
+# CSS class names that mark a hidden section (in addition to inline
+# "display:none", the "hidden" attribute and aria-hidden="true").
+hidden_classes:
+  - visually-hidden
+  - visetdisplay-none
+  - element-hidden

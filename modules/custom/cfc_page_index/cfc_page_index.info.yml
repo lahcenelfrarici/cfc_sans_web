@@ -1,0 +1,9 @@
+name: 'CFC Page Index'
+type: module
+description: 'Indexes the visible text of configured site pages (including text that only lives in Twig templates) into the Search API "default" content index.'
+package: CFC
+core_version_requirement: ^10 || ^11
+dependencies:
+  - search_api:search_api
+  - drupal:node
+configure: cfc_page_index.settings

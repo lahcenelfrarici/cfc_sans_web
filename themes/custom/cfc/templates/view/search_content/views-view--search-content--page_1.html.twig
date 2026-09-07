@@ -43,7 +43,7 @@
           </div>
         </div>
 
-        {% if rows is empty %}
+        {% if view.result is empty %}
           {# No results message #}
           <div id="no-members-message">
             <svg xmlns="http://www.w3.org/2000/svg" width="95" height="95" viewbox="0 0 95 95" fill="none">
@@ -66,8 +66,8 @@
               </defs>
             </svg>
             <p>
-              {{'It looks like there are no members in this industry and country right now.<br>
-              Check back later to explore new additions to our community!'|t}}
+              {{ 'We couldn\'t find any content matching your search.<br>
+              Try different keywords or check your spelling.'|t }}
             </p>
             {# <div class="btn--pls">
               <a class="" href="{{ path('entity.node.canonical', {'node': 101}) }}">

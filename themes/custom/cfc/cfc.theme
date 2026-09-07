@@ -124,17 +124,17 @@ function cfc_preprocess_breadcrumb(array &$variables)
 //   // You can add more logic here to create more granular template suggestions.
 // }
 
-function cfc_theme_suggestions_node_alter(array &$suggestions, array $variables)
-{
-  // Use $variables variable to get data related to your node
-  $node_name = $variables["elements"]["#node"]->get("title")->value;
-  //  dump($node);
+// function cfc_theme_suggestions_node_alter(array &$suggestions, array $variables)
+// {
+//   // Use $variables variable to get data related to your node
+//   $node_name = $variables["elements"]["#node"]->get("title")->value;
+//   //  dump($node);
 
-  $modifiedText = str_replace(' ', '_', $node_name);
+//   $modifiedText = str_replace(' ', '_', $node_name);
 
 
-  $suggestions[] = "node__" . $modifiedText;
-}
+//   $suggestions[] = "node__" . $modifiedText;
+// }
 
 function cfc_theme_suggestions_form_alter(array &$suggestions, array $variables)
 {
@@ -453,4 +453,357 @@ function cfc_form_alter(&$form, FormStateInterface $form_state, $form_id) {
  */
 function cfc_confirmation_message_form_submit(array &$form, FormStateInterface $form_state) {
   \Drupal::messenger()->addMessage(t('Thank you! Your message has been received.'));
+}
+use Drupal\node\NodeInterface;
+
+function cfc_theme_suggestions_node_alter(array &$suggestions, array $variables) {
+  if (!empty($variables['elements']['#node']) && $variables['elements']['#node'] instanceof NodeInterface) {
+
+    $node = $variables['elements']['#node'];
+
+    // Get alias
+    $alias = \Drupal::service('path_alias.manager')->getAliasByPath('/node/' . $node->id());
+
+    // Clean alias
+    $alias = trim($alias, '/');
+
+    // Remove language prefix (en/)
+    $alias = preg_replace('/^[a-z]{2}\//', '', $alias);
+
+    // 🔥 IMPORTANT: replace "-" with "_"
+    $alias = str_replace('-', '_', $alias);
+
+    // Replace "/" with "__"
+    $alias = str_replace('/', '__', $alias);
+
+    // Final sanitize
+    $alias = preg_replace('/[^a-z0-9_]+/', '_', $alias);
+
+    // Add suggestion
+    $suggestions[] = 'node__' . $alias;
+  }
+}
+
+/**
+ * Implements hook_theme().
+ *
+ * Registers the uniform card used for every row of the "Search content" view.
+ * Search results are rebuilt from scratch in
+ * cfc_preprocess_views_view_unformatted() so that they never fall back to a
+ * content type's own full-page template (node--gfci, node--news, …) or to the
+ * raw field output of a custom block.
+ */
+function cfc_theme($existing, $type, $theme, $path) {
+  return [
+    'cfc_search_result' => [
+      'variables' => [
+        'title' => '',
+        'summary' => '',
+        'image_url' => '',
+        'image_is_logo' => FALSE,
+        'date' => '',
+        'url' => '',
+      ],
+      'path' => $path . '/templates/view/search_content',
+      'template' => 'cfc-search-result',
+    ],
+  ];
+}
+
+/**
+ * Image field candidates, in priority order, checked on a search result entity.
+ */
+function _cfc_search_image_fields() {
+  return [
+    'field_image',
+    'field_image_news',
+    'field_image_rapport',
+    'field_image_team',
+    'field_image_member',
+    'field_image_banner',
+    'field_flag_image',
+    'field_photo_couverture',
+    'field_cover',
+    'field_thumbnail',
+    'field_teaser_image',
+  ];
+}
+
+/**
+ * Builds a short plain-text excerpt from an entity's body/description field.
+ */
+function _cfc_search_summary($entity) {
+  $text = '';
+  if ($entity->hasField('body') && !$entity->get('body')->isEmpty()) {
+    $text = $entity->get('body')->summary ?: $entity->get('body')->value;
+  }
+  elseif ($entity->hasField('field_description') && !$entity->get('field_description')->isEmpty()) {
+    $text = $entity->get('field_description')->value;
+  }
+  elseif ($entity->hasField('field_resume') && !$entity->get('field_resume')->isEmpty()) {
+    $text = $entity->get('field_resume')->value;
+  }
+
+  // Some "page" nodes hold a whole pasted HTML document in their body; drop the
+  // non-visible parts before stripping tags.
+  $text = preg_replace('#<(style|script|head|template)[^>]*>.*?</\1>#is', ' ', (string) $text);
+  $text = html_entity_decode(strip_tags($text), ENT_QUOTES | ENT_HTML5);
+  $text = trim(preg_replace('/\s+/', ' ', $text));
+
+  if (mb_strlen($text) > 180) {
+    $text = rtrim(mb_substr($text, 0, 180)) . '…';
+  }
+  return $text;
+}
+
+/**
+ * Resolves a preview image URL for a search result entity.
+ */
+function _cfc_search_image_url($entity) {
+  $generator = \Drupal::service('file_url_generator');
+
+  foreach (_cfc_search_image_fields() as $field_name) {
+    if ($entity->hasField($field_name) && !$entity->get($field_name)->isEmpty()) {
+      $file = $entity->get($field_name)->entity;
+      if ($file && $file->getEntityTypeId() === 'file') {
+        return $generator->generateString($file->getFileUri());
+      }
+    }
+  }
+
+  // Media reference (media entity -> image field -> file).
+  if ($entity->hasField('field_media_image') && !$entity->get('field_media_image')->isEmpty()) {
+    $media = $entity->get('field_media_image')->entity;
+    if ($media && $media->hasField('field_media_image') && !$media->get('field_media_image')->isEmpty()) {
+      $file = $media->get('field_media_image')->entity;
+      if ($file) {
+        return $generator->generateString($file->getFileUri());
+      }
+    }
+  }
+
+  return '';
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for views-view-unformatted.
+ *
+ * Replaces every row of the "Search content" view with a uniform card
+ * (image + title + short body + link). Without this, a node result renders
+ * with its own content-type template — which for this site is a full page
+ * layout — and a custom block renders its raw field output. Rendering
+ * elsewhere on the site is untouched.
+ */
+function cfc_preprocess_views_view_unformatted(array &$variables) {
+  $view = $variables['view'] ?? NULL;
+  if (!$view || $view->id() !== 'search_content' || empty($view->result)) {
+    return;
+  }
+
+  $front = \Drupal\Core\Url::fromRoute('<front>')->toString();
+  $default_attributes = $variables['rows'][0]['attributes'] ?? NULL;
+
+  // Rebuild the row list straight from the results so that every hit — node or
+  // site page — gets the same card, even when Search API would otherwise
+  // render an empty row for it.
+  $rows = [];
+  $seen_urls = [];
+  foreach ($view->result as $i => $result) {
+    $card = NULL;
+
+    if (($result->search_api_datasource ?? NULL) === 'cfc_page') {
+      // A crawled page that is actually a node → show the rich node card
+      // (image, date, body) rather than the plain page card.
+      $node = _cfc_search_page_node($result);
+      $card = $node ? _cfc_search_node_card($node) : _cfc_search_page_card($result);
+    }
+    elseif (!empty($result->_object) && ($entity = $result->_object->getValue()) instanceof \Drupal\Core\Entity\ContentEntityInterface) {
+      $card = $entity instanceof \Drupal\node\NodeInterface
+        ? _cfc_search_node_card($entity)
+        : [
+          '#theme' => 'cfc_search_result',
+          '#title' => $entity->label(),
+          '#summary' => _cfc_search_summary($entity),
+          '#image_url' => _cfc_search_image_url($entity),
+          '#date' => '',
+          '#url' => $front,
+          '#cache' => ['tags' => $entity->getCacheTags()],
+        ];
+    }
+
+    if ($card === NULL) {
+      // Unknown row: keep whatever Views produced.
+      $rows[] = $variables['rows'][$i] ?? ['content' => ['#markup' => '']];
+      continue;
+    }
+
+    // Use the CFC logo for the home page, and as a fallback for any result
+    // that has no image of its own.
+    if (empty($card['#image_url']) || _cfc_search_normalize_url((string) ($card['#url'] ?? '')) === '/') {
+      $card['#image_url'] = base_path() . 'themes/custom/cfc/CFC/assets/images/Logo.png';
+      $card['#image_is_logo'] = TRUE;
+    }
+
+    // De-duplicate: a landing page can match both as a node and as a crawled
+    // page. Keep whichever ranked higher, drop the later twin.
+    $card_url = _cfc_search_normalize_url((string) ($card['#url'] ?? ''));
+    if ($card_url !== '' && $card_url !== '/') {
+      if (isset($seen_urls[$card_url])) {
+        continue;
+      }
+      $seen_urls[$card_url] = TRUE;
+    }
+
+    $row = ['content' => $card];
+    if ($default_attributes !== NULL) {
+      $row['attributes'] = clone $default_attributes;
+    }
+    $rows[] = $row;
+  }
+
+  $variables['rows'] = array_values($rows);
+}
+
+/**
+ * Builds the rich card for a node result (image + date + short body + link).
+ */
+function _cfc_search_node_card($node): array {
+  $date = '';
+  if ($node->bundle() === 'news' || $node->bundle() === 'events') {
+    if ($node->hasField('field_date') && !$node->get('field_date')->isEmpty()) {
+      $date = \Drupal::service('date.formatter')->format(strtotime($node->get('field_date')->value), 'custom', 'd M Y');
+    }
+    elseif ($node->hasField('created')) {
+      $date = \Drupal::service('date.formatter')->format($node->get('created')->value, 'custom', 'd M Y');
+    }
+  }
+
+  return [
+    '#theme' => 'cfc_search_result',
+    '#title' => $node->label(),
+    '#summary' => _cfc_search_summary($node),
+    '#image_url' => _cfc_search_image_url($node),
+    '#date' => $date,
+    '#url' => $node->toUrl()->toString(),
+    '#cache' => ['tags' => $node->getCacheTags()],
+  ];
+}
+
+/**
+ * Returns the node a "site page" search result points at, or NULL.
+ */
+function _cfc_search_page_node($result) {
+  if (empty($result->_item) || !preg_match('#^cfc_page/([a-z-]+):(/.*)$#', $result->_item->getId(), $m)) {
+    return NULL;
+  }
+  [, $langcode, $path] = $m;
+  if ($path === '/') {
+    return NULL;
+  }
+  $url = \Drupal::service('path.validator')->getUrlIfValidWithoutAccessCheck($path);
+  if (!$url || $url->getRouteName() !== 'entity.node.canonical') {
+    return NULL;
+  }
+  $node = \Drupal::entityTypeManager()->getStorage('node')->load($url->getRouteParameters()['node']);
+  if (!$node) {
+    return NULL;
+  }
+  if ($node->hasTranslation($langcode)) {
+    $node = $node->getTranslation($langcode);
+  }
+  return $node->access('view') ? $node : NULL;
+}
+
+/**
+ * Normalizes a URL to "/path" (no scheme, host, language prefix, query).
+ */
+function _cfc_search_normalize_url(string $url): string {
+  $path = parse_url($url, PHP_URL_PATH) ?: $url;
+  $path = '/' . ltrim($path, '/');
+  foreach (array_keys(\Drupal::languageManager()->getLanguages()) as $lc) {
+    if ($path === '/' . $lc) {
+      return '/';
+    }
+    if (str_starts_with($path, '/' . $lc . '/')) {
+      $path = substr($path, strlen($lc) + 1);
+      break;
+    }
+  }
+  return rtrim($path, '/') ?: '/';
+}
+
+/**
+ * Builds the search card render array for a "site page" result.
+ *
+ * The title, excerpt and URL come from the copy cfc_page_index cached during
+ * the last index run, so no page is re-rendered while the results list is
+ * displayed.
+ */
+function _cfc_search_page_card($result) {
+  $title = '';
+  $content = '';
+  $image = '';
+  $url = '';
+
+  // Parse the item id ("cfc_page/en:/path") for path + language.
+  $langcode = '';
+  $path = '/';
+  if (!empty($result->_item) && preg_match('#^cfc_page/([a-z-]+):(/.*)$#', $result->_item->getId(), $m)) {
+    [, $langcode, $path] = $m;
+  }
+
+  // First choice: the values Search API stored for this row (persistent,
+  // survive a cache rebuild). Requested in cfc_page_index_views_query_alter().
+  if (!empty($result->_item)) {
+    $field = static function (string $name) use ($result): string {
+      $f = $result->_item->getField($name);
+      $values = $f ? $f->getValues() : [];
+      return $values ? (string) reset($values) : '';
+    };
+    $title = $field('page_label');
+    $content = $field('page_excerpt');
+    $image = $field('page_image');
+    $url = $field('page_url');
+  }
+
+  // Second choice: the page text cached by the last crawl / index run.
+  if (($title === '' || $content === '') && $langcode !== '' && \Drupal::hasService('cfc_page_index.extractor')) {
+    $data = \Drupal::service('cfc_page_index.extractor')->extract($path, $langcode, FALSE);
+    if (is_array($data)) {
+      $title = $title !== '' ? $title : (string) ($data['title'] ?? '');
+      $content = $content !== '' ? $content : (string) ($data['text'] ?? '');
+      $image = $image !== '' ? $image : (string) ($data['image'] ?? '');
+      $url = $url !== '' ? $url : (string) ($data['url'] ?? '');
+    }
+  }
+
+  if ($url === '') {
+    try {
+      $language = $langcode !== '' ? \Drupal::languageManager()->getLanguage($langcode) : NULL;
+      $url = $path === '/'
+        ? \Drupal\Core\Url::fromRoute('<front>', [], $language ? ['language' => $language] : [])->toString()
+        : \Drupal\Core\Url::fromUserInput($path, $language ? ['language' => $language] : [])->toString();
+    }
+    catch (\Exception) {
+      $url = \Drupal\Core\Url::fromRoute('<front>')->toString();
+    }
+  }
+
+  $summary = trim(preg_replace('/\s+/', ' ', $content));
+  if (mb_strlen($summary) > 180) {
+    $summary = rtrim(mb_substr($summary, 0, 180)) . '…';
+  }
+
+  // Drop a trailing " | Site name" from the title.
+  $title = preg_replace('/\s*[|–—-]\s*[^|–—-]{1,40}$/u', '', $title) ?: $title;
+
+  return [
+    '#theme' => 'cfc_search_result',
+    '#title' => $title !== '' ? $title : t('Page'),
+    '#summary' => $summary,
+    '#image_url' => $image,
+    '#date' => '',
+    '#url' => $url,
+    '#cache' => ['max-age' => 0],
+  ];
 }
