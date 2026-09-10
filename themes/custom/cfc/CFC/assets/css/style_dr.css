@@ -5685,3 +5685,13 @@ html[lang="en"] .gfcm-sc.section_show_french {
   width: 100%;
   height: 100%;
 }
+
+.page-search-content #contact---us {
+  display: none;
+}
+.page-search-content .section---filter-block {
+  display: none;
+}
+.gfcm-card {
+  display: block !important;
+}
