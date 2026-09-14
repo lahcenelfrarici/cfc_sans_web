@@ -110,3 +110,13 @@ function cfc_page_index_update_10008(): void {
   \Drupal::service('cfc_page_index.manager')->install();
   \Drupal::service('cfc_page_index.manager')->refresh();
 }
+
+/**
+ * Removes the "current interface language" filter from the search view: a
+ * visitor browsing the French site must still find an English-only page (and
+ * vice versa) when their keywords match it, so search is no longer restricted
+ * to the interface language.
+ */
+function cfc_page_index_update_10009(): void {
+  \Drupal::service('cfc_page_index.manager')->install();
+}

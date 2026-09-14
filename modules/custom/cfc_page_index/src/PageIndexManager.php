@@ -223,10 +223,15 @@ final class PageIndexManager {
   }
 
   /**
-   * Applies this module's two changes to the "Search content" view:
-   *  - phrase parse mode, so a multi-word search matches the exact phrase only;
-   *  - a "current interface language" filter, so an English search never
-   *    returns French hits and vice versa.
+   * Applies this module's change to the "Search content" view: phrase parse
+   * mode, so a multi-word search matches the exact phrase only.
+   *
+   * A search is intentionally NOT restricted to the current interface
+   * language: a visitor browsing the French site must still find an
+   * English-only page (and vice versa) if their keywords match it. Any
+   * "search_api_language" filter left over from an earlier version of this
+   * module is removed for the same reason.
+   *
    * Idempotent.
    */
   private function configureSearchView(): void {
@@ -243,49 +248,8 @@ final class PageIndexManager {
     }
 
     $filter_key = 'display.default.display_options.filters.search_api_language';
-    if ($view->get('display.default.display_options.filters') !== NULL
-      && $view->get($filter_key) === NULL) {
-      $view->set($filter_key, [
-        'id' => 'search_api_language',
-        'table' => 'search_api_index_default_index',
-        'field' => 'search_api_language',
-        'relationship' => 'none',
-        'group_type' => 'group',
-        'admin_label' => '',
-        'plugin_id' => 'search_api_language',
-        'operator' => 'in',
-        'value' => ['***LANGUAGE_language_interface***' => '***LANGUAGE_language_interface***'],
-        'group' => 1,
-        'exposed' => FALSE,
-        'expose' => [
-          'operator_id' => '',
-          'label' => '',
-          'description' => '',
-          'use_operator' => FALSE,
-          'operator' => 'search_api_language_op',
-          'operator_limit_selection' => FALSE,
-          'operator_list' => [],
-          'identifier' => 'search_api_language',
-          'required' => FALSE,
-          'remember' => FALSE,
-          'multiple' => FALSE,
-          'remember_roles' => ['authenticated' => 'authenticated'],
-          'reduce' => FALSE,
-        ],
-        'is_grouped' => FALSE,
-        'group_info' => [
-          'label' => '',
-          'description' => '',
-          'identifier' => '',
-          'optional' => TRUE,
-          'widget' => 'select',
-          'multiple' => FALSE,
-          'remember' => FALSE,
-          'default_group' => 'All',
-          'default_group_multiple' => [],
-          'group_items' => [],
-        ],
-      ]);
+    if ($view->get($filter_key) !== NULL) {
+      $view->clear($filter_key);
     }
 
     $view->save();

@@ -140,20 +140,30 @@ final class PageTextExtractor {
     $absolute = $base . $localised;
     $host = parse_url($base, PHP_URL_HOST);
 
-    try {
-      $response = $this->httpClient->request('GET', $absolute, [
-        'timeout' => 90,
-        'connect_timeout' => 15,
-        'http_errors' => FALSE,
-        'allow_redirects' => TRUE,
-        'headers' => array_filter([
-          'Host' => filter_var($host, FILTER_VALIDATE_IP) ? $this->configuredHost() : NULL,
-          'User-Agent' => 'CFC Page Index crawler',
-        ]),
-      ]);
+    $response = NULL;
+    $error = NULL;
+    // One retry: a dropped connection on an otherwise healthy page (e.g. the
+    // homepage, which is by far the heaviest to render) must not permanently
+    // remove that page from the index until the next crawl.
+    for ($attempt = 1; $attempt <= 2 && $response === NULL; $attempt++) {
+      try {
+        $response = $this->httpClient->request('GET', $absolute, [
+          'timeout' => 90,
+          'connect_timeout' => 15,
+          'http_errors' => FALSE,
+          'allow_redirects' => TRUE,
+          'headers' => array_filter([
+            'Host' => filter_var($host, FILTER_VALIDATE_IP) ? $this->configuredHost() : NULL,
+            'User-Agent' => 'CFC Page Index crawler',
+          ]),
+        ]);
+      }
+      catch (\Throwable $e) {
+        $error = $e;
+      }
     }
-    catch (\Throwable $e) {
-      $this->logger->warning('Fetching @url failed: @msg', ['@url' => $absolute, '@msg' => $e->getMessage()]);
+    if ($response === NULL) {
+      $this->logger->warning('Fetching @url failed: @msg', ['@url' => $absolute, '@msg' => $error?->getMessage()]);
       return NULL;
     }
 
@@ -362,6 +372,15 @@ final class PageTextExtractor {
     $headings = [];
     $context = $xpath->query('//main')->item(0) ?? $xpath->query('//body')->item(0);
     if ($context !== NULL) {
+      // DOM textContent concatenates text nodes with no separator, so two
+      // adjacent elements in the source markup (e.g. consecutive <li> items,
+      // or text split across <br> tags) would otherwise glue together into
+      // one word (observed as "...situé à CFC4. Être géré..." — the list item
+      // boundary between "CFC" and "4." vanished). That breaks exact-phrase
+      // search anywhere it happens, so a space is inserted at every such
+      // boundary before any text is read.
+      $this->insertBoundaryWhitespace($document, $context);
+
       foreach ($xpath->query('.//h1 | .//h2 | .//h3', $context) as $node) {
         $h = trim($node->textContent);
         if ($h !== '') {
@@ -388,6 +407,37 @@ final class PageTextExtractor {
   /**
    * Removes every node in a DOMNodeList from its document.
    */
+  /**
+   * Inserts a space after every block-level / line-break element under $root
+   * so that reading its textContent afterwards never glues together the text
+   * of two adjacent elements (e.g. two <li> items, or text split by <br>).
+   */
+  private function insertBoundaryWhitespace(\DOMDocument $document, \DOMNode $root): void {
+    static $tags = [
+      'br', 'p', 'div', 'li', 'tr', 'td', 'th', 'h1', 'h2', 'h3', 'h4', 'h5',
+      'h6', 'section', 'article', 'header', 'footer', 'blockquote', 'ul',
+      'ol', 'table', 'dd', 'dt', 'figcaption',
+    ];
+    $xpath = new \DOMXPath($document);
+    $query = implode(' | ', array_map(static fn (string $tag): string => ".//{$tag}", $tags));
+    $elements = [];
+    foreach ($xpath->query($query, $root) as $element) {
+      $elements[] = $element;
+    }
+    foreach ($elements as $element) {
+      if (!$element instanceof \DOMElement || !$element->parentNode) {
+        continue;
+      }
+      $space = $document->createTextNode(' ');
+      if ($element->nextSibling) {
+        $element->parentNode->insertBefore($space, $element->nextSibling);
+      }
+      else {
+        $element->parentNode->appendChild($space);
+      }
+    }
+  }
+
   private function removeNodes(\DOMNodeList $nodes): void {
     // Iterate over a static copy: removing mutates the live list.
     $list = [];

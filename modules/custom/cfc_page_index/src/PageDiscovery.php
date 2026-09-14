@@ -25,6 +25,12 @@ final class PageDiscovery {
   private const STATE_KEY = 'cfc_page_index.discovered_paths';
 
   /**
+   * Pause between two real HTTP requests to the site during a crawl, to avoid
+   * piling up server worker processes on a small/local environment.
+   */
+  private const CRAWL_DELAY_MICROSECONDS = 200000;
+
+  /**
    * Path prefixes that are never indexed.
    */
   private const EXCLUDED_PREFIXES = [
@@ -80,7 +86,13 @@ final class PageDiscovery {
     foreach ($paths as $path) {
       foreach ($langcodes as $langcode) {
         // The default language was already fetched during the crawl.
-        if ($langcode === $default || $this->extractor->fetchPage($path, $langcode) !== NULL) {
+        if ($langcode === $default) {
+          $ids[] = $langcode . ':' . $path;
+          continue;
+        }
+        $found = $this->extractor->fetchPage($path, $langcode) !== NULL;
+        usleep(self::CRAWL_DELAY_MICROSECONDS);
+        if ($found) {
           $ids[] = $langcode . ':' . $path;
         }
       }
@@ -154,6 +166,10 @@ final class PageDiscovery {
       $visited[$path] = TRUE;
 
       $page = $this->extractor->fetchPage($path, $langcode);
+      // A short pause between real HTTP requests to this same server: crawling
+      // ~150 pages back-to-back with no gap was observed to pile up server
+      // worker processes and eventually crash the local database.
+      usleep(self::CRAWL_DELAY_MICROSECONDS);
       if ($page === NULL) {
         continue;
       }
