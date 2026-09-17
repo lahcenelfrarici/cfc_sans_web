@@ -5637,9 +5637,9 @@ body .register-section form input {
   }
 }
 
-.increment--bx {
+/* .increment--bx {
   display: none;
-}
+} */
 .modal__hear_it_from_our_community iframe {
   height: 500px !important;
 }
