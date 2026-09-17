@@ -2084,6 +2084,40 @@ modal_1.click(function (e) {
       }
     }
   });
+  // CFC members autocomplete + membership check for the "Request an access
+  // code" form (Company field). Loads the member list once, offers it as a
+  // <datalist> on #edit-company, and mirrors the typed value into the hidden
+  // #edit-is-member field so the webform's email handlers can branch on it.
+  (function () {
+    var membersList = [];
+    var membersLower = [];
+
+    function buildDatalist() {
+      if ($('#cfc-members-list').length) {
+        return;
+      }
+      var $datalist = $('<datalist id="cfc-members-list"></datalist>');
+      membersList.forEach(function (name) {
+        $datalist.append($('<option>').val(name));
+      });
+      $('body').append($datalist);
+    }
+
+    $.getJSON('/themes/custom/cfc/CFC/assets/js/cfc_members.json', function (data) {
+      membersList = data || [];
+      membersLower = membersList.map(function (name) {
+        return name.toLowerCase();
+      });
+      buildDatalist();
+    });
+
+    $(document).on('input change', '#edit-company', function () {
+      var typed = $.trim($(this).val()).toLowerCase();
+      var isMember = typed !== '' && membersLower.indexOf(typed) !== -1;
+      $('[name="is_member"]').val(isMember ? '1' : '0');
+    });
+  })();
+
   // SHOW / HIDE password
   $("form").on('click', '.toggle-password', function () {
 
