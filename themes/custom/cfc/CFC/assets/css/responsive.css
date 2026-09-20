@@ -1293,7 +1293,9 @@
 
 @media (max-width: 991px) {
 
-
+#block-cfc-webform-forgot form {
+  display: block;
+}
   .register-section form .form-item:nth-child(1) {
     order: 1;
 

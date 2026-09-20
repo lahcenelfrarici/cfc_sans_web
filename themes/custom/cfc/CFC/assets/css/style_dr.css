@@ -5695,3 +5695,26 @@ html[lang="en"] .gfcm-sc.section_show_french {
 .gfcm-card {
   display: block !important;
 }
+
+#block-cfc-webform-forgot #edit-email {
+  border: 1px solid var(--Grey-Grey-20, #E5E7EB) !important;
+  background: #EDF2F8 !important;
+}
+
+#block-cfc-webform-forgot .wrapper_submit {
+  display: inline-flex;
+  align-items: end;
+  gap: 0 15px;
+}
+#block-cfc-webform-forgot .wrapper_submit input {
+  width: auto;
+}
+
+#block-cfc-webform-forgot label {
+  display: none;
+}
+#block-cfc-webform-forgot form {
+  display: flex;
+  align-items: center;
+  gap: 0 25px;
+}
