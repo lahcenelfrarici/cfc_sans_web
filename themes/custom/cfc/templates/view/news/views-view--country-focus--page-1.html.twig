@@ -414,6 +414,34 @@
       </button>
     </div>
     <p id="error-message" style="display: none; color: red;">{{ 'Wrong password, please try again.'|t }}</p>
+    <div class="wrapper-text-click" id="forgot-password-btn">
+      {{ 'Forgot password?'|t }}
+    </div>
+    <div id="forgot-password-block" style="display: none;">
+      <style>
+        #forgot-password-block .webform-button--submit {
+          background: none;
+          border: none;
+          box-shadow: none;
+          padding: 0;
+          display: block;
+          margin: 10px auto 0;
+          color: #007565;
+          text-align: center;
+          -webkit-text-stroke-width: 0.5px;
+          -webkit-text-stroke-color: #007565;
+          font-family: "Averta CY";
+          font-size: 26px;
+          font-style: normal;
+          font-weight: 400;
+          cursor: pointer;
+        }
+        #forgot-password-block .webform-button--submit:hover {
+          text-decoration: underline;
+        }
+      </style>
+      {{ drupal_entity('block', 'cfc_webform_forgot') }}
+    </div>
     <div class="wrapper-text-click" id="not-member-btn">
       {{ 'I’m not a CFC member'|t }}
     </div>
