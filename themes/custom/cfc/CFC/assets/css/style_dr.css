@@ -5718,3 +5718,13 @@ html[lang="en"] .gfcm-sc.section_show_french {
   align-items: center;
   gap: 0 25px;
 }
+
+.gfcm-card {
+  display: none !important;
+}
+.gfcm-irec {
+  display: none;
+}
+.gfcm-banner {
+  display: none;
+}
