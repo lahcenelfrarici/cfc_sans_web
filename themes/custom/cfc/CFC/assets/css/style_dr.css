@@ -5726,5 +5726,5 @@ html[lang="en"] .gfcm-sc.section_show_french {
   display: none;
 }
 .gfcm-banner {
-  display: none;
+  display: none !important;
 }
