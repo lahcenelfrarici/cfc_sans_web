@@ -5728,3 +5728,6 @@ html[lang="en"] .gfcm-sc.section_show_french {
 .gfcm-banner {
   display: none !important;
 }
+.speaker-card .sp-role {
+  padding-top: 2%;
+}
