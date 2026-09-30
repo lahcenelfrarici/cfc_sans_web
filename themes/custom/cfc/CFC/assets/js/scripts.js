@@ -2224,16 +2224,23 @@ modal_1.click(function (e) {
   })();
 
   // UTM tracking (e.g. ?utm_source=teads&utm_campaign=uae). Purely driven by
-  // THIS page's own URL: if it has no utm_* params, nothing happens at all
-  // (normal browsing, untouched). If it does, every internal link on the
-  // page is rewritten to carry the same utm_* params, so clicking through
-  // keeps them visible in the address bar page after page. A plain visit
-  // (no utm_* in the URL) never shows them, no matter what was browsed
-  // before, since nothing is stored across page loads.
+  // THIS page's own URL: if it has no utm_* params, or its utm_campaign
+  // isn't one of the 3 approved campaigns below, nothing happens at all
+  // (normal browsing, untouched). If it's a valid campaign, every internal
+  // link on the page is rewritten to carry the same utm_* params, so
+  // clicking through keeps them visible in the address bar page after page.
+  // Nothing is stored across page loads, so a plain visit (or a made-up
+  // utm_campaign) never shows utm_* no matter what was browsed before.
   (function () {
     var UTM_KEYS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'];
+    var VALID_CAMPAIGNS = ['uae', 'fr', 'uk'];
 
     var params = new URLSearchParams(window.location.search);
+    var campaign = (params.get('utm_campaign') || '').toLowerCase();
+    if (VALID_CAMPAIGNS.indexOf(campaign) === -1) {
+      return; // Not one of the 3 approved campaigns: leave the page untouched.
+    }
+
     var utm = {};
     UTM_KEYS.forEach(function (key) {
       var value = params.get(key);
@@ -2243,9 +2250,6 @@ modal_1.click(function (e) {
     });
 
     var utmKeysPresent = Object.keys(utm);
-    if (!utmKeysPresent.length) {
-      return; // No utm_* on this URL: leave the page completely untouched.
-    }
 
     // Rewrite every internal link on the page so clicking through to another
     // page keeps utm_* visible in its URL too.
@@ -2255,8 +2259,16 @@ modal_1.click(function (e) {
         if (url.origin !== window.location.origin) {
           return href; // Never touch external links.
         }
+        // Some internal links (e.g. Drupal's own language switcher) already
+        // carry part of the current query string natively, which can leave
+        // stale/reordered utm_* values mixed in. Drop any utm_* the link
+        // already has, then re-add exactly what this page has, in the same
+        // fixed order every time, so the values are never altered.
+        UTM_KEYS.forEach(function (key) {
+          url.searchParams.delete(key);
+        });
         utmKeysPresent.forEach(function (key) {
-          url.searchParams.set(key, utm[key]);
+          url.searchParams.append(key, utm[key]);
         });
         return url.pathname + '?' + url.searchParams.toString() + url.hash;
       } catch (e) {
