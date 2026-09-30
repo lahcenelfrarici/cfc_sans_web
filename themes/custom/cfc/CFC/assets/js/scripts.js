@@ -2223,6 +2223,75 @@ modal_1.click(function (e) {
     });
   })();
 
+  // UTM tracking (e.g. ?utm_source=teads&utm_campaign=uae). Purely driven by
+  // THIS page's own URL: if it has no utm_* params, nothing happens at all
+  // (normal browsing, untouched). If it does, every internal link on the
+  // page is rewritten to carry the same utm_* params, so clicking through
+  // keeps them visible in the address bar page after page. A plain visit
+  // (no utm_* in the URL) never shows them, no matter what was browsed
+  // before, since nothing is stored across page loads.
+  (function () {
+    var UTM_KEYS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'];
+
+    var params = new URLSearchParams(window.location.search);
+    var utm = {};
+    UTM_KEYS.forEach(function (key) {
+      var value = params.get(key);
+      if (value) {
+        utm[key] = value;
+      }
+    });
+
+    var utmKeysPresent = Object.keys(utm);
+    if (!utmKeysPresent.length) {
+      return; // No utm_* on this URL: leave the page completely untouched.
+    }
+
+    // Rewrite every internal link on the page so clicking through to another
+    // page keeps utm_* visible in its URL too.
+    function appendUtmToHref(href) {
+      try {
+        var url = new URL(href, window.location.origin);
+        if (url.origin !== window.location.origin) {
+          return href; // Never touch external links.
+        }
+        utmKeysPresent.forEach(function (key) {
+          url.searchParams.set(key, utm[key]);
+        });
+        return url.pathname + '?' + url.searchParams.toString() + url.hash;
+      } catch (e) {
+        return href;
+      }
+    }
+
+    function rewriteLinks() {
+      $('a[href]').each(function () {
+        var href = $(this).attr('href');
+        if (!href || href.charAt(0) === '#' || href.indexOf('mailto:') === 0 ||
+          href.indexOf('tel:') === 0 || href.indexOf('javascript:') === 0) {
+          return;
+        }
+        $(this).attr('href', appendUtmToHref(href));
+      });
+    }
+
+    rewriteLinks();
+    // Menus/content added after load (mobile nav, ajax views, etc.).
+    $(document).ajaxComplete(rewriteLinks);
+
+    // Fill: any form on the site can opt in simply by having a hidden field
+    // named utm_source / utm_medium / utm_campaign / utm_term / utm_content.
+    $(document).on('focusin', 'form', function () {
+      var $form = $(this);
+      utmKeysPresent.forEach(function (key) {
+        var $field = $form.find('[name="' + key + '"]');
+        if ($field.length && !$field.val()) {
+          $field.val(utm[key]);
+        }
+      });
+    });
+  })();
+
   // SHOW / HIDE password
   $("form").on('click', '.toggle-password', function () {
 
