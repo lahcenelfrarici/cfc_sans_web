@@ -5740,9 +5740,10 @@ html[lang="en"] .gfcm-sc.section_show_french {
   width: 30%;
 }
 
-.page-cbforum #register {
+.page-cbforum #register ,.page-cbf #register{
   display: none;
 }
-.page-cbforum .messages.messages--status {
+.page-cbforum .messages.messages--status ,
+.page-cbf .messages.messages--status{
   display: none;
 }
