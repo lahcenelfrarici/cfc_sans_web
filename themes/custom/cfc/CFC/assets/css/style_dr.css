@@ -5739,3 +5739,10 @@ html[lang="en"] .gfcm-sc.section_show_french {
 #wrappeer_pop .custom-card.card-doing img {
   width: 30%;
 }
+
+.page-cbforum #register {
+  display: none;
+}
+.page-cbforum .messages.messages--status {
+  display: none;
+}
