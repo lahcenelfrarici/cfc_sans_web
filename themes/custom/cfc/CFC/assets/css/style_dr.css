@@ -5748,5 +5748,5 @@ html[lang="en"] .gfcm-sc.section_show_french {
   display: none;
 }
 #modal-event {
-  display: none;
+  display: none !important;
 }
