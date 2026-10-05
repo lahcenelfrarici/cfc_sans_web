@@ -5747,3 +5747,6 @@ html[lang="en"] .gfcm-sc.section_show_french {
 .page-cbf .messages.messages--status{
   display: none;
 }
+#modal-event {
+  display: none;
+}
