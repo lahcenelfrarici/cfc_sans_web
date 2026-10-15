@@ -2304,6 +2304,20 @@ modal_1.click(function (e) {
     });
   })();
 
+  // Report download gated by a simple lead-capture form (Rapports page):
+  // clicking the "Download" link on the gated report opens a modal instead
+  // of downloading directly; the webform inside it redirects straight to
+  // the PDF once submitted (see report_talent_lead webform confirmation).
+  (function () {
+    $(document).on('click', '.open-report-lead-modal', function (e) {
+      e.preventDefault();
+      $('#report-lead-modal').fadeIn();
+    });
+    $(document).on('click', '#report-lead-modal .close', function () {
+      $('#report-lead-modal').fadeOut();
+    });
+  })();
+
   // SHOW / HIDE password
   $("form").on('click', '.toggle-password', function () {
 
