@@ -1,0 +1,37 @@
+{#
+/**
+ * @file
+ * Annual Reports page (CFCA annual/activity reports), kept separate from
+ * the Africa Insights Reports page per client request.
+ *
+ * @see template_preprocess_views_view()
+ */
+#}
+
+<section class="emblemes_href three_colmun_to_sc odd-re-bg rapport_size_img" data-aos="fade-up" data-aos-duration="1000" id="annual-reports">
+	<div class="title-primary-sc mb-3 container">
+		<div class="paragraph--african_insights">
+			<p class="size--vw-1-5">{{'Browse the CFCA annual and activity reports.'|t}}</p>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="element--detail row">
+				<div class="element-sc active">
+					<div class="row">
+						<div>
+							<div class="container">
+								<div class="wrapper-title-filter">
+									{{'Browse reports'|t}}
+								</div>
+								<div class="row g-4 mt-2" id="list--news-all">
+									{{ rows }}
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
