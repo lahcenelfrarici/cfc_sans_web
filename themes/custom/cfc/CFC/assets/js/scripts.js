@@ -1594,26 +1594,42 @@
   //   activateTabById(id);
   // });
   // *********************************** end old
-  // Function to handle tab activation based on ID
+  // Function to handle tab activation based on ID. Uses the native
+  // document.getElementById (never a jQuery/CSS selector) so a malformed id
+  // can never throw a Sizzle "unrecognized expression" error.
   function activateTabById(id) {
+    var target = document.getElementById(id);
+    if (!target) {
+      return false;
+    }
+    var $target = $(target);
+
     // Remove active class from all tabs and elements
     $('.emblemes .tabs--item button').removeClass('active');
     $('.emblemes .element-sc').removeClass('active');
 
     // Add active class to the corresponding tab and content element
-    $('#' + id).addClass('active');
-    $('.emblemes .element-sc').eq($('#' + id).index()).addClass('active');
+    $target.addClass('active');
+    $('.emblemes .element-sc').eq($target.index()).addClass('active');
+    return true;
   }
 
-  // Handle the URL fragment on page load
+  // Handle the URL fragment on page load. The fragment isn't always one of
+  // our own tab ids: third-party tools (e.g. Dynamics 365's marketing
+  // tracking links) append their own hash such as
+  // "#msdynmkt_trackingcontext=...", which contains characters ("=", "-")
+  // that are not valid in a bare id and must never be tried as one.
   var fragment = window.location.hash; // Get the fragment from the URL (e.g., #section2)
+  var tabActivated = false;
 
-  if (fragment) {
-    // If there's a fragment, activate the tab corresponding to the fragment (e.g., #section2)
+  if (fragment && /^#[A-Za-z0-9_-]+$/.test(fragment)) {
     var sectionId = fragment.substring(1); // Remove the '#' character
-    activateTabById(sectionId);
-  } else {
-    // If no fragment, activate the first tab and its content by default
+    tabActivated = activateTabById(sectionId);
+  }
+
+  if (!tabActivated) {
+    // No fragment, or not one of our tab ids (e.g. a third-party tracking
+    // hash): activate the first tab and its content by default.
     $('.emblemes .tabs--item button').first().addClass('active');
     $('.emblemes .element-sc').first().addClass('active');
   }
