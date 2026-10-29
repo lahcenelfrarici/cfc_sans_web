@@ -1252,16 +1252,28 @@
         // Remove the disabled attribute so the button is clickable
         $("#download-btn").prop("disabled", false);
 
-        // Handle download button click
-        const correctPassword = "CFC123";
+        // Handle download button click. The access code is verified
+        // server-side (CFC-05 fix) so it is never present in this file.
         $("#download-btn").off("click").on("click", function (event) {
+          event.preventDefault();
           const enteredPassword = $("#access-password").val();
-          if (enteredPassword !== correctPassword) {
-            event.preventDefault();
+
+          $.ajax({
+            url: "/cfc-access-gate/verify",
+            type: "POST",
+            contentType: "application/json",
+            data: JSON.stringify({ code: enteredPassword }),
+            dataType: "json",
+          }).done(function (response) {
+            if (response && response.valid) {
+              $("#error-message").hide();
+              window.open(factSheetLink, "_blank");
+            } else {
+              $("#error-message").text("Wrong password, please try again").show();
+            }
+          }).fail(function () {
             $("#error-message").text("Wrong password, please try again").show();
-          } else {
-            $("#error-message").hide();
-          }
+          });
         });
       });
 
@@ -1885,25 +1897,8 @@
   //   // Remove disabled so the button is clickable
   //   $("#download-btn").prop("disabled", false);
 
-  //   // Handle password validation
-  //   const correctPassword = "CFC123";
-  //   $("#access-password").off("input").on("input", function () {
-  //     const enteredPassword = $(this).val();
-  //     if (enteredPassword === correctPassword) {
-  //       $("#error-message").hide();
-  //     }
-  //   });
-
-  //   // Handle download button click
-  //   $("#download-btn").off("click").on("click", function (event) {
-  //     const enteredPassword = $("#access-password").val();
-  //     if (enteredPassword !== correctPassword) {
-  //       event.preventDefault();
-  //       $("#error-message").text("Wrong password, please try again").show();
-  //     } else {
-  //       $("#error-message").hide();
-  //     }
-  //   });
+  //   // Handle password validation (see the live handler above for the
+  //   // current, server-verified implementation — CFC-05 fix).
   // });
   //
   // Initialize Owl Carousel

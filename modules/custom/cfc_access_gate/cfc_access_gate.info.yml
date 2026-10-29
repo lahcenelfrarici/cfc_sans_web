@@ -1,0 +1,5 @@
+name: 'CFC Access Gate'
+type: module
+description: 'Server-side verification of the maps/reports access code, so the code is never exposed in client-side JavaScript (CFC-05 pentest fix).'
+package: CFC
+core_version_requirement: ^10 || ^11

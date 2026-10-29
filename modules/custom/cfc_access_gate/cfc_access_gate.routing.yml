@@ -1,0 +1,9 @@
+cfc_access_gate.verify:
+  path: '/cfc-access-gate/verify'
+  defaults:
+    _controller: 'Drupal\cfc_access_gate\Controller\AccessGateController::verify'
+  methods: [POST]
+  requirements:
+    _access: 'TRUE'
+  options:
+    no_cache: TRUE
