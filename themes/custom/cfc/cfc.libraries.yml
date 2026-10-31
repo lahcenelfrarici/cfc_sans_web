@@ -31,7 +31,6 @@ global-js:
 
   dependencies:
     - core/jquery
-    - jquery.ui
     - core/once
 
 
