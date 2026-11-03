@@ -2931,6 +2931,10 @@ section.three_colmun_to_sc {
   align-items: center;
 }
 
+.three_colmun_to_sc .tabs--item.tabs--item-4 button {
+  width: 23%;
+}
+
 .three_colmun_to_sc .tabs--item button svg {
   height: 44px;
 }
@@ -3460,6 +3464,11 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.three_colmun_to_sc .tabs--item.tabs--item-4 button,
+.three_colmun_to_sc .tabs--item.tabs--item-4 a {
+  width: 23%;
 }
 
 .three_colmun_to_sc .tabs--item a {
