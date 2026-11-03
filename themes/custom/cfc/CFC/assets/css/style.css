@@ -3471,6 +3471,23 @@ a {
   width: 23%;
 }
 
+.three_colmun_to_sc .tabs--item.tabs--item-4 a {
+  width: 100%;
+  height: auto;
+  min-height: 110px;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 16px 8px;
+  text-align: center;
+}
+
+.three_colmun_to_sc .tabs--item.tabs--item-4 button svg {
+  height: 32px;
+  width: 32px;
+}
+
 .three_colmun_to_sc .tabs--item a {
   color: #151515;
   -webkit-text-stroke-width: 0.5px;
